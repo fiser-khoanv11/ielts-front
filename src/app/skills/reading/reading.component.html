@@ -1,0 +1,24 @@
+<md-tab-group>
+  <md-tab *ngFor="let section of data" label="Section {{section.section_number}}">
+    <div class="padding">
+      <div class="passage">
+        <h2>{{section.content.heading}}</h2>
+        <h3>{{section.content.sub_heading}}</h3>
+        <p *ngFor="let para of section.content.passage" class="para">{{para}}</p>
+      </div>
+      
+      <div *ngFor="let question of section.questions" class="block">
+        <h3 class="header">Questions {{question.first}} - {{question.last}}</h3>
+        <div *ngIf="question.type == 'true-false'">
+          <app-true-false [data]="question"></app-true-false>
+        </div>
+        <div *ngIf="question.type == 'answer'">
+          <app-answer [data]="question"></app-answer>
+        </div>
+        <div *ngIf="question.type == 'heading'">
+          <app-heading [data]="question"></app-heading>
+        </div>
+      </div>
+    </div>
+  </md-tab>
+</md-tab-group>

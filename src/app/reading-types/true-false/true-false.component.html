@@ -1,0 +1,20 @@
+<p>
+  <i>Do the following statements agree with the information given in Reading Passage 1?</i>
+</p>
+<p>
+  <i>In boxes {{data.first}}-{{data.last}} on your answer sheet, write</i>
+</p>
+<div class="options">
+  <p><i><b>TRUE</b></i> if the statement argees with the information</p>
+  <p><i><b>FALSE</b></i> if the statement contradicts with the information</p>
+  <p><i><b>NOT GIVEN</b></i> if there is no information on this</p>
+</div>
+<div *ngFor="let text of data.text; let i = 'index'">
+  <p><span>{{data.first + i}}. </span>{{text}}</p>
+  <select>
+    <option disabled class="none">Select</option>
+    <option value="TRUE">TRUE</option>
+    <option value="FALSE">FALSE</option>
+    <option value="NOT GIVEN">NOT GIVEN</option>
+  </select>
+</div>

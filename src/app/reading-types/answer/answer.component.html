@@ -1,0 +1,13 @@
+<p>
+  <i>Answer the questions below.</i>
+</p>
+<p>
+  <i>Choose <b>NO MORE THAN {{data.word_limit | textNumber | uppercase}} WORDS</b> <b *ngIf="data.number_limit != 0">AND/OR {{data.number_limit | textNumber | uppercase}} NUMBER</b> from the passage for each answer.</i>
+</p>
+<p>
+  <i>Write your answers in boxes {{data.first}}-{{data.last}} on your answer sheet.</i>
+</p>
+<div *ngFor="let text of data.text; let i = 'index'">
+  <p><span>{{data.first + i}}. </span>{{text}}</p>
+  <md-input type="text"></md-input>
+</div>

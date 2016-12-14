@@ -1,3 +1,15 @@
-<h1>
-  {{title}}
-</h1>
+<md-toolbar color="primary">
+  <span>IELTS Online</span>
+  <md-toolbar-row>
+    <p>Cambridge IELTS 9 - Test 1</p>
+    <span class="fill-remaining-space"></span>
+    <nav>
+      <button md-button routerLink="/reading" routerLinkActive="active">Reading</button>
+      <button md-button routerLink="/listening" routerLinkActive="active">Listening</button>
+      <button md-button routerLink="/listening" routerLinkActive="active">Writing</button>
+      <button md-button routerLink="/listening" routerLinkActive="active">Speaking</button>
+    </nav>
+  </md-toolbar-row>
+</md-toolbar>
+
+<router-outlet></router-outlet>

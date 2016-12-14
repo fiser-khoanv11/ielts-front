@@ -1,0 +1,20 @@
+<div class="list">
+  <p><b>List of Headings</b></p>
+  <div *ngFor="let heading of data.headings; let i = 'index'">
+    <p><span>{{i + 1 | roman}}. </span>{{heading}}</p>
+  </div>
+</div>
+
+<div *ngFor="let para of data.paras; let j = 'index'">
+  <p><span>{{data.first + j}}. </span>Paragraph {{para.char | uppercase}}</p>
+  <div *ngIf="para.answer == 'none'">
+    <select>
+      <option disabled class="none">Select</option>
+      <option *ngFor="let heading of data.headings; let i = 'index'" value="i">{{i + 1 | roman}}</option>
+    </select>  
+  </div>
+  <div *ngIf="para.answer != 'none'">
+    <p><i>Example: {{para.answer | roman}}</i></p>
+  </div>
+</div>
+
