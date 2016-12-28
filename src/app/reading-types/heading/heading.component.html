@@ -8,10 +8,10 @@
 <div *ngFor="let para of data.paras; let j = 'index'">
   <p><span>{{data.first + j}}. </span>Paragraph {{para.char | uppercase}}</p>
   <div *ngIf="para.answer == 'none'">
-    <select>
-      <option disabled class="none">Select</option>
-      <option *ngFor="let heading of data.headings; let i = 'index'" value="i">{{i + 1 | roman}}</option>
-    </select>  
+    <md-select placeholder="Select" [(ngModel)]="answers[j]">
+      <md-option *ngFor="let heading of data.headings; let i = 'index'"
+                 [value]="i + 1">{{i + 1 | roman}}</md-option>
+    </md-select>
   </div>
   <div *ngIf="para.answer != 'none'">
     <p><i>Example: {{para.answer | roman}}</i></p>

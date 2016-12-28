@@ -17,6 +17,9 @@ import { AnswerComponent } from './reading-types/answer/answer.component';
 import { HeadingComponent } from './reading-types/heading/heading.component';
 import { RomanPipe } from './pipes/roman.pipe';
 import { TextNumberPipe } from './pipes/text-number.pipe';
+import { TestComponent } from './pages/test/test.component';
+import { ResultComponent } from './pages/result/result.component';
+import { TestToolbarComponent } from './components/test-toolbar/test-toolbar.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +33,10 @@ import { TextNumberPipe } from './pipes/text-number.pipe';
     AnswerComponent,
     HeadingComponent,
     RomanPipe,
-    TextNumberPipe
+    TextNumberPipe,
+    TestComponent,
+    ResultComponent,
+    TestToolbarComponent
   ],
   imports: [
     BrowserModule,

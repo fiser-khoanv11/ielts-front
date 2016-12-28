@@ -2,6 +2,14 @@
 @import '~@angular/material/core/theming/prebuilt/deeppurple-amber.css';
 
 body {
-  font-family: 'Roboto';
+  /*font-family: 'Roboto';*/
   margin: 0px;
+}
+
+.padding-50 {
+  padding: 50px;
+}
+
+.margin-bottom-50 {
+  margin-bottom: 50px;
 }

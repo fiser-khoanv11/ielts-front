@@ -9,6 +9,9 @@ import { Input } from '@angular/core';
 export class TrueFalseComponent implements OnInit {
 
   @Input() data: Object;
+  @Input() sectionNumber: number;
+  options: string[] = ['true', 'false', 'not given'];
+  answers: string[] = [];
 
   constructor() { }
 

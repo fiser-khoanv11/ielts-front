@@ -1,5 +1,5 @@
 <p>
-  <i>Do the following statements agree with the information given in Reading Passage 1?</i>
+  <i>Do the following statements agree with the information given in Reading Passage {{sectionNumber}}?</i>
 </p>
 <p>
   <i>In boxes {{data.first}}-{{data.last}} on your answer sheet, write</i>
@@ -11,10 +11,7 @@
 </div>
 <div *ngFor="let text of data.text; let i = 'index'">
   <p><span>{{data.first + i}}. </span>{{text}}</p>
-  <select>
-    <option disabled class="none">Select</option>
-    <option value="TRUE">TRUE</option>
-    <option value="FALSE">FALSE</option>
-    <option value="NOT GIVEN">NOT GIVEN</option>
-  </select>
+  <md-select placeholder="Select" [(ngModel)]="answers[i]">
+    <md-option *ngFor="let item of options" [value]="item">{{item | uppercase}}</md-option>
+  </md-select>
 </div>

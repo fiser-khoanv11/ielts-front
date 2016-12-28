@@ -9,6 +9,7 @@ import { Input } from '@angular/core';
 export class HeadingComponent implements OnInit {
 
   @Input() data: Object;
+  answers: string[] = [];
 
   constructor() { }
 

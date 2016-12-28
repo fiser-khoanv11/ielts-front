@@ -1,16 +1,23 @@
+<app-test-toolbar></app-test-toolbar>
 <md-tab-group>
   <md-tab *ngFor="let section of data" label="Section {{section.section_number}}">
-    <div class="padding">
-      <div class="passage">
-        <h2>{{section.content.heading}}</h2>
-        <h3>{{section.content.sub_heading}}</h3>
-        <p *ngFor="let para of section.content.passage" class="para">{{para}}</p>
-      </div>
+    <div class="padding-50">
+      <md-card class="margin-bottom-50">
+        <md-card-title>{{section.passage.heading}}</md-card-title>
+        <md-card-subtitle>{{section.passage.sub_heading}}</md-card-subtitle>
+        <md-card-content>
+          <div *ngFor="let para of section.passage.paras">
+            <button *ngIf="para.mark" md-mini-fab class="mark" disabled="true">{{para.mark | uppercase}}</button>
+            <p class="para">{{para.content}}</p>
+          </div>
+        </md-card-content>
+      </md-card>
       
       <div *ngFor="let question of section.questions" class="block">
         <h3 class="header">Questions {{question.first}} - {{question.last}}</h3>
         <div *ngIf="question.type == 'true-false'">
-          <app-true-false [data]="question"></app-true-false>
+          <app-true-false [data]="question" [sectionNumber]="section.section_number"></app-true-false>
+          <!-- {{section.section_nu}} -->
         </div>
         <div *ngIf="question.type == 'answer'">
           <app-answer [data]="question"></app-answer>
@@ -22,3 +29,5 @@
     </div>
   </md-tab>
 </md-tab-group>
+
+<button id="check" md-fab (click)="getAnswers()"><md-icon>check</md-icon></button>
