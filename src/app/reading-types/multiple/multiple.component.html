@@ -2,7 +2,12 @@
   Choose <b>{{data.limit | textNumber | uppercase}}</b> letters, <b>{{firstChar | uppercase}}-{{lastChar | uppercase}}</b>.
 </i></p>
 <p>
-  <i>Write the correct letters in boxes {{data.first}}-{{data.last}}.</i>
+  <i>
+    Write the correct letters in boxes {{data.first}}
+    <span *ngIf="data.last - data.first == 1"> and </span>
+    <span *ngIf="data.last - data.first > 1"> - </span>
+    {{data.last}} on your answer sheet.
+  </i>
 </p>
 <p>
   <i>{{data.des}}</i>
@@ -12,6 +17,9 @@
 </p>
 
 <div *ngFor="let item of data.choices; let i = 'index'">
-  <md-checkbox [(ngModel)]="answers[i]" (change)="checkLimit()">{{item.char | uppercase}}. {{item.text}}</md-checkbox>
+  <md-checkbox class="check-box" [(ngModel)]="answers[i]" 
+    (change)="checkLimit()">
+    {{item.char | uppercase}}. {{item.text}}
+  </md-checkbox>
 </div>
 

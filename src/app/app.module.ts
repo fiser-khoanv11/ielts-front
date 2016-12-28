@@ -21,6 +21,7 @@ import { TestComponent } from './pages/test/test.component';
 import { ResultComponent } from './pages/result/result.component';
 import { TestToolbarComponent } from './components/test-toolbar/test-toolbar.component';
 import { MultipleComponent } from './reading-types/multiple/multiple.component';
+import { SingleComponent } from './reading-types/single/single.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { MultipleComponent } from './reading-types/multiple/multiple.component';
     TestComponent,
     ResultComponent,
     TestToolbarComponent,
-    MultipleComponent
+    MultipleComponent,
+    SingleComponent
   ],
   imports: [
     BrowserModule,

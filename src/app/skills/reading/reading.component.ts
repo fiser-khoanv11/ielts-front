@@ -6,6 +6,7 @@ import { TrueFalseComponent } from '../../reading-types/true-false/true-false.co
 import { AnswerComponent } from '../../reading-types/answer/answer.component';
 import { HeadingComponent } from '../../reading-types/heading/heading.component';
 import { MultipleComponent } from '../../reading-types/multiple/multiple.component';
+import { SingleComponent } from '../../reading-types/single/single.component';
 
 @Component({
   selector: 'app-reading',
@@ -64,7 +65,7 @@ export class ReadingComponent implements OnInit {
         "content": "Although Perkin’s fame was achieved and fortune assured by his first discovery, the chemist continued his research. Among other dyes he developed and introduced were aniline red (1859) and aniline black (1863) and, in the late 1860s, Perkin’s green. It is important to note that Perkin’s synthetic dye discoveries had outcomes far beyond the merely decorative. The dyes also became vital to medical research in many ways. For instance, they were used to stain previously invisible microbes and bacteria, allowing researchers to identify such bacilli as tuberculosis, cholera, and anthrax. Artificial dyes continue to play a crucial role today. And, in what would have been particularly pleasing to Perkin, their current use is in the search for a vaccine against malaria."
       }]
     },
-    "questions": [{
+    "sub_sections": [{
       "first": 1,
       "last": 7,
       "type": "true-false",
@@ -103,7 +104,7 @@ export class ReadingComponent implements OnInit {
         "content": "There is considerable debate over how we should react if we detect a signal from an alien civilisation. Everybody agrees that we should not reply immediately. Quite apart from the impracticality of sending a reply over such large distances at short notice, it raises a host of ethical questions that would have to be addressed by the global community before any reply could be sent. Would the human race face the culture shock if faced with a superior and much older civilisation? Luckily, there is no urgency about this. The stars being searched are hundreds of light years away, so it takes hundreds of years for their signal to reach us, and a further few hundred years for our reply to reach them. It’s not important, then, if there’s a delay of a few years, or decades, while the human race debates the question of whether to reply, and perhaps carefully drafts a reply."
       }]
     },
-    "questions": [{
+    "sub_sections": [{
       "first": 14,
       "last": 17,
       "type": "heading",
@@ -142,9 +143,45 @@ export class ReadingComponent implements OnInit {
     "passage": {
       "image": "http://abc.com/img.jpg",
       "heading": "The history of the tortoise",
-      "paras": ["If you go back far enough, everything lived in the sea. At various points in evolutionary history, enterprising individuals within many different animal groups moved out onto the land, sometimes even to the most parched deserts, taking their own private seawater with them in blood and cellular fluids. In addition to the reptiles, birds, mammals and insects which we see all around us, other groups that have succeeded out of water include scorpions, snails, crustaceans such as woodlice and land crabs, millipedes and centipedes, spiders and various worms. And we mustn’t forget the plants, without whose prior invasion of the land none of the other migrations could have happened."]
+      "paras": [{
+        "mark": "a",
+        "content": "If you go back far enough, everything lived in the sea. At various points in evolutionary history, enterprising individuals within many different animal groups moved out onto the land, sometimes even to the most parched deserts, taking their own private seawater with them in blood and cellular fluids. In addition to the reptiles, birds, mammals and insects which we see all around us, other groups that have succeeded out of water include scorpions, snails, crustaceans such as woodlice and land crabs, millipedes and centipedes, spiders and various worms. And we mustn’t forget the plants, without whose prior invasion of the land none of the other migrations could have happened."
+      }, {
+        "mark": "b",
+        "content": "A preliminary study in New Zealand has shown that classroom noise presents a major concern for teachers and pupils. Modern teaching practices, the organisation of desks in the classroom, poor classroom acoustics, and mechanical means of ventilation such as air-conditioning units all contribute to the number of children unable to comprehend the teacher's voice. Education researchers Nelson and Soli have also suggested that recent trends in learning often involve collaborative interaction of multiple minds and tools as much as individual possession of information. This all amounts to heightened activity and noise levels, which have the potential to be particularly serious for children experiencing auditory function deficit. Noise in classrooms can only exacerbate their difficulty in comprehending and processing verbal communication with other children and instructions from the teacher."
+      }]
     },
-    "questions": [{
+    "sub_sections": [{
+      "first": 27,
+      "last": 31,
+      "type": "single",
+      "questions": [{
+          "text": "Neuroeconomics is a field of study which seeks to",
+          "choices": [
+            "cause a change in how scientists understand brain chemistry.",
+            "understand how good decisions are made in the brain.",
+            "understand how the brain is linked to achievement in competitive fields.",
+            "trace the specific firing patterns of neurons in different areas of the brain."
+          ]
+        }, {
+          "text": "According to the writer, iconoclasts are distinctive because",
+          "choices": [
+            "they create unusual brain circuits.",
+            "their brains function differently.",
+            "their personalities are distinctive.",
+            "they make decisions easily."
+          ]
+        }, {
+          "text": "According to the writer, the brain works efficiently because",
+          "choices": [
+            "it uses the eyes quickly.",
+            "it interprets data logically.",
+            "it generates its own energy.",
+            "it relies on previous events."
+          ]
+        }
+      ]
+    }, {
       "first": 27,
       "last": 28,
       "type": "multiple",
@@ -170,6 +207,7 @@ export class ReadingComponent implements OnInit {
   @ViewChildren(AnswerComponent) answerComponents: QueryList<AnswerComponent>;
   @ViewChildren(HeadingComponent) headingComponents: QueryList<HeadingComponent>;
   @ViewChildren(MultipleComponent) multipleComponents: QueryList<MultipleComponent>;
+  @ViewChildren(SingleComponent) singleComponents: QueryList<SingleComponent>;
 
   constructor(private router: Router) { }
 
@@ -182,6 +220,7 @@ export class ReadingComponent implements OnInit {
     arr = arr.concat(this.answerComponents.toArray());
     arr = arr.concat(this.headingComponents.toArray());
     arr = arr.concat(this.multipleComponents.toArray());
+    arr = arr.concat(this.singleComponents.toArray());
 
     let answers: Object[] = [];
     for (let i = 0; i < arr.length; i++) {

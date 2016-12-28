@@ -1,0 +1,31 @@
+<p>
+  <i>Choose the correct letter, <b>A</b>, <b>B</b>, <b>C</b> or <b>D</b>.</i>
+</p>
+<p>
+  <i>
+    Write the correct letter in boxes {{data.first}}
+    <span *ngIf="data.last - data.first == 1"> and </span>
+    <span *ngIf="data.last - data.first > 1"> - </span>
+    {{data.last}} on your answer sheet.
+  </i>
+</p>
+
+<div *ngFor="let question of data.questions; let i = 'index'">
+  <p><span>{{data.first + i}}. </span>{{question.text}}</p>
+  <md-radio-group class="radio-group" [(ngModel)]="answers[i]">
+    <md-radio-button *ngFor="let choice of choices; let i = 'index'" 
+      [value]="choice">{{choice | uppercase}}. {{question.choices[i]}}</md-radio-button>
+    <!-- <md-radio-button [value]="'b'">B. {{question.choices[1]}}</md-radio-button>
+    <md-radio-button [value]="'c'">C. {{question.choices[2]}}</md-radio-button>
+    <md-radio-button [value]="'d'">D. {{question.choices[3]}}</md-radio-button> -->
+    <!-- <md-radio-button class="example-radio-button" *ngFor="let season of seasons" [value]="season">
+      {{season}}
+    </md-radio-button> -->
+  </md-radio-group>
+</div>
+
+<!-- <md-radio-group class="example-radio-group" [(ngModel)]="favoriteSeason">
+  <md-radio-button class="example-radio-button" *ngFor="let season of seasons" [value]="season">
+    {{season}}
+  </md-radio-button>
+</md-radio-group> -->

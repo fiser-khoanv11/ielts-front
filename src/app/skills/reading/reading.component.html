@@ -13,8 +13,13 @@
         </md-card-content>
       </md-card>
       
-      <div *ngFor="let question of section.questions" class="block">
-        <h3 class="header">Questions {{question.first}} - {{question.last}}</h3>
+      <div *ngFor="let question of section.sub_sections" class="block">
+        <h3 class="header">
+          Questions {{question.first}}
+            <span *ngIf="question.last - question.first == 1"> and </span>
+            <span *ngIf="question.last - question.first > 1"> - </span>
+          {{question.last}}
+        </h3>
         <div *ngIf="question.type == 'true-false'">
           <app-true-false [data]="question" 
             [sectionNumber]="section.section_number"></app-true-false>
@@ -27,6 +32,9 @@
         </div>
         <div *ngIf="question.type == 'multiple'">
           <app-multiple [data]="question"></app-multiple>
+        </div>
+        <div *ngIf="question.type == 'single'">
+          <app-single [data]="question"></app-single>
         </div>
       </div>
     </div>
