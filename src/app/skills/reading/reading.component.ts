@@ -5,6 +5,7 @@ import { RouterModule, Routes, Router } from '@angular/router';
 import { TrueFalseComponent } from '../../reading-types/true-false/true-false.component';
 import { AnswerComponent } from '../../reading-types/answer/answer.component';
 import { HeadingComponent } from '../../reading-types/heading/heading.component';
+import { MultipleComponent } from '../../reading-types/multiple/multiple.component';
 
 @Component({
   selector: 'app-reading',
@@ -147,7 +148,16 @@ export class ReadingComponent implements OnInit {
       "first": 27,
       "last": 28,
       "type": "multiple",
-      "text": ["What had to transfer from sea to land before any animals could migrate? ", "Which TWO processes are mentioned as those in which animals had to make big changes as they moved onto land?", "Which physical feature, possessed by their ancestors, do whales lack?", "Which animals might ichthyosaurs have resembled?"]
+      "limit": 2,
+      "des": "The list below includes factors contributing to classroom noise.",
+      "choices": [
+        {"char": "a", "text": "current teaching methods"},
+        {"char": "b", "text": "echoing corridors"},
+        {"char": "c", "text": "cooling systems"},
+        {"char": "d", "text": "large class sizes"},
+        {"char": "e", "text": "loud-voiced teachers"},
+        {"char": "f", "text": "playground games"}
+      ]
     }, {
       "first": 31,
       "last": 33,
@@ -159,6 +169,7 @@ export class ReadingComponent implements OnInit {
   @ViewChildren(TrueFalseComponent) trueFalseComponents: QueryList<TrueFalseComponent>;
   @ViewChildren(AnswerComponent) answerComponents: QueryList<AnswerComponent>;
   @ViewChildren(HeadingComponent) headingComponents: QueryList<HeadingComponent>;
+  @ViewChildren(MultipleComponent) multipleComponents: QueryList<MultipleComponent>;
 
   constructor(private router: Router) { }
 
@@ -170,10 +181,14 @@ export class ReadingComponent implements OnInit {
     arr = arr.concat(this.trueFalseComponents.toArray());
     arr = arr.concat(this.answerComponents.toArray());
     arr = arr.concat(this.headingComponents.toArray());
+    arr = arr.concat(this.multipleComponents.toArray());
 
     let answers: Object[] = [];
     for (let i = 0; i < arr.length; i++) {
-      answers.push({type: arr[i].data.type, answers: arr[i].answers});
+      answers.push({
+        type: arr[i].data.type,
+        answers: arr[i].getAnswers()
+      });
     }
 
     console.log('ok here');

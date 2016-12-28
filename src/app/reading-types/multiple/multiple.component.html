@@ -1,0 +1,17 @@
+<p><i>
+  Choose <b>{{data.limit | textNumber | uppercase}}</b> letters, <b>{{firstChar | uppercase}}-{{lastChar | uppercase}}</b>.
+</i></p>
+<p>
+  <i>Write the correct letters in boxes {{data.first}}-{{data.last}}.</i>
+</p>
+<p>
+  <i>{{data.des}}</i>
+</p>
+<p>
+  <i>Which <b>{{data.limit | textNumber | uppercase}}</b> are mentioned by the writer of the passage?</i>
+</p>
+
+<div *ngFor="let item of data.choices; let i = 'index'">
+  <md-checkbox [(ngModel)]="answers[i]" (change)="checkLimit()">{{item.char | uppercase}}. {{item.text}}</md-checkbox>
+</div>
+

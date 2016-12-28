@@ -16,4 +16,8 @@ export class AnswerComponent implements OnInit {
   ngOnInit() {
   }
 
+  getAnswers() {
+    return this.answers;
+  }
+
 }

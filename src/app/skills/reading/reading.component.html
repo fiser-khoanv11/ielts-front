@@ -7,7 +7,7 @@
         <md-card-subtitle>{{section.passage.sub_heading}}</md-card-subtitle>
         <md-card-content>
           <div *ngFor="let para of section.passage.paras">
-            <button *ngIf="para.mark" md-mini-fab class="mark" disabled="true">{{para.mark | uppercase}}</button>
+            <button *ngIf="para.mark" md-mini-fab class="mark" disabled="false">{{para.mark | uppercase}}</button>
             <p class="para">{{para.content}}</p>
           </div>
         </md-card-content>
@@ -16,14 +16,17 @@
       <div *ngFor="let question of section.questions" class="block">
         <h3 class="header">Questions {{question.first}} - {{question.last}}</h3>
         <div *ngIf="question.type == 'true-false'">
-          <app-true-false [data]="question" [sectionNumber]="section.section_number"></app-true-false>
-          <!-- {{section.section_nu}} -->
+          <app-true-false [data]="question" 
+            [sectionNumber]="section.section_number"></app-true-false>
         </div>
         <div *ngIf="question.type == 'answer'">
           <app-answer [data]="question"></app-answer>
         </div>
         <div *ngIf="question.type == 'heading'">
           <app-heading [data]="question"></app-heading>
+        </div>
+        <div *ngIf="question.type == 'multiple'">
+          <app-multiple [data]="question"></app-multiple>
         </div>
       </div>
     </div>

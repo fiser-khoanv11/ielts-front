@@ -20,6 +20,7 @@ import { TextNumberPipe } from './pipes/text-number.pipe';
 import { TestComponent } from './pages/test/test.component';
 import { ResultComponent } from './pages/result/result.component';
 import { TestToolbarComponent } from './components/test-toolbar/test-toolbar.component';
+import { MultipleComponent } from './reading-types/multiple/multiple.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { TestToolbarComponent } from './components/test-toolbar/test-toolbar.com
     TextNumberPipe,
     TestComponent,
     ResultComponent,
-    TestToolbarComponent
+    TestToolbarComponent,
+    MultipleComponent
   ],
   imports: [
     BrowserModule,
