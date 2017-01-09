@@ -10,12 +10,17 @@ export class TrueFalseComponent implements OnInit {
 
   @Input() data: Object;
   @Input() sectionNumber: number;
-  options: string[] = ['true', 'false', 'not given'];
+  options: string[];
   answers: string[] = [];
 
   constructor() { }
 
   ngOnInit() {
+    if (this.data['options'] == 'tf') {
+      this.options = [ 'true', 'false', 'not given' ];
+    } else if (this.data['options'] == 'yn') {
+      this.options = [ 'yes', 'no', 'not given' ];
+    }
   }
 
   getAnswers() {

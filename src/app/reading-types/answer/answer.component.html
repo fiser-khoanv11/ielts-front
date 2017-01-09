@@ -14,7 +14,7 @@
 </p>
 <div *ngFor="let text of data.text; let i = 'index'">
   <p><span>{{data.first + i}}. </span>{{text}}</p>
-  <md-input-container>
-    <input md-input type="text" [(ngModel)]="answers[i]"/>
+  <md-input-container floatingPlaceholder="false">
+    <input md-input type="text" [(ngModel)]="answers[i]" placeholder="Type here" />
   </md-input-container>
 </div>

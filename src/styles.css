@@ -13,3 +13,11 @@ body {
 .margin-bottom-50 {
   margin-bottom: 50px;
 }
+
+.margin-right-10 {
+  margin-right: 10px;
+}
+
+p {
+  text-align: justify;
+}

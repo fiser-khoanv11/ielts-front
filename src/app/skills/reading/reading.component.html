@@ -14,7 +14,8 @@
       </md-card>
       
       <div *ngFor="let question of section.sub_sections" class="block">
-        <h3 class="header">
+        <h3 *ngIf="question.first == question.last">Question {{question.first}}</h3>
+        <h3 *ngIf="question.first != question.last">
           Questions {{question.first}}
             <span *ngIf="question.last - question.first == 1"> and </span>
             <span *ngIf="question.last - question.first > 1"> - </span>
@@ -35,6 +36,9 @@
         </div>
         <div *ngIf="question.type == 'single'">
           <app-single [data]="question"></app-single>
+        </div>
+        <div *ngIf="question.type == 'summary'">
+          <app-summary [data]="question"></app-summary>
         </div>
       </div>
     </div>

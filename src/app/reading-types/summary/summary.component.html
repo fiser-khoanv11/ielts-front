@@ -1,0 +1,26 @@
+<p><i>Complete the summary below.</i></p>
+<p>
+  <i>Choose <b>NO MORE THAN {{data.word_limit | textNumber | uppercase}} WORDS <span *ngIf="data.number_limit != 0">AND/OR {{data.number_limit | textNumber | uppercase}} NUMBER</span></b> from the passage for each answer.</i>
+</p>
+<p>
+  <i>
+    Write your answers in boxes {{data.first}}
+    <span *ngIf="data.last - data.first == 1"> and </span>
+    <span *ngIf="data.last - data.first > 1"> - </span>
+    {{data.last}} on your answer sheet.
+  </i>
+</p>
+<md-card class="half-card">
+  <md-card-title>{{data.heading}}</md-card-title>
+  <md-card-content>
+    <p *ngFor="let para of displayParas; let i = 'index'">
+      <span *ngFor="let span of para; let j = 'index'">
+        <md-input-container *ngIf="span.isInput" floatingPlaceholder="false">
+          <b md-prefix class="margin-right-10">{{span.data}} </b>
+          <input md-input type="text" [(ngModel)]="answers[i][j]" placeholder="Type here"/>
+        </md-input-container>
+        <span *ngIf="!span.isInput">{{span.data}}</span>
+      </span>
+    </p>
+  </md-card-content>
+</md-card>

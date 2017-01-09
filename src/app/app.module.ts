@@ -22,6 +22,9 @@ import { ResultComponent } from './pages/result/result.component';
 import { TestToolbarComponent } from './components/test-toolbar/test-toolbar.component';
 import { MultipleComponent } from './reading-types/multiple/multiple.component';
 import { SingleComponent } from './reading-types/single/single.component';
+// import { SummaryCompletionComponent } from './reading-types/summary-completion/summary-completion.component';
+import { SummaryComponent } from './reading-types/summary/summary.component';
+import { BlankSpaceDirective } from './directives/blank-space.directive';
 
 @NgModule({
   declarations: [
@@ -40,7 +43,10 @@ import { SingleComponent } from './reading-types/single/single.component';
     ResultComponent,
     TestToolbarComponent,
     MultipleComponent,
-    SingleComponent
+    SingleComponent,
+    // SummaryCompletionComponent,
+    SummaryComponent,
+    BlankSpaceDirective
   ],
   imports: [
     BrowserModule,

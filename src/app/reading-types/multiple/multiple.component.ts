@@ -11,7 +11,7 @@ import { MdSnackBar, MdButton } from '@angular/material';
 export class MultipleComponent implements OnInit {
 
   @Input() data: Object;
-  answers: boolean[] = [];
+  answers: string[] = [];
   firstChar: string;
   lastChar: string;
   numberOfChecked: number;
@@ -24,7 +24,7 @@ export class MultipleComponent implements OnInit {
     this.lastChar = this.data['choices'][length - 1].char;
   }
 
-  checkLimit() {
+  checkLimit(): void {
     let count = 0;
 
     for (let i = 0; i < this.answers.length; i++) {
