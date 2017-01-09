@@ -40,6 +40,9 @@
         <div *ngIf="question.type == 'summary'">
           <app-summary [data]="question"></app-summary>
         </div>
+        <div *ngIf="question.type == 'sentence'">
+          <app-sentence [data]="question"></app-sentence>
+        </div>
       </div>
     </div>
   </md-tab>

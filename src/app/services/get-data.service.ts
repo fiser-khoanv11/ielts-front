@@ -7,6 +7,27 @@ export class GetDataService {
 
   getDataForEachType(): Object[] {
     let data = [{
+      "section_number": "Sentence completion",
+      "passage": {
+        "image": "",
+        "heading": "Blah",
+        "paras": [{
+          "content": "Animal migration, however it is defined, is far more than just the movement of animals. It can loosely be described as travel that takes place at regular intervals - often in an annual cycle - that may involve many members of a species, and is rewarded only after a long journey. It suggests inherited instinct. The biologist Hugh Dingle has identified five characteristics that apply, in varying degrees and combinations, to all migrations. They are prolonged movements that carry animals outside familiar habitats; they tend to be linear, not zigzaggy; they involve special behaviours concerning preparation (such as overfeeding) and arrival; they demand special allocations of energy. And one more: migrating animals maintain an intense attentiveness to the greater mission, which keeps them undistracted by temptations and undeterred by challenges that would turn other animals aside."
+        }]
+      },
+      "sub_sections": [{
+        "first": 38,
+        "last": 40,
+        "type": "sentence",
+        "word_limit": 2,
+        "number_limit": 0,
+        "sentences": [
+          "Von Frisch discovered the difference between dance types by changing the position of the [].",
+          "The dance outside the hive points in the direction of the [].",
+          "The angle of the dance from the vertical shows the angle of the food from the []."
+        ]
+      }]
+    }, {
       "section_number": "Summary",
       "passage": {
         "image": "",

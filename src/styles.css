@@ -21,3 +21,7 @@ body {
 p {
   text-align: justify;
 }
+
+input {
+  color: rgb(103, 58, 183) !important;
+}

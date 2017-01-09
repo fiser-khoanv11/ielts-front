@@ -17,7 +17,7 @@
       <span *ngFor="let span of para; let j = 'index'">
         <md-input-container *ngIf="span.isInput" floatingPlaceholder="false">
           <b md-prefix class="margin-right-10">{{span.data}} </b>
-          <input md-input type="text" [(ngModel)]="answers[i][j]" placeholder="Type here"/>
+          <input md-input type="text" [(ngModel)]="answers[i][j]" placeholder=""/>
         </md-input-container>
         <span *ngIf="!span.isInput">{{span.data}}</span>
       </span>
