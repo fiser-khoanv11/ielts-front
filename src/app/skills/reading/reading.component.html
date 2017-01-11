@@ -47,6 +47,10 @@
         <div *ngIf="question.type == 'ending'">
           <app-ending [data]="question"></app-ending>
         </div>
+        <div *ngIf="question.type == 'information'">
+          <app-information [data]="question"
+            [sectionNumber]="section.section_number"></app-information>
+        </div>
       </div>
     </div>
   </md-tab>

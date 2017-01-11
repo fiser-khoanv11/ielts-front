@@ -1,27 +1,25 @@
 import { Component, OnInit } from '@angular/core';
 import { Input } from '@angular/core';
+import { ConverterService } from '../../services/converter.service';
 
 import { MdSnackBar } from '@angular/material';
 
 @Component({
   selector: 'app-multiple',
   templateUrl: './multiple.component.html',
-  styleUrls: ['./multiple.component.css']
+  styleUrls: ['./multiple.component.css'],
+  providers: [ ConverterService ]
 })
 export class MultipleComponent implements OnInit {
 
   @Input() data: Object;
   answers: string[] = [];
-  firstChar: string;
-  lastChar: string;
   numberOfChecked: number;
 
-  constructor(public snackBar: MdSnackBar) { }
+  constructor(public snackBar: MdSnackBar, private converterService: ConverterService) { }
 
   ngOnInit() {
-    this.firstChar = this.data['choices'][0].char;
     let length = this.data['choices'].length;
-    this.lastChar = this.data['choices'][length - 1].char;
   }
 
   checkLimit(): void {
@@ -47,7 +45,7 @@ export class MultipleComponent implements OnInit {
     let res: string[] = [];
     for (let i = 0; i < this.answers.length; i++) {
       if (this.answers[i]) {
-        res.push(this.data['choices'][i].char);
+        res.push(this.converterService.numberToLetter(i + 1));
       }
     }
     console.log(res);

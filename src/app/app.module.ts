@@ -28,6 +28,7 @@ import { BlankSpaceDirective } from './directives/blank-space.directive';
 import { SentenceComponent } from './reading-types/sentence/sentence.component';
 import { EndingComponent } from './reading-types/ending/ending.component';
 import { LetterPipe } from './pipes/letter.pipe';
+import { InformationComponent } from './reading-types/information/information.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +53,8 @@ import { LetterPipe } from './pipes/letter.pipe';
     BlankSpaceDirective,
     SentenceComponent,
     EndingComponent,
-    LetterPipe
+    LetterPipe,
+    InformationComponent
   ],
   imports: [
     BrowserModule,

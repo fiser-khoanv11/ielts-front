@@ -7,6 +7,74 @@ export class GetDataService {
 
   getDataForEachType(): Object[] {
     let data = [{
+      "section_number": "Multiple choice - multi",
+      "passage": {
+        "image": "http://abc.com/img.jpg",
+        "heading": "A neuroscientist reveals how to think differently 9-2-1",
+        "paras": [{
+          "mark": "a",
+          "content": "Hearing impairment or other auditory function deficit in young children can have a major impact on their development of speech and communication, resulting in a detrimental effect on their ability to learn at school. This is likely to have major consequences for the individual and the population as a whole. The New Zealand Ministry of Health has found from research carried out over two decades that 6-10% of children in that country are affected by hearing loss."
+        }, {
+          "mark": "b",
+          "content": "A preliminary study in New Zealand has shown that classroom noise presents a major concern for teachers and pupils. Modern teaching practices, the organisation of desks in the classroom, poor classroom acoustics, and mechanical means of ventilation such as air-conditioning units all contribute to the number of children unable to comprehend the teacher's voice. Education researchers Nelson and Soli have also suggested that recent trends in learning often involve collaborative interaction of multiple minds and tools as much as individual possession of information. This all amounts to heightened activity and noise levels, which have the potential to be particularly serious for children experiencing auditory function deficit. Noise in classrooms can only exacerbate their difficulty in comprehending and processing verbal communication with other children and instructions from the teacher."
+        }]
+      },
+      "sub_sections": [{
+        "first": 11,
+        "last": 12,
+        "type": "multiple",
+        "limit": 2,
+        "des": "The list below includes factors contributing to classroom noise.",
+        "choices": [
+          "current teaching methods",
+          "echoing corridors",
+          "cooling systems",
+          "large class sizes",
+          "loud-voiced teachers",
+          "playground games"
+        ]
+      }]
+    }, {
+      "section_number": "Matchin information",
+      "passage": {
+        "image": "",
+        "heading": "Information theory - the big idea - 9-3-3",
+        "sub_heading": "Information theory lies at the heart of everything - from DVD players and the genetic code of DNA to the physics of the univers at its most fundamental. It has been central to the development of the science of communication, which enables data to be sent electronically and has therefore had a major impact on our lives",
+        "paras": [{
+          "mark": "a",
+          "content": "In April 2002 an event took...",
+        }, {
+          "mark": "b",
+          "content": "In April 2002 an event took...",
+        }, {
+          "mark": "c",
+          "content": "In April 2002 an event took...",
+        }, {
+          "mark": "d",
+          "content": "In April 2002 an event took...",
+        }, {
+          "mark": "e",
+          "content": "In April 2002 an event took...",
+        }, {
+          "mark": "f",
+          "content": "In April 2002 an event took...",
+        }]
+      },
+      "sub_sections": [{
+        "first": 27,
+        "last": 32,
+        "type": "information",
+        "number_of_paras": 6,
+        "text": [
+          "an explaination of the factors affecting the transmission of information",
+          "an example of how unnecessary information can be omitted",
+          "a reference to Shannon's attitude to fame",
+          "details of a machine capable of interpreting incomplete information",
+          "a detailed account of an incident involving information theory",
+          "a reference to what Shannon initially intended to achieve in his research"
+        ]
+      }]
+    }, {
       "section_number": "Matching sen. endings",
       "passage": {
         "image": "",
@@ -221,34 +289,6 @@ export class GetDataService {
             "it relies on previous events."
           ]
         }]
-      }]
-    }, {
-      "section_number": "Multiple choice - multi",
-      "passage": {
-        "image": "http://abc.com/img.jpg",
-        "heading": "A neuroscientist reveals how to think differently 9-2-1",
-        "paras": [{
-          "mark": "a",
-          "content": "Hearing impairment or other auditory function deficit in young children can have a major impact on their development of speech and communication, resulting in a detrimental effect on their ability to learn at school. This is likely to have major consequences for the individual and the population as a whole. The New Zealand Ministry of Health has found from research carried out over two decades that 6-10% of children in that country are affected by hearing loss."
-        }, {
-          "mark": "b",
-          "content": "A preliminary study in New Zealand has shown that classroom noise presents a major concern for teachers and pupils. Modern teaching practices, the organisation of desks in the classroom, poor classroom acoustics, and mechanical means of ventilation such as air-conditioning units all contribute to the number of children unable to comprehend the teacher's voice. Education researchers Nelson and Soli have also suggested that recent trends in learning often involve collaborative interaction of multiple minds and tools as much as individual possession of information. This all amounts to heightened activity and noise levels, which have the potential to be particularly serious for children experiencing auditory function deficit. Noise in classrooms can only exacerbate their difficulty in comprehending and processing verbal communication with other children and instructions from the teacher."
-        }]
-      },
-      "sub_sections": [{
-        "first": 11,
-        "last": 12,
-        "type": "multiple",
-        "limit": 2,
-        "des": "The list below includes factors contributing to classroom noise.",
-        "choices": [
-          {"char": "a", "text": "current teaching methods"},
-          {"char": "b", "text": "echoing corridors"},
-          {"char": "c", "text": "cooling systems"},
-          {"char": "d", "text": "large class sizes"},
-          {"char": "e", "text": "loud-voiced teachers"},
-          {"char": "f", "text": "playground games"}
-        ]
       }]
     }];
 
