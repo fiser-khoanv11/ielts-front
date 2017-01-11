@@ -7,6 +7,33 @@ export class GetDataService {
 
   getDataForEachType(): Object[] {
     let data = [{
+      "section_number": "Matching sen. endings",
+      "passage": {
+        "image": "",
+        "heading": "A neuroscientist reveals how to think differently 9-2-3",
+        "paras": [{
+          "content": "In the last decade a revolution has occurred in the way..."
+        }]
+      },
+      "sub_sections": [{
+        "first": 38,
+        "last": 40,
+        "type": "ending",
+        "nb": true,
+        "sentences": [
+          "Thinking like a successful iconoclast is demanding because it",
+          "The concept of the social brain is useful to iconoclasts because it",
+          "Iconoclasts are generally an asset because their way of thinking",
+        ],
+        "endings": [
+          "requires both perceptual and social intelligence skills.",
+          "focuses on how groups decide on an action.",
+          "works in many fields, both artistic and scientific.",
+          "leaves one open to criticism and rejection.",
+          "involves understanding how organisations manage people.",
+        ]
+      }]
+    }, {
       "section_number": "Sentence completion",
       "passage": {
         "image": "",
@@ -50,7 +77,7 @@ export class GetDataService {
         ]
       }]
     }, {
-      "section_number": "Identifying information (true-false)",
+      "section_number": "Identifying (true-false)",
       "passage": {
         "image": "http://abc.com/img.jpg",
         "heading": "William Henry Perkin 9-1-1",
@@ -146,16 +173,12 @@ export class GetDataService {
           "answer": 5
         }, {
           "char": "b",
-          "answer": "none"
         }, {
           "char": "c",
-          "answer": "none"
         }, {
           "char": "d",
-          "answer": "none"
         }, {
           "char": "e",
-          "answer": "none"
         }]
       }]
     }, {

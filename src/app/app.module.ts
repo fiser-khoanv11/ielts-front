@@ -26,6 +26,8 @@ import { SingleComponent } from './reading-types/single/single.component';
 import { SummaryComponent } from './reading-types/summary/summary.component';
 import { BlankSpaceDirective } from './directives/blank-space.directive';
 import { SentenceComponent } from './reading-types/sentence/sentence.component';
+import { EndingComponent } from './reading-types/ending/ending.component';
+import { LetterPipe } from './pipes/letter.pipe';
 
 @NgModule({
   declarations: [
@@ -48,7 +50,9 @@ import { SentenceComponent } from './reading-types/sentence/sentence.component';
     // SummaryCompletionComponent,
     SummaryComponent,
     BlankSpaceDirective,
-    SentenceComponent
+    SentenceComponent,
+    EndingComponent,
+    LetterPipe
   ],
   imports: [
     BrowserModule,

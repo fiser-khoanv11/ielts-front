@@ -1,8 +1,6 @@
 <h1>Need correction adapting for each type, true-false or yes-no.</h1>
 
-<p>
-  <i>Do the following statements agree with the information given in Reading Passage {{sectionNumber}}?</i>
-</p>
+<p>Do the following statements agree with the information given in Reading Passage {{sectionNumber}}?</p>
 <p>
   <i>In boxes {{data.first}}-{{data.last}} on your answer sheet, write</i>
 </p>
@@ -11,9 +9,10 @@
   <p><i><b>FALSE</b></i> if the statement contradicts with the information</p>
   <p><i><b>NOT GIVEN</b></i> if there is no information on this</p>
 </div>
+
 <div *ngFor="let text of data.text; let i = 'index'">
   <p><span>{{data.first + i}}. </span>{{text}}</p>
-  <md-select placeholder="Select" [(ngModel)]="answers[i]">
+  <md-select [(ngModel)]="answers[i]">
     <md-option *ngFor="let item of options" [value]="item">{{item | uppercase}}</md-option>
   </md-select>
 </div>

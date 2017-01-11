@@ -1,20 +1,46 @@
-<div class="list">
-  <p><b>List of Headings</b></p>
-  <div *ngFor="let heading of data.headings; let i = 'index'">
-    <p><span>{{i + 1 | roman}}. </span>{{heading}}</p>
-  </div>
-</div>
+<p>
+  Reading Passage {{sectionNumber}} has {{data.paras.length | textNumber}} paragraphs, 
+  <b>{{data.paras[0].char | uppercase}}-{{data.paras[data.paras.length - 1].char | uppercase}}</b>.
+</p>
+<p><i>Choose the correct heading for paragraph ?-? from the list of headings below.</i></p>
+<p><i>
+  Write the correct number, 
+  <b>{{1 | roman}}-{{data.headings.length | roman}}</b>
+  , in boxes {{data.first}}-{{data.last}} on your answer sheet.
+</i></p>
+
+<md-card class="half-card">
+  <md-card-title>List of headings</md-card-title>
+  <md-card-content>
+    <p *ngFor="let heading of data.headings; let i = 'index'"
+       [style.color]="changeColor(i + 1) ? 'rgb(103, 58, 183)' : ''"
+       class="relative">
+       <span>{{i + 1 | roman}}. </span>
+       {{heading}}
+        <md-icon class="icon" 
+          color="warn"
+          *ngIf="checkDuplicated(i + 1)"
+          md-tooltip="This option is used more than once"
+          [mdTooltipPosition]="'right'">
+          warning
+        </md-icon>
+    </p>
+  </md-card-content>
+</md-card>
 
 <div *ngFor="let para of data.paras; let j = 'index'">
-  <p><span>{{data.first + j}}. </span>Paragraph {{para.char | uppercase}}</p>
-  <div *ngIf="para.answer == 'none'">
-    <md-select placeholder="Select" [(ngModel)]="answers[j]">
+  <p>
+    <span *ngIf="para.no">{{para.no}}. </span>
+    <span *ngIf="!para.no"><i>Example: </i></span>
+    Paragraph {{para.char | uppercase}}
+  </p>
+  <div *ngIf="!para.answer">
+    <md-select [(ngModel)]="answers[j]">
       <md-option *ngFor="let heading of data.headings; let i = 'index'"
                  [value]="i + 1">{{i + 1 | roman}}</md-option>
     </md-select>
   </div>
-  <div *ngIf="para.answer != 'none'">
-    <p><i>Example: {{para.answer | roman}}</i></p>
+  <div *ngIf="para.answer">
+    <p><i>Answer: </i>{{para.answer | roman}}</p>
   </div>
 </div>
-

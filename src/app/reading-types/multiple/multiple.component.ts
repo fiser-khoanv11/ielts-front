@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Input } from '@angular/core';
 
-import { MdSnackBar, MdButton } from '@angular/material';
+import { MdSnackBar } from '@angular/material';
 
 @Component({
   selector: 'app-multiple',
@@ -35,7 +35,7 @@ export class MultipleComponent implements OnInit {
 
     if (this.numberOfChecked == this.data['limit'] && count == this.data['limit'] + 1) {
       console.warn('Limit');
-      this.snackBar.open('Careful with the choice limit!', 'OK', {
+      this.snackBar.open('Be careful with the choice limit!', 'OK', {
         duration: 2000
       });
     }
