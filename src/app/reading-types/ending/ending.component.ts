@@ -12,30 +12,31 @@ export class EndingComponent implements OnInit {
 
   @Input() data: Object;
   answers: number[] = [];
+  mark: string = 'letter';
 
   constructor(private converterService: ConverterService) { }
 
   ngOnInit() {
   }
 
-  changeColor(v: number): boolean {
-    if (this.answers.indexOf(v) >= 0) return true;
-    return false;
-  }
+  // changeColor(v: number): boolean {
+  //   if (this.answers.indexOf(v) >= 0) return true;
+  //   return false;
+  // }
 
-  checkDuplicated(v: number): boolean {
-    if (this.data['nb']) return false;
+  // checkDuplicated(v: number): boolean {
+  //   if (this.data['nb']) return false;
 
-    let count = 0;
-    for (let i = 0; i < this.answers.length; i++) {
-      if (this.answers[i] == v) {
-        count ++;
-        if (count >= 2) return true;
-      }
-    }
+  //   let count = 0;
+  //   for (let i = 0; i < this.answers.length; i++) {
+  //     if (this.answers[i] == v) {
+  //       count ++;
+  //       if (count >= 2) return true;
+  //     }
+  //   }
 
-    return false;
-  }
+  //   return false;
+  // }
 
   getAnswers() {
     let res: string[] = [];

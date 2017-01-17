@@ -1,5 +1,4 @@
-<md-slide-toggle [(ngModel)]="data.nb">NB (Can choose more than once)</md-slide-toggle>
-{{data.nb}}
+<md-slide-toggle [(ngModel)]="data.duplicatable">NB (Can choose more than once)</md-slide-toggle>
 <p>
   <i>Complete each sentence with the correct ending, 
   <b>{{1 | letter | uppercase}}-{{data.endings.length | letter | uppercase}}</b>
@@ -13,9 +12,14 @@
     <span *ngIf="data.last - data.first > 1"> - </span>
     {{data.last}} on your answer sheet.
 </i></p>
-<p *ngIf="data.nb"><b>NB</b> You may use any letter more than once.</p>
+<p *ngIf="data.duplicatable"><b>NB</b> You may use any letter more than once.</p>
 
-<md-card class="half-card">
+<app-option-list [duplicatable]="data.duplicatable"
+                 [list]="data.endings"
+                 [answers]="answers"
+                 [mark]="mark"></app-option-list>
+
+<!-- <md-card class="half-card">
   <md-card-content>
     <p *ngFor="let ending of data.endings; let i = 'index'"
        [style.color]="changeColor(i + 1) ? 'rgb(103, 58, 183)' : ''"
@@ -31,7 +35,7 @@
         </md-icon>
     </p>
   </md-card-content>
-</md-card>
+</md-card> -->
 
 <div *ngFor="let sen of data.sentences; let i = 'index'">
   <p><span>{{data.first + i}}. </span>{{sen}}</p>

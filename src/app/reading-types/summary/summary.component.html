@@ -1,12 +1,12 @@
-<p><i>Complete the summary below.</i></p>
+<p><i>Complete the note below.</i></p>
 <p>
-  <i>Choose <b>NO MORE THAN {{data.word_limit | textNumber | uppercase}} WORDS <span *ngIf="data.number_limit != 0">AND/OR {{data.number_limit | textNumber | uppercase}} NUMBER</span></b> from the passage for each answer.</i>
+  <i>Choose <b>{{data.word_limit | textNumber | uppercase}} WORD(S) <span *ngIf="data.number_limit != 0">AND/OR {{data.number_limit | textNumber | uppercase}} NUMBER</span></b> from the passage for each answer.</i>
 </p>
 <p>
   <i>
     Write your answers in boxes {{data.first}}
     <span *ngIf="data.last - data.first == 1"> and </span>
-    <span *ngIf="data.last - data.first > 1"> - </span>
+    <span *ngIf="data.last - data.first > 1">-</span>
     {{data.last}} on your answer sheet.
   </i>
 </p>

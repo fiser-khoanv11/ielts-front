@@ -1,6 +1,7 @@
 <app-test-toolbar></app-test-toolbar>
+<!-- <button md-button (click)="test()">TEST</button> -->
 <md-tab-group>
-  <md-tab *ngFor="let section of data" label="S. {{section.section_number}}">
+  <md-tab *ngFor="let section of data" label="S.{{section.section_number}}">
     <div class="padding-50">
       <md-card class="margin-bottom-50">
         <md-card-title>{{section.passage.heading}}</md-card-title>
@@ -38,8 +39,11 @@
         <div *ngIf="question.type == 'single'">
           <app-single [data]="question"></app-single>
         </div>
-        <div *ngIf="question.type == 'summary'">
+        <div *ngIf="question.type == 'summary' && question.source == 'text'">
           <app-summary [data]="question"></app-summary>
+        </div>
+        <div *ngIf="question.type == 'summary' && question.source == 'select'">
+          <app-summary-select [data]="question"></app-summary-select>
         </div>
         <div *ngIf="question.type == 'sentence'">
           <app-sentence [data]="question"></app-sentence>
@@ -61,7 +65,7 @@
     <div><md-checkbox class="check-box" checked="true">1. Multiple choice</md-checkbox></div>
     <div><md-checkbox class="check-box" checked="true">2. Identifying information</md-checkbox></div>
     <div><md-checkbox class="check-box" checked="true">3. Identifying writer's views/claims</md-checkbox></div>
-    <div><md-checkbox class="check-box" >4. Matching information</md-checkbox></div>
+    <div><md-checkbox class="check-box" checked="true">4. Matching information</md-checkbox></div>
     <div><md-checkbox class="check-box" checked="true">5. Matching headings</md-checkbox></div>
     <div><md-checkbox class="check-box" >6. Matching features</md-checkbox></div>
     <div><md-checkbox class="check-box" checked="true">7. Matching sentence endings</md-checkbox></div>

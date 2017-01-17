@@ -1,0 +1,51 @@
+<md-slide-toggle [(ngModel)]="data.duplicatable">Duplicatable</md-slide-toggle>
+
+<p><i>Complete the summary using the list of words, 
+  <b>A-{{data.words.length | letter | uppercase}}</b>, below.</i></p>
+<p><i>
+  Write your letter, <b>A-{{data.words.length | letter | uppercase}}</b>, in boxes {{data.first}}
+  <span *ngIf="data.last - data.first == 1"> and </span>
+  <span *ngIf="data.last - data.first > 1">-</span>
+  {{data.last}} on your answer sheet.
+</i></p>
+
+<md-card class="half-card">
+  <md-card-title>{{data.heading}}</md-card-title>
+  <md-card-content>
+    <p *ngFor="let para of displayParas; let i = 'index'">
+      <span *ngFor="let span of para; let j = 'index'">
+        <div *ngIf="span.isInput" class="inline-flex">
+          <b>{{span.data}}</b>
+          <md-select [(ngModel)]="answers[i][j]">
+            <md-option *ngFor="let word of data.words; let i = 'index'"
+                       [value]="i + 1">{{i + 1 | letter | uppercase}}. {{word}}</md-option>
+          </md-select>
+        </div>
+        <span *ngIf="!span.isInput">{{span.data}}</span>
+      </span>
+    </p>
+  </md-card-content>
+</md-card>
+
+<app-option-list [duplicatable]="data.duplicatable"
+                 [list]="data.words"
+                 [answers]="getAnswerArray()"
+                 [mark]="mark"></app-option-list>
+
+<!-- <md-card class="half-card">
+  <md-card-content>
+    <p *ngFor="let word of data.words; let i = 'index'"
+       [style.color]="changeColor(i + 1) ? 'rgb(103, 58, 183)' : ''"
+       class="relative">
+        <span>{{i + 1 | letter | uppercase}}. </span>
+        {{word}}
+        <md-icon class="icon"
+          color="warn"
+          *ngIf="checkDuplicated(i + 1)"
+          md-tooltip="This option is used more than once"
+          [mdTooltipPosition]="'right'">
+          warning
+        </md-icon>
+    </p>
+  </md-card-content>
+</md-card> -->

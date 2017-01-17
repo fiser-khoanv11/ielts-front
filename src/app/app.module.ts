@@ -29,6 +29,8 @@ import { SentenceComponent } from './reading-types/sentence/sentence.component';
 import { EndingComponent } from './reading-types/ending/ending.component';
 import { LetterPipe } from './pipes/letter.pipe';
 import { InformationComponent } from './reading-types/information/information.component';
+import { SummarySelectComponent } from './reading-types/summary-select/summary-select.component';
+import { OptionListComponent } from './components/option-list/option-list.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +56,9 @@ import { InformationComponent } from './reading-types/information/information.co
     SentenceComponent,
     EndingComponent,
     LetterPipe,
-    InformationComponent
+    InformationComponent,
+    SummarySelectComponent,
+    OptionListComponent
   ],
   imports: [
     BrowserModule,

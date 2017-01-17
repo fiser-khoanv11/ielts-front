@@ -22,6 +22,10 @@ p {
   text-align: justify;
 }
 
-input {
+input, .md-select-value {
   color: rgb(103, 58, 183) !important;
+}
+
+.inline-flex {
+  display: inline-flex;
 }

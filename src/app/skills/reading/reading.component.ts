@@ -8,6 +8,7 @@ import { HeadingComponent } from '../../reading-types/heading/heading.component'
 import { MultipleComponent } from '../../reading-types/multiple/multiple.component';
 import { SingleComponent } from '../../reading-types/single/single.component';
 import { SummaryComponent } from '../../reading-types/summary/summary.component';
+import { SummarySelectComponent } from '../../reading-types/summary-select/summary-select.component';
 import { EndingComponent } from '../../reading-types/ending/ending.component';
 
 import { GetDataService } from '../../services/get-data.service';
@@ -25,6 +26,7 @@ export class ReadingComponent implements OnInit {
   @ViewChildren(MultipleComponent) multipleComponents: QueryList<MultipleComponent>;
   @ViewChildren(SingleComponent) singleComponents: QueryList<SingleComponent>;
   @ViewChildren(SummaryComponent) summaryComponents: QueryList<SummaryComponent>;
+  @ViewChildren(SummarySelectComponent) summarySelectComponents: QueryList<SummarySelectComponent>;
   @ViewChildren(EndingComponent) endingComponents: QueryList<EndingComponent>;
 
   data: Object[];
@@ -35,6 +37,10 @@ export class ReadingComponent implements OnInit {
     this.data = this.getDataService.getDataForEachType();
   }
 
+  test() {
+    this.data = [];
+  }
+
   getAnswers(): Object {
     let arr = [];
     arr = arr.concat(this.trueFalseComponents.toArray());
@@ -43,6 +49,7 @@ export class ReadingComponent implements OnInit {
     arr = arr.concat(this.multipleComponents.toArray());
     arr = arr.concat(this.singleComponents.toArray());
     arr = arr.concat(this.summaryComponents.toArray());
+    arr = arr.concat(this.summarySelectComponents.toArray());
     arr = arr.concat(this.endingComponents.toArray());
 
     let answers: Object[] = [];

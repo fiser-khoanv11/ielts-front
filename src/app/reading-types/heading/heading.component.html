@@ -9,8 +9,8 @@
   , in boxes {{data.first}}-{{data.last}} on your answer sheet.
 </i></p>
 
-<md-card class="half-card">
-  <md-card-title>List of headings</md-card-title>
+<!-- <md-card class="half-card">
+  <md-card-title>List of Headings</md-card-title>
   <md-card-content>
     <p *ngFor="let heading of data.headings; let i = 'index'"
        [style.color]="changeColor(i + 1) ? 'rgb(103, 58, 183)' : ''"
@@ -26,7 +26,12 @@
         </md-icon>
     </p>
   </md-card-content>
-</md-card>
+</md-card> -->
+
+<app-option-list [duplicatable]="duplicatable"
+                 [list]="data.headings"
+                 [answers]="getAnswerArray()"
+                 [mark]="mark"></app-option-list>
 
 <div *ngFor="let para of data.paras; let j = 'index'">
   <p>

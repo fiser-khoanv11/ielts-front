@@ -10,7 +10,9 @@ export class HeadingComponent implements OnInit {
 
   @Input() data: Object;
   @Input() sectionNumber: number;
-  answers: number[] = [];
+  answers: Array<number> = [];
+  duplicatable: boolean = false;
+  mark: string = 'roman';
 
   constructor() { }
 
@@ -25,39 +27,58 @@ export class HeadingComponent implements OnInit {
     }
   }
 
-  changeColor(v: number): boolean {
-    for (let i = 0; i < this.data['paras'].length; i++) {
-      if (this.data['paras'][i]['answer'] == v) return true;
-    }
-
-    if (this.answers.indexOf(v) >= 0) return true;
-    return false;
-  }
-
-  checkDuplicated(v: number): boolean {
-    let array: number[] = [];
+  getAnswerArray(): Array<number> {
+    let array: Array<number> = this.answers.slice(0);
 
     for (let i = 0; i < this.data['paras'].length; i++) {
-      let answer = this.data['paras'][i]['answer'];
-      if (answer != undefined) {
-        array.push(answer);
+      let a = this.data['paras'][i]['answer'];
+      if (a != undefined) {
+        array.push(a);
       }
     }
 
-    for (let i = 0; i < this.answers.length; i++) {
-      array.push(this.answers[i]);
-    }
+    // for (let i = 0; i < this.answers.length; i++) {
+    //     if (this.answers[i][j] != undefined) {
+    //       array.push(this.answers[i][j]);
+    //     }
+    // }
 
-    let count = 0;
-    for (let i = 0; i < array.length; i++) {
-      if (array[i] == v) {
-        count ++;
-        if (count >= 2) return true;
-      }
-    }
-
-    return false;
+    return array;
   }
+
+  // changeColor(v: number): boolean {
+  //   for (let i = 0; i < this.data['paras'].length; i++) {
+  //     if (this.data['paras'][i]['answer'] == v) return true;
+  //   }
+
+  //   if (this.answers.indexOf(v) >= 0) return true;
+  //   return false;
+  // }
+
+  // checkDuplicated(v: number): boolean {
+  //   let array: number[] = [];
+
+  //   for (let i = 0; i < this.data['paras'].length; i++) {
+  //     let answer = this.data['paras'][i]['answer'];
+  //     if (answer != undefined) {
+  //       array.push(answer);
+  //     }
+  //   }
+
+  //   for (let i = 0; i < this.answers.length; i++) {
+  //     array.push(this.answers[i]);
+  //   }
+
+  //   let count = 0;
+  //   for (let i = 0; i < array.length; i++) {
+  //     if (array[i] == v) {
+  //       count ++;
+  //       if (count >= 2) return true;
+  //     }
+  //   }
+
+  //   return false;
+  // }
 
   getAnswers() {
     return this.answers;
