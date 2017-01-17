@@ -31,9 +31,11 @@ import { LetterPipe } from './pipes/letter.pipe';
 import { InformationComponent } from './reading-types/information/information.component';
 import { SummarySelectComponent } from './reading-types/summary-select/summary-select.component';
 import { OptionListComponent } from './components/option-list/option-list.component';
+import { IReadingComponent } from './reading-types/i-reading/i-reading.component';
 
 @NgModule({
   declarations: [
+    // IReadingComponent
     AppComponent,
     ComaComponent,
     CombComponent,
@@ -58,7 +60,7 @@ import { OptionListComponent } from './components/option-list/option-list.compon
     LetterPipe,
     InformationComponent,
     SummarySelectComponent,
-    OptionListComponent
+    OptionListComponent,
   ],
   imports: [
     BrowserModule,

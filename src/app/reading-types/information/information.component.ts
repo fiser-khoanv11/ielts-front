@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Input } from '@angular/core';
 import { ConverterService } from '../../services/converter.service';
-
+import { IReadingComponent } from '../i-reading/i-reading.component';
 
 @Component({
   selector: 'app-information',
@@ -9,7 +9,7 @@ import { ConverterService } from '../../services/converter.service';
   styleUrls: ['./information.component.css'],
   providers: [ ConverterService ]
 })
-export class InformationComponent implements OnInit {
+export class InformationComponent implements OnInit, IReadingComponent {
 
   @Input() data: Object;
   @Input() sectionNumber: number;

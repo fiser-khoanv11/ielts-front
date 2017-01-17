@@ -1,12 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { Input } from '@angular/core';
+import { IReadingComponent } from '../i-reading/i-reading.component';
 
 @Component({
   selector: 'app-sentence',
   templateUrl: './sentence.component.html',
   styleUrls: ['./sentence.component.css']
 })
-export class SentenceComponent implements OnInit {
+export class SentenceComponent implements OnInit, IReadingComponent {
 
   @Input() data: Object;
   displaySens: Array<Array<Object>> = [];

@@ -31,21 +31,3 @@
                  [list]="data.words"
                  [answers]="getAnswerArray()"
                  [mark]="mark"></app-option-list>
-
-<!-- <md-card class="half-card">
-  <md-card-content>
-    <p *ngFor="let word of data.words; let i = 'index'"
-       [style.color]="changeColor(i + 1) ? 'rgb(103, 58, 183)' : ''"
-       class="relative">
-        <span>{{i + 1 | letter | uppercase}}. </span>
-        {{word}}
-        <md-icon class="icon"
-          color="warn"
-          *ngIf="checkDuplicated(i + 1)"
-          md-tooltip="This option is used more than once"
-          [mdTooltipPosition]="'right'">
-          warning
-        </md-icon>
-    </p>
-  </md-card-content>
-</md-card> -->

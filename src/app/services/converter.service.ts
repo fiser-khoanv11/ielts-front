@@ -19,6 +19,33 @@ export class ConverterService {
       case 10: return 'j';
     }
 
-    return 'nan';
+    return null;
+  }
+
+  paragraphToArray(paragraphs: Array<string>, first: number): Array<Array<Object>> {
+    let result: Array<Array<Object>> = [];
+
+    for (let i = 0; i < paragraphs.length; i++) {
+      result[i] = [];
+      let paragraph: string = paragraphs[i];
+
+      while (paragraph.includes('[]')) {
+        paragraph = paragraph.replace('[]', '*{}*');
+      }
+
+      let splitedPara: Array<string> = paragraph.split('*');
+      
+      for (let j = 0; j < splitedPara.length; j++) {
+        if (splitedPara[j] == '{}') {
+          result[i].push({ isInput: true, data: first });
+          first++;
+        } else {
+          result[i].push({ isInput: false, data: splitedPara[j] });
+        }
+      }
+    }
+
+    // console.warn(result);
+    return result;
   }
 }

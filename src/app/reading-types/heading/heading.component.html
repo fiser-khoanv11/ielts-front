@@ -40,7 +40,7 @@
     Paragraph {{para.char | uppercase}}
   </p>
   <div *ngIf="!para.answer">
-    <md-select [(ngModel)]="answers[j]">
+    <md-select [(ngModel)]="answers[para.no - data.first]">
       <md-option *ngFor="let heading of data.headings; let i = 'index'"
                  [value]="i + 1">{{i + 1 | roman}}</md-option>
     </md-select>

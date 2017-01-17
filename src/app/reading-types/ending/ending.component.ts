@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Input } from '@angular/core';
 import { ConverterService } from '../../services/converter.service';
+import { IReadingComponent } from '../i-reading/i-reading.component';
 
 @Component({
   selector: 'app-ending',
@@ -8,7 +9,7 @@ import { ConverterService } from '../../services/converter.service';
   styleUrls: ['./ending.component.css'],
   providers: [ ConverterService ]
 })
-export class EndingComponent implements OnInit {
+export class EndingComponent implements OnInit, IReadingComponent {
 
   @Input() data: Object;
   answers: number[] = [];
@@ -18,25 +19,6 @@ export class EndingComponent implements OnInit {
 
   ngOnInit() {
   }
-
-  // changeColor(v: number): boolean {
-  //   if (this.answers.indexOf(v) >= 0) return true;
-  //   return false;
-  // }
-
-  // checkDuplicated(v: number): boolean {
-  //   if (this.data['nb']) return false;
-
-  //   let count = 0;
-  //   for (let i = 0; i < this.answers.length; i++) {
-  //     if (this.answers[i] == v) {
-  //       count ++;
-  //       if (count >= 2) return true;
-  //     }
-  //   }
-
-  //   return false;
-  // }
 
   getAnswers() {
     let res: string[] = [];

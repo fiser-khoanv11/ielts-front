@@ -2,14 +2,16 @@ import { Component, OnInit } from '@angular/core';
 import { ViewChildren, QueryList } from '@angular/core';
 import { RouterModule, Routes, Router } from '@angular/router';
 
-import { TrueFalseComponent } from '../../reading-types/true-false/true-false.component';
 import { AnswerComponent } from '../../reading-types/answer/answer.component';
+import { EndingComponent } from '../../reading-types/ending/ending.component';
 import { HeadingComponent } from '../../reading-types/heading/heading.component';
+import { InformationComponent } from '../../reading-types/information/information.component';
 import { MultipleComponent } from '../../reading-types/multiple/multiple.component';
+import { SentenceComponent } from '../../reading-types/sentence/sentence.component';
 import { SingleComponent } from '../../reading-types/single/single.component';
 import { SummaryComponent } from '../../reading-types/summary/summary.component';
 import { SummarySelectComponent } from '../../reading-types/summary-select/summary-select.component';
-import { EndingComponent } from '../../reading-types/ending/ending.component';
+import { TrueFalseComponent } from '../../reading-types/true-false/true-false.component';
 
 import { GetDataService } from '../../services/get-data.service';
 
@@ -28,6 +30,8 @@ export class ReadingComponent implements OnInit {
   @ViewChildren(SummaryComponent) summaryComponents: QueryList<SummaryComponent>;
   @ViewChildren(SummarySelectComponent) summarySelectComponents: QueryList<SummarySelectComponent>;
   @ViewChildren(EndingComponent) endingComponents: QueryList<EndingComponent>;
+  @ViewChildren(InformationComponent) informationComponents: QueryList<InformationComponent>;
+  @ViewChildren(SentenceComponent) sentenceComponents: QueryList<SentenceComponent>;
 
   data: Object[];
 
@@ -51,21 +55,43 @@ export class ReadingComponent implements OnInit {
     arr = arr.concat(this.summaryComponents.toArray());
     arr = arr.concat(this.summarySelectComponents.toArray());
     arr = arr.concat(this.endingComponents.toArray());
+    arr = arr.concat(this.informationComponents.toArray());
+    arr = arr.concat(this.sentenceComponents.toArray());
 
     let answers: Object[] = [];
     for (let i = 0; i < arr.length; i++) {
       answers.push({
         type: arr[i].data.type,
+        first: arr[i].data.first,
         answers: arr[i].getAnswers()
       });
     }
 
-    console.log('ok here');
+    let overall: Array<Object> = [];
+    for (let i = 0; i < arr.length; i++) {
+      let t = 0;
+      let data = arr[i].getAnswers();
+      for (let j = arr[i].data.first; j <= arr[i].data.last; j++) {
+        overall.push({
+          no: j,
+          ans: data[t]
+        });
+
+        t++;
+      }
+    }
+
     console.log(answers);
-    console.log(JSON.stringify(answers));
-    // this.router.navigate(['/result', answers]);
+    // console.log(JSON.stringify(answers));
+    console.log(JSON.stringify(overall.sort(this.compare)));
 
     return null;
+  }
+
+  compare(a: Object, b: Object): number {
+    if (a['no'] < b['no']) return -1;
+    if (a['no'] > b['no']) return 1;
+    return 0;
   }
 
 }

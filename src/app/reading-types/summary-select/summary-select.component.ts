@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Input } from '@angular/core';
 import { ConverterService } from '../../services/converter.service';
+import { IReadingComponent } from '../i-reading/i-reading.component';
 
 @Component({
   selector: 'app-summary-select',
@@ -8,7 +9,7 @@ import { ConverterService } from '../../services/converter.service';
   styleUrls: ['./summary-select.component.css'],
   providers: [ ConverterService ]
 })
-export class SummarySelectComponent implements OnInit {
+export class SummarySelectComponent implements OnInit, IReadingComponent {
 
   @Input() data: Object;
   displayParas: Array<Array<Object>> = [];
@@ -18,27 +19,10 @@ export class SummarySelectComponent implements OnInit {
   constructor(private converterService: ConverterService) { }
 
   ngOnInit() {
-    let first = this.data['first'];
     let paras = this.data['paras'];
+    this.displayParas = this.converterService.paragraphToArray(paras, this.data['first']);
     
     for (let i = 0; i < paras.length; i++) {
-      let para = paras[i];
-      while (para.includes('[]')) {
-        para = para.replace('[]', '*{}*');
-      }
-
-      let tempDisplayPara = para.split('*');
-      for (let j = 0; j < tempDisplayPara.length; j++) {
-        if (tempDisplayPara[j] == '{}') {
-          tempDisplayPara[j] = { isInput: true, data: first };
-          first++;
-        } else {
-          tempDisplayPara[j] = { isInput: false, data: tempDisplayPara[j] };
-        }
-      }
-
-      this.displayParas[i] = tempDisplayPara;
-
       this.answers[i] = [];
     }
   }
