@@ -32,6 +32,7 @@ import { InformationComponent } from './reading-types/information/information.co
 import { SummarySelectComponent } from './reading-types/summary-select/summary-select.component';
 import { OptionListComponent } from './components/option-list/option-list.component';
 import { IReadingComponent } from './reading-types/i-reading/i-reading.component';
+import { FeatureComponent } from './reading-types/feature/feature.component';
 
 @NgModule({
   declarations: [
@@ -61,6 +62,7 @@ import { IReadingComponent } from './reading-types/i-reading/i-reading.component
     InformationComponent,
     SummarySelectComponent,
     OptionListComponent,
+    FeatureComponent,
   ],
   imports: [
     BrowserModule,

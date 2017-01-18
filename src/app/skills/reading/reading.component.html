@@ -55,6 +55,9 @@
           <app-information [data]="question"
             [sectionNumber]="section.section_number"></app-information>
         </div>
+        <div *ngIf="question.type == 'feature'">
+          <app-feature [data]="question"></app-feature>
+        </div>
       </div>
     </div>
   </md-tab>
@@ -67,7 +70,7 @@
     <div><md-checkbox class="check-box" checked="true">3. Identifying writer's views/claims</md-checkbox></div>
     <div><md-checkbox class="check-box" checked="true">4. Matching information</md-checkbox></div>
     <div><md-checkbox class="check-box" checked="true">5. Matching headings</md-checkbox></div>
-    <div><md-checkbox class="check-box" >6. Matching features</md-checkbox></div>
+    <div><md-checkbox class="check-box" checked="true">6. Matching features</md-checkbox></div>
     <div><md-checkbox class="check-box" checked="true">7. Matching sentence endings</md-checkbox></div>
     <div><md-checkbox class="check-box" checked="true">8. Sentence completion</md-checkbox></div>
     <div><md-checkbox class="check-box" indeterminate="true">9. Summary, note, table, flow-chart completion</md-checkbox></div>

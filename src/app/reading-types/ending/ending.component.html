@@ -19,24 +19,6 @@
                  [answers]="answers"
                  [mark]="mark"></app-option-list>
 
-<!-- <md-card class="half-card">
-  <md-card-content>
-    <p *ngFor="let ending of data.endings; let i = 'index'"
-       [style.color]="changeColor(i + 1) ? 'rgb(103, 58, 183)' : ''"
-       class="relative">
-        <span>{{i + 1 | letter | uppercase}}. </span>
-        {{ending}}
-        <md-icon class="icon" 
-          color="warn"
-          *ngIf="checkDuplicated(i + 1)"
-          md-tooltip="This option is used more than once"
-          [mdTooltipPosition]="'right'">
-          warning
-        </md-icon>
-    </p>
-  </md-card-content>
-</md-card> -->
-
 <div *ngFor="let sen of data.sentences; let i = 'index'">
   <p><span>{{data.first + i}}. </span>{{sen}}</p>
   <md-select [(ngModel)]="answers[i]">

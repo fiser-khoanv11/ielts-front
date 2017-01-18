@@ -7,6 +7,30 @@ export class GetDataService {
 
   getDataForEachType(): Object[] {
     let data = [{
+      "section_number": "feature",
+      "passage": {
+        "image": "",
+        "heading": "Collecting Ant Specimens 8-4-3",
+        "paras": [{
+          "content": "This book will provide a detailed examination of the Little Ice Age..."
+        }]
+      },
+      "sub_sections": [{
+        "first": 31,
+        "last": 36,
+        "type": "feature",
+        "des": "Classify the following statements as referring to",
+        "features": [ "hand colleting", "using bait", "sampling ground litter", "using a pitfall trap" ],
+        "text": [
+          "It is preferable to take specimens from groups of ants.",
+          "It is particularly effective for wet habitats.",
+          "It is a good method for species which are hard to find.",
+          "Little time and efford is required.",
+          "Separate containers are used for individual specimens.",
+          "Non-alcoholic preservative should be used."
+        ],
+      }]
+    }, {
       "section_number": "Summary - Select",
       "passage": {
         "image": "",

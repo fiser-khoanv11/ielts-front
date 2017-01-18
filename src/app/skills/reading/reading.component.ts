@@ -4,6 +4,7 @@ import { RouterModule, Routes, Router } from '@angular/router';
 
 import { AnswerComponent } from '../../reading-types/answer/answer.component';
 import { EndingComponent } from '../../reading-types/ending/ending.component';
+import { FeatureComponent } from '../../reading-types/feature/feature.component';
 import { HeadingComponent } from '../../reading-types/heading/heading.component';
 import { InformationComponent } from '../../reading-types/information/information.component';
 import { MultipleComponent } from '../../reading-types/multiple/multiple.component';
@@ -32,6 +33,7 @@ export class ReadingComponent implements OnInit {
   @ViewChildren(EndingComponent) endingComponents: QueryList<EndingComponent>;
   @ViewChildren(InformationComponent) informationComponents: QueryList<InformationComponent>;
   @ViewChildren(SentenceComponent) sentenceComponents: QueryList<SentenceComponent>;
+  @ViewChildren(FeatureComponent) featureComponents: QueryList<FeatureComponent>;
 
   data: Object[];
 
@@ -57,6 +59,7 @@ export class ReadingComponent implements OnInit {
     arr = arr.concat(this.endingComponents.toArray());
     arr = arr.concat(this.informationComponents.toArray());
     arr = arr.concat(this.sentenceComponents.toArray());
+    arr = arr.concat(this.featureComponents.toArray());
 
     let answers: Object[] = [];
     for (let i = 0; i < arr.length; i++) {
