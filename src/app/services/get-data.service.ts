@@ -1,9 +1,10 @@
 import { Injectable } from '@angular/core';
+import { Http } from '@angular/http';
 
 @Injectable()
 export class GetDataService {
 
-  constructor() { }
+  constructor(private http: Http) { }
 
   getDataForEachType(): Object[] {
     let data = [{
@@ -19,6 +20,7 @@ export class GetDataService {
         "first": 31,
         "last": 36,
         "type": "feature",
+        "duplicatable": false,
         "des": "Classify the following statements as referring to",
         "features": [ "hand colleting", "using bait", "sampling ground litter", "using a pitfall trap" ],
         "text": [
@@ -42,8 +44,8 @@ export class GetDataService {
       "sub_sections": [{
         "first": 18,
         "last": 22,
-        "type": "summary",
-        "source": "select",
+        "type": "summary-select",
+        // "source": "select",
         "duplicatable": true,
         "heading": "Weather during the Little Ice Age",
         "paras": [
@@ -65,7 +67,7 @@ export class GetDataService {
         "first": 23,
         "last": 26,
         "type": "summary",
-        "source": "text",
+        // "source": "text",
         "word_limit": 1,
         "number_limit": 0,
         "heading": "The migration of pronghorns",
@@ -347,115 +349,12 @@ export class GetDataService {
     return data;
   }
 
-  getData() {
-    let data = [{
-      "section_number": 1,
-      "passage": {
-        "image": "",
-        "heading": "The life and work of Marie Curie",
-        "paras": [{
-          "content": "Marie Curie is probably the most famous woman scientist who has ever lived. Born Maria Sklodowska in Poland in 1867, she is famous for her work on radioactivity, and was twice a winner of the Nobel Prize. With her husband, Pierre Curie, and Henri Becquerel, she was awarded the 1903 Nobel Prize for Physics, and was then sole winner of the 1911 Nobel Prize for Chemistry. She was the first woman to win a Nobel Prize."
-        }, {
-          "content": "From childhood, Marie was remarkable for her prodigious memory, and at the age of 16 won a gold medal on completion of her secondary education. Because her father lost his savings through bad investment, she then had to take work as a teacher. From her earnings she was able to finance her sister Bronia's medical studies in Paris, on the understanding that Bronia would, in turn, later help her to get an education."
-        }, {
-          "content": "In 1891 this promise was fulfilled and Marie went to Paris and began to study at the Sorbonne (the University of Paris). She often worked far into the night and lived on little more than bread and butter and tea. She came first in the examination in the physical sciences in 1893, and in 1894 was placed second in the examination in mathematical sciences. It was not until the spring of that year that she was introduced to Pierre Curie."
-        }, {
-          "content": "Their marriage in 1895 marked the start of a partnership that was soon to achieve results of world significance. Following Henri Becquerel's discovery in 1896 of a new phenomenon, which Marie later called 'radioactivity', Marie Curie decided to find out if the radioactivity discovered in uranium was to be found in other elements. She discovered that this was true for thorium."
-        }, {
-          "content": "Turning her attention to minerals, she found her interest drawn to pitchblende, a mineral whose radioactivity, superior to that of pure uranium, could be explained only by the presence in the ore of small quantities of an unknown substance of very high activity. Pierre Curie joined her in the work that she had undertaken to resolve this problem, and that led to the discovery of the new elements, polonium and radium. While Pierre Curie devoted himself chiefly to the physical study of the new radiations, Marie Curie struggled to obtain pure radium in the metallic state. This was achieved with the help of the chemist André-Louis Debierne, one of Pierre Curie's pupils. Based on the results of this research, Marie Curie received her Doctorate of Science, and in 1903 Marie and Pierre shared with Becquerel the Nobel Prize for Physics for the discovery of radioactivity."
-        }, {
-          "content": "The births of Marie's two daughters, Irène and Eve, in 1897 and 1904 failed to interrupt her scientific work. She was appointed lecturer in physics at the École Normale Supérieure for girls in Sèvres, France (1900), and introduced a method of teaching based on experimental demonstrations. In December 1904 she was appointed chief assistant in the laboratory directed by Pierre Curie."
-        }, {
-          "content": "The sudden death of her husband in 1906 was a bitter blow to Marie Curie, but was also a turning point in her career: henceforth she was to devote all her energy to completing alone the scientific work that they had undertaken. On May 13, 1906, she was appointed to the professorship that had been left vacant on her husband's death, becoming the first woman to teach at the Sorbonne. In 1911 she was awarded the Nobel Prize for Chemistry for the isolation of a pure form of radium."
-        }, {
-          "content": "During World War I, Marie Curie, with the help of her daughter Irène, devoted herself to the development of the use of X-radiography, including the mobile units which came to be known as ‘Little Curies', used for the treatment of wounded soldiers. In 1918 the Radium Institute, whose staff Irène had joined, began to operate in earnest, and became a centre for nuclear physics and chemistry. Marie Curie, now at the highest point of her fame and, from 1922, a member of the Academy of Medicine, researched the chemistry of radioactive substances and their medical applications."
-        }, {
-          "content": "In 1921, accompanied by her two daughters, Marie Curie made a triumphant journey to the United States to raise funds for research on radium. Women there presented her with a gram of radium for her campaign. Marie also gave lectures in Belgium, Brazil, Spain and Czechoslovakia and, in addition, had the satisfaction of seeing the development of the Curie Foundation in Paris, and the inauguration in 1932 in Warsaw of the Radium Institute, where her sister Bronia became director."
-        }, {
-          "content": "One of Marie Curie's outstanding achievements was to have understood the need to accumulate intense radioactive sources, not only to treat illness but also to maintain an abundant supply for research. The existence in Paris at the Radium Institute of a stock of 1.5 grams of radium made a decisive contribution to the success of the experiments undertaken in the years around 1930. This work prepared the way for the discovery of the neutron by Sir James Chadwick and, above all, for the discovery in 1934 by Irène and Frédéric Joliot-Curie of artificial radioactivity. A few months after this discovery, Marie Curie died as a result of leukaemia caused by exposure to radiation. She had often carried test tubes containing radioactive isotopes in her pocket, remarking on the pretty blue-green light they gave off."
-        }, {
-          "content": "Her contribution to physics had been immense, not only in her own work, the importance of which had been demonstrated by her two Nobel Prizes, but because of her influence on subsequent generations of nuclear physicists and chemists."
-        }]
-      },
-      "sub_sections": [{
-        "first": 1,
-        "last": 6,
-        "type": "true-false",
-        "options": "tf",
-        "text": [
-          "Marie Curie’s husband was a joint winner of both Marie’s Nobel Prizes.",
-          "Marie became interested in science when she was a child.",
-          "Marie was able to attend the Sorbonne because of her sister’s financial contribution.",
-          "Marie stopped doing research for several years when her children were born.",
-          "Marie took over the teaching position her husband had held.",
-          "Marie’s sister Bronia studied the medical uses of radioactivity."
-        ]
-      }, {
-        "first": 7,
-        "last": 13,
-        "type": "summary",
-        "word_limit": 1,
-        "number_limit": 0,
-        "heading": "Marie Curie’s research on radioactivity",
-        "paras": [
-          "When uranium was discovered to be radioactive, Marie Curie found that the element called [] had the same property.",
-          "Marie and Pierre Curie’s research into the radioactivity of the mineral known as [] led to the discovery of two new elements.",
-          "In 1911, Marie Curie received recognition for her work on the element [].",
-          "Marie and Irene Curie developed X-radiography which was used as a medical technique for [].",
-          "Marie Curie saw the importance of collecting radioactive material both for research and for cases of [].",
-          "The radioactive material stocked in Paris contributed to the discoveries in the 1930s of the [] and of what was known as artificial radioactivity.",
-          "During her research, Marie Curie was exposed to radiation and as a result she suffered from []."
-        ]
-      }]
-    }, {
-      "section_number": 2,
-      "passage": {
-        "image": "http://abc.com/img.jpg",
-        "heading": "Young children's sense of identity",
-        "paras": [{
-          "mark": "a",
-          "content": "A sense of self develops in young children by degrees. The process can usefully be thought of in terms of the gradual emergence of two somewhat separate features: the self as a subject, and the self as an object. William James introduced the distinction in 1892, and contemporaries of his, such as Charles Cooley, added to the developing debate. Ever since then psychologists have continued building on the theory."
-        }, {
-          "mark": "b",
-          "content": "According to James, a child's first step on the road to self-understanding can be seen as the recognition that he or she exists. This is an aspect of the self that he labelled 'self-as-subject', and he gave it various elements. These included an awareness of one's own agency (i.e. one's power to act), and an awareness of one's distinctiveness from other people. These features gradually emerge as infants explore their world and interact with caregivers. Cooley (1902) suggested that a sense of the self-as-subject was primarily concerned with being able to exercise power. He proposed that the earliest examples of this are an infant's attempts to control physical objects, such as toys or his or her own limbs. This is followed by attempts to affect the behaviour of other people. For example, infants learn that when they cry or smile someone responds to them."
-        }, {
-          "mark": "c",
-          "content": "Another powerful source of information for infants about the effects they can have on the world around them is provided when others mimic them. Many parents spend a lot of time, particularly in the early months, copying their infant's vocalizations and expressions. In addition, young children enjoy looking in mirrors, where the movements they can see are dependent upon their own movements. This is not to say that infants recognize the reflection as their own image (a later development). However, Lewis and Brooks-Gunn (1979) suggest that infants' developing understanding that the movements they see in the mirror are contingent on their own, leads to a growing awareness that they are distinct from other people. This is because they, and only they, can change the reflection in the mirror."
-        }, {
-          "mark": "d",
-          "content": "This understanding that children gain of themselves as active agents continues to develop in their attempts to co-operate with others in play. Dunn (1988) points out that it is in such day-to-day relationships and interactions that the child's understanding of his- or herself emerges. Empirical investigations of the self-as-subject in young children are, however, rather scarce because of difficulties of communication: even if young infants can reflect on their experience, they certainly cannot express this aspect of the self directly."
-        }, {
-          "mark": "e",
-          "content": "Once children have acquired a certain level of self-awareness, they begin to place themselves in a whole series of categories, which together play such an important part in defining them uniquely as 'themselves'. This second step in the development of a full sense of self is what James called the 'self-as-object'. This has been seen by many to be the aspect of the self which is most influenced by social elements, since it is made up of social roles (such as student, brother, colleague) and characteristics which derive their meaning from comparison or interaction with other people (such as trustworthiness, shyness, sporting ability)."
-        }, {
-          "mark": "f",
-          "content": "Cooley and other researchers suggested a close connection between a person's own understanding of their identity and other people's understanding of it. Cooley believed that people build up their sense of identity from the reactions of others to them, and from the view they believe others have of them. He called the self-as-object the 'looking-glass self', since people come to see themselves as they are reflected in others. Mead (1934) went even further, and saw the self and the social world as inextricably bound together: 'The self is essentially a social structure, and it arises in social experience ... it is impossible to conceive of a self arising outside of social experience.'"
-        }, {
-          "mark": "g",
-          "content": "Lewis and Brooks-Gunn argued that an important developmental milestone is reached when children become able to recognize themselves visually without the support of seeing contingent movement. This recognition occurs around their second birthday. In one experiment, Lewis and Brooks-Gunn (1979) dabbed some red powder on the noses of children who were playing in front of a mirror, and then observed how often they touched their noses. The psychologists reasoned that if the children knew what they usually looked like, they would be surprised by the unusual red mark and would start touching it. On the other hand, they found that children of 15 to 18 months are generally not able to recognize themselves unless other cues such as movement are present."
-        }, {
-          "mark": "h",
-          "content": "Finally, perhaps the most graphic expressions of self-awareness in general can be seen in the displays of rage which are most common from 18 months to 3 years of age. In a longitudinal study of groups of three or four children, Bronson (1975) found that the intensity of the frustration and anger in their disagreements increased sharply between the ages of 1 and 2 years. Often, the children's disagreements involved a struggle over a toy that none of them had played with before or after the tug-of-war: the children seemed to be disputing ownership rather than wanting to play with it. Although it may be less marked in other societies, the link between the sense of 'self' and of 'ownership' is a notable feature of childhood in Western societies."
-        }]
-      },
-      "sub_sections": [{
-        "first": 14,
-        "last": 19,
-        "type": "information",
-        "duplicatable": true,
-        "number_of_paras": 8,
-        "text": [
-          "an account of the method used by researchers in a particular study",
-          "the role of imitation in developing a sense of identity",
-          "the age at which children can usually identify a static image of themselves",
-          "a reason for the limitations of scientific research into ‘self-as-subject’",
-          "reference to a possible link between culture and a particular form of behaviour",
-          "examples of the wide range of features that contribute to the sense of 'self-as-object'"
-        ]
-      }]
-    }];
-
-    return data;
+  getData(): Promise<Array<Object>> {
+    return new Promise(resolve => {
+      this.http.get('http://localhost:3000/').subscribe(result => {
+        resolve(result.json());
+      });
+    });
   }
 
 }

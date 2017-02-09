@@ -1,7 +1,7 @@
 <app-test-toolbar></app-test-toolbar>
 <!-- <button md-button (click)="test()">TEST</button> -->
 <md-tab-group>
-  <md-tab *ngFor="let section of data" label="S.{{section.section_number}}">
+  <md-tab *ngFor="let section of data" label="Section {{section.section_number}}">
     <div class="padding-50">
       <md-card class="margin-bottom-50">
         <md-card-title>{{section.passage.heading}}</md-card-title>
@@ -39,10 +39,10 @@
         <div *ngIf="question.type == 'single'">
           <app-single [data]="question"></app-single>
         </div>
-        <div *ngIf="question.type == 'summary' && question.source == 'text'">
+        <div *ngIf="question.type == 'summary'">
           <app-summary [data]="question"></app-summary>
         </div>
-        <div *ngIf="question.type == 'summary' && question.source == 'select'">
+        <div *ngIf="question.type == 'summary-select'">
           <app-summary-select [data]="question"></app-summary-select>
         </div>
         <div *ngIf="question.type == 'sentence'">
@@ -57,6 +57,9 @@
         </div>
         <div *ngIf="question.type == 'feature'">
           <app-feature [data]="question"></app-feature>
+        </div>
+        <div *ngIf="question.type == 'table'">
+          <app-table [data]="question"></app-table>
         </div>
       </div>
     </div>

@@ -1,0 +1,25 @@
+<p>Complete the table below.</p>
+<p>Choose ONE WORD AND/OR A NUMBER from the passage for each answer.</p>
+<p>
+  <i>
+    Write your answers in boxes {{data.first}}
+    <span *ngIf="data.last - data.first == 1"> and </span>
+    <span *ngIf="data.last - data.first > 1">-</span>
+    {{data.last}} on your answer sheet.
+  </i>
+</p>
+<table>
+  <tr *ngFor="let row of displayTable">
+    <td *ngFor="let cell of row">
+      <p *ngFor="let para of cell">
+        <span *ngFor="let span of para">
+          <md-input-container *ngIf="span.isInput" floatingPlaceholder="false">
+            <b md-prefix class="margin-right-10">{{span.data}} </b>
+            <input md-input type="text" placeholder=""/>
+          </md-input-container>
+          <span *ngIf="!span.isInput">{{span.data}}</span>
+        </span>
+      </p>
+    </td>
+  </tr>
+</table>

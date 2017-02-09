@@ -40,7 +40,9 @@ export class ReadingComponent implements OnInit {
   constructor(private router: Router, private getDataService: GetDataService) { }
 
   ngOnInit() {
-    this.data = this.getDataService.getDataForEachType();
+    this.getDataService.getData().then(result => {
+      this.data = result;  
+    });
   }
 
   test() {
