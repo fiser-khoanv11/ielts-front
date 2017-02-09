@@ -13,6 +13,7 @@ import { SingleComponent } from '../../reading-types/single/single.component';
 import { SummaryComponent } from '../../reading-types/summary/summary.component';
 import { SummarySelectComponent } from '../../reading-types/summary-select/summary-select.component';
 import { TrueFalseComponent } from '../../reading-types/true-false/true-false.component';
+import { TableComponent } from '../../reading-types/table/table.component';
 
 import { GetDataService } from '../../services/get-data.service';
 
@@ -34,14 +35,26 @@ export class ReadingComponent implements OnInit {
   @ViewChildren(InformationComponent) informationComponents: QueryList<InformationComponent>;
   @ViewChildren(SentenceComponent) sentenceComponents: QueryList<SentenceComponent>;
   @ViewChildren(FeatureComponent) featureComponents: QueryList<FeatureComponent>;
+  @ViewChildren(TableComponent) tableComponents: QueryList<TableComponent>;
 
-  data: Object[];
+  data: Object[] = [];
+  displayParas: Array<Array<Array<string>>> = [];
 
   constructor(private router: Router, private getDataService: GetDataService) { }
 
   ngOnInit() {
-    this.getDataService.getData().then(result => {
-      this.data = result;  
+    this.getDataService.getDataOffline().then(result => {
+      this.data = result;
+
+      for (let i = 0; i < this.data.length; i++) {
+
+        let paras = this.data[i]['passage']['paras'];
+        // console.log(paras);
+        for (let j = 0; j < paras.length; j++) {
+          paras[j]['content'] = [ {color: 'pink', text: paras[j]['content']} ];
+          // console.log(paras[j]['content']);
+        }
+      }
     });
   }
 
@@ -62,6 +75,7 @@ export class ReadingComponent implements OnInit {
     arr = arr.concat(this.informationComponents.toArray());
     arr = arr.concat(this.sentenceComponents.toArray());
     arr = arr.concat(this.featureComponents.toArray());
+    arr = arr.concat(this.tableComponents.toArray());
 
     let answers: Object[] = [];
     for (let i = 0; i < arr.length; i++) {
@@ -74,15 +88,13 @@ export class ReadingComponent implements OnInit {
 
     let overall: Array<Object> = [];
     for (let i = 0; i < arr.length; i++) {
-      let t = 0;
+      // let t = 0;
       let data = arr[i].getAnswers();
-      for (let j = arr[i].data.first; j <= arr[i].data.last; j++) {
+      for (let t = 0; t <= arr[i].data.last - arr[i].data.first; t++) {
         overall.push({
-          no: j,
+          no: arr[i].data.first + t,
           ans: data[t]
         });
-
-        t++;
       }
     }
 
@@ -97,6 +109,12 @@ export class ReadingComponent implements OnInit {
     if (a['no'] < b['no']) return -1;
     if (a['no'] > b['no']) return 1;
     return 0;
+  }
+
+  getChosenText() {
+    console.log(window.getSelection().anchorOffset);
+    console.log(window.getSelection());
+    console.log(window.getSelection().toString());
   }
 
 }

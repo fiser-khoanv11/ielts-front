@@ -19,6 +19,7 @@ export class RomanPipe implements PipeTransform {
       case 8: return 'viii';
       case 9: return 'ix';
       case 10: return 'x';
+      case 11: return 'xi';
     }
 
     return 'n';

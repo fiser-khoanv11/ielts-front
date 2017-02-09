@@ -5,9 +5,20 @@
   <i>In boxes {{data.first}}-{{data.last}} on your answer sheet, write</i>
 </p>
 <div class="options">
-  <p><i><b>TRUE</b></i> if the statement argees with the information</p>
-  <p><i><b>FALSE</b></i> if the statement contradicts with the information</p>
-  <p><i><b>NOT GIVEN</b></i> if there is no information on this</p>
+  <table>
+    <tr>
+      <td><p class="option primary-color">TRUE</p></td>
+      <td><p>if the statement argees with the information</p></td>
+    </tr>
+    <tr>
+      <td><p class="option primary-color">FALSE</p></td>
+      <td><p>if the statement contradicts with the information</p></td>
+    </tr>
+    <tr>
+      <td><p class="option primary-color">NOT GIVEN</p></td>
+      <td><p>if there is no information on this</p></td>
+    </tr>
+  </table>
 </div>
 
 <div *ngFor="let text of data.text; let i = 'index'">

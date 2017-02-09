@@ -1,4 +1,14 @@
+table {
+  border-collapse: collapse;
+  background: rgba(128, 128, 128, 0.1);
+}
+
 td {
   border: 1px solid black;
   padding: 5px;
+}
+
+.para-in-cell {
+  margin: 0px;
+  text-align: initial;
 }

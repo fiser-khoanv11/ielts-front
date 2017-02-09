@@ -1,67 +1,88 @@
 <app-test-toolbar></app-test-toolbar>
-<!-- <button md-button (click)="test()">TEST</button> -->
+
+<button (click)="getChosenText()">GET</button>
+
 <md-tab-group>
   <md-tab *ngFor="let section of data" label="Section {{section.section_number}}">
-    <div class="padding-50">
-      <md-card class="margin-bottom-50">
-        <md-card-title>{{section.passage.heading}}</md-card-title>
-        <md-card-subtitle>{{section.passage.sub_heading}}</md-card-subtitle>
-        <md-card-content>
-          <div *ngFor="let para of section.passage.paras">
-            <button *ngIf="para.mark" md-mini-fab class="mark" disabled="false">{{para.mark | uppercase}}</button>
-            <p class="para">{{para.content}}</p>
-          </div>
-        </md-card-content>
-      </md-card>
+    <div class="padding-20">
       
-      <div *ngFor="let question of section.sub_sections" class="block">
-        <h3 *ngIf="question.first == question.last">Question {{question.first}}</h3>
-        <h3 *ngIf="question.first != question.last">
-          Questions {{question.first}}
-            <span *ngIf="question.last - question.first == 1"> and </span>
-            <span *ngIf="question.last - question.first > 1"> - </span>
-          {{question.last}}
-        </h3>
-        <div *ngIf="question.type == 'true-false'">
-          <app-true-false [data]="question" 
-            [sectionNumber]="section.section_number"></app-true-false>
-        </div>
-        <div *ngIf="question.type == 'answer'">
-          <app-answer [data]="question"></app-answer>
-        </div>
-        <div *ngIf="question.type == 'heading'">
-          <app-heading [data]="question"
-            [sectionNumber]="section.section_number"></app-heading>
-        </div>
-        <div *ngIf="question.type == 'multiple'">
-          <app-multiple [data]="question"></app-multiple>
-        </div>
-        <div *ngIf="question.type == 'single'">
-          <app-single [data]="question"></app-single>
-        </div>
-        <div *ngIf="question.type == 'summary'">
-          <app-summary [data]="question"></app-summary>
-        </div>
-        <div *ngIf="question.type == 'summary-select'">
-          <app-summary-select [data]="question"></app-summary-select>
-        </div>
-        <div *ngIf="question.type == 'sentence'">
-          <app-sentence [data]="question"></app-sentence>
-        </div>
-        <div *ngIf="question.type == 'ending'">
-          <app-ending [data]="question"></app-ending>
-        </div>
-        <div *ngIf="question.type == 'information'">
-          <app-information [data]="question"
-            [sectionNumber]="section.section_number"></app-information>
-        </div>
-        <div *ngIf="question.type == 'feature'">
-          <app-feature [data]="question"></app-feature>
-        </div>
-        <div *ngIf="question.type == 'table'">
-          <app-table [data]="question"></app-table>
+      <!-- Left-Block -->
+      <div class="left-block">
+        <md-card class="left-card">
+          <md-card-title class="primary-color">{{section.passage.heading}}</md-card-title>
+          <md-card-subtitle>{{section.passage.sub_heading}}</md-card-subtitle>
+          <md-card-content>
+            <div *ngFor="let para of section.passage.paras">
+              <!-- <button *ngIf="para.mark" md-mini-fab class="mark" disabled="false">
+                {{para.mark | uppercase}}
+              </button> -->
+              <!-- <p class="para">{{para.content}}</p> -->
+              <p class="para">
+                <span *ngFor="let span of para.content" [ngStyle]="{'background': span.color}">{{span.text}}</span>
+              </p>
+            </div>
+          </md-card-content>
+        </md-card>
+      </div>
+      <!-- /Left-Block -->
+      
+      <!-- Right-Block -->
+      <div class="right-block">
+        <!-- Block for each set of questions -->
+        <div *ngFor="let question of section.sub_sections" class="margin-bottom-50">
+          <div class="question-block">
+            <h3 *ngIf="question.first == question.last">Question {{question.first}}</h3>
+            <h3 *ngIf="question.first != question.last">
+              Questions {{question.first}}
+                <span *ngIf="question.last - question.first == 1"> and </span>
+                <span *ngIf="question.last - question.first > 1">-</span>
+              {{question.last}}
+            </h3>  
+          </div>
+          
+          <div *ngIf="question.type == 'true-false'">
+            <app-true-false [data]="question" 
+              [sectionNumber]="section.section_number"></app-true-false>
+          </div>
+          <div *ngIf="question.type == 'answer'">
+            <app-answer [data]="question"></app-answer>
+          </div>
+          <div *ngIf="question.type == 'heading'">
+            <app-heading [data]="question"
+              [sectionNumber]="section.section_number"></app-heading>
+          </div>
+          <div *ngIf="question.type == 'multiple'">
+            <app-multiple [data]="question"></app-multiple>
+          </div>
+          <div *ngIf="question.type == 'single'">
+            <app-single [data]="question"></app-single>
+          </div>
+          <div *ngIf="question.type == 'summary'">
+            <app-summary [data]="question"></app-summary>
+          </div>
+          <div *ngIf="question.type == 'summary-select'">
+            <app-summary-select [data]="question"></app-summary-select>
+          </div>
+          <div *ngIf="question.type == 'sentence'">
+            <app-sentence [data]="question"></app-sentence>
+          </div>
+          <div *ngIf="question.type == 'ending'">
+            <app-ending [data]="question"></app-ending>
+          </div>
+          <div *ngIf="question.type == 'information'">
+            <app-information [data]="question"
+              [sectionNumber]="section.section_number"></app-information>
+          </div>
+          <div *ngIf="question.type == 'feature'">
+            <app-feature [data]="question"></app-feature>
+          </div>
+          <div *ngIf="question.type == 'table'">
+            <app-table [data]="question"></app-table>
+          </div>
         </div>
       </div>
+      <!-- /Right-Block -->
+
     </div>
   </md-tab>
 </md-tab-group>

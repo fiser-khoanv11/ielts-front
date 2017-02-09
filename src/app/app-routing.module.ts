@@ -10,7 +10,7 @@ import { TestComponent } from './pages/test/test.component';
 import { ResultComponent } from './pages/result/result.component';
 
 const appRoutes: Routes = [
-  { path: '', component: TestComponent },
+  { path: '', component: ReadingComponent },
   { path: 'test/reading', component: ReadingComponent },
   { path: 'test/listening', component: ListeningComponent },
   { path: 'result', component: ResultComponent },

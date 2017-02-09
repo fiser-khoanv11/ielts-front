@@ -10,6 +10,10 @@ body {
   padding: 50px;
 }
 
+.padding-20 {
+  padding: 20px;
+}
+
 .margin-bottom-50 {
   margin-bottom: 50px;
 }
@@ -28,4 +32,8 @@ input, .md-select-value {
 
 .inline-flex {
   display: inline-flex;
+}
+
+.primary-color {
+  color: #673ab7;
 }

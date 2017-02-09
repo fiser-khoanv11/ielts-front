@@ -357,4 +357,12 @@ export class GetDataService {
     });
   }
 
+  getDataOffline(): Promise<Array<Object>> {
+    return new Promise(resolve => {
+      this.http.get('app/services/data.json').subscribe(result => {
+        resolve(result.json());
+      });
+    });
+  }
+
 }
