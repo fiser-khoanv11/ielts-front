@@ -4,7 +4,7 @@ var app = express();
 var MongoClient = require('mongodb').MongoClient;
 var mongoose = require('mongoose');
 var assert = require('assert');
-var url = 'mongodb://khoa.uet58:nightingale394@ds147599.mlab.com:47599/m-proj';
+var url = 'mongodb://khoa.uet58:ariana1995@ds147599.mlab.com:47599/m-proj';
 var options = { server: { socketOptions: { keepAlive: 300000, connectTimeoutMS: 30000 } }, 
                 replset: { socketOptions: { keepAlive: 300000, connectTimeoutMS : 30000 } } };
 mongoose.connect(url, options);

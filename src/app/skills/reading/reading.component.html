@@ -1,7 +1,6 @@
 <app-test-toolbar></app-test-toolbar>
 
-<button (click)="getChosenText()">GET</button>
-
+<!-- <button (click)="getChosenText()">GET</button> -->
 <md-tab-group>
   <md-tab *ngFor="let section of data" label="Section {{section.section_number}}">
     <div class="padding-20">
@@ -16,10 +15,16 @@
               <!-- <button *ngIf="para.mark" md-mini-fab class="mark" disabled="false">
                 {{para.mark | uppercase}}
               </button> -->
-              <!-- <p class="para">{{para.content}}</p> -->
-              <p class="para">
+              <button *ngIf="para.mark" md-mini-fab class="" disabled="false">
+                {{para.mark | uppercase}}
+              </button>
+              <!-- {{para.highlight}} -->
+              <p class="para" appHighlight [parts]="para.highlight" [text]="para.content"></p>
+              <!-- <input [(ngModel)]="para.content"> -->
+              <!-- {{para.highlight | json}} -->
+              <!-- <p class="para">
                 <span *ngFor="let span of para.content" [ngStyle]="{'background': span.color}">{{span.text}}</span>
-              </p>
+              </p> -->
             </div>
           </md-card-content>
         </md-card>
@@ -87,7 +92,7 @@
   </md-tab>
 </md-tab-group>
 
-<div class="padding-50">
+<div class="padding-50" style="display:none">
   <md-card>
     <div><md-checkbox class="check-box" checked="true">1. Multiple choice</md-checkbox></div>
     <div><md-checkbox class="check-box" checked="true">2. Identifying information</md-checkbox></div>

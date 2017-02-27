@@ -34,6 +34,7 @@ import { OptionListComponent } from './components/option-list/option-list.compon
 import { IReadingComponent } from './reading-types/i-reading/i-reading.component';
 import { FeatureComponent } from './reading-types/feature/feature.component';
 import { TableComponent } from './reading-types/table/table.component';
+import { HighlightDirective } from './directives/highlight.directive';
 
 @NgModule({
   declarations: [
@@ -65,6 +66,7 @@ import { TableComponent } from './reading-types/table/table.component';
     OptionListComponent,
     FeatureComponent,
     TableComponent,
+    HighlightDirective,
   ],
   imports: [
     BrowserModule,
