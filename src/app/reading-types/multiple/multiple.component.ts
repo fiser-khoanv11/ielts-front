@@ -48,7 +48,7 @@ export class MultipleComponent implements OnInit, IReadingComponent {
         res.push(this.converterService.numberToLetter(i + 1));
       }
     }
-    console.log(res);
+
     return res;
   }
 

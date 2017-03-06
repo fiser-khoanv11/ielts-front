@@ -373,4 +373,12 @@ export class GetDataService {
     });
   }
 
+  getSpeakOffline(): Promise<Object> {
+    return new Promise(resolve => {
+      this.http.get('app/services/speak-data.json').subscribe(result => {
+        resolve(result.json());
+      });
+    });
+  }
+
 }

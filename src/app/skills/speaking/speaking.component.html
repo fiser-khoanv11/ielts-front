@@ -1,0 +1,52 @@
+<app-test-toolbar currentPage="3"></app-test-toolbar>
+
+<div class="padding-20" *ngIf="data">
+  <md-card>
+    <md-card-title class="primary-color center">Part 1</md-card-title>
+    <!-- <md-card-subtitle>You should spend about 20 minutes on this task.</md-card-subtitle> -->
+    <md-card-content>
+      <p>The examiner asks the candidate about him/herself, his/her home, work or studies and other familier topics.</p>
+      <!-- <p>EXAMPLE</p> -->
+      <div *ngFor="let topic of data.part_1.topics">
+        <p class="topic primary-color">{{topic.title}}</p>
+        <ul>
+          <li *ngFor="let question of topic.questions">{{question}}</li>
+        </ul>
+      </div>
+    </md-card-content>
+  </md-card>
+
+  <div class="space-20"></div>
+
+  <md-card>
+    <md-card-title class="primary-color center">Part 2</md-card-title>
+    <!-- <md-card-subtitle>You should spend about 40 minutes on this task.</md-card-subtitle> -->
+    <md-card-content>
+      <p>You will have to talk about the topic for one to two minutes.</p>
+      <p>You have one minute to think about what you are going to say.</p>
+      <p>You can make some notes to help you if you wish.</p>
+      <div class="box">
+        <p>{{data.part_2.question}}</p>
+        <p>You should say</p>
+        <ul>
+          <li *ngFor="let clue of data.part_2.clues">{{clue}}</li>
+        </ul>
+        <p>{{final_clue}}</p>
+      </div>
+    </md-card-content>
+  </md-card>
+
+  <div class="space-20"></div>
+
+  <md-card>
+    <md-card-title class="primary-color center">Part 3</md-card-title>
+    <md-card-content>
+      <!-- <p>Discussion topics:</p> -->
+      <div *ngFor="let topic of data.part_3.topics">
+        <p class="topic primary-color">{{topic.title}}</p>
+        <i>Example questions:</i>
+        <p *ngFor="let question of topic.questions">{{question}}</p>
+      </div>
+    </md-card-content>
+  </md-card>
+</div>

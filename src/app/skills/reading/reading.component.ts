@@ -95,18 +95,9 @@ export class ReadingComponent implements OnInit {
     arr = arr.concat(this.featureComponents.toArray());
     arr = arr.concat(this.tableComponents.toArray());
 
-    let answers: Object[] = [];
-    for (let i = 0; i < arr.length; i++) {
-      answers.push({
-        type: arr[i].data.type,
-        first: arr[i].data.first,
-        answers: arr[i].getAnswers()
-      });
-    }
-
+    // Lay du lieu
     let overall: Array<Object> = [];
     for (let i = 0; i < arr.length; i++) {
-      // let t = 0;
       let data = arr[i].getAnswers();
       for (let t = 0; t <= arr[i].data.last - arr[i].data.first; t++) {
         overall.push({
@@ -116,10 +107,10 @@ export class ReadingComponent implements OnInit {
       }
     }
 
-    console.log(answers);
-    // console.log(JSON.stringify(answers));
-    console.log(JSON.stringify(overall.sort(this.compare)));
+    // Sap xep lai
+    overall.sort(this.compare);
 
+    // Mo dialog
     this.dialog.open(SubmitDialog, { 
       // height: '400px',
       width: '600px',

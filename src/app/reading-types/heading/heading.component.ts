@@ -1,21 +1,23 @@
 import { Component, OnInit } from '@angular/core';
 import { Input } from '@angular/core';
 import { IReadingComponent } from '../i-reading/i-reading.component';
+import { ConverterService } from '../../services/converter.service';
 
 @Component({
   selector: 'app-heading',
   templateUrl: './heading.component.html',
-  styleUrls: ['./heading.component.css']
+  styleUrls: ['./heading.component.css'],
+  providers: [ ConverterService ]
 })
 export class HeadingComponent implements OnInit, IReadingComponent {
 
   @Input() data: Object;
   @Input() sectionNumber: number;
-  answers: Array<number> = [];
+  answers: Array<any> = [];
   duplicatable: boolean = false;
   mark: string = 'roman';
 
-  constructor() { }
+  constructor(private converterService: ConverterService) { }
 
   ngOnInit() {
     let first = this.data['first'];
@@ -42,7 +44,21 @@ export class HeadingComponent implements OnInit, IReadingComponent {
   }
 
   getAnswers() {
-    return this.answers;
+    let res: string[] = [];
+    
+    for (let i = 0; i < this.answers.length; i++) {
+      let temp: string = '';
+      
+      if (this.answers[i]) {
+        temp = this.converterService.numberToRoman(this.answers[i]);
+      } else {
+        temp = undefined;
+      }
+
+      res.push(temp);
+    }
+
+    return res;
   }
 
 }

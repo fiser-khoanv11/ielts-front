@@ -36,6 +36,7 @@ import { FeatureComponent } from './reading-types/feature/feature.component';
 import { TableComponent } from './reading-types/table/table.component';
 import { HighlightDirective } from './directives/highlight.directive';
 import { WritingComponent } from './skills/writing/writing.component';
+import { SpeakingComponent } from './skills/speaking/speaking.component';
 
 @NgModule({
   declarations: [
@@ -70,6 +71,7 @@ import { WritingComponent } from './skills/writing/writing.component';
     TableComponent,
     HighlightDirective,
     WritingComponent,
+    SpeakingComponent,
   ],
   entryComponents: [
     SubmitDialog,

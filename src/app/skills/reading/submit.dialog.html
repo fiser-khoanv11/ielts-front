@@ -1,4 +1,3 @@
-<!-- <h1 md-dialog-title>ANSWER SHEET</h1> -->
 <md-card>
   <md-card-title class="primary-color">Answer Sheet</md-card-title>
   <md-card-subtitle>Reading</md-card-subtitle>
@@ -11,7 +10,9 @@
         </tr>
         <tr *ngFor="let item of answers">
           <td class="first-col">{{item.no}}</td>
-          <td class="second-col">{{item.ans | uppercase}}</td>
+          <td class="second-col">
+            <span *ngIf="item.ans">{{item.ans}}</span>
+          </td>
         </tr>
       </table>
     </md-dialog-content>
