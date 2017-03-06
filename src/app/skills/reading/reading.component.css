@@ -66,3 +66,12 @@ figure, md-grid-tile {
 .title {
   text-align: center;
 }
+
+md-tab-group {
+  margin-bottom: 20px;
+}
+
+.actions {
+  text-align: end;
+  margin-bottom: 5px;
+}

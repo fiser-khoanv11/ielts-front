@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { ViewChildren, QueryList } from '@angular/core';
 import { RouterModule, Routes, Router } from '@angular/router';
 import { MdDialog, MdDialogRef } from '@angular/material';
@@ -20,10 +20,19 @@ import { GetDataService } from '../../services/get-data.service';
 
 @Component({
   selector: 'app-submit',
-  templateUrl: './submit.dialog.html'
+  templateUrl: './submit.dialog.html',
+  styleUrls: ['./submit.dialog.css'],
 })
-export class SubmitDialog {
-  constructor() { }
+export class SubmitDialog implements OnInit {
+
+  answers: Array<Object>;
+
+  constructor(private dialogRef: MdDialogRef<any>) { }
+
+  ngOnInit() {
+    this.answers = this.dialogRef.config.data.answers;
+    console.log(this.answers);
+  }
 }
 
 @Component({
@@ -71,7 +80,7 @@ export class ReadingComponent implements OnInit {
     this.data = [];
   }
 
-  getAnswers(): Object {
+  viewSheet(): Object {
     let arr = [];
     arr = arr.concat(this.trueFalseComponents.toArray());
     arr = arr.concat(this.answerComponents.toArray());
@@ -111,7 +120,13 @@ export class ReadingComponent implements OnInit {
     // console.log(JSON.stringify(answers));
     console.log(JSON.stringify(overall.sort(this.compare)));
 
-    // this.dialog.open(SubmitDialog, {});
+    this.dialog.open(SubmitDialog, { 
+      // height: '400px',
+      width: '600px',
+      data: {
+        answers: overall
+      }
+    });
 
     return null;
   }

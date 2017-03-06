@@ -1,6 +1,5 @@
 <app-test-toolbar currentPage="0"></app-test-toolbar>
 
-<!-- <button (click)="getChosenText()">GET</button> -->
 <md-tab-group *ngIf="data">
   <md-tab *ngFor="let section of data" label="Section {{section.section_number}}">
     <div class="padding-20">
@@ -15,7 +14,7 @@
               <!-- <button *ngIf="para.mark" md-mini-fab class="mark" disabled="false">
                 {{para.mark | uppercase}}
               </button> -->
-              <button *ngIf="para.mark" md-mini-fab class="" disabled="false">
+              <button *ngIf="para.mark" md-mini-fab disabled="false">
                 {{para.mark | uppercase}}
               </button>
               <p>{{para.content}}</p>
@@ -78,6 +77,12 @@
           <div *ngIf="question.type == 'table'">
             <app-table [data]="question"></app-table>
           </div>
+        </div>
+
+        <div class="actions">
+          <!-- <button md-raised-button (click)="viewSheet()">Next Section</button> -->
+          <button md-raised-button (click)="viewSheet()">View Answer Sheet</button>
+          <button md-raised-button color="primary" (click)="viewSheet()">Submit</button>
         </div>
       </div>
       <!-- /Right-Block -->

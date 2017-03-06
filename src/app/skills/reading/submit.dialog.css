@@ -1,0 +1,22 @@
+table {
+  width: 100%;
+  border-collapse: collapse;
+  /*background: rgba(67, 169, 208, 0.25);*/
+}
+
+td, th {
+  border: 1px solid black;
+  padding: 5px;
+}
+
+.first-col, .second-col {
+  text-align: center;
+}
+
+.first-col {
+  width: 15%;
+}
+
+.second-col {
+
+}

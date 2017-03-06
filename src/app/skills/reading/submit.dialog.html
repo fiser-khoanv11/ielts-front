@@ -1,1 +1,23 @@
-<p>yazzz kween!</p>
+<!-- <h1 md-dialog-title>ANSWER SHEET</h1> -->
+<md-card>
+  <md-card-title class="primary-color">Answer Sheet</md-card-title>
+  <md-card-subtitle>Reading</md-card-subtitle>
+  <md-card-content>
+    <md-dialog-content>
+      <table>
+        <tr>
+          <th>No.</th>
+          <th>Answer</th>
+        </tr>
+        <tr *ngFor="let item of answers">
+          <td class="first-col">{{item.no}}</td>
+          <td class="second-col">{{item.ans | uppercase}}</td>
+        </tr>
+      </table>
+    </md-dialog-content>
+  </md-card-content>
+</md-card>
+<md-dialog-actions>
+  <button md-raised-button color="primary">Submit</button>
+  <button md-button md-dialog-close>Close</button>
+</md-dialog-actions>
