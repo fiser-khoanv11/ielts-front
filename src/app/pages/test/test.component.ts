@@ -9,7 +9,12 @@ export class TestComponent implements OnInit {
 
   constructor() { }
 
+  tests = [1, 2, 3];
+  cardWidth: string;
+
   ngOnInit() {
+    this.cardWidth = (document.body.clientWidth / 4) + 'px';
+    console.log(this.cardWidth);
   }
 
 }

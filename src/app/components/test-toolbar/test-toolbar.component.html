@@ -2,9 +2,16 @@
   <p><a href="#" class="link">Cambridge IELTS 10</a> - Test 1</p>
   <span class="fill-remaining-space"></span>
   <nav>
-    <button md-button routerLink="/test/reading" routerLinkActive="active">Reading</button>
-    <button md-button routerLink="/test/listening" routerLinkActive="active">Listening</button>
-    <button md-button routerLink="/listening" routerLinkActive="active">Writing</button>
-    <button md-button routerLink="/result" routerLinkActive="active">Speaking</button>
+    <button *ngIf="currentPage == 0" md-raised-button class="primary-color">Reading</button>
+    <button *ngIf="currentPage != 0" md-button routerLink="/test/reading">Reading</button>
+
+    <button *ngIf="currentPage == 1" md-raised-button class="primary-color">Listening</button>
+    <button *ngIf="currentPage != 1" md-button routerLink="/test/listening">Listening</button>
+
+    <button *ngIf="currentPage == 2" md-raised-button class="primary-color">Writing</button>
+    <button *ngIf="currentPage != 2" md-button routerLink="/test/writing">Writing</button>
+
+    <button *ngIf="currentPage == 3" md-raised-button class="primary-color">Speaking</button>
+    <button *ngIf="currentPage != 4" md-button routerLink="/test/reading">Speaking</button>
   </nav>
 </md-toolbar>

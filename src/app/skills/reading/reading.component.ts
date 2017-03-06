@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ViewChildren, QueryList } from '@angular/core';
 import { RouterModule, Routes, Router } from '@angular/router';
+import { MdDialog, MdDialogRef } from '@angular/material';
 
 import { AnswerComponent } from '../../reading-types/answer/answer.component';
 import { EndingComponent } from '../../reading-types/ending/ending.component';
@@ -16,6 +17,14 @@ import { TrueFalseComponent } from '../../reading-types/true-false/true-false.co
 import { TableComponent } from '../../reading-types/table/table.component';
 
 import { GetDataService } from '../../services/get-data.service';
+
+@Component({
+  selector: 'app-submit',
+  templateUrl: './submit.dialog.html'
+})
+export class SubmitDialog {
+  constructor() { }
+}
 
 @Component({
   selector: 'app-reading',
@@ -41,10 +50,10 @@ export class ReadingComponent implements OnInit {
   displayParas: Array<Array<Array<string>>> = [];
   // color = { first: 5, last: 7 };
 
-  constructor(private router: Router, private getDataService: GetDataService) { }
+  constructor(private dialog: MdDialog, private getDataService: GetDataService) { }
 
   ngOnInit() {
-    this.getDataService.getDataOffline().then(result => {
+    this.getDataService.getReadOffline().then(result => {
       this.data = result;
 
       for (let i = 0; i < this.data.length; i++) {
@@ -102,6 +111,8 @@ export class ReadingComponent implements OnInit {
     // console.log(JSON.stringify(answers));
     console.log(JSON.stringify(overall.sort(this.compare)));
 
+    // this.dialog.open(SubmitDialog, {});
+
     return null;
   }
 
@@ -111,40 +122,40 @@ export class ReadingComponent implements OnInit {
     return 0;
   }
 
-  getChosenText() {
-    console.log(window.getSelection());
-    let toString = window.getSelection().toString();
-    let wholeString = window.getSelection().anchorNode['data'];
-    let first = window.getSelection().anchorOffset;
-    let last = window.getSelection().focusOffset;
-    // console.log(toString);
-    // console.log(wholeString);
-    // console.log(first);
-    // console.log(last);
+  // getChosenText() {
+  //   console.log(window.getSelection());
+  //   let toString = window.getSelection().toString();
+  //   let wholeString = window.getSelection().anchorNode['data'];
+  //   let first = window.getSelection().anchorOffset;
+  //   let last = window.getSelection().focusOffset;
+  //   // console.log(toString);
+  //   // console.log(wholeString);
+  //   // console.log(first);
+  //   // console.log(last);
 
-    // HERE
-    // console.warn(this.data);
-    for (let i = 0; i < this.data.length; i++) {
-      let paras = this.data[i]['passage']['paras'];
-      for (let j = 0; j < paras.length; j++) {
-        // console.log('here');
-        let para = paras[j];
-        // console.log(para);
-        // for (let t = 0; t < para['content']; t++) {
-        if (para['content'] == wholeString) {
-          // para
-          // console.warn('okeeeeeee');        
-          let tempPara = para['highlight'].slice();
-          tempPara.push({ first: first, last: last });
-          para['highlight'] = tempPara;
-          break;
-        }
+  //   // HERE
+  //   // console.warn(this.data);
+  //   for (let i = 0; i < this.data.length; i++) {
+  //     let paras = this.data[i]['passage']['paras'];
+  //     for (let j = 0; j < paras.length; j++) {
+  //       // console.log('here');
+  //       let para = paras[j];
+  //       // console.log(para);
+  //       // for (let t = 0; t < para['content']; t++) {
+  //       if (para['content'] == wholeString) {
+  //         // para
+  //         // console.warn('okeeeeeee');        
+  //         let tempPara = para['highlight'].slice();
+  //         tempPara.push({ first: first, last: last });
+  //         para['highlight'] = tempPara;
+  //         break;
+  //       }
         
-        // paras[j]['content'] = [ {color: 'pink', text: paras[j]['content']} ];
-      }
-    }
+  //       // paras[j]['content'] = [ {color: 'pink', text: paras[j]['content']} ];
+  //     }
+  //   }
 
-    console.log(this.data[0]);
-  }
+  //   console.log(this.data[0]);
+  // }
 
 }

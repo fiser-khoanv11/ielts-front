@@ -35,5 +35,9 @@ input, .md-select-value {
 }
 
 .primary-color {
-  color: #673ab7;
+  color: #673ab7 !important;
+}
+
+.space-20 {
+  height: 20px;
 }

@@ -10,7 +10,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { ComaComponent } from './components/coma/coma.component';
 import { CombComponent } from './components/comb/comb.component';
 import { ComcComponent } from './components/comc/comc.component';
-import { ReadingComponent } from './skills/reading/reading.component';
+import { ReadingComponent, SubmitDialog } from './skills/reading/reading.component';
 import { ListeningComponent } from './skills/listening/listening.component';
 import { TrueFalseComponent } from './reading-types/true-false/true-false.component';
 import { AnswerComponent } from './reading-types/answer/answer.component';
@@ -35,6 +35,7 @@ import { IReadingComponent } from './reading-types/i-reading/i-reading.component
 import { FeatureComponent } from './reading-types/feature/feature.component';
 import { TableComponent } from './reading-types/table/table.component';
 import { HighlightDirective } from './directives/highlight.directive';
+import { WritingComponent } from './skills/writing/writing.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { HighlightDirective } from './directives/highlight.directive';
     CombComponent,
     ComcComponent,
     ReadingComponent,
+    SubmitDialog,
     ListeningComponent,
     TrueFalseComponent,
     AnswerComponent,
@@ -67,6 +69,10 @@ import { HighlightDirective } from './directives/highlight.directive';
     FeatureComponent,
     TableComponent,
     HighlightDirective,
+    WritingComponent,
+  ],
+  entryComponents: [
+    SubmitDialog,
   ],
   imports: [
     BrowserModule,

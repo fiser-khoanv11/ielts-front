@@ -62,3 +62,7 @@ figure, md-grid-tile {
 .left-card {
   margin: 3px;
 }
+
+.title {
+  text-align: center;
+}

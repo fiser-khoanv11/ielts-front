@@ -4,21 +4,38 @@
 <p>
   <i>In boxes {{data.first}}-{{data.last}} on your answer sheet, write</i>
 </p>
+
 <div class="options">
-  <table>
+  <table *ngIf="data.options == 'tf'">
     <tr>
       <td><p class="option primary-color">TRUE</p></td>
       <td><p>if the statement argees with the information</p></td>
     </tr>
     <tr>
       <td><p class="option primary-color">FALSE</p></td>
-      <td><p>if the statement contradicts with the information</p></td>
+      <td><p>if the statement contradicts the information</p></td>
     </tr>
     <tr>
       <td><p class="option primary-color">NOT GIVEN</p></td>
       <td><p>if there is no information on this</p></td>
     </tr>
   </table>
+
+  <table *ngIf="data.options == 'yn'">
+    <tr>
+      <td><p class="option primary-color">YES</p></td>
+      <td><p>if the statement argees with the claims of the writer</p></td>
+    </tr>
+    <tr>
+      <td><p class="option primary-color">NO</p></td>
+      <td><p>if the statement contradicts the claims of the writer</p></td>
+    </tr>
+    <tr>
+      <td><p class="option primary-color">NOT GIVEN</p></td>
+      <td><p>if it is impossible to say what the writer thinks about this</p></td>
+    </tr>
+  </table>
+
 </div>
 
 <div *ngFor="let text of data.text; let i = 'index'">

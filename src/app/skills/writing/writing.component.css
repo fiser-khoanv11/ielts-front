@@ -1,0 +1,9 @@
+.box {
+  border: 1px solid black;
+  background: rgba(67, 169, 208, 0.25);
+  padding: 10px;
+}
+
+md-card {
+  width: 50%;
+}

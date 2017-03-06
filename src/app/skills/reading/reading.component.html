@@ -1,14 +1,14 @@
-<app-test-toolbar></app-test-toolbar>
+<app-test-toolbar currentPage="0"></app-test-toolbar>
 
 <!-- <button (click)="getChosenText()">GET</button> -->
-<md-tab-group>
+<md-tab-group *ngIf="data">
   <md-tab *ngFor="let section of data" label="Section {{section.section_number}}">
     <div class="padding-20">
       
       <!-- Left-Block -->
       <div class="left-block">
         <md-card class="left-card">
-          <md-card-title class="primary-color">{{section.passage.heading}}</md-card-title>
+          <md-card-title class="primary-color title">{{section.passage.heading}}</md-card-title>
           <md-card-subtitle>{{section.passage.sub_heading}}</md-card-subtitle>
           <md-card-content>
             <div *ngFor="let para of section.passage.paras">
@@ -18,13 +18,7 @@
               <button *ngIf="para.mark" md-mini-fab class="" disabled="false">
                 {{para.mark | uppercase}}
               </button>
-              <!-- {{para.highlight}} -->
-              <p class="para" appHighlight [parts]="para.highlight" [text]="para.content"></p>
-              <!-- <input [(ngModel)]="para.content"> -->
-              <!-- {{para.highlight | json}} -->
-              <!-- <p class="para">
-                <span *ngFor="let span of para.content" [ngStyle]="{'background': span.color}">{{span.text}}</span>
-              </p> -->
+              <p>{{para.content}}</p>
             </div>
           </md-card-content>
         </md-card>

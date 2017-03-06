@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-test-toolbar',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./test-toolbar.component.css']
 })
 export class TestToolbarComponent implements OnInit {
+
+  @Input() currentPage: number;
 
   constructor() { }
 

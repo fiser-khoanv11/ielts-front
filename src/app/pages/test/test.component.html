@@ -1,10 +1,23 @@
-<md-toolbar color="primary">
-  <p><a href="#" class="link">Cambridge IELTS 9</a> - Test 1</p>
-  <span class="fill-remaining-space"></span>
-  <nav>
-    <button md-button routerLink="/test/reading" routerLinkActive="active">Reading</button>
-    <button md-button routerLink="/listening" routerLinkActive="active">Listening</button>
-    <button md-button routerLink="/listening" routerLinkActive="active">Writing</button>
-    <button md-button routerLink="/result" routerLinkActive="active">Speaking</button>
-  </nav>
-</md-toolbar>
+<div class="overall">
+  <div *ngFor="let item of tests" class="card-div" [ngStyle]="{'width': cardWidth}">
+    <md-card class="example-card">
+      <md-card-header>
+        <div md-card-avatar class="example-header-image"></div>
+        <md-card-title>Cambridge IELTS 10</md-card-title>
+        <md-card-subtitle>Test {{item}}</md-card-subtitle>
+      </md-card-header>
+      <img md-card-image src="http://schoolsuganda.com/uploads/articles/35/650x650/1433145871-bc.png">
+      <!-- <md-card-content>
+        <p>
+          The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+          A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+          bred for hunting.
+        </p>
+      </md-card-content> -->
+      <md-card-actions>
+        <button md-button routerLink="/test/reading" routerLinkActive="active">TAKE THIS TEST</button>
+        <!-- <button md-button>SHARE</button> -->
+      </md-card-actions>
+    </md-card>
+  </div>
+</div>

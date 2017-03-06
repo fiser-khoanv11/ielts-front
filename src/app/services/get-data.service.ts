@@ -357,9 +357,17 @@ export class GetDataService {
     });
   }
 
-  getDataOffline(): Promise<Array<Object>> {
+  getReadOffline(): Promise<Array<Object>> {
     return new Promise(resolve => {
-      this.http.get('app/services/data.json').subscribe(result => {
+      this.http.get('app/services/read-data.json').subscribe(result => {
+        resolve(result.json());
+      });
+    });
+  }
+
+  getWriteOffline(): Promise<Object> {
+    return new Promise(resolve => {
+      this.http.get('app/services/write-data.json').subscribe(result => {
         resolve(result.json());
       });
     });
