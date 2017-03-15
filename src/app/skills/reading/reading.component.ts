@@ -17,22 +17,38 @@ import { TrueFalseComponent } from '../../reading-types/true-false/true-false.co
 import { TableComponent } from '../../reading-types/table/table.component';
 
 import { GetDataService } from '../../services/get-data.service';
+import { ConverterService } from '../../services/converter.service';
 
 @Component({
   selector: 'app-submit',
   templateUrl: './submit.dialog.html',
   styleUrls: ['./submit.dialog.css'],
+  providers: [ ConverterService ]
 })
 export class SubmitDialog implements OnInit {
 
   answers: Array<Object>;
+  keys: Array<Object>;
+  testResult: {result: Array<boolean>, noOfCorrect: number, score: number};
+  isSubmited: boolean;
 
-  constructor(private dialogRef: MdDialogRef<any>) { }
+  constructor(private dialogRef: MdDialogRef<any>, private converterService: ConverterService) { }
 
   ngOnInit() {
     this.answers = this.dialogRef.config.data.answers;
-    console.log(this.answers);
+    this.keys = this.dialogRef.config.data.keys;
+    this.isSubmited = this.dialogRef.config.data.isSubmited;
+    this.testResult = this.converterService.getTestResult(this.answers, this.keys);
   }
+
+  ngOnDestroy() {
+    this.dialogRef.close(this.isSubmited);
+  }
+
+  submit() {
+    this.isSubmited = true;
+  }
+
 }
 
 @Component({
@@ -56,31 +72,24 @@ export class ReadingComponent implements OnInit {
   @ViewChildren(TableComponent) tableComponents: QueryList<TableComponent>;
 
   data: Object[] = [];
+  keys: Object[] = [];
+  isSubmited: boolean = false;
   displayParas: Array<Array<Array<string>>> = [];
-  // color = { first: 5, last: 7 };
 
   constructor(private dialog: MdDialog, private getDataService: GetDataService) { }
 
   ngOnInit() {
     this.getDataService.getReadOffline().then(result => {
-      this.data = result;
+      this.data = result['content'];
+      this.keys = result['keys'];
 
-      for (let i = 0; i < this.data.length; i++) {
-        let paras = this.data[i]['passage']['paras'];
-        for (let j = 0; j < paras.length; j++) {
-          paras[j]['highlight'] = [];
-        }
+      if (this.keys.length != 40) {
+        console.error('keys.length <> 40');
       }
-
-      console.log(this.data);
     });
   }
 
-  test() {
-    this.data = [];
-  }
-
-  viewSheet(): Object {
+  getAnswers(): Array<Object> {
     let arr = [];
     arr = arr.concat(this.trueFalseComponents.toArray());
     arr = arr.concat(this.answerComponents.toArray());
@@ -110,16 +119,29 @@ export class ReadingComponent implements OnInit {
     // Sap xep lai
     overall.sort(this.compare);
 
+    if (overall.length != 40) {
+      console.error('overall.length != 40');
+    }
+
+    return overall;
+  }
+
+  viewSheet(): void {
+    let overall = this.getAnswers();
+
     // Mo dialog
-    this.dialog.open(SubmitDialog, { 
-      // height: '400px',
+    let dialogRef = this.dialog.open(SubmitDialog, { 
       width: '600px',
       data: {
-        answers: overall
+        answers: overall,
+        keys: this.keys,
+        isSubmited: this.isSubmited
       }
     });
 
-    return null;
+    dialogRef.afterClosed().subscribe(result => {
+      this.isSubmited = result;
+    });
   }
 
   compare(a: Object, b: Object): number {
@@ -156,7 +178,7 @@ export class ReadingComponent implements OnInit {
   //         para['highlight'] = tempPara;
   //         break;
   //       }
-        
+
   //       // paras[j]['content'] = [ {color: 'pink', text: paras[j]['content']} ];
   //     }
   //   }

@@ -1,3 +1,7 @@
+md-dialog-content::-webkit-scrollbar { 
+    display: none; 
+}
+
 table {
   width: 100%;
   border-collapse: collapse;
@@ -5,12 +9,12 @@ table {
 }
 
 td, th {
-  border: 1px solid black;
+  border: 1px solid #9E9E9E;
   padding: 5px;
 }
 
 .first-col, .second-col {
-  text-align: center;
+  /*text-align: center;*/
 }
 
 .first-col {
@@ -19,4 +23,31 @@ td, th {
 
 .second-col {
 
+}
+
+.mat-dialog-content {
+  max-height: 50vh;
+}
+
+.submit {
+  margin-right: 10px;
+}
+
+.score, .no-of-correct {
+  text-align: right;
+  margin: 0px;
+}
+
+.score {
+  font-size: 300%
+}
+
+.no-of-correct {
+  color: grey;
+  margin: 5px 0px 10px 0px;
+}
+
+.score-prefix {
+  font-size: 60%;
+  color: inherit;
 }

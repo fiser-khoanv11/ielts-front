@@ -5,6 +5,48 @@ export class ConverterService {
 
   constructor() { }
 
+  getTestResult(answers: Array<Object>, _keys: Array<Object>): {result: Array<boolean>, noOfCorrect: number, score: number} {
+    let result: Array<boolean> = [];
+
+    for (let i = 0; i < 40; i++) {
+      let answer = answers[i]['ans'];
+      let keys = _keys[i]['keys'];
+
+      result[i] = false;
+
+      for (let j = 0; j < keys.length; j++) {
+        if (answer == keys[j]) {
+          result[i] = true;
+          break;
+        }
+      }
+    }
+
+    let count = 0;
+    for (let i = 0; i < 40; i++) {
+      if (result[i]) count ++;
+    }
+
+    return { result: result, noOfCorrect: count, score: this.getReadingScore(count) };
+  }
+
+  getReadingScore(n: number) {
+    if (n >= 39) return 9;
+    if (n >= 37) return 8.5;
+    if (n >= 35) return 8;
+    if (n >= 33) return 7.5;
+    if (n >= 30) return 7;
+    if (n >= 27) return 6.5;
+    if (n >= 23) return 6;
+    if (n >= 19) return 5.5;
+    if (n >= 15) return 5;
+    if (n >= 13) return 4.5;
+    if (n >= 10) return 4;
+    if (n >= 8) return 3.5;
+    if (n >= 6) return 3;
+    return 0;
+  }
+
   numberToLetter(value: number): string {
     switch (value) {
       case 1: return 'a';

@@ -3,10 +3,8 @@
 <div class="padding-20" *ngIf="data">
   <md-card>
     <md-card-title class="primary-color center">Part 1</md-card-title>
-    <!-- <md-card-subtitle>You should spend about 20 minutes on this task.</md-card-subtitle> -->
+    <md-card-subtitle>The examiner asks the candidate about him/herself, his/her home, work or studies and other familier topics.</md-card-subtitle>
     <md-card-content>
-      <p>The examiner asks the candidate about him/herself, his/her home, work or studies and other familier topics.</p>
-      <!-- <p>EXAMPLE</p> -->
       <div *ngFor="let topic of data.part_1.topics">
         <p class="topic primary-color">{{topic.title}}</p>
         <ul>
@@ -20,7 +18,9 @@
 
   <md-card>
     <md-card-title class="primary-color center">Part 2</md-card-title>
-    <!-- <md-card-subtitle>You should spend about 40 minutes on this task.</md-card-subtitle> -->
+    <md-card-subtitle>
+      
+    </md-card-subtitle>
     <md-card-content>
       <p>You will have to talk about the topic for one to two minutes.</p>
       <p>You have one minute to think about what you are going to say.</p>
@@ -31,7 +31,7 @@
         <ul>
           <li *ngFor="let clue of data.part_2.clues">{{clue}}</li>
         </ul>
-        <p>{{final_clue}}</p>
+        <p>{{data.part_2.final_clue}}</p>
       </div>
     </md-card-content>
   </md-card>
@@ -40,6 +40,7 @@
 
   <md-card>
     <md-card-title class="primary-color center">Part 3</md-card-title>
+    <md-card-subtitle>Discussion topics</md-card-subtitle>
     <md-card-content>
       <!-- <p>Discussion topics:</p> -->
       <div *ngFor="let topic of data.part_3.topics">

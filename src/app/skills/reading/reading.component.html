@@ -1,5 +1,7 @@
 <app-test-toolbar currentPage="0"></app-test-toolbar>
-
+<div style="height: 200px; border:1px solid pink">
+  <div style="height: 50px; width: 50px; border:1px solid pink">babayawiefu</div>
+</div>
 <md-tab-group *ngIf="data">
   <md-tab *ngFor="let section of data" label="Section {{section.section_number}}">
     <div class="padding-20">
@@ -80,9 +82,10 @@
         </div>
 
         <div class="actions">
-          <!-- <button md-raised-button (click)="viewSheet()">Next Section</button> -->
-          <button md-raised-button (click)="viewSheet()">View Answer Sheet</button>
-          <button md-raised-button color="primary" (click)="viewSheet()">Submit</button>
+          <button md-raised-button color="primary" (click)="viewSheet()">
+            <span *ngIf="!isSubmited">View Answer Sheet & Submit</span>
+            <span *ngIf="isSubmited">Review</span>
+          </button>
         </div>
       </div>
       <!-- /Right-Block -->
