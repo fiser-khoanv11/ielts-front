@@ -15,7 +15,7 @@
 <div *ngFor="let question of data.questions; let i = 'index'">
   <p><span *ngIf="data.first != data.last">{{data.first + i}}. </span>{{question.text}}</p>
   <md-radio-group class="radio-group" [(ngModel)]="answers[i]">
-    <md-radio-button *ngFor="let choice of choices; let i = 'index'" 
-      [value]="choice">{{choice | uppercase}}. {{question.choices[i]}}</md-radio-button>
+    <md-radio-button *ngFor="let choice of question.choices; let i = 'index'" 
+      [value]="i + 1 | letter">{{i+1 | letter | uppercase}}. {{choice}}</md-radio-button>
   </md-radio-group>
 </div>

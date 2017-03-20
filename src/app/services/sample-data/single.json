@@ -1,0 +1,24 @@
+{
+  "first": 10,
+  "last": 11,
+  "type": "single",
+  "directions": [
+    "Choose the correct letter, <b>A</b>, <b>B</b> or <b>C</b>."
+  ],
+  "heading": "<optional> This is a heading",
+  "questions": [{
+    "text": "This is question 1",
+    "choices": [
+      "choice 1.",
+      "choice 2.",
+      "choice 3."
+    ]
+  }, {
+    "text": "This is question 2",
+    "choices": [
+      "choice 1.",
+      "choice 2.",
+      "choice 3."
+    ]
+  }]
+}

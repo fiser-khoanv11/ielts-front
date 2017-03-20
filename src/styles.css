@@ -41,3 +41,7 @@ input, .md-select-value {
 .space-20 {
   height: 20px;
 }
+
+.italic {
+  font-style: italic;
+}

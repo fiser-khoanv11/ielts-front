@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ViewChildren, QueryList } from '@angular/core';
-import { RouterModule, Routes, Router } from '@angular/router';
+import { RouterModule, Routes, Router, ActivatedRoute } from '@angular/router';
 import { MdDialog, MdDialogRef } from '@angular/material';
 
 import { AnswerComponent } from '../../reading-types/answer/answer.component';
@@ -8,13 +8,13 @@ import { EndingComponent } from '../../reading-types/ending/ending.component';
 import { FeatureComponent } from '../../reading-types/feature/feature.component';
 import { HeadingComponent } from '../../reading-types/heading/heading.component';
 import { InformationComponent } from '../../reading-types/information/information.component';
-import { MultipleComponent } from '../../reading-types/multiple/multiple.component';
+import { RMultipleComponent } from '../../reading-types/r-multiple/r-multiple.component';
 import { SentenceComponent } from '../../reading-types/sentence/sentence.component';
-import { SingleComponent } from '../../reading-types/single/single.component';
-import { SummaryComponent } from '../../reading-types/summary/summary.component';
+import { RSingleComponent } from '../../reading-types/r-single/r-single.component';
+import { RNoteComponent } from '../../reading-types/r-note/r-note.component';
 import { SummarySelectComponent } from '../../reading-types/summary-select/summary-select.component';
 import { TrueFalseComponent } from '../../reading-types/true-false/true-false.component';
-import { TableComponent } from '../../reading-types/table/table.component';
+import { RTableComponent } from '../../reading-types/r-table/r-table.component';
 
 import { GetDataService } from '../../services/get-data.service';
 import { ConverterService } from '../../services/converter.service';
@@ -58,28 +58,31 @@ export class SubmitDialog implements OnInit {
   providers: [ GetDataService ]
 })
 export class ReadingComponent implements OnInit {
+  @ViewChildren(RMultipleComponent) multipleComponents: QueryList<RMultipleComponent>;
+  @ViewChildren(RNoteComponent) summaryComponents: QueryList<RNoteComponent>;
+  @ViewChildren(RSingleComponent) singleComponents: QueryList<RSingleComponent>;
+  @ViewChildren(RTableComponent) tableComponents: QueryList<RTableComponent>;
+  
   @ViewChildren(TrueFalseComponent) trueFalseComponents: QueryList<TrueFalseComponent>;
   @ViewChildren(AnswerComponent) answerComponents: QueryList<AnswerComponent>;
   @ViewChildren(HeadingComponent) headingComponents: QueryList<HeadingComponent>;
-  @ViewChildren(MultipleComponent) multipleComponents: QueryList<MultipleComponent>;
-  @ViewChildren(SingleComponent) singleComponents: QueryList<SingleComponent>;
-  @ViewChildren(SummaryComponent) summaryComponents: QueryList<SummaryComponent>;
   @ViewChildren(SummarySelectComponent) summarySelectComponents: QueryList<SummarySelectComponent>;
   @ViewChildren(EndingComponent) endingComponents: QueryList<EndingComponent>;
   @ViewChildren(InformationComponent) informationComponents: QueryList<InformationComponent>;
   @ViewChildren(SentenceComponent) sentenceComponents: QueryList<SentenceComponent>;
   @ViewChildren(FeatureComponent) featureComponents: QueryList<FeatureComponent>;
-  @ViewChildren(TableComponent) tableComponents: QueryList<TableComponent>;
 
   data: Object[] = [];
   keys: Object[] = [];
   isSubmited: boolean = false;
-  displayParas: Array<Array<Array<string>>> = [];
 
-  constructor(private dialog: MdDialog, private getDataService: GetDataService) { }
+  constructor(private dialog: MdDialog, private getDataService: GetDataService, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
-    this.getDataService.getReadOffline().then(result => {
+    let id = this.activatedRoute.snapshot.params['id'];
+
+    this.getDataService.getReadingOffline(id).then(result => {
+      console.warn(result);
       this.data = result['content'];
       this.keys = result['keys'];
 

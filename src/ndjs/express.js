@@ -24,8 +24,11 @@ app.use(function(req, res, next) {
   next();
 });
 
-app.get('/', function (req, res) {
-  Test.find(function(err, test) {
+app.get('/reading/:id', function (req, res) {
+  // console.log(req.params);
+  Test.findOne({
+    "_id": req.params.id
+  }, function(err, test) {
     if (err) {
       res.send(err);
     } else {

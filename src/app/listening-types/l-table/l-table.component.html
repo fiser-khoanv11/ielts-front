@@ -1,0 +1,17 @@
+<p class="italic" *ngFor="let dir of data.directions" [innerHTML]="dir"></p>
+
+<table>
+  <tr *ngFor="let row of displayTable">
+    <td *ngFor="let cell of row">
+      <p *ngFor="let para of cell" class="para-in-cell">
+        <span *ngFor="let span of para">
+          <md-input-container *ngIf="span.isInput" floatingPlaceholder="false">
+            <b md-prefix class="margin-right-10">{{span.data}} </b>
+            <input mdInput type="text" [(ngModel)]="answers[span.data - data.first]" placeholder=""/>
+          </md-input-container>
+          <span *ngIf="!span.isInput" [innerHTML]="span.data"></span>
+        </span>
+      </p>
+    </td>
+  </tr>
+</table>

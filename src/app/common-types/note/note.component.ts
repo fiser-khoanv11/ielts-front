@@ -1,16 +1,13 @@
-import { Component, OnInit } from '@angular/core';
-import { Input } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { ConverterService } from '../../services/converter.service';
-import { IReadingComponent } from '../i-reading/i-reading.component';
 
 @Component({
-  selector: 'app-summary',
-  templateUrl: './summary.component.html',
-  styleUrls: ['./summary.component.css'],
-  providers: [ ConverterService ]
+  selector: 'app-note',
+  templateUrl: './note.component.html',
+  styleUrls: ['./note.component.css']
 })
-export class SummaryComponent implements OnInit, IReadingComponent {
-  
+export class NoteComponent implements OnInit {
+
   @Input() data: Object;
   displayParas: Array<Array<Object>> = [];
   answers: Object[] = [];

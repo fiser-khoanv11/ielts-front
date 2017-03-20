@@ -1,0 +1,47 @@
+{
+  "first": 9,
+  "last": 13,
+  "type": "table",
+  "directions": [
+    "Complete the table below.",
+    "Write <b>ONE WORD AND/OR A NUMBER</b> for each answer."
+  ],
+  "table": [
+    [
+      ["Stepwell"],
+      ["Date"],
+      ["Features"],
+      ["Other notes"]
+    ],
+    [
+      ["Rani Ki Vav"],
+      ["Late 11th century"],
+      ["As many as 500 sculptures decorate the monument"],
+      ["Restored in the 1960s", "Excellent condition, despite the [] of 2001"]
+    ],
+    [
+      ["Surya"],
+      ["1026"],
+      ["Steps on the [] produce a geometrical pattern", "Carved shrines"],
+      ["Looks more like a [] than a well"]
+    ],
+    [
+      ["Raniji Ki Baori"],
+      ["1699"],
+      ["Intricately carved monument"],
+      ["One of 21 baoris in the area commissioned by Queen Nathavatji"]
+    ],
+    [
+      ["Chand Baori"],
+      ["850 AD"],
+      ["Steps take you down 11 storey to the bottom"],
+      ["Old, deep and very dramatic", "Has [] which provide a view of the steps"]
+    ],
+    [
+      ["Neemrana Ki Baori"],
+      ["1700"],
+      ["Has two [] levels"],
+      ["Used by public today"]
+    ]
+  ]
+}

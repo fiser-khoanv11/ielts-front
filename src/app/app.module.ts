@@ -20,10 +20,9 @@ import { TextNumberPipe } from './pipes/text-number.pipe';
 import { TestComponent } from './pages/test/test.component';
 import { ResultComponent } from './pages/result/result.component';
 import { TestToolbarComponent } from './components/test-toolbar/test-toolbar.component';
-import { MultipleComponent } from './reading-types/multiple/multiple.component';
-import { SingleComponent } from './reading-types/single/single.component';
+
 // import { SummaryCompletionComponent } from './reading-types/summary-completion/summary-completion.component';
-import { SummaryComponent } from './reading-types/summary/summary.component';
+
 import { BlankSpaceDirective } from './directives/blank-space.directive';
 import { SentenceComponent } from './reading-types/sentence/sentence.component';
 import { EndingComponent } from './reading-types/ending/ending.component';
@@ -33,10 +32,26 @@ import { SummarySelectComponent } from './reading-types/summary-select/summary-s
 import { OptionListComponent } from './components/option-list/option-list.component';
 import { IReadingComponent } from './reading-types/i-reading/i-reading.component';
 import { FeatureComponent } from './reading-types/feature/feature.component';
-import { TableComponent } from './reading-types/table/table.component';
+
 import { HighlightDirective } from './directives/highlight.directive';
 import { WritingComponent } from './skills/writing/writing.component';
 import { SpeakingComponent } from './skills/speaking/speaking.component';
+
+import { MultipleComponent } from './common-types/multiple/multiple.component';
+import { LMultipleComponent } from './listening-types/l-multiple/l-multiple.component';
+import { RMultipleComponent } from './reading-types/r-multiple/r-multiple.component';
+
+import { NoteComponent } from './common-types/note/note.component';
+import { LNoteComponent } from './listening-types/l-note/l-note.component';
+import { RNoteComponent } from './reading-types/r-note/r-note.component';
+
+import { SingleComponent } from './common-types/single/single.component';
+import { LSingleComponent } from './listening-types/l-single/l-single.component';
+import { RSingleComponent } from './reading-types/r-single/r-single.component';
+
+import { TableComponent } from './common-types/table/table.component';
+import { LTableComponent } from './listening-types/l-table/l-table.component';
+import { RTableComponent } from './reading-types/r-table/r-table.component';
 
 @NgModule({
   declarations: [
@@ -56,10 +71,10 @@ import { SpeakingComponent } from './skills/speaking/speaking.component';
     TestComponent,
     ResultComponent,
     TestToolbarComponent,
-    MultipleComponent,
-    SingleComponent,
+    RMultipleComponent,
+    RSingleComponent,
     // SummaryCompletionComponent,
-    SummaryComponent,
+    RNoteComponent,
     BlankSpaceDirective,
     SentenceComponent,
     EndingComponent,
@@ -68,10 +83,18 @@ import { SpeakingComponent } from './skills/speaking/speaking.component';
     SummarySelectComponent,
     OptionListComponent,
     FeatureComponent,
-    TableComponent,
+    RTableComponent,
     HighlightDirective,
     WritingComponent,
     SpeakingComponent,
+    LTableComponent,
+    LMultipleComponent,
+    LSingleComponent,
+    LNoteComponent,
+    MultipleComponent,
+    SingleComponent,
+    NoteComponent,
+    TableComponent
   ],
   entryComponents: [
     SubmitDialog,

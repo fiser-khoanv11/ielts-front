@@ -1,0 +1,17 @@
+{
+  "first": 10,
+  "last": 11,
+  "type": "multiple",
+  "limit": 2,
+  "directions": [
+    "Choose <b>TWO</b> letters <b>A-E</b>.",
+    "Which <b>TWO</b> facilities at the leisure club have recently been improved?"
+  ],
+  "choices": [
+    "choice 1",
+    "choice 2",
+    "choice 3",
+    "choice 4",
+    "choice 5",
+  ]
+}

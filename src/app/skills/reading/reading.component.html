@@ -1,7 +1,5 @@
-<app-test-toolbar currentPage="0"></app-test-toolbar>
-<div style="height: 200px; border:1px solid pink">
-  <div style="height: 50px; width: 50px; border:1px solid pink">babayawiefu</div>
-</div>
+<app-test-toolbar currentPage="1"></app-test-toolbar>
+
 <md-tab-group *ngIf="data">
   <md-tab *ngFor="let section of data" label="Section {{section.section_number}}">
     <div class="padding-20">
@@ -52,13 +50,13 @@
               [sectionNumber]="section.section_number"></app-heading>
           </div>
           <div *ngIf="question.type == 'multiple'">
-            <app-multiple [data]="question"></app-multiple>
+            <app-r-multiple [data]="question"></app-r-multiple>
           </div>
           <div *ngIf="question.type == 'single'">
-            <app-single [data]="question"></app-single>
+            <app-r-single [data]="question"></app-r-single>
           </div>
           <div *ngIf="question.type == 'summary'">
-            <app-summary [data]="question"></app-summary>
+            <app-r-note [data]="question"></app-r-note>
           </div>
           <div *ngIf="question.type == 'summary-select'">
             <app-summary-select [data]="question"></app-summary-select>
@@ -77,7 +75,7 @@
             <app-feature [data]="question"></app-feature>
           </div>
           <div *ngIf="question.type == 'table'">
-            <app-table [data]="question"></app-table>
+            <app-r-table [data]="question"></app-r-table>
           </div>
         </div>
 
@@ -93,21 +91,3 @@
     </div>
   </md-tab>
 </md-tab-group>
-
-<div class="padding-50" style="display:none">
-  <md-card>
-    <div><md-checkbox class="check-box" checked="true">1. Multiple choice</md-checkbox></div>
-    <div><md-checkbox class="check-box" checked="true">2. Identifying information</md-checkbox></div>
-    <div><md-checkbox class="check-box" checked="true">3. Identifying writer's views/claims</md-checkbox></div>
-    <div><md-checkbox class="check-box" checked="true">4. Matching information</md-checkbox></div>
-    <div><md-checkbox class="check-box" checked="true">5. Matching headings</md-checkbox></div>
-    <div><md-checkbox class="check-box" checked="true">6. Matching features</md-checkbox></div>
-    <div><md-checkbox class="check-box" checked="true">7. Matching sentence endings</md-checkbox></div>
-    <div><md-checkbox class="check-box" checked="true">8. Sentence completion</md-checkbox></div>
-    <div><md-checkbox class="check-box" indeterminate="true">9. Summary, note, table, flow-chart completion</md-checkbox></div>
-    <div><md-checkbox class="check-box" >10. Diagram label completion</md-checkbox></div>
-    <div><md-checkbox class="check-box" checked="true">11. Short-answer questions</md-checkbox></div>
-  </md-card>
-</div>
-
-<!-- <button id="check" md-fab (click)="getAnswers()"><md-icon>check</md-icon></button> -->

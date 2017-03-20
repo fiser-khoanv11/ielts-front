@@ -349,17 +349,26 @@ export class GetDataService {
     return data;
   }
 
-  getData(): Promise<Array<Object>> {
+  getReadingTest(id: string): Promise<Object> {
     return new Promise(resolve => {
-      this.http.get('http://localhost:3000/').subscribe(result => {
+      // console.log(id);
+      this.http.get('http://localhost:3000/reading/' + id).subscribe(result => {
         resolve(result.json());
       });
     });
   }
 
-  getReadOffline(): Promise<Array<Object>> {
+  getReadingOffline(id: string): Promise<Object> {
     return new Promise(resolve => {
       this.http.get('app/services/read-data.json').subscribe(result => {
+        resolve(result.json());
+      });
+    });
+  }
+
+  getListeningOffline(id: string): Promise<Object> {
+    return new Promise(resolve => {
+      this.http.get('app/services/listen-data.json').subscribe(result => {
         resolve(result.json());
       });
     });

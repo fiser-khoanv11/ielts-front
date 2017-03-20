@@ -1,7 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { Input } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { ConverterService } from '../../services/converter.service';
-import { IReadingComponent } from '../i-reading/i-reading.component';
 import { MdSnackBar } from '@angular/material';
 
 @Component({
@@ -10,7 +8,7 @@ import { MdSnackBar } from '@angular/material';
   styleUrls: ['./multiple.component.css'],
   providers: [ ConverterService ]
 })
-export class MultipleComponent implements OnInit, IReadingComponent {
+export class MultipleComponent implements OnInit {
 
   @Input() data: Object;
   answers: string[] = [];
