@@ -10,6 +10,9 @@ import { UserService } from 'app/services/user.service';
 })
 export class AppComponent implements OnInit {
 
+  fbConnected: boolean = false;
+  user: Object;
+
   constructor(private fb: FacebookService, private userService: UserService) {
     let fbParams: FacebookInitParams = {
       appId: '1084564141677221',
@@ -27,9 +30,11 @@ export class AppComponent implements OnInit {
   fbLogin(): void {
     this.fb.login().then(
       (response: FacebookLoginResponse) => {
-        console.log('Login successfully');
+        console.log(response);
+        this.fbConnected = true;
         this.fb.api('/me?fields=first_name,name,picture,email').then(data => {
           this.userService.saveUser(data);
+          this.user = data;
         });
       },
       (error: any) => console.error(error)
@@ -38,12 +43,28 @@ export class AppComponent implements OnInit {
 
   showFbLoginStatus(): void {
     this.fb.getLoginStatus().then(
-      (status: FacebookLoginStatus) => console.log(status)
+      (response: FacebookLoginStatus) => {
+        console.log(response);
+        if (response.status === 'connected') {
+          this.fbConnected = true;
+          this.fb.api('/me?fields=first_name,name,picture,email').then(data => {
+            this.user = data;
+            console.log(this.user);
+          });
+        }
+      }
     );
   }
 
   fbLogout(): void {
-    this.fb.logout();
+    this.fb.logout().then(
+      (value: any) => {
+        console.log(value);
+        this.fbConnected = false;
+        this.user = undefined;
+      },
+      (reason: any) => console.error(reason)
+    );
   }
 
 

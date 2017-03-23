@@ -5,3 +5,32 @@
 #copy {
   font-size: small;
 }
+
+.fill-remaining-space {
+  flex: 1 1 auto;
+}
+
+.nav-bar > button {
+  border: solid #e41937;
+  border-width: 0px 0px;
+  border-radius: 0;
+  height: 100%;
+  color: #e41937;
+}
+
+.nav-bar {
+  height: 100%;
+}
+
+.logo {
+  height: 100%;
+}
+
+.logo-a {
+  height: 50%;
+}
+
+.avatar {
+  height: 75%;
+  border-radius: 70%;
+}

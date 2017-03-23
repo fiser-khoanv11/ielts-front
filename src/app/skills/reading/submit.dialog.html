@@ -43,6 +43,6 @@
   </md-card-content>
 </md-card>
 <md-dialog-actions>
-  <button md-raised-button color="primary" [disabled]="isSubmited" (click)="submit()" class="submit">Submit</button>
+  <button md-raised-button color="primary" *ngIf="!isSubmited" (click)="submit()" class="submit">Submit</button>
   <button md-button md-dialog-close>Close</button>
 </md-dialog-actions>

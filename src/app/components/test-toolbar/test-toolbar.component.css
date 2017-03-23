@@ -10,3 +10,40 @@
   color: rgba(255, 255, 255, 0.87);
   text-decoration: none;
 }
+
+md-toolbar {
+  /*height: 40px;*/
+  min-height: 0px;
+  background: #e41937;
+}
+
+.mat-toolbar-layout, md-toolbar-row {
+  height: 100%;
+}
+
+nav > button {
+  /*color: white;*/
+}
+
+.active {
+  color: #e41937;
+  cursor: default;
+}
+
+.inactive {
+  color: white;
+}
+
+.test-title {
+  color: white;
+  font-size: 75%
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}

@@ -1,5 +1,8 @@
 <app-test-toolbar currentPage="1"></app-test-toolbar>
-
+<button class="timer" md-raised-button>
+  <md-icon class="icon">alarm</md-icon>
+  {{timer | timer}}
+</button>
 <md-tab-group *ngIf="data">
   <md-tab *ngFor="let section of data" label="Section {{section.section_number}}">
     <div class="padding-20">
@@ -88,7 +91,7 @@
         </div>
 
         <div class="actions">
-          <button md-raised-button color="primary" (click)="viewSheet()">
+          <button md-raised-button color="primary" (click)="viewSheet(false)">
             <span *ngIf="!isSubmited">View Answer Sheet & Submit</span>
             <span *ngIf="isSubmited">Review</span>
           </button>

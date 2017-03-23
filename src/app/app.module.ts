@@ -51,6 +51,7 @@ import { SingleComponent } from './common-types/single/single.component';
 // import { RSingleComponent } from './reading-types/r-single/r-single.component';
 
 import { TableComponent } from './common-types/table/table.component';
+import { TimerPipe } from './pipes/timer.pipe';
 // import { LTableComponent } from './listening-types/l-table/l-table.component';
 // import { RTableComponent } from './reading-types/r-table/r-table.component';
 
@@ -94,7 +95,8 @@ import { TableComponent } from './common-types/table/table.component';
     MultipleComponent,
     SingleComponent,
     NoteComponent,
-    TableComponent
+    TableComponent,
+    TimerPipe
   ],
   entryComponents: [
     SubmitDialog,

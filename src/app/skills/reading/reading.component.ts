@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ViewChildren, QueryList } from '@angular/core';
 import { RouterModule, Routes, Router, ActivatedRoute } from '@angular/router';
-import { MdDialog, MdDialogRef } from '@angular/material';
+import { MdDialog, MdDialogRef, MdSnackBar } from '@angular/material';
 
 import { GetDataService } from '../../services/get-data.service';
 import { ConverterService } from '../../services/converter.service';
@@ -32,6 +32,7 @@ export class SubmitDialog implements OnInit {
   keys: Array<Object>;
   testResult: {result: Array<boolean>, noOfCorrect: number, score: number};
   isSubmited: boolean;
+  isTimeout: boolean;
 
   constructor(private dialogRef: MdDialogRef<any>, private converterService: ConverterService) { }
 
@@ -39,7 +40,12 @@ export class SubmitDialog implements OnInit {
     this.answers = this.dialogRef.config.data.answers;
     this.keys = this.dialogRef.config.data.keys;
     this.isSubmited = this.dialogRef.config.data.isSubmited;
+    this.isTimeout = this.dialogRef.config.data.isTimeout;
     this.testResult = this.converterService.getTestResult(this.answers, this.keys);
+
+    if (this.isTimeout) {
+      this.submit();
+    }
   }
 
   ngOnDestroy() {
@@ -77,8 +83,9 @@ export class ReadingComponent implements OnInit {
   data: Object[] = [];
   keys: Object[] = [];
   isSubmited: boolean = false;
+  timer: number = 500; //3600
 
-  constructor(private dialog: MdDialog, private getDataService: GetDataService, private activatedRoute: ActivatedRoute) { }
+  constructor(private dialog: MdDialog, private snackBar: MdSnackBar, private getDataService: GetDataService, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
     let id = this.activatedRoute.snapshot.params['id'];
@@ -92,6 +99,23 @@ export class ReadingComponent implements OnInit {
         console.error('keys.length <> 40');
       }
     });
+
+    this.setTimer();
+  }
+
+  setTimer(): void {
+    let setting = setInterval(() => {
+      this.timer --;
+
+      if (this.timer == 1800) {
+        this.snackBar.open('30 minutes left!', 'OK', { duration: 2000 });
+      } else if (this.timer == 600) {
+        this.snackBar.open('10 minutes left!', 'OK', { duration: 2000 });
+      } else if (this.timer <= 0) {
+        clearInterval(setting);
+        this.viewSheet(true);
+      }
+    }, 1); // 1000
   }
 
   getAnswers(): Array<Object> {
@@ -131,7 +155,7 @@ export class ReadingComponent implements OnInit {
     return overall;
   }
 
-  viewSheet(): void {
+  viewSheet(isTimeout: boolean): void {
     let overall = this.getAnswers();
 
     // Mo dialog
@@ -140,7 +164,8 @@ export class ReadingComponent implements OnInit {
       data: {
         answers: overall,
         keys: this.keys,
-        isSubmited: this.isSubmited
+        isSubmited: this.isSubmited,
+        isTimeout: isTimeout
       }
     });
 

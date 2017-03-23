@@ -1,17 +1,23 @@
-<md-toolbar color="primary">
-  <p><a href="#" class="link">Cambridge IELTS 10</a> - Test 1</p>
+<md-toolbar>
+  <p class="test-title">
+    <a href="/">Library</a>
+    <md-icon class="icon">chevron_right</md-icon>
+    <a href="/">Cambridge IELTS 10</a>
+    <md-icon class="icon">chevron_right</md-icon>
+    Test 1
+  </p>
   <span class="fill-remaining-space"></span>
   <nav>
-    <button *ngIf="currentPage == 0" md-raised-button class="primary-color">Listening</button>
-    <button *ngIf="currentPage != 0" md-button routerLink="/test/listening/1">Listening</button>
+    <button *ngIf="currentPage == 0" md-raised-button class="active">Listening</button>
+    <button *ngIf="currentPage != 0" md-button class="inactive" routerLink="/test/listening/1">Listening</button>
 
-    <button *ngIf="currentPage == 1" md-raised-button class="primary-color">Reading</button>
-    <button *ngIf="currentPage != 1" md-button routerLink="/test/reading/1">Reading</button>
+    <button *ngIf="currentPage == 1" md-raised-button class="active">Reading</button>
+    <button *ngIf="currentPage != 1" md-button class="inactive" routerLink="/test/reading/1">Reading</button>
 
-    <button *ngIf="currentPage == 2" md-raised-button class="primary-color">Writing</button>
-    <button *ngIf="currentPage != 2" md-button routerLink="/test/writing">Writing</button>
+    <button *ngIf="currentPage == 2" md-raised-button class="active">Writing</button>
+    <button *ngIf="currentPage != 2" md-button class="inactive" routerLink="/test/writing">Writing</button>
 
-    <button *ngIf="currentPage == 3" md-raised-button class="primary-color">Speaking</button>
-    <button *ngIf="currentPage != 3" md-button routerLink="/test/speaking">Speaking</button>
+    <button *ngIf="currentPage == 3" md-raised-button class="active">Speaking</button>
+    <button *ngIf="currentPage != 3" md-button class="inactive" routerLink="/test/speaking">Speaking</button>
   </nav>
 </md-toolbar>

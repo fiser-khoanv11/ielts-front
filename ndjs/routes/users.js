@@ -6,7 +6,10 @@ var router = express.Router();
 var Schema = mongoose.Schema;
 var userSchema = new Schema({
     id: Number,
-    name: String
+    first_name: String,
+    name: String,
+    email: String,
+    picture: Object
 }, { collection: 'users' });
 var User = mongoose.model('User', userSchema);
 
