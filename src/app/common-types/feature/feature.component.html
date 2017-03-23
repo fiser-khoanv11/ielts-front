@@ -1,16 +1,8 @@
-<p><i>{{data.des}}</i></p>
-<app-option-list [duplicatable]="duplicatable"
-                 [list]="data.features"
+<p class="italic" *ngFor="let dir of data.directions" [innerHTML]="dir"></p>
+
+<app-option-list [list]="data.features"
                  [answers]="answers"
                  [mark]="mark"></app-option-list>
-<p><i>
-    Write the correct letter, 
-    <b>A-{{data.features.length | letter | uppercase}}</b>
-    , in boxes {{data.first}}
-    <span *ngIf="data.last - data.first == 1"> and </span>
-    <span *ngIf="data.last - data.first > 1"> - </span>
-    {{data.last}} on your answer sheet.
-</i></p>
 
 <div *ngFor="let item of data.text; let i = 'index'">
   <p><span>{{data.first + i}}. </span>{{item}}</p>

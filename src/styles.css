@@ -34,7 +34,7 @@ input, .md-select-value {
   display: inline-flex;
 }
 
-.primary-color {
+b, .primary-color {
   color: #673ab7 !important;
 }
 

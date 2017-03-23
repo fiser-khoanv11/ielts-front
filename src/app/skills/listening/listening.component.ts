@@ -6,30 +6,32 @@ import { MdDialog, MdDialogRef } from '@angular/material';
 import { GetDataService } from '../../services/get-data.service';
 import { ConverterService } from '../../services/converter.service';
 
-import { LMultipleComponent } from '../../listening-types/l-multiple/l-multiple.component';
-import { LNoteComponent } from '../../listening-types/l-note/l-note.component';
-import { LSingleComponent } from '../../listening-types/l-single/l-single.component';
-import { LTableComponent } from '../../listening-types/l-table/l-table.component';
+import { FeatureComponent } from '../../common-types/feature/feature.component';
+import { MultipleComponent } from '../../common-types/multiple/multiple.component';
+import { NoteComponent } from '../../common-types/note/note.component';
+import { SingleComponent } from '../../common-types/single/single.component';
+import { TableComponent } from '../../common-types/table/table.component';
 
 @Component({
   selector: 'app-listening',
   templateUrl: './listening.component.html',
   styleUrls: ['./listening.component.css'],
-  providers: [ GetDataService ]
+  providers: [ GetDataService, ConverterService ]
 })
 export class ListeningComponent implements OnInit {
 
-  @ViewChildren(LMultipleComponent) lMultipleComponent: QueryList<LMultipleComponent>;
-  @ViewChildren(LNoteComponent) lNoteComponent: QueryList<LNoteComponent>;
-  @ViewChildren(LSingleComponent) lSingleComponent: QueryList<LSingleComponent>;
-  @ViewChildren(LTableComponent) lTableComponent: QueryList<LTableComponent>;
+  @ViewChildren(FeatureComponent) featureComponents: QueryList<FeatureComponent>;
+  @ViewChildren(MultipleComponent) multipleComponent: QueryList<MultipleComponent>;
+  @ViewChildren(NoteComponent) noteComponent: QueryList<NoteComponent>;
+  @ViewChildren(SingleComponent) singleComponent: QueryList<SingleComponent>;
+  @ViewChildren(TableComponent) tableComponent: QueryList<TableComponent>;
 
   data: Object[] = [];
   keys: Object[] = [];
   isSubmited: boolean = false;
   displayParas: Array<Array<Array<string>>> = [];
 
-  constructor(private dialog: MdDialog, private getDataService: GetDataService, private activatedRoute: ActivatedRoute) { }
+  constructor(private dialog: MdDialog, private getDataService: GetDataService, private activatedRoute: ActivatedRoute, private converterService: ConverterService) { }
 
   ngOnInit() {
     let id = this.activatedRoute.snapshot.params['id'];
@@ -46,10 +48,10 @@ export class ListeningComponent implements OnInit {
 
   getAnswers(): Array<Object> {
     let arr = [];
-    arr = arr.concat(this.lMultipleComponent.toArray());
-    arr = arr.concat(this.lNoteComponent.toArray());
-    arr = arr.concat(this.lSingleComponent.toArray());
-    arr = arr.concat(this.lTableComponent.toArray());
+    arr = arr.concat(this.multipleComponent.toArray());
+    arr = arr.concat(this.noteComponent.toArray());
+    arr = arr.concat(this.singleComponent.toArray());
+    arr = arr.concat(this.tableComponent.toArray());
 
     // Lay du lieu
     let overall: Array<Object> = [];

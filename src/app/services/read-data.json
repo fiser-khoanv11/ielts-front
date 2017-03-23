@@ -100,41 +100,44 @@
       "first": 9,
       "last": 13,
       "type": "table",
-      "word_limit": 1,
-      "number_limit": 1,
+      "directions": [
+        "Complete the table below",
+        "Choose <b>ONE WORD AND/OR A NUMBER</b> from the passage for each answer.",
+        "Write your answers in boxes 9-13 on your answer sheet."
+      ],
       "table": [
         [
-          ["Stepwell"],
-          ["Date"],
-          ["Features"],
-          ["Other notes"]
+          ["<b>Stepwell</b>"],
+          ["<b>Date</b>"],
+          ["<b>Features</b>"],
+          ["<b>Other notes</b>"]
         ],
         [
-          ["Rani Ki Vav"],
+          ["<b><i>Rani Ki Vav</i></b>"],
           ["Late 11th century"],
           ["As many as 500 sculptures decorate the monument"],
           ["Restored in the 1960s", "Excellent condition, despite the [] of 2001"]
         ],
         [
-          ["Surya"],
+          ["<b><i>Surya</i></b>"],
           ["1026"],
           ["Steps on the [] produce a geometrical pattern", "Carved shrines"],
           ["Looks more like a [] than a well"]
         ],
         [
-          ["Raniji Ki Baori"],
+          ["<b><i>Raniji Ki Baori</i></b>"],
           ["1699"],
           ["Intricately carved monument"],
           ["One of 21 baoris in the area commissioned by Queen Nathavatji"]
         ],
         [
-          ["Chand Baori"],
+          ["<b><i>Chand Baori</i></b>"],
           ["850 AD"],
           ["Steps take you down 11 storey to the bottom"],
           ["Old, deep and very dramatic", "Has [] which provide a view of the steps"]
         ],
         [
-          ["Neemrana Ki Baori"],
+          ["<b><i>Neemrana Ki Baori</i></b>"],
           ["1700"],
           ["Has two [] levels"],
           ["Used by public today"]
@@ -240,6 +243,10 @@
       "first": 27,
       "last": 30,
       "type": "single",
+      "directions": [
+        "Choose the correct letter, <b>A</b>, <b>B</b>, <b>C</b> or <b>D</b>.",
+        "Write the correct letter in boxes 27-30 on your answer sheet."
+      ],
       "questions": [{
         "text": "The example of the 'million-dollar quartet' underlines the writer's point about",
         "choices": [

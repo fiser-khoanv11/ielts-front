@@ -6,17 +6,18 @@
   <md-card-content>
     <p *ngFor="let item of list; let i = 'index'"
        [style.color]="changeColor(i + 1) ? 'rgb(103, 58, 183)' : ''"
+       [style.fontStyle]="changeColor(i + 1) ? 'bold' : ''"
        class="relative">
         <span *ngIf="mark == 'letter'">{{i + 1 | letter | uppercase}}. </span>
         <span *ngIf="mark == 'roman'">{{i + 1 | roman}}. </span>
         {{item}}
-        <md-icon class="icon"
+        <!-- <md-icon class="icon"
           color=""
           *ngIf="checkDuplicated(i + 1)"
           md-tooltip="This option is used more than once"
           [mdTooltipPosition]="'right'">
           info
-        </md-icon>
+        </md-icon> -->
     </p>
   </md-card-content>
 </md-card>

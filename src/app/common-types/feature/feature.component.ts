@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Input } from '@angular/core';
 import { ConverterService } from '../../services/converter.service';
-import { IReadingComponent } from '../i-reading/i-reading.component';
+// import { IReadingComponent } from '../i-reading/i-reading.component';
 
 @Component({
   selector: 'app-feature',
@@ -9,12 +9,12 @@ import { IReadingComponent } from '../i-reading/i-reading.component';
   styleUrls: ['./feature.component.css'],
   providers: [ ConverterService ]
 })
-export class FeatureComponent implements OnInit, IReadingComponent {
+export class FeatureComponent implements OnInit {
 
   @Input() data: Object;
   answers: number[] = [];
   mark: string = 'letter';
-  duplicatable: boolean = true;
+  // duplicatable: boolean = true;
 
   constructor(private converterService: ConverterService) { }
 

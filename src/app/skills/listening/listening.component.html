@@ -18,17 +18,20 @@
             </h3>  
           </div>
           
+          <div *ngIf="question.type == 'feature'">
+            <app-feature [data]="question"></app-feature>
+          </div>
           <div *ngIf="question.type == 'table'">
-            <app-l-table [data]="question"></app-l-table>
+            <app-table [data]="question"></app-table>
           </div>
           <div *ngIf="question.type == 'multiple'">
-            <app-l-multiple [data]="question"></app-l-multiple>
+            <app-multiple [data]="question"></app-multiple>
           </div>
           <div *ngIf="question.type == 'single'">
-            <app-l-single [data]="question"></app-l-single>
+            <app-single [data]="question"></app-single>
           </div>
           <div *ngIf="question.type == 'note'">
-            <app-l-note [data]="question"></app-l-note>
+            <app-note [data]="question"></app-note>
           </div>
         </div>
 

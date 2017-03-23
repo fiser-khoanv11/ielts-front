@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { MaterialModule } from '@angular/material';
+import { FacebookService } from 'ng2-facebook-sdk';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -31,27 +32,27 @@ import { InformationComponent } from './reading-types/information/information.co
 import { SummarySelectComponent } from './reading-types/summary-select/summary-select.component';
 import { OptionListComponent } from './components/option-list/option-list.component';
 import { IReadingComponent } from './reading-types/i-reading/i-reading.component';
-import { FeatureComponent } from './reading-types/feature/feature.component';
+import { FeatureComponent } from './common-types/feature/feature.component';
 
 import { HighlightDirective } from './directives/highlight.directive';
 import { WritingComponent } from './skills/writing/writing.component';
 import { SpeakingComponent } from './skills/speaking/speaking.component';
 
 import { MultipleComponent } from './common-types/multiple/multiple.component';
-import { LMultipleComponent } from './listening-types/l-multiple/l-multiple.component';
-import { RMultipleComponent } from './reading-types/r-multiple/r-multiple.component';
+// import { LMultipleComponent } from './listening-types/l-multiple/l-multiple.component';
+// import { RMultipleComponent } from './reading-types/r-multiple/r-multiple.component';
 
 import { NoteComponent } from './common-types/note/note.component';
-import { LNoteComponent } from './listening-types/l-note/l-note.component';
-import { RNoteComponent } from './reading-types/r-note/r-note.component';
+// import { LNoteComponent } from './listening-types/l-note/l-note.component';
+// import { RNoteComponent } from './reading-types/r-note/r-note.component';
 
 import { SingleComponent } from './common-types/single/single.component';
-import { LSingleComponent } from './listening-types/l-single/l-single.component';
-import { RSingleComponent } from './reading-types/r-single/r-single.component';
+// import { LSingleComponent } from './listening-types/l-single/l-single.component';
+// import { RSingleComponent } from './reading-types/r-single/r-single.component';
 
 import { TableComponent } from './common-types/table/table.component';
-import { LTableComponent } from './listening-types/l-table/l-table.component';
-import { RTableComponent } from './reading-types/r-table/r-table.component';
+// import { LTableComponent } from './listening-types/l-table/l-table.component';
+// import { RTableComponent } from './reading-types/r-table/r-table.component';
 
 @NgModule({
   declarations: [
@@ -71,10 +72,9 @@ import { RTableComponent } from './reading-types/r-table/r-table.component';
     TestComponent,
     ResultComponent,
     TestToolbarComponent,
-    RMultipleComponent,
-    RSingleComponent,
-    // SummaryCompletionComponent,
-    RNoteComponent,
+    // RMultipleComponent,
+    // RSingleComponent,
+    // RNoteComponent,
     BlankSpaceDirective,
     SentenceComponent,
     EndingComponent,
@@ -83,14 +83,14 @@ import { RTableComponent } from './reading-types/r-table/r-table.component';
     SummarySelectComponent,
     OptionListComponent,
     FeatureComponent,
-    RTableComponent,
+    // RTableComponent,
     HighlightDirective,
     WritingComponent,
     SpeakingComponent,
-    LTableComponent,
-    LMultipleComponent,
-    LSingleComponent,
-    LNoteComponent,
+    // LTableComponent,
+    // LMultipleComponent,
+    // LSingleComponent,
+    // LNoteComponent,
     MultipleComponent,
     SingleComponent,
     NoteComponent,
@@ -106,7 +106,9 @@ import { RTableComponent } from './reading-types/r-table/r-table.component';
     MaterialModule.forRoot(),
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    FacebookService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

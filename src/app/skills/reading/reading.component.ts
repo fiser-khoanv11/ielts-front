@@ -3,21 +3,22 @@ import { ViewChildren, QueryList } from '@angular/core';
 import { RouterModule, Routes, Router, ActivatedRoute } from '@angular/router';
 import { MdDialog, MdDialogRef } from '@angular/material';
 
-import { AnswerComponent } from '../../reading-types/answer/answer.component';
-import { EndingComponent } from '../../reading-types/ending/ending.component';
-import { FeatureComponent } from '../../reading-types/feature/feature.component';
-import { HeadingComponent } from '../../reading-types/heading/heading.component';
-import { InformationComponent } from '../../reading-types/information/information.component';
-import { RMultipleComponent } from '../../reading-types/r-multiple/r-multiple.component';
-import { SentenceComponent } from '../../reading-types/sentence/sentence.component';
-import { RSingleComponent } from '../../reading-types/r-single/r-single.component';
-import { RNoteComponent } from '../../reading-types/r-note/r-note.component';
-import { SummarySelectComponent } from '../../reading-types/summary-select/summary-select.component';
-import { TrueFalseComponent } from '../../reading-types/true-false/true-false.component';
-import { RTableComponent } from '../../reading-types/r-table/r-table.component';
-
 import { GetDataService } from '../../services/get-data.service';
 import { ConverterService } from '../../services/converter.service';
+
+import { FeatureComponent } from '../../common-types/feature/feature.component';
+import { MultipleComponent } from '../../common-types/multiple/multiple.component';
+import { NoteComponent } from '../../common-types/note/note.component';
+import { SingleComponent } from '../../common-types/single/single.component';
+import { TableComponent } from '../../common-types/table/table.component';
+
+import { AnswerComponent } from '../../reading-types/answer/answer.component';
+import { EndingComponent } from '../../reading-types/ending/ending.component';
+import { HeadingComponent } from '../../reading-types/heading/heading.component';
+import { InformationComponent } from '../../reading-types/information/information.component';
+import { SentenceComponent } from '../../reading-types/sentence/sentence.component';
+import { SummarySelectComponent } from '../../reading-types/summary-select/summary-select.component';
+import { TrueFalseComponent } from '../../reading-types/true-false/true-false.component';
 
 @Component({
   selector: 'app-submit',
@@ -58,10 +59,12 @@ export class SubmitDialog implements OnInit {
   providers: [ GetDataService ]
 })
 export class ReadingComponent implements OnInit {
-  @ViewChildren(RMultipleComponent) multipleComponents: QueryList<RMultipleComponent>;
-  @ViewChildren(RNoteComponent) summaryComponents: QueryList<RNoteComponent>;
-  @ViewChildren(RSingleComponent) singleComponents: QueryList<RSingleComponent>;
-  @ViewChildren(RTableComponent) tableComponents: QueryList<RTableComponent>;
+
+  @ViewChildren(FeatureComponent) featureComponents: QueryList<FeatureComponent>;
+  @ViewChildren(MultipleComponent) multipleComponents: QueryList<MultipleComponent>;
+  @ViewChildren(NoteComponent) summaryComponents: QueryList<NoteComponent>;
+  @ViewChildren(SingleComponent) singleComponents: QueryList<SingleComponent>;
+  @ViewChildren(TableComponent) tableComponents: QueryList<TableComponent>;
   
   @ViewChildren(TrueFalseComponent) trueFalseComponents: QueryList<TrueFalseComponent>;
   @ViewChildren(AnswerComponent) answerComponents: QueryList<AnswerComponent>;
@@ -70,7 +73,6 @@ export class ReadingComponent implements OnInit {
   @ViewChildren(EndingComponent) endingComponents: QueryList<EndingComponent>;
   @ViewChildren(InformationComponent) informationComponents: QueryList<InformationComponent>;
   @ViewChildren(SentenceComponent) sentenceComponents: QueryList<SentenceComponent>;
-  @ViewChildren(FeatureComponent) featureComponents: QueryList<FeatureComponent>;
 
   data: Object[] = [];
   keys: Object[] = [];

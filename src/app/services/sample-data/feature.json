@@ -1,0 +1,18 @@
+{
+  "first": 10,
+  "last": 15,
+  "type": "feature",
+  "directions": [
+    "Some thing",
+    "Choose <b>SIX</b> answers from the box and write the correct letter, <b>A-I</b>, next to questions 15-20."
+  ],
+  "features": [
+    "feature 1",
+    "feature 2"
+  ],
+  "heading": "<optional> This is a heading",
+  "text": [
+    "text 1",
+    "text 2"
+  ],
+}

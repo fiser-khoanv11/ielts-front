@@ -38,6 +38,22 @@
             </h3>  
           </div>
           
+          <div *ngIf="question.type == 'feature'">
+            <app-feature [data]="question"></app-feature>
+          </div>
+          <div *ngIf="question.type == 'multiple'">
+            <app-multiple [data]="question"></app-multiple>
+          </div>
+          <div *ngIf="question.type == 'summary'">
+            <app-note [data]="question"></app-note>
+          </div>
+          <div *ngIf="question.type == 'single'">
+            <app-single [data]="question"></app-single>
+          </div>
+          <div *ngIf="question.type == 'table'">
+            <app-table [data]="question"></app-table>
+          </div>
+
           <div *ngIf="question.type == 'true-false'">
             <app-true-false [data]="question" 
               [sectionNumber]="section.section_number"></app-true-false>
@@ -49,15 +65,12 @@
             <app-heading [data]="question"
               [sectionNumber]="section.section_number"></app-heading>
           </div>
-          <div *ngIf="question.type == 'multiple'">
-            <app-r-multiple [data]="question"></app-r-multiple>
-          </div>
-          <div *ngIf="question.type == 'single'">
+          <!-- <div *ngIf="question.type == 'single'">
             <app-r-single [data]="question"></app-r-single>
-          </div>
-          <div *ngIf="question.type == 'summary'">
+          </div> -->
+          <!-- <div *ngIf="question.type == 'summary'">
             <app-r-note [data]="question"></app-r-note>
-          </div>
+          </div> -->
           <div *ngIf="question.type == 'summary-select'">
             <app-summary-select [data]="question"></app-summary-select>
           </div>
@@ -71,12 +84,7 @@
             <app-information [data]="question"
               [sectionNumber]="section.section_number"></app-information>
           </div>
-          <div *ngIf="question.type == 'feature'">
-            <app-feature [data]="question"></app-feature>
-          </div>
-          <div *ngIf="question.type == 'table'">
-            <app-r-table [data]="question"></app-r-table>
-          </div>
+          
         </div>
 
         <div class="actions">

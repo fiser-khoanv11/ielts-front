@@ -95,6 +95,34 @@
         "the outdoor pool",
         "the sports training for children"
       ]
+    }, {
+      "first": 13,
+      "last": 18,
+      "type": "feature",
+      "directions": [
+        "Which features is related to each of the following areas of the world represented in the playground?",
+        "Choose <b>SIX</b> answers from the box and write the correct letter, <b>A-I</b>, next to questions 15-20."
+      ],
+      "features": [
+        "ancient forts",
+        "waterways",
+        "ice and snow",
+        "jewels",
+        "local animals",
+        "mountains",
+        "music and film",
+        "space travel",
+        "volcanoes"
+      ],
+      "heading": "Areas of the world",
+      "text": [
+        "Asia",
+        "Antarctica",
+        "South America",
+        "North America",
+        "Europe",
+        "Africa"
+      ]
     }]
   }, {
     "section_number": 3,
