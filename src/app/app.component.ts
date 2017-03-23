@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FacebookService, FacebookLoginResponse, FacebookInitParams, FacebookLoginStatus } from 'ng2-facebook-sdk';
 import { UserService } from 'app/services/user.service';
+import { FacebookService, FacebookLoginResponse, FacebookInitParams, FacebookLoginStatus } from 'ng2-facebook-sdk';
 
 @Component({
   selector: 'app-root',
@@ -66,6 +66,5 @@ export class AppComponent implements OnInit {
       (reason: any) => console.error(reason)
     );
   }
-
 
 }

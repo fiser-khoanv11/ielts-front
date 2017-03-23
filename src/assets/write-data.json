@@ -1,0 +1,16 @@
+{
+  "task_1": {
+    "text": [
+      "The first chart below shows how energy is used in an average Australian household. The second chart shows the greenhouse gas emissions which result from this energy use.",
+      "Summarise the information by selecting and reporting the main features, and make comparisons where relevant."
+    ],
+    "image": "http://www.link.com"
+  },
+  "task_2": {
+    "text": [
+      "It is important for children to learn difference between right and wrong at an early age. Punishment is necessary to help them learn this distinction.",
+      "To what extent do you agree or disagree with this opinion?",
+      "What sort of punishment should parents and teachers be allowed to use to teach good behaviour to children?"
+    ]
+  }
+}

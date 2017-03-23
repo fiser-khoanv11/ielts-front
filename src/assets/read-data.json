@@ -1,0 +1,365 @@
+{
+  "keys": [
+    { "no": 1, "keys": [ "false" ] },
+    { "no": 2, "keys": [ "true" ] },
+    { "no": 3, "keys": [ "not given" ] },
+    { "no": 4, "keys": [ "not given" ] },
+    { "no": 5, "keys": [ "true" ] },
+    { "no": 6, "keys": [ "pavilions" ] },
+    { "no": 7, "keys": [ "drought" ] },
+    { "no": 8, "keys": [ "tourists" ] },
+    { "no": 9, "keys": [ "earthquake" ] },
+    { "no": 10, "keys": [ "4 sides", "four sides" ] },
+    { "no": 11, "keys": [ "tank" ] },
+    { "no": 12, "keys": [ "verandas", "verandahs" ] },
+    { "no": 13, "keys": [ "underwater" ] },
+    { "no": 14, "keys": [ "vii" ] },
+    { "no": 15, "keys": [ "iii" ] },
+    { "no": 16, "keys": [ "xi" ] },
+    { "no": 17, "keys": [ "i" ] },
+    { "no": 18, "keys": [ "v" ] },
+    { "no": 19, "keys": [ "x" ] },
+    { "no": 20, "keys": [ "ii" ] },
+    { "no": 21, "keys": [ "iv" ] },
+    { "no": 22, "keys": [ "true" ] },
+    { "no": 23, "keys": [ "false" ] },
+    { "no": 24, "keys": [ "not given" ] },
+    { "no": 25, "keys": [ "not given" ] },
+    { "no": 26, "keys": [ "false" ] },
+    { "no": 27, "keys": [ "c" ] },
+    { "no": 28, "keys": [ "a" ] },
+    { "no": 29, "keys": [ "d" ] },
+    { "no": 30, "keys": [ "b" ] },
+    { "no": 31, "keys": [ "g" ] },
+    { "no": 32, "keys": [ "e" ] },
+    { "no": 33, "keys": [ "a" ] },
+    { "no": 34, "keys": [ "f" ] },
+    { "no": 35, "keys": [ "b" ] },
+    { "no": 36, "keys": [ "no" ] },
+    { "no": 37, "keys": [ "yes" ] },
+    { "no": 38, "keys": [ "not given" ] },
+    { "no": 39, "keys": [ "not given" ] },
+    { "no": 40, "keys": [ "no" ] }
+  ],
+  "content": [{
+    "section_number": 1,
+    "passage": {
+      "image": "",
+      "heading": "Stepwells",
+      "sub_heading": "A millennium ago, stepwells were fundamental to life in the driest parts of India. Although many have been neglected, recent restoration has returned them to their former glory. Richard Cox travelled to  north-western India to document these spectacular monuments from a bygone era.",
+      "paras": [{
+        "content": "During the sixth and seventh centuries, the inhabitants of the modern-day states of Gujarat and Rajasthan in North-western India developed a method of gaining access to clean, fresh groundwater during the dry season for drinking, bathing, watering animals and irrigation. However, the significance of this invention – the stepwell – goes beyond its utilitarian application."
+      }, {
+        "content": "Unique to the region, stepwells are often architecturally complex and vary widely in size and shape. During their heyday, they were places of gathering, of leisure, of relaxation and of worship for villagers of all but the lowest castes.Most stepwells are found dotted around the desert areas of Gujarat (where they are called vav) and Rajasthan (where they are known as baori), while a few also survive in Delhi. Some were located in or near villages as public spaces for the community; others were positioned beside roads as resting places for travellers."
+      }, {
+        "content": "As their name suggests, stepwells comprise a series of stone steps descending from ground level to the water source (normally an underground aquifer) as it recedes following the rains. When the water level was high, the user needed only to descend a few steps to reach it; when it was low, several levels would have to be negotiated."
+      }, {
+        "content": "Some wells are vast, open craters with hundreds of steps paving each sloping side, often in tiers. Others are more elaborate, with long stepped passages leading to the water via several storeys built from stone and supported by pillars, they also included pavilions that sheltered visitors from the relentless heat. But perhaps the most impressive features are the intricate decorative sculptures that embellish many stepwells, showing activities from fighting and dancing to everyday acts such as women combing their hair and churning butter."
+      }, {
+        "content": "Down the centuries, thousands of wells were constructed throughout northwestern India, but the majority have now fallen into disuse; many are derelict and dry, as groundwater has been diverted for industrial use and the wells no longer reach the water table. Their condition hasn’t been helped by recent dry spells: southern Rajasthan suffered an eight-year drought between 1996 and 2004."
+      }, {
+        "content": "However, some important sites in Gujarat have recently undergone major restoration, and the state government announced in June last year that it plans to restore the stepwells throughout the state."
+      }, {
+        "content": "In Patan, the state’s ancient capital, the stepwell of Rani Ki Vav (Queen’s Stepwell) is perhaps the finest current example. It was built by Queen Udayamati during the late 11th century, but became silted up following a flood during the 13th century. But the Archaeological Survey of India began restoring it in the 1960s, and today it’s in pristine condition. At 65 metres long, 20 metres wide and 27 metres deep, Rani Ki Vav features 500 distinct sculptures carved into niches throughout the monument, depicting gods such as Vishnu and Parvati in various incarnations. Incredibly, in January 2001, this ancient structure survived a devastating earthquake that measured 7.6 on the Richter scale."
+      }, {
+        "content": "Another example is the Surya Kund in Modhera, northern Gujarat, next to the Sun Temple, built by King Bhima I in 1026 to honour the sun god Surya. It’s actually a tank (kund means reservoir or pond) rather than a well, but displays the hallmarks of stepwell architecture, including four sides of steps that descend to the bottom in a stunning geometrical formation. The terraces house 108 small, intricately carved shrines between the sets of steps."
+      }, {
+        "content": "Rajasthan also has a wealth of wells. The ancient city of Bundi, 200 kilometres south of Jaipur, is reknowned for its architecture, including its stepwells. One of the larger examples is Raniji Ki Baori, which was built by the queen of the region, Nathavatji, in 1699. At 46 metres deep, 20 metres wide and 40 metres long, the intricately carved monument is one of 21 baoris commissioned in the Bundi area by Nathavatji."
+      }, {
+        "content": "In the old ruined town of Abhaneri, about 95 kilometres east of Jaipur, is Chand Baori, one of India’s oldest and deepest wells; aesthetically, it’s perhaps one of the most dramatic. Built in around 850 AD next to the temple of Harshat Mata, the baori comprises hundreds of zigzagging steps that run along three of its sides, steeply descending 11 storeys, resulting in a striking geometric pattern when seen from afar. On the fourth side, covered verandas supported by ornate pillars overlook the steps."
+      }, {
+        "content": "Still in public use is Neemrana Ki Baori, located just off the Jaipur–Dehli highway. Constructed in around 1700, it’s nine storeys deep, with the last two levels underwater. At ground level, there are 86 colonnaded openings from where the visitor descends 170 steps to the deepest water source."
+      }, {
+        "content": "Today, following years of neglect, many of these monuments to medieval engineering have been saved by the Archaeological Survey of India, which has recognised the importance of preserving them as part of the country’s rich history. Tourists flock to wells in far-flung corners of northwestern India to gaze in wonder at these architectural marvels from 1,000 years ago, which serve as a reminder of both the ingenuity and artistry of ancient civilisations and of the value of water to human existence."
+      }]
+    },
+    "sub_sections": [{
+      "first": 1,
+      "last": 5,
+      "type": "true-false",
+      "options": "tf",
+      "text": [
+        "Examples of ancient stepwells can be found all over the world.",
+        "Stepwells had a range of functions, in addition to those related to water collection.",
+        "The few existing stepwells in Delhi are more attractive than those found elsewhere.",
+        "It took workers many years to build the stone steps characteristic of stepwells.",
+        "It number of steps above the water level in a stepwell altered during the course of a year."
+      ]
+    }, {
+      "first": 6,
+      "last": 8,
+      "type": "answer",
+      "word_limit": 1,
+      "number_limit": 0,
+      "text": [
+        "Which part of some stepwells provided shade for people?",
+        "What type of serious climatic event, which took place in southern Rajasthan, is mentioned in the article?",
+        "Who are frequent visitors to stepwells nowadays?"
+      ]
+    }, {
+      "first": 9,
+      "last": 13,
+      "type": "table",
+      "directions": [
+        "Complete the table below",
+        "Choose <b>ONE WORD AND/OR A NUMBER</b> from the passage for each answer.",
+        "Write your answers in boxes 9-13 on your answer sheet."
+      ],
+      "table": [
+        [
+          ["<b>Stepwell</b>"],
+          ["<b>Date</b>"],
+          ["<b>Features</b>"],
+          ["<b>Other notes</b>"]
+        ],
+        [
+          ["<b><i>Rani Ki Vav</i></b>"],
+          ["Late 11th century"],
+          ["As many as 500 sculptures decorate the monument"],
+          ["Restored in the 1960s", "Excellent condition, despite the [] of 2001"]
+        ],
+        [
+          ["<b><i>Surya</i></b>"],
+          ["1026"],
+          ["Steps on the [] produce a geometrical pattern", "Carved shrines"],
+          ["Looks more like a [] than a well"]
+        ],
+        [
+          ["<b><i>Raniji Ki Baori</i></b>"],
+          ["1699"],
+          ["Intricately carved monument"],
+          ["One of 21 baoris in the area commissioned by Queen Nathavatji"]
+        ],
+        [
+          ["<b><i>Chand Baori</i></b>"],
+          ["850 AD"],
+          ["Steps take you down 11 storey to the bottom"],
+          ["Old, deep and very dramatic", "Has [] which provide a view of the steps"]
+        ],
+        [
+          ["<b><i>Neemrana Ki Baori</i></b>"],
+          ["1700"],
+          ["Has two [] levels"],
+          ["Used by public today"]
+        ]
+      ]
+    }]
+  }, {
+    "section_number": 2,
+    "passage": {
+      "image": "http://abc.com/img.jpg",
+      "heading": "European transport systems 1900-2010",
+      "sub_heading": "What have been the trends and what are the prospects for European transport systems?",
+      "paras": [{
+        "mark": "a",
+        "content": "It is difficult to conceive of vigorous economic growth without an efficient transport system. Although modern information technologies can reduce the demand for physical transport by facilitating teleworking and teleservices, the requirement for transport continues to increase. There are two key factors behind this trend. For passenger transport, the determining factor is the spectacular growth in car use. The number of cars on European Union (EU) roads saw an increase of three million cars each year from 1990 to 2010, and in the next decade the EU will see a further substantial increase in its fleet."
+      }, {
+        "mark": "b",
+        "content": "As far as goods transport is concerned, growth is due to a large extent to changes in the European economy and its system of production. In the last 20 years, as internal frontiers have been abolished, the EU has moved from a ”stock” economy to a ”flow” economy. This phenomenon has been emphasised by the relocation of some industries, particularly those which are labour intensive, to reduce production costs, even though the production site is hundreds or even thousands of kilometres away from the final assembly plant or away from users."
+      }, {
+        "mark": "c",
+        "content": "The strong economic growth expected in countries which are candidates for entry to the EU will also increase transport flows, in particular road haulage traffic. In 1998, some of these countries already exported more than twice their 1990 volumes and imported more than five times their 1990 volumes. And although many candidate countries inherited a transport system which encourages rail, the distribution between modes has tipped sharply in favour of road transport since the 1990s. Between 1990 and 1998，road haulage increased by 19.4%, while during the same period rail haulage decreased by 43.5%, although – and this could benefit the enlarged EU – it is still on average at a much higher level than in existing member states."
+      }, {
+        "mark": "d",
+        "content": "However, a new imperative-sustainable development – offers an opportunity for adapting the EU，s common transport policy. This objective, agreed by the Gothenburg European Council, has to be achieved by integrating environmental considerations into Community policies, and shifting the balance between modes of transport lies at the heart of its strategy. The ambitious objective can only be fully achieved by 2020, but proposed measures are nonetheless a first essential step towards a sustainable transport system which will ideally be in place in 30 years‟ time, that is by 2040."
+      }, {
+        "mark": "e",
+        "content": "In 1998, energy consumption in the transport sector was to blame for 28% of emissions of CO2，the leading greenhouse gas. According to the latest estimates, if nothing is done to reverse the traffic growth trend, CO2 emissions from transport can be expected to increase by around 50% to 1,113 billion tonnes by 2020，compared with the 739 billion tonnes recorded in 1990. Once again, road transport is the main culprit since it alone accounts for 84% of the CO2 emissions attributable to transport. Using alternative fuels and improving energy efficiency is thus both an ecological necessity and a technological challenge."
+      }, {
+        "mark": "f",
+        "content": "At the same time greater efforts must be made to achieve a modal shift. Such a change cannot be achieved overnight, all the less so after over half a century of constant deterioration in favour of road. This has reached such a pitch that today rail freight services are facing marginalisation, with just 8% of market share, and with international goods trains struggling along at an average speed of 18km/h. Three possible options have emerged."
+      }, {
+        "mark": "g",
+        "content": "The first approach would consist of focusing on road transport solely through pricing. This option would not be accompanied by complementary measures in the other modes of transport. In the short term it might curb the growth in road transport through the better loading ratio of goods vehicles and occupancy rates of passenger vehicles expected as a result of the increase in the price of transport. However, the lack of measures available to revitalise other modes of transport would make it impossible for more sustainable modes of transport to take up the baton."
+      }, {
+        "mark": "h",
+        "content": "The second approach also concentrates on road transport pricing but is accompanied by measures to increase the efficiency of the other modes (better quality of services, logistics, technology). However, this approach does not include investment in new infrastructure, nor does it guarantee better regional cohesion. It could help to achieve greater uncoupling than the first approach, but road transport would keep the lion‟s share of the market and continue to concentrate on saturated arteries, despite being the most polluting of the modes. It is therefore not enough to guarantee the necessary shift of the balance."
+      }, {
+        "mark": "i",
+        "content": "The third approach, which is not new, comprises a series of measures ranging from pricing to revitalising alternative modes of transport and targeting investment in the trans-European network. This integrated approach would allow the market shares of the other modes to return to their 1998 levels and thus make a shift of balance. It is far more ambitious than it looks, bearing in mind the historical imbalance in favour of roads for the last fifty years, but would achieve a marked break in the link between road transport growth and economic growth, without placing restrictions on the mobility of people and goods."
+      }]
+    },
+    "sub_sections": [{
+      "first": 14,
+      "last": 21,
+      "type": "heading",
+      "headings": [
+        "A fresh and important long-term goal",
+        "Changing for roads and improving other transport methods",
+        "Changes affecting the distances goods may be transported",
+        "Taking all the steps necessary to change transport patterns",
+        "The environmental cost of rail transport",
+        "The escalating cost of rail transport",
+        "The need to achieve transport rebalance",
+        "The rapid growth of private transport",
+        "Plans to develop major road networks",
+        "Restricting road use through charging policies alone",
+        "Transport trends in countries awaiting EU admission"
+      ],
+      "paras": [{
+        "char": "a"
+      }, {
+        "char": "b"
+      }, {
+        "char": "c"
+      }, {
+        "char": "d"
+      }, {
+        "char": "e"
+      }, {
+        "char": "f",
+        "answer": 7
+      }, {
+        "char": "g"
+      }, {
+        "char": "h"
+      }, {
+        "char": "i"
+      }]
+    }, {
+      "first": 22,
+      "last": 26,
+      "type": "true-false",
+      "options": "tf",
+      "text": [
+        "The need for transport is growing, despite technological developments.",
+        "To reduce production costs, some indsutries have been moved closer to their relevant consumers.",
+        "Cars are prohibitively expensive in some EU candidate countries.",
+        "The Gothenburg European Council was set up 20 years ago.",
+        "By the end of this decade, C02 emissions from transport are predicted to reach 739 billion tonnes."
+      ]
+    }]
+  }, {
+    "section_number": 3,
+    "passage": {
+      "image": "",
+      "heading": "The psychology of innovation",
+      "sub_heading": "Why are so few companies truly innnovative?",
+      "paras": [{
+        "content": "Innovation is key to business survival, and companies pu substa..."
+      }]
+    },
+    "sub_sections": [{
+      "first": 27,
+      "last": 30,
+      "type": "single",
+      "directions": [
+        "Choose the correct letter, <b>A</b>, <b>B</b>, <b>C</b> or <b>D</b>.",
+        "Write the correct letter in boxes 27-30 on your answer sheet."
+      ],
+      "questions": [{
+        "text": "The example of the 'million-dollar quartet' underlines the writer's point about",
+        "choices": [
+          "recognising talent.",
+          "working as a team.",
+          "having a shared objective.",
+          "being an effective leader."
+        ]
+      }, {
+        "text": "James Watson suggests that he and Francis Crick won the race to discover the DNA code because they",
+        "choices": [
+          "were conscious of their own limitations.",
+          "brought complementary skills to their partnership.",
+          "were determined to outperform their brighter rivals.",
+          "encouraged each other to realise thier joint ambition."
+        ]
+      }, {
+        "text": "The writer mentions competitions on breakfast cereal packets as an example of how to",
+        "choices": [
+          "inspire creative thinking.",
+          "generate concise writing.",
+          "promote loyalty to a group.",
+          "strengthen commitment to an idea."
+        ]
+      }, {
+        "text": "In the last paragraph, the writer suggests that it is important for employees to",
+        "choices": [
+          "be aware of their company's goals.",
+          "feel that their contributions are valued.",
+          "have respect for their co-workers' achievements.",
+          "understand why certain management decisions are made."
+        ]
+      }]
+    }, {
+      "first": 31,
+      "last": 35,
+      "type": "ending",
+      "duplicatable": false,
+      "sentences": [
+        "Employees whose values match those of their employers are more likely to",
+        "At times of change, people tend to",
+        "If people are aware of what they might lost, they often will",
+        "People working under a dominant boss are liable to",
+        "Employees working in organisations with few rules are more likely to"
+      ],
+      "endings": [
+        "take chances.",
+        "share their ideas.",
+        "become competitive.",
+        "get promotion.",
+        "avoid risk.",
+        "ignore their duties",
+        "remain in their jobs."
+      ]
+    }, {
+      "first": 36,
+      "last": 40,
+      "type": "true-false",
+      "options": "yn",
+      "text": [
+        "The physical surroundings in which a person works play a key role in determining their creativity.",
+        "Most people have the potential to be creative.",
+        "Teams work best when their members are of equally matched intelligence.",
+        "It is easier for smaller companies to be innovative.",
+        "A manager's approval of an idea is more persuasive than that of a colleague."
+      ]
+    }]
+  }, {
+    "section_number": 4,
+    "passage": {
+      "image": "",
+      "heading": "Stepwells",
+      "sub_heading": "A millennium ago, stepwells were fundamental to life in the driest parts of India. Although many have been neglected, recent restoration has returned them to their former glory. Richard Cox travelled to  north-western India to document these spectacular monuments from a bygone era.",
+      "paras": [{
+        "content": "During the sixth and seventh centuries, the inhabitants of the modern-day states of Gujarat and Rajasthan in North-western India developed a method of gaining access to clean, fresh groundwater during the dry season for drinking, bathing, watering animals and irrigation. However, the significance of this invention – the stepwell – goes beyond its utilitarian application."
+      }, {
+        "content": "Unique to the region, stepwells are often architecturally complex and vary widely in size and shape. During their heyday, they were places of gathering, of leisure, of relaxation and of worship for villagers of all but the lowest castes.Most stepwells are found dotted around the desert areas of Gujarat (where they are called vav) and Rajasthan (where they are known as baori), while a few also survive in Delhi. Some were located in or near villages as public spaces for the community; others were positioned beside roads as resting places for travellers."
+      }, {
+        "content": "As their name suggests, stepwells comprise a series of stone steps descending from ground level to the water source (normally an underground aquifer) as it recedes following the rains. When the water level was high, the user needed only to descend a few steps to reach it; when it was low, several levels would have to be negotiated."
+      }, {
+        "content": "Some wells are vast, open craters with hundreds of steps paving each sloping side, often in tiers. Others are more elaborate, with long stepped passages leading to the water via several storeys built from stone and supported by pillars, they also included pavilions that sheltered visitors from the relentless heat. But perhaps the most impressive features are the intricate decorative sculptures that embellish many stepwells, showing activities from fighting and dancing to everyday acts such as women combing their hair and churning butter."
+      }, {
+        "content": "Down the centuries, thousands of wells were constructed throughout northwestern India, but the majority have now fallen into disuse; many are derelict and dry, as groundwater has been diverted for industrial use and the wells no longer reach the water table. Their condition hasn’t been helped by recent dry spells: southern Rajasthan suffered an eight-year drought between 1996 and 2004."
+      }, {
+        "content": "However, some important sites in Gujarat have recently undergone major restoration, and the state government announced in June last year that it plans to restore the stepwells throughout the state."
+      }, {
+        "content": "In Patan, the state’s ancient capital, the stepwell of Rani Ki Vav (Queen’s Stepwell) is perhaps the finest current example. It was built by Queen Udayamati during the late 11th century, but became silted up following a flood during the 13th century. But the Archaeological Survey of India began restoring it in the 1960s, and today it’s in pristine condition. At 65 metres long, 20 metres wide and 27 metres deep, Rani Ki Vav features 500 distinct sculptures carved into niches throughout the monument, depicting gods such as Vishnu and Parvati in various incarnations. Incredibly, in January 2001, this ancient structure survived a devastating earthquake that measured 7.6 on the Richter scale."
+      }, {
+        "content": "Another example is the Surya Kund in Modhera, northern Gujarat, next to the Sun Temple, built by King Bhima I in 1026 to honour the sun god Surya. It’s actually a tank (kund means reservoir or pond) rather than a well, but displays the hallmarks of stepwell architecture, including four sides of steps that descend to the bottom in a stunning geometrical formation. The terraces house 108 small, intricately carved shrines between the sets of steps."
+      }, {
+        "content": "Rajasthan also has a wealth of wells. The ancient city of Bundi, 200 kilometres south of Jaipur, is reknowned for its architecture, including its stepwells. One of the larger examples is Raniji Ki Baori, which was built by the queen of the region, Nathavatji, in 1699. At 46 metres deep, 20 metres wide and 40 metres long, the intricately carved monument is one of 21 baoris commissioned in the Bundi area by Nathavatji."
+      }, {
+        "content": "In the old ruined town of Abhaneri, about 95 kilometres east of Jaipur, is Chand Baori, one of India’s oldest and deepest wells; aesthetically, it’s perhaps one of the most dramatic. Built in around 850 AD next to the temple of Harshat Mata, the baori comprises hundreds of zigzagging steps that run along three of its sides, steeply descending 11 storeys, resulting in a striking geometric pattern when seen from afar. On the fourth side, covered verandas supported by ornate pillars overlook the steps."
+      }, {
+        "content": "Still in public use is Neemrana Ki Baori, located just off the Jaipur–Dehli highway. Constructed in around 1700, it’s nine storeys deep, with the last two levels underwater. At ground level, there are 86 colonnaded openings from where the visitor descends 170 steps to the deepest water source."
+      }, {
+        "content": "Today, following years of neglect, many of these monuments to medieval engineering have been saved by the Archaeological Survey of India, which has recognised the importance of preserving them as part of the country’s rich history. Tourists flock to wells in far-flung corners of northwestern India to gaze in wonder at these architectural marvels from 1,000 years ago, which serve as a reminder of both the ingenuity and artistry of ancient civilisations and of the value of water to human existence."
+      }]
+    },
+    "sub_sections": [{
+      "first": 50,
+      "last": 51,
+      "type": "multiple",
+      "limit": 2,
+      "des": "The list below includes factors contributing to classroom noise.",
+      "choices": [
+        "current teaching methods",
+        "echoing corridors",
+        "cooling systems",
+        "large class sizes",
+        "loud-voiced teachers",
+        "playground games"
+      ]
+    }]
+  }]
+}

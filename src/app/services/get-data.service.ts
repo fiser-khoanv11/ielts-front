@@ -360,7 +360,7 @@ export class GetDataService {
 
   getReadingOffline(id: string): Promise<Object> {
     return new Promise(resolve => {
-      this.http.get('app/services/read-data.json').subscribe(result => {
+      this.http.get('/assets/read-data.json').subscribe(result => {
         resolve(result.json());
       });
     });
@@ -368,7 +368,7 @@ export class GetDataService {
 
   getListeningOffline(id: string): Promise<Object> {
     return new Promise(resolve => {
-      this.http.get('app/services/listen-data.json').subscribe(result => {
+      this.http.get('/assets/listen-data.json').subscribe(result => {
         resolve(result.json());
       });
     });
@@ -376,7 +376,7 @@ export class GetDataService {
 
   getWriteOffline(): Promise<Object> {
     return new Promise(resolve => {
-      this.http.get('app/services/write-data.json').subscribe(result => {
+      this.http.get('/assets/write-data.json').subscribe(result => {
         resolve(result.json());
       });
     });
@@ -384,7 +384,7 @@ export class GetDataService {
 
   getSpeakOffline(): Promise<Object> {
     return new Promise(resolve => {
-      this.http.get('app/services/speak-data.json').subscribe(result => {
+      this.http.get('/assets/speak-data.json').subscribe(result => {
         resolve(result.json());
       });
     });

@@ -24,7 +24,7 @@ import { TestToolbarComponent } from './components/test-toolbar/test-toolbar.com
 
 // import { SummaryCompletionComponent } from './reading-types/summary-completion/summary-completion.component';
 
-import { BlankSpaceDirective } from './directives/blank-space.directive';
+// import { BlankSpaceDirective } from './directives/blank-space.directive';
 import { SentenceComponent } from './reading-types/sentence/sentence.component';
 import { EndingComponent } from './reading-types/ending/ending.component';
 import { LetterPipe } from './pipes/letter.pipe';
@@ -34,7 +34,7 @@ import { OptionListComponent } from './components/option-list/option-list.compon
 import { IReadingComponent } from './reading-types/i-reading/i-reading.component';
 import { FeatureComponent } from './common-types/feature/feature.component';
 
-import { HighlightDirective } from './directives/highlight.directive';
+// import { HighlightDirective } from './directives/highlight.directive';
 import { WritingComponent } from './skills/writing/writing.component';
 import { SpeakingComponent } from './skills/speaking/speaking.component';
 
@@ -76,7 +76,7 @@ import { TimerPipe } from './pipes/timer.pipe';
     // RMultipleComponent,
     // RSingleComponent,
     // RNoteComponent,
-    BlankSpaceDirective,
+    // BlankSpaceDirective,
     SentenceComponent,
     EndingComponent,
     LetterPipe,
@@ -85,7 +85,7 @@ import { TimerPipe } from './pipes/timer.pipe';
     OptionListComponent,
     FeatureComponent,
     // RTableComponent,
-    HighlightDirective,
+    // HighlightDirective,
     WritingComponent,
     SpeakingComponent,
     // LTableComponent,

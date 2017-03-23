@@ -1,0 +1,225 @@
+{
+  "keys": [
+    { "no": 1, "keys": [ "pargetter" ] },
+    { "no": 2, "keys": [ "east" ] },
+    { "no": 3, "keys": [ "library" ] },
+    { "no": 4, "keys": [ "morning", "mornings" ] },
+    { "no": 5, "keys": [ "postbox" ] },
+    { "no": 6, "keys": [ "prices" ] },
+    { "no": 7, "keys": [ "glass" ] },
+    { "no": 8, "keys": [ "cooker" ] },
+    { "no": 9, "keys": [ "week" ] },
+    { "no": 10, "keys": [ "fence" ] },
+    { "no": 11, "keys": [ "b" ] },
+    { "no": 12, "keys": [ "b" ] },
+    { "no": 13, "keys": [ "a" ] },
+    { "no": 14, "keys": [ "a" ] },
+    { "no": 15, "keys": [ "c" ] },
+    { "no": 16, "keys": [ "trains" ] },
+    { "no": 17, "keys": [ "dark" ] },
+    { "no": 18, "keys": [ "games" ] },
+    { "no": 19, "keys": [ "guided tour" ] },
+    { "no": 20, "keys": [ "ladder", "ladders" ] },
+    { "no": 21, "keys": [ "a" ] },
+    { "no": 22, "keys": [ "e" ] },
+    { "no": 23, "keys": [ "b" ] },
+    { "no": 24, "keys": [ "c" ] },
+    { "no": 25, "keys": [ "d" ] },
+    { "no": 26, "keys": [ "f" ] },
+    { "no": 27, "keys": [ "g" ] },
+    { "no": 28, "keys": [ "b" ] },
+    { "no": 29, "keys": [ "e" ] },
+    { "no": 30, "keys": [ "c" ] },
+    { "no": 31, "keys": [ "c" ] },
+    { "no": 32, "keys": [ "b" ] },
+    { "no": 33, "keys": [ "c" ] },
+    { "no": 34, "keys": [ "metal", "metals" ] },
+    { "no": 35, "keys": [ "space" ] },
+    { "no": 36, "keys": [ "memory" ] },
+    { "no": 37, "keys": [ "solar" ] },
+    { "no": 38, "keys": [ "oil" ] },
+    { "no": 39, "keys": [ "waste" ] },
+    { "no": 40, "keys": [ "tests" ] }
+  ],
+  "content": [{
+    "section_number": 1,
+    "audio": "",
+    "sub_sections": [{
+      "first": 7,
+      "last": 10,
+      "type": "table",
+      "directions": [
+        "Complete the table below.",
+        "Write <b>ONE WORD AND/OR A NUMBER</b> for each answer."
+      ],
+      "table": [
+        [
+          [],
+          ["<b>Number of days</b>"],
+          ["<b>Total distance</b>"],
+          ["<b>Price (per person)</b>"],
+          ["<b>Includes</b>"]
+        ],
+        [
+          ["<b>Trip One</b>"],
+          ["12 days"],
+          ["[] km"],
+          ["£525"],
+          ["accommodation", "car", "one []"]
+        ],
+        [
+          ["<b>Trip Two</b>"],
+          ["9 days"],
+          ["980 km"],
+          ["£ []"],
+          ["accommodation", "car", "[]"]
+        ]
+      ]
+    }]
+  }, {
+    "section_number": 2,
+    "audio": "",
+    "sub_sections": [{
+      "first": 11,
+      "last": 12,
+      "type": "multiple",
+      "limit": 2,
+      "directions": [
+        "Choose <b>TWO</b> letters <b>A-E</b>.",
+        "Which <b>TWO</b> facilities at the leisure club have recently been improved?"
+      ],
+      "choices": [
+        "the gym",
+        "the tracks",
+        "the indoor pool",
+        "the outdoor pool",
+        "the sports training for children"
+      ]
+    }, {
+      "first": 13,
+      "last": 18,
+      "type": "feature",
+      "directions": [
+        "Which features is related to each of the following areas of the world represented in the playground?",
+        "Choose <b>SIX</b> answers from the box and write the correct letter, <b>A-I</b>, next to questions 15-20."
+      ],
+      "features": [
+        "ancient forts",
+        "waterways",
+        "ice and snow",
+        "jewels",
+        "local animals",
+        "mountains",
+        "music and film",
+        "space travel",
+        "volcanoes"
+      ],
+      "heading": "Areas of the world",
+      "text": [
+        "Asia",
+        "Antarctica",
+        "South America",
+        "North America",
+        "Europe",
+        "Africa"
+      ]
+    }]
+  }, {
+    "section_number": 3,
+    "audio": "",
+    "sub_sections": [{
+      "first": 21,
+      "last": 25,
+      "type": "single",
+      "directions": [
+        "Choose the correct letter, <b>A</b>, <b>B</b> or <b>C</b>."
+      ],
+      "heading": "Global Design Competition",
+      "questions": [{
+        "text": "Students entering the design competition have to",
+        "choices": [
+          "produce an energy-efficient design.",
+          "adapt an existing energy-saving appliance.",
+          "develop a new use for current technology."
+        ]
+      }, {
+        "text": "John chose a dishwasher because he wanted to make dishwashers",
+        "choices": [
+          "more appealing.",
+          "more common.",
+          "more economical."
+        ]
+      }, {
+        "text": "The Stone in John's 'Rockpool' design is used",
+        "choices": [
+          "for decoration.",
+          "to switch it on.",
+          "to stop water escaping."
+        ]
+      }, {
+        "text": "In the holding chamber, the carbon dioxide",
+        "choices": [
+          "changes back to a gas.",
+          "dries the dishes.",
+          "is allowed to cool."
+        ]
+      }, {
+        "text": "At the end of the cleaning process, the carbon dioxide",
+        "choices": [
+          "is released into the air.",
+          "is disposed of with the waste.",
+          "is collected ready to be re-used."
+        ]
+      }]
+    }, {
+      "first": 26,
+      "last": 30,
+      "type": "note",
+      "directions": [
+        "Complete the notes below.",
+        "Write <b>ONE WORD ONLY</b> for each answer."
+      ],
+      "heading": "",
+      "paras": [
+        "John needs help preparing for his [].",
+        "The professor advises John to make a [] of his design.",
+        "John's main problem is getting good quality [].",
+        "The professor suggests John apply for a [].",
+        "The professor will check the [] information in John's written report."
+      ]
+    }]
+  }, {
+    "section_number": 4,
+    "audio": "",
+    "sub_sections": [{
+      "first": 31,
+      "last": 40,
+      "type": "note",
+      "directions": [
+        "Complete the notes below.",
+        "Write <b>ONE WORD ONLY</b> for each answer."
+      ],
+      "heading": "THE SPIRIT BEAR",
+      "paras": [
+        "<b>General facts</b>",
+        "It is a white bear belonging to the black bear family.",
+        "Its color comes from an uncommon [].",
+        "Local people believe that it has unusual [].",
+        "They protect the bear from [].",
+        "<b>Habitat</b>",
+        "The bear's relationship with the forest complex.",
+        "Tree roots stop [] along salmon streams.",
+        "The bears' feeding habits provide nutrients for forest vegatation.",
+        "It is currently found on a small number of [].",
+        "<b>Threats</b>",
+        "Habitat is being lost due to deforestation and construction of [] by logging companies.",
+        "Unrestricted [] is affecting the salmon supply.",
+        "The bears' existence is also threatened by their low rate of [].",
+        "<b>Going forward</b>",
+        "Interested parties are working together.",
+        "Logging companies must improve their [] of logging.",
+        "Maintenance and [] of the spirit bears' territory is needed."
+      ]
+    }]
+  }]
+}
