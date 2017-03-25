@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Input } from '@angular/core';
-import { IReadingComponent } from '../i-reading/i-reading.component';
 import { ConverterService } from '../../services/converter.service';
 
 @Component({
@@ -9,7 +8,7 @@ import { ConverterService } from '../../services/converter.service';
   styleUrls: ['./heading.component.css'],
   providers: [ ConverterService ]
 })
-export class HeadingComponent implements OnInit, IReadingComponent {
+export class HeadingComponent implements OnInit {
 
   @Input() data: Object;
   @Input() sectionNumber: number;

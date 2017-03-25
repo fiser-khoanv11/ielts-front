@@ -31,7 +31,6 @@ import { LetterPipe } from './pipes/letter.pipe';
 import { InformationComponent } from './reading-types/information/information.component';
 import { SummarySelectComponent } from './reading-types/summary-select/summary-select.component';
 import { OptionListComponent } from './components/option-list/option-list.component';
-import { IReadingComponent } from './reading-types/i-reading/i-reading.component';
 import { FeatureComponent } from './common-types/feature/feature.component';
 
 // import { HighlightDirective } from './directives/highlight.directive';
@@ -39,25 +38,28 @@ import { WritingComponent } from './skills/writing/writing.component';
 import { SpeakingComponent } from './skills/speaking/speaking.component';
 
 import { MultipleComponent } from './common-types/multiple/multiple.component';
-// import { LMultipleComponent } from './listening-types/l-multiple/l-multiple.component';
-// import { RMultipleComponent } from './reading-types/r-multiple/r-multiple.component';
+
 
 import { NoteComponent } from './common-types/note/note.component';
-// import { LNoteComponent } from './listening-types/l-note/l-note.component';
-// import { RNoteComponent } from './reading-types/r-note/r-note.component';
+
 
 import { SingleComponent } from './common-types/single/single.component';
-// import { LSingleComponent } from './listening-types/l-single/l-single.component';
-// import { RSingleComponent } from './reading-types/r-single/r-single.component';
+
 
 import { TableComponent } from './common-types/table/table.component';
 import { TimerPipe } from './pipes/timer.pipe';
-// import { LTableComponent } from './listening-types/l-table/l-table.component';
-// import { RTableComponent } from './reading-types/r-table/r-table.component';
+
+import { LMultipleComponent } from './listening-types/l-multiple/l-multiple.component';
+import { RMultipleComponent } from './reading-types/r-multiple/r-multiple.component';
+import { LTableComponent } from './listening-types/l-table/l-table.component';
+import { RTableComponent } from './reading-types/r-table/r-table.component';
+import { LNoteComponent } from './listening-types/l-note/l-note.component';
+import { RNoteComponent } from './reading-types/r-note/r-note.component';
+import { LSingleComponent } from './listening-types/l-single/l-single.component';
+import { RSingleComponent } from './reading-types/r-single/r-single.component';
 
 @NgModule({
   declarations: [
-    // IReadingComponent
     AppComponent,
     ComaComponent,
     CombComponent,
@@ -73,10 +75,7 @@ import { TimerPipe } from './pipes/timer.pipe';
     TestComponent,
     ResultComponent,
     TestToolbarComponent,
-    // RMultipleComponent,
-    // RSingleComponent,
-    // RNoteComponent,
-    // BlankSpaceDirective,
+    
     SentenceComponent,
     EndingComponent,
     LetterPipe,
@@ -84,19 +83,26 @@ import { TimerPipe } from './pipes/timer.pipe';
     SummarySelectComponent,
     OptionListComponent,
     FeatureComponent,
-    // RTableComponent,
-    // HighlightDirective,
+    
     WritingComponent,
     SpeakingComponent,
-    // LTableComponent,
-    // LMultipleComponent,
-    // LSingleComponent,
-    // LNoteComponent,
+    
     MultipleComponent,
     SingleComponent,
     NoteComponent,
     TableComponent,
-    TimerPipe
+    TimerPipe,
+
+    // IReadingComponent,
+    RTableComponent,
+    RMultipleComponent,
+    RSingleComponent,
+    RNoteComponent,
+    LTableComponent,
+    LMultipleComponent,
+    LSingleComponent,
+    LNoteComponent,
+
   ],
   entryComponents: [
     SubmitDialog,
