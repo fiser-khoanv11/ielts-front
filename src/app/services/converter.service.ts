@@ -15,6 +15,12 @@ export class ConverterService {
       result[i] = false;
 
       for (let j = 0; j < keys.length; j++) {
+        if (answer != undefined) {
+          answer = answer.trim();
+          while (answer.indexOf('  ') >= 0) {
+            answer = answer.replace('  ', ' ');
+          }
+        }
         if (answer == keys[j]) {
           result[i] = true;
           break;

@@ -34,3 +34,7 @@
   height: 75%;
   border-radius: 70%;
 }
+
+md-toolbar {
+  height: 64px;
+}

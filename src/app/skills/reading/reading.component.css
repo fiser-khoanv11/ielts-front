@@ -75,3 +75,13 @@ md-tab-group {
   text-align: end;
   margin-bottom: 5px;
 }
+
+.timer {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+}
+
+.timer:hover {
+  opacity: 0.5;
+}

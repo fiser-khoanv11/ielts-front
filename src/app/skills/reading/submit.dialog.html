@@ -3,7 +3,7 @@
   <!-- <md-card-subtitle>Reading</md-card-subtitle> -->
   <md-card-content>
     <div *ngIf="isSubmited">
-      <p class="score primary-color"><span class="score-prefix">Your score is </span>{{testResult.score}}</p>
+      <p class="score primary-color"><span class="score-prefix">Your score is </span>{{testResult.score | number : '1.1-1'}}</p>
       <p class="no-of-correct">Correct answers: {{testResult.noOfCorrect}}/40</p>
     </div>
     <md-dialog-content>

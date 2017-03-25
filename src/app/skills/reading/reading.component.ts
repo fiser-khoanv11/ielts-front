@@ -83,7 +83,7 @@ export class ReadingComponent implements OnInit {
   data: Object[] = [];
   keys: Object[] = [];
   isSubmited: boolean = false;
-  timer: number = 500; //3600
+  timer: number = 1000; //3600
 
   constructor(private dialog: MdDialog, private snackBar: MdSnackBar, private getDataService: GetDataService, private activatedRoute: ActivatedRoute) { }
 
@@ -179,41 +179,5 @@ export class ReadingComponent implements OnInit {
     if (a['no'] > b['no']) return 1;
     return 0;
   }
-
-  // getChosenText() {
-  //   console.log(window.getSelection());
-  //   let toString = window.getSelection().toString();
-  //   let wholeString = window.getSelection().anchorNode['data'];
-  //   let first = window.getSelection().anchorOffset;
-  //   let last = window.getSelection().focusOffset;
-  //   // console.log(toString);
-  //   // console.log(wholeString);
-  //   // console.log(first);
-  //   // console.log(last);
-
-  //   // HERE
-  //   // console.warn(this.data);
-  //   for (let i = 0; i < this.data.length; i++) {
-  //     let paras = this.data[i]['passage']['paras'];
-  //     for (let j = 0; j < paras.length; j++) {
-  //       // console.log('here');
-  //       let para = paras[j];
-  //       // console.log(para);
-  //       // for (let t = 0; t < para['content']; t++) {
-  //       if (para['content'] == wholeString) {
-  //         // para
-  //         // console.warn('okeeeeeee');        
-  //         let tempPara = para['highlight'].slice();
-  //         tempPara.push({ first: first, last: last });
-  //         para['highlight'] = tempPara;
-  //         break;
-  //       }
-
-  //       // paras[j]['content'] = [ {color: 'pink', text: paras[j]['content']} ];
-  //     }
-  //   }
-
-  //   console.log(this.data[0]);
-  // }
 
 }
