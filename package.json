@@ -48,5 +48,8 @@
   },
   "devDependencies": {
     
+  },
+  "engines": {
+    "node": "6.10.1"
   }
 }
