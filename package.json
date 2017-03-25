@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "start": "ng serve",
+    "start": "node server.js",
     "lint": "tslint",
     "test": "ng test --watch=false",
     "pree2e": "webdriver-manager update",
@@ -16,6 +16,7 @@
     "@angular/cli": "1.0.0-rc.4",
     "@angular/common": "^2.4.0",
     "@angular/compiler": "^2.4.0",
+    "@angular/compiler-cli": "^2.4.0",
     "@angular/core": "^2.4.0",
     "@angular/forms": "^2.4.0",
     "@angular/http": "^2.4.0",
@@ -23,33 +24,30 @@
     "@angular/platform-browser": "^2.4.0",
     "@angular/platform-browser-dynamic": "^2.4.0",
     "@angular/router": "^3.4.0",
-    "core-js": "^2.4.1",
-    "rxjs": "^5.1.0",
-    "zone.js": "^0.7.6",
-    "ng2-facebook-sdk": "1.2.1",
-
-    "@angular/compiler-cli": "^2.4.0",
     "@types/jasmine": "2.5.38",
     "@types/node": "~6.0.60",
     "codelyzer": "~2.0.0",
+    "core-js": "^2.4.1",
+    "express": "^4.15.2",
     "jasmine-core": "~2.5.2",
     "jasmine-spec-reporter": "~3.2.0",
     "karma": "~1.4.1",
     "karma-chrome-launcher": "~2.0.0",
     "karma-cli": "~1.0.1",
+    "karma-coverage-istanbul-reporter": "^0.2.0",
     "karma-jasmine": "~1.1.0",
     "karma-jasmine-html-reporter": "^0.2.2",
-    "karma-coverage-istanbul-reporter": "^0.2.0",
+    "ng2-facebook-sdk": "1.2.1",
     "protractor": "~5.1.0",
+    "rxjs": "^5.1.0",
     "ts-node": "~2.0.0",
     "tslint": "~4.5.0",
-    "typescript": "~2.0.0"
+    "typescript": "~2.0.0",
+    "zone.js": "^0.7.6"
   },
-  "devDependencies": {
-    
-  },
+  "devDependencies": {},
   "engines": {
     "node": "6.10.1",
-    "npm": "3.10.7"
+    "npm": "4.4.4"
   }
 }
