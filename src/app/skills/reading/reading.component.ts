@@ -83,7 +83,7 @@ export class ReadingComponent implements OnInit {
   data: Object[] = [];
   keys: Object[] = [];
   isSubmited: boolean = false;
-  timer: number = 1000; //3600
+  timer: number = 3600; //3600
 
   constructor(private dialog: MdDialog, private snackBar: MdSnackBar, private getDataService: GetDataService, private activatedRoute: ActivatedRoute) { }
 
