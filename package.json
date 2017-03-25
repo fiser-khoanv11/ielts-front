@@ -3,15 +3,15 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "start": "concurrently --kill-others \"ng serve --aot=true --progress=false --proxy-config proxy.conf.json\" \"npm run _server:run\"",
-    "lint": "tslint \"src/**/*.ts\"",
+    "start": "ng serve",
+    "lint": "tslint",
     "test": "ng test --watch=false",
     "pree2e": "webdriver-manager update",
     "e2e": "protractor",
-    "build": "ng build --prod --sm=false --aot=true --output-path=dist/client && npm run _server:build",
-    "_server:run": "tsc -p ./server && concurrently \"tsc -w -p ./server\" \"nodemon dist/server/bin/www.js\" ",
-    "_server:build": "tsc -p ./server",
-    "postinstall": "npm run build"
+    "build": "ng build",
+    // "_server:run": "tsc -p ./server && concurrently \"tsc -w -p ./server\" \"nodemon dist/server/bin/www.js\" ",
+    // "_server:build": "tsc -p ./server",
+    "postinstall": "ng build --aot -prod"
   },
   "private": true,
   "dependencies": {
