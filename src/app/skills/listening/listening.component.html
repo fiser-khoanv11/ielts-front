@@ -1,5 +1,9 @@
-<app-test-toolbar currentPage="0"></app-test-toolbar>
+<app-test-toolbar currentPage="0" [testId]="testId"></app-test-toolbar>
 
+<button class="timer" md-raised-button>
+  <md-icon class="icon">alarm</md-icon>
+  {{timer | timer}}
+</button>
 <md-tab-group *ngIf="data">
   <md-tab *ngFor="let section of data" label="Section {{section.section_number}}">
     <div class="padding-20">

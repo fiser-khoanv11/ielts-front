@@ -11,7 +11,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { ComaComponent } from './components/coma/coma.component';
 import { CombComponent } from './components/comb/comb.component';
 import { ComcComponent } from './components/comc/comc.component';
-import { ReadingComponent, SubmitDialog } from './skills/reading/reading.component';
+import { ReadingComponent } from './skills/reading/reading.component';
 import { ListeningComponent } from './skills/listening/listening.component';
 import { TrueFalseComponent } from './reading-types/true-false/true-false.component';
 import { AnswerComponent } from './reading-types/answer/answer.component';
@@ -57,6 +57,8 @@ import { LNoteComponent } from './listening-types/l-note/l-note.component';
 import { RNoteComponent } from './reading-types/r-note/r-note.component';
 import { LSingleComponent } from './listening-types/l-single/l-single.component';
 import { RSingleComponent } from './reading-types/r-single/r-single.component';
+import { CommonComponent } from './skills/common/common.component';
+import { SubmitDialog } from './skills/dialogs/submit.dialog'
 
 @NgModule({
   declarations: [
@@ -102,6 +104,7 @@ import { RSingleComponent } from './reading-types/r-single/r-single.component';
     LMultipleComponent,
     LSingleComponent,
     LNoteComponent,
+    CommonComponent,
 
   ],
   entryComponents: [

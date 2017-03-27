@@ -1,10 +1,10 @@
 <div class="overall">
-  <div *ngFor="let item of tests" class="card-div" [ngStyle]="{'width': cardWidth}">
+  <div *ngFor="let test of tests" class="card-div" [ngStyle]="{'width': cardWidth}">
     <md-card class="example-card">
       <md-card-header>
         <div md-card-avatar class="example-header-image"></div>
-        <md-card-title>Cambridge IELTS 10</md-card-title>
-        <md-card-subtitle>Test {{item}}</md-card-subtitle>
+        <md-card-title>{{test.title}}</md-card-title>
+        <md-card-subtitle>{{test.description}}</md-card-subtitle>
       </md-card-header>
       <img md-card-image src="http://schoolsuganda.com/uploads/articles/35/650x650/1433145871-bc.png">
       <!-- <md-card-content>
@@ -15,7 +15,7 @@
         </p>
       </md-card-content> -->
       <md-card-actions>
-        <button md-button routerLink="/test/listening/58c90131734d1d2ca855b0c9" routerLinkActive="active">TAKE THIS TEST</button>
+        <button md-button routerLink="/test/{{test.id}}/listening">TAKE THIS TEST</button>
         <!-- <button md-button>SHARE</button> -->
       </md-card-actions>
     </md-card>

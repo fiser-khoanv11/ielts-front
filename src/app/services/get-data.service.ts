@@ -349,10 +349,19 @@ export class GetDataService {
     return data;
   }
 
+  findOne(testId: number, skill: string): Promise<Object> {
+    return new Promise(resolve => {
+      console.info(testId + ' day roi');
+      this.http.get('/api/skill/find-one/' + skill + '/' + testId).subscribe(result => {
+        resolve(result.json());
+      });
+    });
+  }
+
   getReadingTest(id: string): Promise<Object> {
     return new Promise(resolve => {
       // console.log(id);
-      this.http.get('http://localhost:3000/reading/' + id).subscribe(result => {
+      this.http.get('http://localhost:3000/api/readings/' + id).subscribe(result => {
         resolve(result.json());
       });
     });
@@ -366,7 +375,7 @@ export class GetDataService {
     });
   }
 
-  getListeningOffline(id: string): Promise<Object> {
+  getListeningOffline(id: number): Promise<Object> {
     return new Promise(resolve => {
       this.http.get('/assets/listen-data.json').subscribe(result => {
         resolve(result.json());

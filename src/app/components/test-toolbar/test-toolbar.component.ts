@@ -8,6 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class TestToolbarComponent implements OnInit {
 
   @Input() currentPage: number;
+  @Input() testId: number;
 
   constructor() { }
 

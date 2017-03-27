@@ -7,8 +7,9 @@ export class ConverterService {
 
   getTestResult(answers: Array<Object>, _keys: Array<Object>): {result: Array<boolean>, noOfCorrect: number, score: number} {
     let result: Array<boolean> = [];
+    console.info(JSON.stringify(answers));
 
-    for (let i = 0; i < 40; i++) {
+    for (let i = 0; i < answers.length; i++) {
       let answer = answers[i]['ans'];
       let keys = _keys[i]['keys'];
 

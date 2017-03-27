@@ -1,10 +1,9 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component } from '@angular/core';
 import { ViewChildren, QueryList } from '@angular/core';
-import { RouterModule, Routes, Router, ActivatedRoute } from '@angular/router';
-import { MdDialog, MdDialogRef, MdSnackBar } from '@angular/material';
+import { ActivatedRoute } from '@angular/router';
+import { MdDialog, MdSnackBar } from '@angular/material';
 
 import { GetDataService } from '../../services/get-data.service';
-import { ConverterService } from '../../services/converter.service';
 
 import { FeatureComponent } from '../../common-types/feature/feature.component';
 import { MultipleComponent } from '../../common-types/multiple/multiple.component';
@@ -20,43 +19,7 @@ import { SentenceComponent } from '../../reading-types/sentence/sentence.compone
 import { SummarySelectComponent } from '../../reading-types/summary-select/summary-select.component';
 import { TrueFalseComponent } from '../../reading-types/true-false/true-false.component';
 
-@Component({
-  selector: 'app-submit',
-  templateUrl: './submit.dialog.html',
-  styleUrls: ['./submit.dialog.css'],
-  providers: [ ConverterService ]
-})
-export class SubmitDialog implements OnInit {
-
-  answers: Array<Object>;
-  keys: Array<Object>;
-  testResult: {result: Array<boolean>, noOfCorrect: number, score: number};
-  isSubmited: boolean;
-  isTimeout: boolean;
-
-  constructor(private dialogRef: MdDialogRef<any>, private converterService: ConverterService) { }
-
-  ngOnInit() {
-    this.answers = this.dialogRef.config.data.answers;
-    this.keys = this.dialogRef.config.data.keys;
-    this.isSubmited = this.dialogRef.config.data.isSubmited;
-    this.isTimeout = this.dialogRef.config.data.isTimeout;
-    this.testResult = this.converterService.getTestResult(this.answers, this.keys);
-
-    if (this.isTimeout) {
-      this.submit();
-    }
-  }
-
-  ngOnDestroy() {
-    this.dialogRef.close(this.isSubmited);
-  }
-
-  submit() {
-    this.isSubmited = true;
-  }
-
-}
+import { CommonComponent } from '../common/common.component';
 
 @Component({
   selector: 'app-reading',
@@ -64,7 +27,7 @@ export class SubmitDialog implements OnInit {
   styleUrls: ['./reading.component.css'],
   providers: [ GetDataService ]
 })
-export class ReadingComponent implements OnInit {
+export class ReadingComponent extends CommonComponent {
 
   @ViewChildren(FeatureComponent) featureComponents: QueryList<FeatureComponent>;
   @ViewChildren(MultipleComponent) multipleComponents: QueryList<MultipleComponent>;
@@ -80,42 +43,9 @@ export class ReadingComponent implements OnInit {
   @ViewChildren(InformationComponent) informationComponents: QueryList<InformationComponent>;
   @ViewChildren(SentenceComponent) sentenceComponents: QueryList<SentenceComponent>;
 
-  data: Object[] = [];
-  keys: Object[] = [];
-  isSubmited: boolean = false;
-  timer: number = 3600; //3600
-
-  constructor(private dialog: MdDialog, private snackBar: MdSnackBar, private getDataService: GetDataService, private activatedRoute: ActivatedRoute) { }
-
-  ngOnInit() {
-    let id = this.activatedRoute.snapshot.params['id'];
-
-    this.getDataService.getReadingOffline(id).then(result => {
-      console.warn(result);
-      this.data = result['content'];
-      this.keys = result['keys'];
-
-      if (this.keys.length != 40) {
-        console.error('keys.length <> 40');
-      }
-    });
-
-    this.setTimer();
-  }
-
-  setTimer(): void {
-    let setting = setInterval(() => {
-      this.timer --;
-
-      if (this.timer == 1800) {
-        this.snackBar.open('30 minutes left!', 'OK', { duration: 2000 });
-      } else if (this.timer == 600) {
-        this.snackBar.open('10 minutes left!', 'OK', { duration: 2000 });
-      } else if (this.timer <= 0) {
-        clearInterval(setting);
-        this.viewSheet(true);
-      }
-    }, 1); // 1000
+  constructor(private _dialog: MdDialog, private _snackBar: MdSnackBar, private _getDataService: GetDataService, private _activatedRoute: ActivatedRoute) {
+    super(_dialog, _snackBar, _getDataService, _activatedRoute);
+    this.skill = 'reading';
   }
 
   getAnswers(): Array<Object> {
@@ -153,31 +83,6 @@ export class ReadingComponent implements OnInit {
     }
 
     return overall;
-  }
-
-  viewSheet(isTimeout: boolean): void {
-    let overall = this.getAnswers();
-
-    // Mo dialog
-    let dialogRef = this.dialog.open(SubmitDialog, { 
-      width: '600px',
-      data: {
-        answers: overall,
-        keys: this.keys,
-        isSubmited: this.isSubmited,
-        isTimeout: isTimeout
-      }
-    });
-
-    dialogRef.afterClosed().subscribe(result => {
-      this.isSubmited = result;
-    });
-  }
-
-  compare(a: Object, b: Object): number {
-    if (a['no'] < b['no']) return -1;
-    if (a['no'] > b['no']) return 1;
-    return 0;
   }
 
 }

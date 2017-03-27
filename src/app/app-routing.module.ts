@@ -13,8 +13,8 @@ import { ResultComponent } from './pages/result/result.component';
 
 const appRoutes: Routes = [
   { path: '', component: TestComponent },
-  { path: 'test/reading/:id', component: ReadingComponent },
-  { path: 'test/listening/:id', component: ListeningComponent },
+  { path: 'test/:testId/reading', component: ReadingComponent },
+  { path: 'test/:testId/listening', component: ListeningComponent },
   { path: 'test/writing', component: WritingComponent },
   { path: 'test/speaking', component: SpeakingComponent },
   { path: 'result', component: ResultComponent },

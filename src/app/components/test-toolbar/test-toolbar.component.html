@@ -9,10 +9,10 @@
   <span class="fill-remaining-space"></span>
   <nav>
     <button *ngIf="currentPage == 0" md-raised-button class="active">Listening</button>
-    <button *ngIf="currentPage != 0" md-button class="inactive" routerLink="/test/listening/1">Listening</button>
+    <button *ngIf="currentPage != 0" md-button class="inactive" routerLink="/test/{{testId}}/listening">Listening</button>
 
     <button *ngIf="currentPage == 1" md-raised-button class="active">Reading</button>
-    <button *ngIf="currentPage != 1" md-button class="inactive" routerLink="/test/reading/1">Reading</button>
+    <button *ngIf="currentPage != 1" md-button class="inactive" routerLink="/test/{{testId}}/reading">Reading</button>
 
     <button *ngIf="currentPage == 2" md-raised-button class="active">Writing</button>
     <button *ngIf="currentPage != 2" md-button class="inactive" routerLink="/test/writing">Writing</button>

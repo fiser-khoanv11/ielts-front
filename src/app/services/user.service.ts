@@ -7,7 +7,7 @@ export class UserService {
   constructor(private http: Http) { }
 
   saveUser(data: any): void {
-    this.http.post('/users/save', data).subscribe(response => {
+    this.http.post('/api/user/save', data).subscribe(response => {
       console.info(response);
     });
   }

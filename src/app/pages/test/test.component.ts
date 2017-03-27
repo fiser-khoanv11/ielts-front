@@ -1,20 +1,24 @@
 import { Component, OnInit } from '@angular/core';
+import { TestService } from '../../services/test.service';
 
 @Component({
   selector: 'app-test',
   templateUrl: './test.component.html',
-  styleUrls: ['./test.component.css']
+  styleUrls: ['./test.component.css'],
+  providers: [ TestService ]
 })
 export class TestComponent implements OnInit {
 
-  constructor() { }
+  constructor(private testService: TestService) { }
 
-  tests = [1, 2, 3];
+  tests: Array<Object>;
   cardWidth: string;
 
   ngOnInit() {
+    this.testService.find().then(result => {
+      this.tests = result;
+    });
     this.cardWidth = (document.body.clientWidth / 4) + 'px';
-    console.log(this.cardWidth);
   }
 
 }
