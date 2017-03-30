@@ -1,5 +1,0 @@
-Hướng dẫn deploy
-- Đổi service từ 'http://localhost:3000/' sang '/'
-- ng build
-- copy dist sang ndjs
-- push lên heroku

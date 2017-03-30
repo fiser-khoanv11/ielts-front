@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from 'app/services/user.service';
+import { GlobalService } from 'app/services/global.service';
 import { FacebookService, FacebookLoginResponse, FacebookInitParams, FacebookLoginStatus } from 'ng2-facebook-sdk';
 
 @Component({
@@ -13,7 +14,7 @@ export class AppComponent implements OnInit {
   fbConnected: boolean = false;
   user: Object;
 
-  constructor(private fb: FacebookService, private userService: UserService) {
+  constructor(private fb: FacebookService, private userService: UserService, private global: GlobalService) {
     let fbParams: FacebookInitParams = {
       appId: '1084564141677221',
       cookie: true,
@@ -31,10 +32,11 @@ export class AppComponent implements OnInit {
     this.fb.login().then(
       (response: FacebookLoginResponse) => {
         console.log(response);
-        this.fbConnected = true;
         this.fb.api('/me?fields=first_name,name,picture,email').then(data => {
           this.userService.saveUser(data);
+          this.fbConnected = true;
           this.user = data;
+          this.global.setFb(data);
         });
       },
       (error: any) => console.error(error)
@@ -49,7 +51,7 @@ export class AppComponent implements OnInit {
           this.fbConnected = true;
           this.fb.api('/me?fields=first_name,name,picture,email').then(data => {
             this.user = data;
-            console.log(this.user);
+            this.global.setFb(data);
           });
         }
       }
@@ -62,6 +64,7 @@ export class AppComponent implements OnInit {
         console.log(value);
         this.fbConnected = false;
         this.user = undefined;
+        this.global.setFb(undefined);
       },
       (reason: any) => console.error(reason)
     );

@@ -1,9 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-// import { ComaComponent } from './components/coma/coma.component';
-// import { CombComponent } from './components/comb/comb.component';
-// import { ComcComponent } from './components/comc/comc.component';
 import { ListeningComponent } from './skills/listening/listening.component';
 import { ReadingComponent } from './skills/reading/reading.component';
 import { WritingComponent } from './skills/writing/writing.component';

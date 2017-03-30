@@ -1,3 +1,15 @@
-<p>
-  result works!
-</p>
+<div *ngIf="user">
+  <table>
+    <tr>
+      <th>Test</th>
+      <th>Skill</th>
+      <th>Score</th>
+      <th>Time</th>
+    </tr>
+    <tr *ngFor="let attempt of user.attempts.slice().reverse()">
+      <td>{{attempt.test_id}}</td>
+      <td>{{attempt.skill}}</td>
+      <td>{{attempt.score}}</td>
+    </tr>
+  </table>
+</div>

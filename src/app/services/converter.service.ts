@@ -9,7 +9,7 @@ export class ConverterService {
     let result: Array<boolean> = [];
     console.info(JSON.stringify(answers));
 
-    for (let i = 0; i < answers.length; i++) {
+    for (let i = 0; i < answers.length && i < _keys.length; i++) {
       let answer = answers[i]['ans'];
       let keys = _keys[i]['keys'];
 

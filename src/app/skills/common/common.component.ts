@@ -4,6 +4,7 @@ import { MdDialog, MdDialogRef, MdSnackBar } from '@angular/material';
 
 import { GetDataService } from '../../services/get-data.service';
 import { ConverterService } from '../../services/converter.service';
+import { GlobalService } from '../../services/global.service';
 
 import { FeatureComponent } from '../../common-types/feature/feature.component';
 import { MultipleComponent } from '../../common-types/multiple/multiple.component';
@@ -35,10 +36,11 @@ export class CommonComponent implements OnInit {
   skill: string;
   timer: number = 3600;
 
-  constructor(private dialog: MdDialog, private snackBar: MdSnackBar, private getDataService: GetDataService, private activatedRoute: ActivatedRoute) { }
+  constructor(private dialog: MdDialog, private snackBar: MdSnackBar, 
+              private getDataService: GetDataService, private activatedRoute: ActivatedRoute,
+              private global: GlobalService) { }
 
   ngOnInit() {
-    console.log(this.skill + 'hey');
     this.testId = this.activatedRoute.snapshot.params['testId'];
 
     this.getDataService.findOne(this.testId, this.skill).then(result => {
@@ -97,18 +99,21 @@ export class CommonComponent implements OnInit {
     return overall;
   }
 
-  viewSheet(isTimeout: boolean): void {
-    let overall = this.getAnswers();
-    console.log(JSON.stringify(overall) + ' ' + overall.length);
+  viewSheet(isTimeout: boolean): void {    
+    let _data = {
+      answers: this.getAnswers(),
+      keys: this.keys,
+      isSubmited: this.isSubmited,
+      // isTimeout: isTimeout,
+      skill: this.skill,
+      testId: this.testId
+    }
 
     // Mo dialog
     let dialogRef = this.dialog.open(SubmitDialog, { 
       width: '600px',
       data: {
-        answers: overall,
-        keys: this.keys,
-        isSubmited: this.isSubmited,
-        isTimeout: isTimeout
+        data: _data
       }
     });
 

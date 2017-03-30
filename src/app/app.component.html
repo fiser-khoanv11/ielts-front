@@ -1,26 +1,20 @@
 <md-toolbar>
-  <!-- <span>IELTS Online</span> -->
   <a class="logo-a" href="/"><img class="logo" src="/assets/logo.png"></a>
   <span class="fill-remaining-space"></span>
   <nav class="nav-bar">
     <button md-button routerLink="/">Library</button>
     <button md-button *ngIf="!fbConnected" (click)="fbLogin()">Login</button>
-    <!-- <p></p> -->
-    <button md-button *ngIf="fbConnected && user" (click)="fbLogout()">
+    <button md-button *ngIf="fbConnected && user" routerLink="/result">
       <img class="avatar" [src]="user.picture.data.url">
       <span>{{user.first_name}}</span>
       <md-icon class="icon">arrow_drop_down</md-icon>
     </button>
+    <button md-button *ngIf="fbConnected" (click)="fbLogout()">Logout</button>
   </nav>
 </md-toolbar>
 
-<!-- <button (click)="fbLogin()">Login</button>
-<button (click)="showFbLoginStatus()">Status</button>
-<button (click)="fbLogout()">Logout</button>
-{{fbConnected}} -->
 <router-outlet></router-outlet>
 <md-toolbar>
   <span id="copy">&copy;2017 - IELTS Online</span>
   <span class="spacer"></span>
-  <!-- <span>IELTS Online</span> -->
 </md-toolbar>

@@ -1,8 +1,8 @@
 <md-card>
   <md-card-title class="primary-color">Answer Sheet</md-card-title>
-  <!-- <md-card-subtitle>Reading</md-card-subtitle> -->
+  <md-card-subtitle>{{data.skill | uppercase}}</md-card-subtitle>
   <md-card-content>
-    <div *ngIf="isSubmited">
+    <div *ngIf="data.isSubmited">
       <p class="score primary-color"><span class="score-prefix">Your score is </span>{{testResult.score | number : '1.1-1'}}</p>
       <p class="no-of-correct">Correct answers: {{testResult.noOfCorrect}}/40</p>
     </div>
@@ -11,13 +11,13 @@
         <tr>
           <th>No.</th>
           <th>Your Answer</th>
-          <th *ngIf="isSubmited">Key</th>
+          <th *ngIf="data.isSubmited">Key</th>
         </tr>
-        <tr *ngFor="let item of answers; let i = 'index'">
+        <tr *ngFor="let item of data.answers; let i = 'index'">
           <td class="first-col">{{item.no}}</td>
           <td class="second-col">
-            <span *ngIf="!isSubmited && item.ans">{{item.ans}}</span>
-            <span *ngIf="isSubmited && testResult.result" [ngStyle]="{color: testResult.result[i] ? 'green' : 'red'}">{{item.ans}}</span>
+            <span *ngIf="!data.isSubmited && item.ans">{{item.ans}}</span>
+            <span *ngIf="data.isSubmited && testResult.result" [ngStyle]="{color: testResult.result[i] ? 'green' : 'red'}">{{item.ans}}</span>
             <!-- <md-icon class="icon"
               color="blue"
               *ngIf="isSubmited && testResult.result[i]">
@@ -29,9 +29,9 @@
               info
             </md-icon> -->
           </td>
-          <td *ngIf="isSubmited" class="second-col">
-            <span *ngIf="keys[i]">
-              <span *ngFor="let key of keys[i].keys; let j = 'index'">
+          <td *ngIf="data.isSubmited" class="second-col">
+            <span *ngIf="data.keys[i]">
+              <span *ngFor="let key of data.keys[i].keys; let j = 'index'">
                 <span *ngIf="j != 0"> / </span>
                 <span>{{key}}</span>
               </span>
@@ -43,6 +43,6 @@
   </md-card-content>
 </md-card>
 <md-dialog-actions>
-  <button md-raised-button color="primary" *ngIf="!isSubmited" (click)="submit()" class="submit">Submit</button>
+  <button md-raised-button color="primary" *ngIf="!data.isSubmited" (click)="submit()" class="submit">Submit</button>
   <button md-button md-dialog-close>Close</button>
 </md-dialog-actions>

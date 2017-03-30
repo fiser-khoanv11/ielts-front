@@ -40,7 +40,7 @@
         </div>
 
         <div class="actions">
-          <button md-raised-button color="primary" (click)="viewSheet()">
+          <button md-raised-button color="primary" (click)="viewSheet(isSubmited)">
             <span *ngIf="!isSubmited">View Answer Sheet & Submit</span>
             <span *ngIf="isSubmited">Review</span>
           </button>

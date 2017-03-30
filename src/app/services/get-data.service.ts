@@ -1,10 +1,19 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
+import { GlobalService } from './global.service';
 
 @Injectable()
 export class GetDataService {
 
   constructor(private http: Http) { }
+
+  findOne(testId: number, skill: string): Promise<Object> {
+    return new Promise(resolve => {
+      this.http.get(GlobalService.url + '/api/skill/find-one/' + skill + '/' + testId).subscribe(response => {
+        resolve(response.json());
+      });
+    });
+  }
 
   getDataForEachType(): Object[] {
     let data = [{
@@ -347,15 +356,6 @@ export class GetDataService {
     }];
 
     return data;
-  }
-
-  findOne(testId: number, skill: string): Promise<Object> {
-    return new Promise(resolve => {
-      console.info(testId + ' day roi');
-      this.http.get('/api/skill/find-one/' + skill + '/' + testId).subscribe(result => {
-        resolve(result.json());
-      });
-    });
   }
 
   getReadingTest(id: string): Promise<Object> {

@@ -2,42 +2,48 @@ import { Component, OnInit } from '@angular/core';
 import { MdDialogRef } from '@angular/material';
 
 import { ConverterService } from '../../services/converter.service';
+import { UserService } from '../../services/user.service';
+import { GlobalService } from '../../services/global.service';
+
+class Data {
+  answers: Array<Object>;
+  keys: Array<Object>;
+  isSubmited: boolean;
+  skill: string;
+  testId: number;
+}
 
 @Component({
   selector: 'app-submit',
   templateUrl: './submit.dialog.html',
   styleUrls: ['./submit.dialog.css'],
-  providers: [ ConverterService ]
+  providers: [ ConverterService, UserService ]
 })
 export class SubmitDialog implements OnInit {
 
-  answers: Array<Object>;
-  keys: Array<Object>;
+  data: Data;
   testResult: {result: Array<boolean>, noOfCorrect: number, score: number};
-  isSubmited: boolean;
-  isTimeout: boolean;
 
-  constructor(private dialogRef: MdDialogRef<any>, private converterService: ConverterService) { }
+  constructor(private dialogRef: MdDialogRef<any>, private converter: ConverterService,
+              private userSv: UserService, private global: GlobalService) { }
 
   ngOnInit() {
-    this.answers = this.dialogRef.config.data.answers;
-    console.log(JSON.stringify(this.answers));
-    this.keys = this.dialogRef.config.data.keys;
-    this.isSubmited = this.dialogRef.config.data.isSubmited;
-    this.isTimeout = this.dialogRef.config.data.isTimeout;
-    this.testResult = this.converterService.getTestResult(this.answers, this.keys);
-
-    if (this.isTimeout) {
-      this.submit();
-    }
+    this.data = this.dialogRef.config.data.data;
+    this.testResult = this.converter.getTestResult(this.data.answers, this.data.keys);
   }
 
   ngOnDestroy() {
-    this.dialogRef.close(this.isSubmited);
+    this.dialogRef.close(this.data.isSubmited);
   }
 
   submit() {
-    this.isSubmited = true;
+    this.data.isSubmited = true;
+
+    this.global.user.subscribe(user => {
+      if (user != undefined) {
+        this.userSv.saveAttempt(user.id, this.data.testId, this.data.skill, this.testResult.score);
+      }
+    });
   }
 
 }

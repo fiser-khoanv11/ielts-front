@@ -4,6 +4,7 @@ import { ActivatedRoute } from '@angular/router';
 import { MdDialog, MdSnackBar } from '@angular/material';
 
 import { GetDataService } from '../../services/get-data.service';
+import { GlobalService } from '../../services/global.service';
 
 import { FeatureComponent } from '../../common-types/feature/feature.component';
 import { MultipleComponent } from '../../common-types/multiple/multiple.component';
@@ -43,8 +44,10 @@ export class ReadingComponent extends CommonComponent {
   @ViewChildren(InformationComponent) informationComponents: QueryList<InformationComponent>;
   @ViewChildren(SentenceComponent) sentenceComponents: QueryList<SentenceComponent>;
 
-  constructor(private _dialog: MdDialog, private _snackBar: MdSnackBar, private _getDataService: GetDataService, private _activatedRoute: ActivatedRoute) {
-    super(_dialog, _snackBar, _getDataService, _activatedRoute);
+  constructor(private _dialog: MdDialog, private _snackBar: MdSnackBar, 
+              private _getDataService: GetDataService, private _activatedRoute: ActivatedRoute,
+              private _global: GlobalService) {
+    super(_dialog, _snackBar, _getDataService, _activatedRoute, _global);
     this.skill = 'reading';
   }
 
