@@ -6,6 +6,7 @@ import { GetDataService } from '../../services/get-data.service';
 import { ConverterService } from '../../services/converter.service';
 import { GlobalService } from '../../services/global.service';
 
+import { AnswerComponent } from '../../common-types/answer/answer.component';
 import { FeatureComponent } from '../../common-types/feature/feature.component';
 import { MultipleComponent } from '../../common-types/multiple/multiple.component';
 import { NoteComponent } from '../../common-types/note/note.component';
@@ -22,6 +23,7 @@ import { SubmitDialog } from '../dialogs/submit.dialog'
 })
 export class CommonComponent implements OnInit {
 
+  @ViewChildren(AnswerComponent) answerComponents: QueryList<AnswerComponent>;
   @ViewChildren(FeatureComponent) featureComponents: QueryList<FeatureComponent>;
   @ViewChildren(MultipleComponent) multipleComponent: QueryList<MultipleComponent>;
   @ViewChildren(NoteComponent) noteComponent: QueryList<NoteComponent>;
@@ -31,7 +33,7 @@ export class CommonComponent implements OnInit {
   data: Object[] = [];
   keys: Object[] = [];
   isSubmited: boolean = false;
-  displayParas: Array<Array<Array<string>>> = [];
+  // displayParas: Array<Array<Array<string>>> = [];
   testId: number;
   skill: string;
   timer: number = 3600;
@@ -72,6 +74,8 @@ export class CommonComponent implements OnInit {
 
   getAnswers(): Array<Object> {
     let arr = [];
+    arr = arr.concat(this.answerComponents.toArray());
+    arr = arr.concat(this.featureComponents.toArray());
     arr = arr.concat(this.multipleComponent.toArray());
     arr = arr.concat(this.noteComponent.toArray());
     arr = arr.concat(this.singleComponent.toArray());

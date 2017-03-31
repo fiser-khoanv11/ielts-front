@@ -1,0 +1,25 @@
+{
+  "first": 31,
+  "last": 35,
+  "type": "ending",
+  "directions": [
+    "Complete each sentence with the correct ending, <b>A-G</b>, below.",
+    "Write the correct letter, <b>A-G</b>, in boxes 31-35 on your answer sheet."
+  ],
+  "sentences": [
+    "Employees whose values match those of their employers are more likely to",
+    "At times of change, people tend to",
+    "If people are aware of what they might lost, they often will",
+    "People working under a dominant boss are liable to",
+    "Employees working in organisations with few rules are more likely to"
+  ],
+  "endings": [
+    "take chances.",
+    "share their ideas.",
+    "become competitive.",
+    "get promotion.",
+    "avoid risk.",
+    "ignore their duties",
+    "remain in their jobs."
+  ]
+}

@@ -1,32 +1,4 @@
-<p>
-  Reading Passage {{sectionNumber}} has {{data.paras.length | textNumber}} paragraphs, 
-  <b>A-{{data.paras[data.paras.length - 1].char | uppercase}}</b>.
-</p>
-<p><i>Choose the correct heading for paragraph ?-? from the list of headings below.</i></p>
-<p><i>
-  Write the correct number, 
-  <b>i-{{data.headings.length | roman}}</b>
-  , in boxes {{data.first}}-{{data.last}} on your answer sheet.
-</i></p>
-
-<!-- <md-card class="half-card">
-  <md-card-title>List of Headings</md-card-title>
-  <md-card-content>
-    <p *ngFor="let heading of data.headings; let i = 'index'"
-       [style.color]="changeColor(i + 1) ? 'rgb(103, 58, 183)' : ''"
-       class="relative">
-       <span>{{i + 1 | roman}}. </span>
-       {{heading}}
-        <md-icon class="icon" 
-          color="warn"
-          *ngIf="checkDuplicated(i + 1)"
-          md-tooltip="This option is used more than once"
-          [mdTooltipPosition]="'right'">
-          warning
-        </md-icon>
-    </p>
-  </md-card-content>
-</md-card> -->
+<p class="italic" *ngFor="let dir of data.directions" [innerHTML]="dir"></p>
 
 <app-option-list 
                  [list]="data.headings"
@@ -37,7 +9,7 @@
   <p>
     <span *ngIf="para.no">{{para.no}}. </span>
     <span *ngIf="!para.no"><i>Example: </i></span>
-    Paragraph {{para.char | uppercase}}
+    Paragraph <b>{{para.char | uppercase}}</b>
   </p>
   <div *ngIf="!para.answer">
     <md-select [(ngModel)]="answers[para.no - data.first]">

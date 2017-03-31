@@ -1,0 +1,17 @@
+{
+  "first": 1,
+  "last": 5,
+  "type": "true-false",
+  "options": "tf",
+  "directions": [
+    "Do the following statements agree with the information given in Reading Passage 1?",
+    "In boxes 1-5 on your answer sheet, write"
+  ],
+  "text": [
+    "Examples of ancient stepwells can be found all over the world.",
+    "Stepwells had a range of functions, in addition to those related to water collection.",
+    "The few existing stepwells in Delhi are more attractive than those found elsewhere.",
+    "It took workers many years to build the stone steps characteristic of stepwells.",
+    "It number of steps above the water level in a stepwell altered during the course of a year."
+  ]
+}

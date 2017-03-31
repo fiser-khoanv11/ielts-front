@@ -18,10 +18,10 @@
               <!-- <button *ngIf="para.mark" md-mini-fab class="mark" disabled="false">
                 {{para.mark | uppercase}}
               </button> -->
-              <button *ngIf="para.mark" md-mini-fab disabled="false">
+              <!-- <button *ngIf="para.mark" md-mini-fab disabled="false">
                 {{para.mark | uppercase}}
-              </button>
-              <p>{{para.content}}</p>
+              </button> -->
+              <p style="position:relative;"><b style="position:absolute;left:-15px">{{para.mark | uppercase}}</b>{{para.content}}</p>
             </div>
           </md-card-content>
         </md-card>
@@ -59,8 +59,7 @@
           </div>
 
           <div *ngIf="question.type == 'true-false'">
-            <app-true-false [data]="question" 
-              [sectionNumber]="section.section_number"></app-true-false>
+            <app-true-false [data]="question"></app-true-false>
           </div>
           <div *ngIf="question.type == 'answer'">
             <app-answer [data]="question"></app-answer>

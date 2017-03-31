@@ -1,25 +1,21 @@
-<md-card class="half-card">
-  <!-- <md-card-title>List of Headings</md-card-title> -->
-  <!-- {{answers}} -->
-  <!-- {{changeColor(1)}} -->
-  <!-- {{answer.indexOf(1)}} -->
+<table>
+  <tr *ngFor="let item of list; let i = 'index'" [style.color]="changeColor(i + 1) ? '#1E88E5' : ''">
+    <td>
+      <span *ngIf="mark == 'letter'">{{i + 1 | letter | uppercase}}. </span>
+      <span *ngIf="mark == 'roman'">{{i + 1 | roman}} </span>
+    </td>
+    <td>{{item}}</td>
+  </tr>
+</table>
+
+<!-- <md-card class="half-card">
   <md-card-content>
     <p *ngFor="let item of list; let i = 'index'"
        [style.color]="changeColor(i + 1) ? 'rgb(103, 58, 183)' : ''"
-       [style.fontStyle]="changeColor(i + 1) ? 'bold' : ''"
-       class="relative">
+       [style.fontStyle]="changeColor(i + 1) ? 'bold' : ''">
         <span *ngIf="mark == 'letter'">{{i + 1 | letter | uppercase}}. </span>
         <span *ngIf="mark == 'roman'">{{i + 1 | roman}}. </span>
         {{item}}
-        <!-- <md-icon class="icon"
-          color=""
-          *ngIf="checkDuplicated(i + 1)"
-          md-tooltip="This option is used more than once"
-          [mdTooltipPosition]="'right'">
-          info
-        </md-icon> -->
     </p>
   </md-card-content>
-</md-card>
-
-<!-- [style.color]="changeColor(i + 1) ? 'rgb(103, 58, 183)' : ''" -->
+</md-card> -->

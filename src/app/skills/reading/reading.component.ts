@@ -6,13 +6,13 @@ import { MdDialog, MdSnackBar } from '@angular/material';
 import { GetDataService } from '../../services/get-data.service';
 import { GlobalService } from '../../services/global.service';
 
+import { AnswerComponent } from '../../common-types/answer/answer.component';
 import { FeatureComponent } from '../../common-types/feature/feature.component';
 import { MultipleComponent } from '../../common-types/multiple/multiple.component';
 import { NoteComponent } from '../../common-types/note/note.component';
 import { SingleComponent } from '../../common-types/single/single.component';
 import { TableComponent } from '../../common-types/table/table.component';
 
-import { AnswerComponent } from '../../reading-types/answer/answer.component';
 import { EndingComponent } from '../../reading-types/ending/ending.component';
 import { HeadingComponent } from '../../reading-types/heading/heading.component';
 import { InformationComponent } from '../../reading-types/information/information.component';

@@ -1,18 +1,4 @@
-<md-slide-toggle [(ngModel)]="data.duplicatable">NB (Can choose more than once)</md-slide-toggle>
-<p>
-  <i>Complete each sentence with the correct ending, 
-  <b>{{1 | letter | uppercase}}-{{data.endings.length | letter | uppercase}}</b>
-  , below.</i>
-</p>
-<p><i>
-    Write the correct letters, 
-    <b>{{1 | letter | uppercase}}-{{data.endings.length | letter | uppercase}}</b>
-    , in boxes {{data.first}}
-    <span *ngIf="data.last - data.first == 1"> and </span>
-    <span *ngIf="data.last - data.first > 1"> - </span>
-    {{data.last}} on your answer sheet.
-</i></p>
-<p *ngIf="data.duplicatable"><b>NB</b> You may use any letter more than once.</p>
+<p class="italic" *ngFor="let dir of data.directions" [innerHTML]="dir"></p>
 
 <app-option-list [list]="data.endings"
                  [answers]="answers"

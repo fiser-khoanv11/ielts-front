@@ -1,0 +1,15 @@
+{
+  "first": 6,
+  "last": 8,
+  "type": "answer",
+  "directions": [
+    "Answer the questions below.",
+    "Choose <b>ONE WORD ONLY</b> from the passage for each answer.",
+    "Write your answers in boxes 6-8 on your answer sheet."
+  ],
+  "text": [
+    "Which part of some stepwells provided shade for people?",
+    "What type of serious climatic event, which took place in southern Rajasthan, is mentioned in the article?",
+    "Who are frequent visitors to stepwells nowadays?"
+  ]
+}

@@ -33,7 +33,7 @@
             <span *ngIf="data.keys[i]">
               <span *ngFor="let key of data.keys[i].keys; let j = 'index'">
                 <span *ngIf="j != 0"> / </span>
-                <span>{{key}}</span>
+                <span>{{key | uppercase}}</span>
               </span>
             </span>
           </td>

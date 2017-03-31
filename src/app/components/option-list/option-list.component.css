@@ -2,12 +2,18 @@
   width: 60%;
 }
 
-.relative {
-  position: relative;
+table {
+  margin: auto;
+  border-collapse: collapse;
+  background: rgba(67, 169, 208, 0.25);
+  border: 2px solid #1E88E5;
 }
 
-.icon {
-  position: absolute;
-  top: -4px;
-  cursor: pointer;
+td {
+  /*border: 1px solid #9E9E9E;*/
+  padding: 5px;
+}
+
+.font-bold {
+  font-weight: bold;
 }

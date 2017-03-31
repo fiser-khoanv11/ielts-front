@@ -13,7 +13,6 @@ export class Data {
 export class TrueFalseComponent implements OnInit {
 
   @Input() data: Data;
-  @Input() sectionNumber: number;
   options: string[];
   answers: string[] = [];
 
