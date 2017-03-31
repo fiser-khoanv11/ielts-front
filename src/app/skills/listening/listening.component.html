@@ -4,22 +4,21 @@
   <md-icon class="icon">alarm</md-icon>
   {{timer | timer}}
 </button>
+
 <md-tab-group *ngIf="data">
   <md-tab *ngFor="let section of data" label="Section {{section.section_number}}">
     <div class="padding-20">
-      
-      <!-- Right-Block -->
-      <div class="">
+    
         <!-- Block for each set of questions -->
         <div *ngFor="let question of section.sub_sections" class="margin-bottom-50">
-          <div class="question-block">
-            <h3 *ngIf="question.first == question.last">Question {{question.first}}</h3>
-            <h3 *ngIf="question.first != question.last">
-              Questions {{question.first}}
-                <span *ngIf="question.last - question.first == 1"> and </span>
-                <span *ngIf="question.last - question.first > 1">-</span>
-              {{question.last}}
-            </h3>  
+          <div class="question-block blue">
+            <p *ngIf="question.first == question.last">Question {{question.first}}</p>
+            <p *ngIf="question.first != question.last">
+              <span>Questions {{question.first}}</span>
+              <span *ngIf="question.last - question.first == 1"> and </span>
+              <span *ngIf="question.last - question.first > 1">-</span>
+              <span>{{question.last}}</span>
+            </p>  
           </div>
           
           <div *ngIf="question.type == 'feature'">
@@ -39,14 +38,12 @@
           </div>
         </div>
 
-        <div class="actions">
+        <div class="action-block">
           <button md-raised-button color="primary" (click)="viewSheet(isSubmited)">
             <span *ngIf="!isSubmited">View Answer Sheet & Submit</span>
             <span *ngIf="isSubmited">Review</span>
           </button>
         </div>
-      </div>
-      <!-- /Right-Block -->
 
     </div>
   </md-tab>

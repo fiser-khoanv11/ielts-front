@@ -1,21 +1,9 @@
-<table>
+<table class="format-table">
   <tr *ngFor="let item of list; let i = 'index'" [style.color]="changeColor(i + 1) ? '#1E88E5' : ''">
     <td>
-      <span *ngIf="mark == 'letter'">{{i + 1 | letter | uppercase}}. </span>
-      <span *ngIf="mark == 'roman'">{{i + 1 | roman}} </span>
+      <span *ngIf="mark == 'letter'" class="blue">{{i + 1 | letter | uppercase}}</span>
+      <span *ngIf="mark == 'roman'">{{i + 1 | roman}}</span>
     </td>
     <td>{{item}}</td>
   </tr>
 </table>
-
-<!-- <md-card class="half-card">
-  <md-card-content>
-    <p *ngFor="let item of list; let i = 'index'"
-       [style.color]="changeColor(i + 1) ? 'rgb(103, 58, 183)' : ''"
-       [style.fontStyle]="changeColor(i + 1) ? 'bold' : ''">
-        <span *ngIf="mark == 'letter'">{{i + 1 | letter | uppercase}}. </span>
-        <span *ngIf="mark == 'roman'">{{i + 1 | roman}}. </span>
-        {{item}}
-    </p>
-  </md-card-content>
-</md-card> -->

@@ -1,11 +1,13 @@
 <p class="italic" *ngFor="let dir of data.directions" [innerHTML]="dir"></p>
 
-<h3>{{data.heading}}</h3>
+<p class="heading">{{data.heading}}</p>
 
 <div *ngFor="let question of data.questions; let i = 'index'">
   <p><span *ngIf="data.first != data.last">{{data.first + i}}. </span>{{question.text}}</p>
   <md-radio-group class="radio-group" [(ngModel)]="answers[i]">
-    <md-radio-button *ngFor="let choice of question.choices; let i = 'index'" 
-      [value]="i + 1 | letter">{{i+1 | letter | uppercase}}. {{choice}}</md-radio-button>
+    <md-radio-button *ngFor="let choice of question.choices; let i = 'index'" [value]="i + 1 | letter">
+      <span class="blue margin-right">{{i+1 | letter | uppercase}}</span>
+      {{choice}}
+    </md-radio-button>
   </md-radio-group>
 </div>

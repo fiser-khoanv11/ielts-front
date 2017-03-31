@@ -1,13 +1,3 @@
-.half-card {
-  width: 60%;
-}
-
-.relative {
-  position: relative;
-}
-
-.icon {
-  position: absolute;
-  top: -4px;
-  cursor: pointer;
+md-select {
+  width: 200px;
 }

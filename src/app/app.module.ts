@@ -35,6 +35,7 @@ import { TestToolbarComponent } from './components/test-toolbar/test-toolbar.com
 
 import { GlobalService } from './services/global.service';
 import { UserService } from './services/user.service';
+import { AccountService } from './services/account.service';
 
 import { SubmitDialog } from './skills/dialogs/submit.dialog';
 
@@ -110,6 +111,7 @@ import { TextNumberPipe } from './pipes/text-number.pipe';
     FacebookService,
     GlobalService,
     UserService,
+    AccountService,
     {provide: LocationStrategy, useClass: HashLocationStrategy}
   ],
   bootstrap: [AppComponent]

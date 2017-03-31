@@ -4,7 +4,8 @@ import { ConverterService } from '../../services/converter.service';
 @Component({
   selector: 'app-note',
   templateUrl: './note.component.html',
-  styleUrls: ['./note.component.css']
+  styleUrls: ['./note.component.css'],
+  providers: [ ConverterService ]
 })
 export class NoteComponent implements OnInit {
 

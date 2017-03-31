@@ -1,15 +1,3 @@
-table {
-  border-collapse: collapse;
-  background: rgba(67, 169, 208, 0.25);
-  border: 2px solid #1E88E5;
-  margin: auto;
-}
-
-td {
-  border: 1px solid #9E9E9E;
-  padding: 5px;
-}
-
 .para-in-cell {
   margin: 0px;
   text-align: initial;

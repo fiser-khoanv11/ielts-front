@@ -3,7 +3,6 @@ import { ActivatedRoute } from '@angular/router';
 import { MdDialog, MdSnackBar } from '@angular/material';
 
 import { GetDataService } from '../../services/get-data.service';
-import { ConverterService } from '../../services/converter.service';
 import { GlobalService } from '../../services/global.service';
 
 import { CommonComponent } from '../common/common.component';
@@ -11,8 +10,8 @@ import { CommonComponent } from '../common/common.component';
 @Component({
   selector: 'app-listening',
   templateUrl: './listening.component.html',
-  styleUrls: ['./listening.component.css'],
-  providers: [ GetDataService, ConverterService ]
+  styleUrls: ['../common/common.component.css', './listening.component.css'],
+  providers: [ GetDataService ]
 })
 export class ListeningComponent extends CommonComponent {
 

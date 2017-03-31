@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 import { GetDataService } from '../../services/get-data.service';
 
@@ -10,11 +11,14 @@ import { GetDataService } from '../../services/get-data.service';
 })
 export class WritingComponent implements OnInit {
 
-  constructor(private getDataService: GetDataService) { }
+  constructor(private getDataService: GetDataService, private route: ActivatedRoute) { }
 
   data: Object;
+  testId: number;
 
   ngOnInit() {
+    this.testId = this.route.snapshot.params['testId'];
+
     this.getDataService.getWriteOffline().then(result => {
       this.data = result;
 

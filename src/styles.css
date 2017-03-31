@@ -1,5 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-@import '~@angular/material/core/theming/prebuilt/deeppurple-amber.css';
+/*@import '~@angular/material/core/theming/prebuilt/dee';*/
 
 body {
   /*font-family: 'Roboto';*/
@@ -27,15 +27,11 @@ p {
 }
 
 input, .md-select-value {
-  color: rgb(103, 58, 183) !important;
+  color: #1E88E5 !important;
 }
 
 .inline-flex {
   display: inline-flex;
-}
-
-b, .primary-color {
-  color: #1E88E5 !important;
 }
 
 .space-20 {
@@ -49,4 +45,30 @@ b, .primary-color {
 .mat-toolbar-layout, .mat-toolbar-row {
   height: 100% !important;
   min-height: 0px !important;
+}
+
+.blue, .heading, b, .primary-color {
+  color: #1E88E5 !important;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.format-table {
+  border-collapse: collapse;
+  background: rgba(67, 169, 208, 0.25);
+  border: 2px solid #1E88E5;
+  margin: auto;
+}
+
+.format-table > tbody > tr > td {
+  border: 1px solid #9E9E9E;
+  padding: 5px;
+}
+
+.heading {
+  margin-bottom: 50px;
+  text-align: center;
+  font-size: x-large;
 }

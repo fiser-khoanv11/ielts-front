@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RouterModule, Routes, Router, ActivatedRoute } from '@angular/router';
 
 import { GetDataService } from '../../services/get-data.service';
 
@@ -10,11 +11,14 @@ import { GetDataService } from '../../services/get-data.service';
 })
 export class SpeakingComponent implements OnInit {
 
-  constructor(private getDataService: GetDataService) { }
+  constructor(private getDataService: GetDataService, private route: ActivatedRoute) { }
 
   data: Object;
+  testId: number;
 
   ngOnInit() {
+    this.testId = this.route.snapshot.params['testId'];
+
     this.getDataService.getSpeakOffline().then(result => {
       this.data = result;
 

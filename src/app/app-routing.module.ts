@@ -12,8 +12,8 @@ const appRoutes: Routes = [
   { path: '', component: TestComponent },
   { path: 'test/:testId/reading', component: ReadingComponent },
   { path: 'test/:testId/listening', component: ListeningComponent },
-  { path: 'test/writing', component: WritingComponent },
-  { path: 'test/speaking', component: SpeakingComponent },
+  { path: 'test/:testId/writing', component: WritingComponent },
+  { path: 'test/:testId/speaking', component: SpeakingComponent },
   { path: 'result', component: ResultComponent },
 ];
 

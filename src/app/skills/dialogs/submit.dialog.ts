@@ -40,8 +40,11 @@ export class SubmitDialog implements OnInit {
     this.data.isSubmited = true;
 
     this.global.user.subscribe(user => {
-      if (user != undefined) {
-        this.userSv.saveAttempt(user.id, this.data.testId, this.data.skill, this.testResult.score);
+      if (user) {
+        this.userSv.saveAttempt(user.id, this.data.testId, this.data.skill, this.testResult.score).then(
+          (value: any) => console.log(value),
+          (reason: any) => console.error(reason)
+        );
       }
     });
   }

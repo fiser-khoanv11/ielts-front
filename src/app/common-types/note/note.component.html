@@ -1,11 +1,11 @@
 <p class="italic" *ngFor="let dir of data.directions" [innerHTML]="dir"></p>
 
 <div class="note">
-  <h2 class="primary-color heading">{{data.heading}}</h2>
+  <p *ngIf="data.heading" class="heading">{{data.heading}}</p>
   <p *ngFor="let para of displayParas; let i = 'index'">
     <span *ngFor="let span of para; let j = 'index'">
       <md-input-container *ngIf="span.isInput" floatingPlaceholder="false">
-        <b md-prefix class="margin-right-10">{{span.data}} </b>
+        <span md-prefix class="margin-right-10" style="font-weight: bold">{{span.data}}</span>
         <input mdInput type="text" [(ngModel)]="answers[i][j]" placeholder=""/>
       </md-input-container>
       <span *ngIf="!span.isInput" [innerHTML]="span.data"></span>

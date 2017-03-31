@@ -1,0 +1,30 @@
+.question-block {
+  border: 2px solid #1E88E5;
+  padding: 5px;
+  display: inline-block;
+}
+
+.question-block > p {
+  margin: 0px;
+  font-size: larger;
+}
+
+md-tab-group {
+  margin-bottom: 20px;
+}
+
+.action-block {
+  text-align: end;
+  margin-bottom: 5px;
+}
+
+.timer {
+  z-index: 2;
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+}
+
+.timer:hover {
+  opacity: 0.5;
+}

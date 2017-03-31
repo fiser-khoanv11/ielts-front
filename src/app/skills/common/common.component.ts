@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, ViewChildren, QueryList } from '@angular/core';
-import { RouterModule, Routes, Router, ActivatedRoute } from '@angular/router';
-import { MdDialog, MdDialogRef, MdSnackBar } from '@angular/material';
+import { ActivatedRoute } from '@angular/router';
+import { MdDialog, MdSnackBar } from '@angular/material';
 
 import { GetDataService } from '../../services/get-data.service';
 import { ConverterService } from '../../services/converter.service';
@@ -12,6 +12,13 @@ import { MultipleComponent } from '../../common-types/multiple/multiple.componen
 import { NoteComponent } from '../../common-types/note/note.component';
 import { SingleComponent } from '../../common-types/single/single.component';
 import { TableComponent } from '../../common-types/table/table.component';
+
+import { EndingComponent } from '../../reading-types/ending/ending.component';
+import { HeadingComponent } from '../../reading-types/heading/heading.component';
+import { InformationComponent } from '../../reading-types/information/information.component';
+import { SentenceComponent } from '../../reading-types/sentence/sentence.component';
+import { SummarySelectComponent } from '../../reading-types/summary-select/summary-select.component';
+import { TrueFalseComponent } from '../../reading-types/true-false/true-false.component';
 
 import { SubmitDialog } from '../dialogs/submit.dialog'
 
@@ -30,20 +37,26 @@ export class CommonComponent implements OnInit {
   @ViewChildren(SingleComponent) singleComponent: QueryList<SingleComponent>;
   @ViewChildren(TableComponent) tableComponent: QueryList<TableComponent>;
 
+  @ViewChildren(TrueFalseComponent) trueFalseComponents: QueryList<TrueFalseComponent>;
+  @ViewChildren(HeadingComponent) headingComponents: QueryList<HeadingComponent>;
+  @ViewChildren(SummarySelectComponent) summarySelectComponents: QueryList<SummarySelectComponent>;
+  @ViewChildren(EndingComponent) endingComponents: QueryList<EndingComponent>;
+  @ViewChildren(InformationComponent) informationComponents: QueryList<InformationComponent>;
+  @ViewChildren(SentenceComponent) sentenceComponents: QueryList<SentenceComponent>;
+
   data: Object[] = [];
   keys: Object[] = [];
   isSubmited: boolean = false;
-  // displayParas: Array<Array<Array<string>>> = [];
   testId: number;
   skill: string;
   timer: number = 3600;
 
   constructor(private dialog: MdDialog, private snackBar: MdSnackBar, 
-              private getDataService: GetDataService, private activatedRoute: ActivatedRoute,
+              private getDataService: GetDataService, private route: ActivatedRoute,
               private global: GlobalService) { }
 
   ngOnInit() {
-    this.testId = this.activatedRoute.snapshot.params['testId'];
+    this.testId = this.route.snapshot.params['testId'];
 
     this.getDataService.findOne(this.testId, this.skill).then(result => {
       this.data = result['sections'];
@@ -80,6 +93,13 @@ export class CommonComponent implements OnInit {
     arr = arr.concat(this.noteComponent.toArray());
     arr = arr.concat(this.singleComponent.toArray());
     arr = arr.concat(this.tableComponent.toArray());
+
+    arr = arr.concat(this.trueFalseComponents.toArray());
+    arr = arr.concat(this.headingComponents.toArray());
+    arr = arr.concat(this.summarySelectComponents.toArray());
+    arr = arr.concat(this.endingComponents.toArray());
+    arr = arr.concat(this.informationComponents.toArray());
+    arr = arr.concat(this.sentenceComponents.toArray());    
 
     // Lay du lieu
     let overall: Array<Object> = [];

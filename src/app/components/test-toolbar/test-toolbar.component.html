@@ -15,9 +15,9 @@
     <button *ngIf="currentPage != 1" md-button class="inactive" routerLink="/test/{{testId}}/reading">Reading</button>
 
     <button *ngIf="currentPage == 2" md-raised-button class="active">Writing</button>
-    <button *ngIf="currentPage != 2" md-button class="inactive" routerLink="/test/writing">Writing</button>
+    <button *ngIf="currentPage != 2" md-button class="inactive" routerLink="/test/{{testId}}/writing">Writing</button>
 
     <button *ngIf="currentPage == 3" md-raised-button class="active">Speaking</button>
-    <button *ngIf="currentPage != 3" md-button class="inactive" routerLink="/test/speaking">Speaking</button>
+    <button *ngIf="currentPage != 3" md-button class="inactive" routerLink="/test/{{testId}}/speaking">Speaking</button>
   </nav>
 </md-toolbar>
