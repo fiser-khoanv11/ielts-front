@@ -1,5 +1,16 @@
 <app-test-toolbar currentPage="2" [testId]="testId"></app-test-toolbar>
 
+<md-input-container>
+  <textarea mdInput [(ngModel)]="task1" placeholder="Task 1"></textarea>
+</md-input-container>
+<md-input-container>
+  <textarea mdInput [(ngModel)]="task2" placeholder="Task 2"></textarea>
+</md-input-container>
+<button md-raised-button (click)="submit()" [disabled]="isDisabled()" color="primary">
+  <span *ngIf="!isDisabled() || !isSubmitted">Submit</span>
+  <span *ngIf="isSubmitted && isDisabled()">Submitted</span>
+</button>
+
 <div class="padding-20" *ngIf="data">
   <md-card>
     <md-card-title class="primary-color center">Writing Task 1</md-card-title>

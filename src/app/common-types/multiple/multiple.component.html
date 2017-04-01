@@ -2,7 +2,7 @@
 
 <div *ngFor="let item of data.choices; let i = 'index'">
   <md-checkbox [(ngModel)]="answers[i]" (change)="checkLimit()">
-    <span class="blue">{{i + 1 | letter | uppercase}}.</span>
+    <span class="blue margin-right">{{i + 1 | letter | uppercase}}</span>
     {{item}}
   </md-checkbox>
 </div>

@@ -2,8 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MdDialogRef } from '@angular/material';
 
 import { ConverterService } from '../../services/converter.service';
-import { UserService } from '../../services/user.service';
-import { GlobalService } from '../../services/global.service';
+import { AttemptService } from '../../services/attempt.service';
 
 class Data {
   answers: Array<Object>;
@@ -17,7 +16,7 @@ class Data {
   selector: 'app-submit',
   templateUrl: './submit.dialog.html',
   styleUrls: ['./submit.dialog.css'],
-  providers: [ ConverterService, UserService ]
+  providers: [ ConverterService, AttemptService ]
 })
 export class SubmitDialog implements OnInit {
 
@@ -25,7 +24,7 @@ export class SubmitDialog implements OnInit {
   testResult: {result: Array<boolean>, noOfCorrect: number, score: number};
 
   constructor(private dialogRef: MdDialogRef<any>, private converter: ConverterService,
-              private userSv: UserService, private global: GlobalService) { }
+              private att: AttemptService) { }
 
   ngOnInit() {
     this.data = this.dialogRef.config.data.data;
@@ -39,14 +38,16 @@ export class SubmitDialog implements OnInit {
   submit() {
     this.data.isSubmited = true;
 
-    this.global.user.subscribe(user => {
-      if (user) {
-        this.userSv.saveAttempt(user.id, this.data.testId, this.data.skill, this.testResult.score).then(
-          (value: any) => console.log(value),
-          (reason: any) => console.error(reason)
-        );
-      }
-    });
+    let sendData = {
+      testId: this.data.testId,
+      skill: this.data.skill,
+      score: this.testResult.score
+    };
+
+    this.att.saveAttempt(sendData).then(
+      (value: any) => {},
+      (reason: any) => console.error(reason)
+    );
   }
 
 }

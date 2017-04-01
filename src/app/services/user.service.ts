@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
+
+import { AccountService } from './account.service';
 import { GlobalService } from './global.service';
 
 export class User {
@@ -14,7 +16,7 @@ export class User {
 @Injectable()
 export class UserService {
 
-  constructor(private http: Http, private global: GlobalService) { }
+  constructor(private http: Http) { }
 
   saveUser(data: any): Promise<any> {
     return new Promise((resolve, reject) => {
@@ -25,27 +27,12 @@ export class UserService {
     });
   }
 
-  saveAttempt(_userId: number, _testId: number, _skill: string, _score: number): Promise<any> {
-    let data = {
-      userId: _userId,
-      testId: _testId,
-      skill: _skill,
-      score:_score
-    }
-
+  findOne(userId: number): Promise<any> {
     return new Promise((resolve, reject) => {
-      this.http.post(GlobalService.url + '/api/user/save-attempt', data).subscribe(
-        (value: any) => resolve(value),
+      this.http.get(GlobalService.url + '/api/user/find-one/' + userId).subscribe(
+        (value: any) => resolve(value.json()),
         (error: any) => reject(error)
       );
-    });
-  }
-
-  findOne(userId: number): Promise<Array<Object>> {
-    return new Promise(resolve => {
-      this.http.get(GlobalService.url + '/api/user/find-one/' + userId).subscribe(response => {
-        resolve(response.json());
-      });
     });
   }
 

@@ -9,7 +9,9 @@
     <tr *ngFor="let attempt of user.attempts.slice().reverse()">
       <td>{{attempt.test_id}}</td>
       <td>{{attempt.skill}}</td>
-      <td>{{attempt.score}}</td>
+      <td>{{attempt.score}}
+        <a *ngIf="attempt.skill === 'writing'" routerLink="/test/{{attempt.test_id}}/writing">See your answer</a>
+      </td>
     </tr>
   </table>
 </div>

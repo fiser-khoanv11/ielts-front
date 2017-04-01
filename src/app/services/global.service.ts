@@ -17,17 +17,15 @@ export class User {
 @Injectable()
 export class GlobalService {
 
-  // static url: string = '';
-  static url: string = 'http://localhost:3000';
+  static url: string = '';
+  // static url: string = 'http://localhost:3000';
   
   public user: BehaviorSubject<any> = new BehaviorSubject<any>(undefined);
 
   constructor() {}
 
-  setFb(_user: User): void {
-    // this.userSv.findOne(_user.id).then(result => {
-      this.user.next(_user);
-    // });
+  setUser(_user: User): void {
+    this.user.next(_user);
   }
 
 }
