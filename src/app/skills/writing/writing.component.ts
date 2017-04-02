@@ -9,7 +9,7 @@ import { UserService } from '../../services/user.service';
 @Component({
   selector: 'app-writing',
   templateUrl: './writing.component.html',
-  styleUrls: ['./writing.component.css'],
+  styleUrls: ['../common/common.component.css', './writing.component.css'],
   providers: [ GetDataService, AttemptService ]
 })
 export class WritingComponent implements OnInit {
@@ -29,11 +29,12 @@ export class WritingComponent implements OnInit {
   ngOnInit() {
     this.testId = this.route.snapshot.params['testId'];
 
-    this.getDataService.getWriteOffline().then(result => {
-      this.data = result;
-
-      console.log(this.data);
-    });
+    this.getDataService.findOne(this.testId, 'writing').then(
+      (value: any) => {
+        this.data = value;
+      },
+      (reason: any) => console.error(reason)
+    );
 
     this.acc.checkStatus().then(
       (value: any) => {

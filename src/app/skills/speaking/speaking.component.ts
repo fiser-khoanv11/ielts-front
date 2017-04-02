@@ -19,11 +19,12 @@ export class SpeakingComponent implements OnInit {
   ngOnInit() {
     this.testId = this.route.snapshot.params['testId'];
 
-    this.getDataService.getSpeakOffline().then(result => {
-      this.data = result;
-
-      console.log(this.data);
-    });
+    this.getDataService.findOne(this.testId, 'speaking').then(
+      (value: any) => {
+        this.data = value;
+      },
+      (reason: any) => console.error(reason)
+    );
   }
 
 }

@@ -37,4 +37,6 @@
 
 md-toolbar {
   height: 64px;
+  /*background: #EEEEEE;*/
+  background: white;
 }

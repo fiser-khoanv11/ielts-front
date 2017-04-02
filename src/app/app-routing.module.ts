@@ -10,10 +10,10 @@ import { ResultComponent } from './pages/result/result.component';
 
 const appRoutes: Routes = [
   { path: '', component: TestComponent },
-  { path: 'test/:testId/reading', component: ReadingComponent },
-  { path: 'test/:testId/listening', component: ListeningComponent },
-  { path: 'test/:testId/writing', component: WritingComponent },
-  { path: 'test/:testId/speaking', component: SpeakingComponent },
+  { path: 'reading/:testId', component: ReadingComponent },
+  { path: 'listening/:testId', component: ListeningComponent },
+  { path: 'writing/:testId', component: WritingComponent },
+  { path: 'speaking/:testId', component: SpeakingComponent },
   { path: 'result', component: ResultComponent },
 ];
 

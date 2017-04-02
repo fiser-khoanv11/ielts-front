@@ -11,9 +11,7 @@ import { ConverterService } from '../../services/converter.service';
 export class HeadingComponent implements OnInit {
 
   @Input() data: Object;
-  @Input() sectionNumber: number;
   answers: Array<any> = [];
-  duplicatable: boolean = false;
   mark: string = 'roman';
 
   constructor(private converterService: ConverterService) { }

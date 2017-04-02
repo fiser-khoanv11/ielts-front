@@ -1,15 +1,18 @@
-<div class="overall">
-  <div *ngFor="let test of tests" class="card-div" [ngStyle]="{'width': cardWidth}">
+<img class="banner" src="/assets/banner.png">
+
+<div class="over" [ngStyle]="{minHeight: cardWidth}">
+  <p class="header">Recent Tests</p>
+  <div *ngFor="let test of tests" class="card-div">
     <md-card class="example-card">
       <md-card-header>
         <div md-card-avatar class="example-header-image"></div>
         <md-card-title>{{test.title}}</md-card-title>
         <md-card-subtitle>{{test.description}}</md-card-subtitle>
       </md-card-header>
-      <img md-card-image [src]="test.image">
-      <md-card-actions>
-        <button md-button routerLink="/test/{{test.id}}/listening">TAKE THIS TEST</button>
-      </md-card-actions>
+      <img md-card-image [src]="test.image" routerLink="/listening/{{test.id}}">
+      <!-- <md-card-actions>
+        <button md-raised-button color="primary" routerLink="/listening/{{test.id}}">TAKE THIS TEST</button>
+      </md-card-actions> -->
     </md-card>
   </div>
 </div>

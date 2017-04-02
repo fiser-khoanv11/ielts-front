@@ -5,12 +5,13 @@
   {{timer | timer}}
 </button>
 
-<md-tab-group *ngIf="data">
-  <md-tab *ngFor="let section of data" label="Section {{section.section_number}}">
+<md-tab-group *ngIf="sections" class="margin-bottom-20">
+  <md-tab *ngFor="let section of sections; let i = 'index'" label="Section {{section.section_number}}">
     <div class="padding-20">
-    
+      
+      <div class="left-block">
         <!-- Block for each set of questions -->
-        <div *ngFor="let question of section.sub_sections" class="margin-bottom-50">
+        <div *ngFor="let question of section.sub_sections" class="margin-bottom-20">
           <div class="question-block blue">
             <p *ngIf="question.first == question.last">Question {{question.first}}</p>
             <p *ngIf="question.first != question.last">
@@ -21,22 +22,31 @@
             </p>  
           </div>
           
+          <div *ngIf="question.type == 'answer'">
+            <app-answer [data]="question"></app-answer>
+          </div>
           <div *ngIf="question.type == 'feature'">
             <app-feature [data]="question"></app-feature>
-          </div>
-          <div *ngIf="question.type == 'table'">
-            <app-table [data]="question"></app-table>
           </div>
           <div *ngIf="question.type == 'multiple'">
             <app-multiple [data]="question"></app-multiple>
           </div>
-          <div *ngIf="question.type == 'single'">
-            <app-single [data]="question"></app-single>
-          </div>
           <div *ngIf="question.type == 'note'">
             <app-note [data]="question"></app-note>
           </div>
+          <div *ngIf="question.type == 'single'">
+            <app-single [data]="question"></app-single>
+          </div>
+          <div *ngIf="question.type == 'table'">
+            <app-table [data]="question"></app-table>
+          </div>
         </div>
+      </div>
+
+      <div class="right-block">
+        <md-input-container class="margin-bottom-50">
+          <textarea mdInput placeholder="Note">You can take notes here but remember to transfer your answers to your answer sheet.</textarea>
+        </md-input-container>
 
         <div class="action-block">
           <button md-raised-button color="primary" (click)="viewSheet(isSubmited)">
@@ -44,7 +54,7 @@
             <span *ngIf="isSubmited">Review</span>
           </button>
         </div>
-
+      </div>
     </div>
   </md-tab>
 </md-tab-group>

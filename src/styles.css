@@ -3,7 +3,9 @@
 
 body {
   /*font-family: 'Roboto';*/
+  background: #F5F5F5;
   margin: 0px;
+  font-family: Roboto,"Helvetica Neue",sans-serif;
 }
 
 .padding-50 {
@@ -18,6 +20,10 @@ body {
   margin-bottom: 50px;
 }
 
+.margin-bottom-20 {
+  margin-bottom: 20px;
+}
+
 .margin-right-10 {
   margin-right: 10px;
 }
@@ -26,9 +32,9 @@ p {
   text-align: justify;
 }
 
-input, .md-select-value {
+/*input, .md-select-value {
   color: #1E88E5 !important;
-}
+}*/
 
 .inline-flex {
   display: inline-flex;
@@ -47,7 +53,7 @@ input, .md-select-value {
   min-height: 0px !important;
 }
 
-.blue, .heading, b, .primary-color {
+.blue, .heading, b, .primary-color, .mat-select-value-text, input, .md-select-value {
   color: #1E88E5 !important;
 }
 

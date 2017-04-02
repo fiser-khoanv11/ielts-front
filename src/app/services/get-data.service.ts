@@ -7,11 +7,12 @@ export class GetDataService {
 
   constructor(private http: Http) { }
 
-  findOne(testId: number, skill: string): Promise<Object> {
-    return new Promise(resolve => {
-      this.http.get(GlobalService.url + '/api/skill/find-one/' + skill + '/' + testId).subscribe(response => {
-        resolve(response.json());
-      });
+  findOne(testId: number, skill: string): Promise<any> {
+    return new Promise((resolve, reject) => {
+      this.http.get(GlobalService.url + '/api/skill/find-one/' + skill + '/' + testId).subscribe(
+        (value: any) => resolve(value.json()),
+        (error: any) => reject(error)
+      );
     });
   }
 

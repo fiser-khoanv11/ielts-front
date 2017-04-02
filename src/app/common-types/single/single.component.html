@@ -1,6 +1,6 @@
 <p class="italic" *ngFor="let dir of data.directions" [innerHTML]="dir"></p>
 
-<p class="heading">{{data.heading}}</p>
+<p *ngIf="data.heading" class="heading">{{data.heading}}</p>
 
 <div *ngFor="let question of data.questions; let i = 'index'">
   <p><span *ngIf="data.first != data.last">{{data.first + i}}. </span>{{question.text}}</p>

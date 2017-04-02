@@ -1,42 +1,44 @@
 <app-test-toolbar currentPage="2" [testId]="testId"></app-test-toolbar>
 
-<md-input-container>
-  <textarea mdInput [(ngModel)]="task1" placeholder="Task 1"></textarea>
-</md-input-container>
-<md-input-container>
-  <textarea mdInput [(ngModel)]="task2" placeholder="Task 2"></textarea>
-</md-input-container>
-<button md-raised-button (click)="submit()" [disabled]="isDisabled()" color="primary">
-  <span *ngIf="!isDisabled() || !isSubmitted">Submit</span>
-  <span *ngIf="isSubmitted && isDisabled()">Submitted</span>
-</button>
-
 <div class="padding-20" *ngIf="data">
-  <md-card>
-    <md-card-title class="primary-color center">Writing Task 1</md-card-title>
-    <md-card-subtitle>You should spend about 20 minutes on this task.</md-card-subtitle>
-    <md-card-content>
-      <div class="box">
-        <p *ngFor="let text of data.task_1.text">{{text}}</p>
-      </div>
-      <p>Write at least 150 words.</p>
-      <div class="space-20"></div>
-      <img src="http://content.ieltsonlinetests.com/fileman/Uploads/Images/ielts/practice%203/percentage-of-water-used-for-different-purposes.png">
-    </md-card-content>
-  </md-card>
+  <div class="left-block">
+    <md-card class="left-card">
+      <md-card-title class="primary-color center">Writing Task 1</md-card-title>
+      <md-card-subtitle>You should spend about 20 minutes on this task.</md-card-subtitle>
+      <md-card-content>
+        <table class="format-table"><tr><td><p *ngFor="let text of data.task_1.text">{{text}}</p></td></tr></table>
+        <p>Write at least 150 words.</p>
+        <div class="space-20"></div>
+        <img src="http://content.ieltsonlinetests.com/fileman/Uploads/Images/ielts/practice%203/percentage-of-water-used-for-different-purposes.png">
+      </md-card-content>
+    </md-card>
 
-  <div class="space-20"></div>
+    <md-card class="left-card">
+      <md-card-title class="primary-color center">Writing Task 2</md-card-title>
+      <md-card-subtitle>You should spend about 40 minutes on this task.</md-card-subtitle>
+      <md-card-content>
+        <p>Write about the following topic:</p>
+        <table class="format-table"><tr><td><p *ngFor="let text of data.task_2.text">{{text}}</p></td></tr></table>
+        <p>Give reasons for your answer and include any relevant examples from your own knowledge or experience.</p>
+        <p>Write at least 250 words.</p>
+      </md-card-content>
+    </md-card>
+  </div>
 
-  <md-card>
-    <md-card-title class="primary-color center">Writing Task 2</md-card-title>
-    <md-card-subtitle>You should spend about 40 minutes on this task.</md-card-subtitle>
-    <md-card-content>
-      <p>Write about the following topic:</p>
-      <div class="box">
-        <p *ngFor="let text of data.task_2.text">{{text}}</p>
-      </div>
-      <p>Give reasons for your answer and include any relevant examples from your own knowledge or experience.</p>
-      <p>Write at least 250 words.</p>
-    </md-card-content>
-  </md-card>
+  <div class="right-block">
+    <md-input-container class="margin-bottom-50">
+      <textarea mdInput [(ngModel)]="task1" placeholder="Task 1"></textarea>
+    </md-input-container>
+
+    <md-input-container class="margin-bottom-50">
+      <textarea mdInput [(ngModel)]="task2" placeholder="Task 2"></textarea>
+    </md-input-container>
+
+    <div class="action-block margin-bottom-20">
+      <button md-raised-button (click)="submit()" [disabled]="isDisabled()" color="primary">
+        <span *ngIf="!isDisabled() || !isSubmitted">Submit</span>
+        <span *ngIf="isSubmitted && isDisabled()">Submitted</span>
+      </button>
+    </div>
+  </div>
 </div>

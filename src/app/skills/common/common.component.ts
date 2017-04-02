@@ -4,7 +4,6 @@ import { MdDialog, MdSnackBar } from '@angular/material';
 
 import { GetDataService } from '../../services/get-data.service';
 import { ConverterService } from '../../services/converter.service';
-import { GlobalService } from '../../services/global.service';
 
 import { AnswerComponent } from '../../common-types/answer/answer.component';
 import { FeatureComponent } from '../../common-types/feature/feature.component';
@@ -44,7 +43,7 @@ export class CommonComponent implements OnInit {
   @ViewChildren(InformationComponent) informationComponents: QueryList<InformationComponent>;
   @ViewChildren(SentenceComponent) sentenceComponents: QueryList<SentenceComponent>;
 
-  data: Object[] = [];
+  sections: Object[] = [];
   keys: Object[] = [];
   isSubmited: boolean = false;
   testId: number;
@@ -52,20 +51,20 @@ export class CommonComponent implements OnInit {
   timer: number = 3600;
 
   constructor(private dialog: MdDialog, private snackBar: MdSnackBar, 
-              private getDataService: GetDataService, private route: ActivatedRoute,
-              private global: GlobalService) { }
+              private getDataService: GetDataService, private route: ActivatedRoute) { }
 
   ngOnInit() {
     this.testId = this.route.snapshot.params['testId'];
 
-    this.getDataService.findOne(this.testId, this.skill).then(result => {
-      this.data = result['sections'];
-      this.keys = result['keys'];
+    this.getDataService.findOne(this.testId, this.skill).then(
+      (value: any) => {
+        this.sections = value['sections'];
+        this.keys = value['keys'];
 
-      if (this.keys.length != 40) {
-        console.error('keys.length <> 40');
-      }
-    });
+        if (this.keys.length != 40) console.error('keys.length <> 40');
+      },
+      (reason: any) => console.error(reason)
+    );
 
     this.setTimer();
   }

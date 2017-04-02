@@ -1,746 +1,578 @@
 {
-    "_id": {
-        "$oid": "58d8d795f36d28365e57e5fd"
+  "test_id": 2,
+  "keys": [
+    {
+      "no": 1,
+      "keys": [
+        "false"
+      ]
     },
-    "test_id": 1,
-    "keys": [
+    {
+      "no": 2,
+      "keys": [
+        "true"
+      ]
+    },
+    {
+      "no": 3,
+      "keys": [
+        "not given"
+      ]
+    },
+    {
+      "no": 4,
+      "keys": [
+        "not given"
+      ]
+    },
+    {
+      "no": 5,
+      "keys": [
+        "true"
+      ]
+    },
+    {
+      "no": 6,
+      "keys": [
+        "pavilions"
+      ]
+    },
+    {
+      "no": 7,
+      "keys": [
+        "drought"
+      ]
+    },
+    {
+      "no": 8,
+      "keys": [
+        "tourists"
+      ]
+    },
+    {
+      "no": 9,
+      "keys": [
+        "earthquake"
+      ]
+    },
+    {
+      "no": 10,
+      "keys": [
+        "4 sides",
+        "four sides"
+      ]
+    },
+    {
+      "no": 11,
+      "keys": [
+        "tank"
+      ]
+    },
+    {
+      "no": 12,
+      "keys": [
+        "verandas",
+        "verandahs"
+      ]
+    },
+    {
+      "no": 13,
+      "keys": [
+        "underwater"
+      ]
+    },
+    {
+      "no": 14,
+      "keys": [
+        "vii"
+      ]
+    },
+    {
+      "no": 15,
+      "keys": [
+        "iii"
+      ]
+    },
+    {
+      "no": 16,
+      "keys": [
+        "not given"
+      ]
+    },
+    {
+      "no": 17,
+      "keys": [
+        "true"
+      ]
+    },
+    {
+      "no": 18,
+      "keys": [
+        "false"
+      ]
+    },
+    {
+      "no": 19,
+      "keys": [
+        "g"
+      ]
+    },
+    {
+      "no": 20,
+      "keys": [
+        "c"
+      ]
+    },
+    {
+      "no": 21,
+      "keys": [
+        "a"
+      ]
+    },
+    {
+      "no": 22,
+      "keys": [
+        "e"
+      ]
+    },
+    {
+      "no": 23,
+      "keys": [
+        "speed"
+      ]
+    },
+    {
+      "no": 24,
+      "keys": [
+        "plains"
+      ]
+    },
+    {
+      "no": 25,
+      "keys": [
+        "bottlenecks"
+      ]
+    },
+    {
+      "no": 26,
+      "keys": [
+        "corridor",
+        "passageway"
+      ]
+    },
+    {
+      "no": 27,
+      "keys": [
+        "d"
+      ]
+    },
+    {
+      "no": 28,
+      "keys": [
+        "b"
+      ]
+    },
+    {
+      "no": 29,
+      "keys": [
+        "g"
+      ]
+    },
+    {
+      "no": 30,
+      "keys": [
+        "c"
+      ]
+    },
+    {
+      "no": 31,
+      "keys": [
+        "b"
+      ]
+    },
+    {
+      "no": 32,
+      "keys": [
+        "e"
+      ]
+    },
+    {
+      "no": 33,
+      "keys": [
+        "a"
+      ]
+    },
+    {
+      "no": 34,
+      "keys": [
+        "f"
+      ]
+    },
+    {
+      "no": 35,
+      "keys": [
+        "beginner"
+      ]
+    },
+    {
+      "no": 36,
+      "keys": [
+        "arithmetic"
+      ]
+    },
+    {
+      "no": 37,
+      "keys": [
+        "intuitive"
+      ]
+    },
+    {
+      "no": 38,
+      "keys": [
+        "scientists"
+      ]
+    },
+    {
+      "no": 39,
+      "keys": [
+        "experiments"
+      ]
+    },
+    {
+      "no": 40,
+      "keys": [
+        "theorems"
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "section_number": 1,
+      "passage": {
+        "image": "",
+        "heading": "THE STORY OF SILK",
+        "sub_heading": "The history of the world's most luxurious fabric, from ancient China to the present day",
+        "paras": [
+          {
+            "content": "During the sixth and seventh centuries, the inhabitants of the modern-day states of Gujarat and Rajasthan in North-western India developed a method of gaining access to clean, fresh groundwater during the dry season for drinking, bathing, watering animals and irrigation. However, the significance of this invention \u2013 the stepwell \u2013 goes beyond its utilitarian application."
+          },
+          {
+            "content": "Unique to the region, stepwells are often architecturally complex and vary widely in size and shape. During their heyday, they were places of gathering, of leisure, of relaxation and of worship for villagers of all but the lowest castes.Most stepwells are found dotted around the desert areas of Gujarat (where they are called vav) and Rajasthan (where they are known as baori), while a few also survive in Delhi. Some were located in or near villages as public spaces for the community; others were positioned beside roads as resting places for travellers."
+          },
+          {
+            "content": "As their name suggests, stepwells comprise a series of stone steps descending from ground level to the water source (normally an underground aquifer) as it recedes following the rains. When the water level was high, the user needed only to descend a few steps to reach it; when it was low, several levels would have to be negotiated."
+          },
+          {
+            "content": "Some wells are vast, open craters with hundreds of steps paving each sloping side, often in tiers. Others are more elaborate, with long stepped passages leading to the water via several storeys built from stone and supported by pillars, they also included pavilions that sheltered visitors from the relentless heat. But perhaps the most impressive features are the intricate decorative sculptures that embellish many stepwells, showing activities from fighting and dancing to everyday acts such as women combing their hair and churning butter."
+          },
+          {
+            "content": "Down the centuries, thousands of wells were constructed throughout northwestern India, but the majority have now fallen into disuse; many are derelict and dry, as groundwater has been diverted for industrial use and the wells no longer reach the water table. Their condition hasn\u2019t been helped by recent dry spells: southern Rajasthan suffered an eight-year drought between 1996 and 2004."
+          },
+          {
+            "content": "However, some important sites in Gujarat have recently undergone major restoration, and the state government announced in June last year that it plans to restore the stepwells throughout the state."
+          },
+          {
+            "content": "In Patan, the state\u2019s ancient capital, the stepwell of Rani Ki Vav (Queen\u2019s Stepwell) is perhaps the finest current example. It was built by Queen Udayamati during the late 11th century, but became silted up following a flood during the 13th century. But the Archaeological Survey of India began restoring it in the 1960s, and today it\u2019s in pristine condition. At 65 metres long, 20 metres wide and 27 metres deep, Rani Ki Vav features 500 distinct sculptures carved into niches throughout the monument, depicting gods such as Vishnu and Parvati in various incarnations. Incredibly, in January 2001, this ancient structure survived a devastating earthquake that measured 7.6 on the Richter scale."
+          },
+          {
+            "content": "Another example is the Surya Kund in Modhera, northern Gujarat, next to the Sun Temple, built by King Bhima I in 1026 to honour the sun god Surya. It\u2019s actually a tank (kund means reservoir or pond) rather than a well, but displays the hallmarks of stepwell architecture, including four sides of steps that descend to the bottom in a stunning geometrical formation. The terraces house 108 small, intricately carved shrines between the sets of steps."
+          },
+          {
+            "content": "Rajasthan also has a wealth of wells. The ancient city of Bundi, 200 kilometres south of Jaipur, is reknowned for its architecture, including its stepwells. One of the larger examples is Raniji Ki Baori, which was built by the queen of the region, Nathavatji, in 1699. At 46 metres deep, 20 metres wide and 40 metres long, the intricately carved monument is one of 21 baoris commissioned in the Bundi area by Nathavatji."
+          },
+          {
+            "content": "In the old ruined town of Abhaneri, about 95 kilometres east of Jaipur, is Chand Baori, one of India\u2019s oldest and deepest wells; aesthetically, it\u2019s perhaps one of the most dramatic. Built in around 850 AD next to the temple of Harshat Mata, the baori comprises hundreds of zigzagging steps that run along three of its sides, steeply descending 11 storeys, resulting in a striking geometric pattern when seen from afar. On the fourth side, covered verandas supported by ornate pillars overlook the steps."
+          },
+          {
+            "content": "Still in public use is Neemrana Ki Baori, located just off the Jaipur\u2013Dehli highway. Constructed in around 1700, it\u2019s nine storeys deep, with the last two levels underwater. At ground level, there are 86 colonnaded openings from where the visitor descends 170 steps to the deepest water source."
+          },
+          {
+            "content": "Today, following years of neglect, many of these monuments to medieval engineering have been saved by the Archaeological Survey of India, which has recognised the importance of preserving them as part of the country\u2019s rich history. Tourists flock to wells in far-flung corners of northwestern India to gaze in wonder at these architectural marvels from 1,000 years ago, which serve as a reminder of both the ingenuity and artistry of ancient civilisations and of the value of water to human existence."
+          }
+        ]
+      },
+      "sub_sections": [
         {
-            "no": 1,
-            "keys": [
-                "false"
-            ]
+          "first": 1,
+          "last": 9,
+          "type": "note",
+          "directions": [
+            "Complete the notes below.",
+            "Choose <b>ONE WORD ONLY</b> from the passage for each answer.",
+            "Write your answers in boxes 1-9 on your answer sheet."
+          ],
+          "heading": "The story of silk",
+          "paras": [
+            "<b>Early silk production in China</b>",
+            "Around 3000 BC, according to legend:",
+            "- silkworm cocoon fell into emperor's wife's []",
+            "- emperor's wife invented a [] to pull out silk fibres",
+            "Only [] were allowed to produce silk",
+            "Only [] were allowed to wear silk",
+            "Silk used as a form of []",
+            "- e.g. farmers' taxes consisted partly of silk",
+            "Silk used for many purposes",
+            "- e.g. evidence found of [] made from silk around 168 AD",
+            "<b>Silk reaches rest of world",
+            "Merchants use Silk Road to take silk westward and bring back [] and precious metals",
+            "500 AD: [] hide silkworm eggs in canes and take them to Constantinople",
+            "Silk production spreads across Middle East and Europe",
+            "20th century: [] and other manmade fibres cause decline in silk production"
+          ]
         },
         {
-            "no": 2,
-            "keys": [
-                "true"
-            ]
-        },
-        {
-            "no": 3,
-            "keys": [
-                "not given"
-            ]
-        },
-        {
-            "no": 4,
-            "keys": [
-                "not given"
-            ]
-        },
-        {
-            "no": 5,
-            "keys": [
-                "true"
-            ]
-        },
-        {
-            "no": 6,
-            "keys": [
-                "pavilions"
-            ]
-        },
-        {
-            "no": 7,
-            "keys": [
-                "drought"
-            ]
-        },
-        {
-            "no": 8,
-            "keys": [
-                "tourists"
-            ]
-        },
-        {
-            "no": 9,
-            "keys": [
-                "earthquake"
-            ]
-        },
-        {
-            "no": 10,
-            "keys": [
-                "4 sides",
-                "four sides"
-            ]
-        },
-        {
-            "no": 11,
-            "keys": [
-                "tank"
-            ]
-        },
-        {
-            "no": 12,
-            "keys": [
-                "verandas",
-                "verandahs"
-            ]
-        },
-        {
-            "no": 13,
-            "keys": [
-                "underwater"
-            ]
-        },
-        {
-            "no": 14,
-            "keys": [
-                "vii"
-            ]
-        },
-        {
-            "no": 15,
-            "keys": [
-                "iii"
-            ]
-        },
-        {
-            "no": 16,
-            "keys": [
-                "xi"
-            ]
-        },
-        {
-            "no": 17,
-            "keys": [
-                "i"
-            ]
-        },
-        {
-            "no": 18,
-            "keys": [
-                "v"
-            ]
-        },
-        {
-            "no": 19,
-            "keys": [
-                "x"
-            ]
-        },
-        {
-            "no": 20,
-            "keys": [
-                "ii"
-            ]
-        },
-        {
-            "no": 21,
-            "keys": [
-                "iv"
-            ]
-        },
-        {
-            "no": 22,
-            "keys": [
-                "true"
-            ]
-        },
-        {
-            "no": 23,
-            "keys": [
-                "false"
-            ]
-        },
-        {
-            "no": 24,
-            "keys": [
-                "not given"
-            ]
-        },
-        {
-            "no": 25,
-            "keys": [
-                "not given"
-            ]
-        },
-        {
-            "no": 26,
-            "keys": [
-                "false"
-            ]
-        },
-        {
-            "no": 27,
-            "keys": [
-                "c"
-            ]
-        },
-        {
-            "no": 28,
-            "keys": [
-                "a"
-            ]
-        },
-        {
-            "no": 29,
-            "keys": [
-                "d"
-            ]
-        },
-        {
-            "no": 30,
-            "keys": [
-                "b"
-            ]
-        },
-        {
-            "no": 31,
-            "keys": [
-                "g"
-            ]
-        },
-        {
-            "no": 32,
-            "keys": [
-                "e"
-            ]
-        },
-        {
-            "no": 33,
-            "keys": [
-                "a"
-            ]
-        },
-        {
-            "no": 34,
-            "keys": [
-                "f"
-            ]
-        },
-        {
-            "no": 35,
-            "keys": [
-                "b"
-            ]
-        },
-        {
-            "no": 36,
-            "keys": [
-                "no"
-            ]
-        },
-        {
-            "no": 37,
-            "keys": [
-                "yes"
-            ]
-        },
-        {
-            "no": 38,
-            "keys": [
-                "not given"
-            ]
-        },
-        {
-            "no": 39,
-            "keys": [
-                "not given"
-            ]
-        },
-        {
-            "no": 40,
-            "keys": [
-                "no"
-            ]
+          "first": 10,
+          "last": 13,
+          "type": "true-false",
+          "options": "tf",
+          "directions": [
+            "Do the following statements agree with the information given in Reading Passage 1?",
+            "In boxes 10-13 on your answer sheet, write"
+          ],
+          "text": [
+            "Gold was the most valuable material transported along the Silk Road.",
+            "Most tradesmen only went along certain sections of the Silk Road.",
+            "The Byzantines spread the practice of silk production across the West.",
+            "Silk yarn makes up the majority of silk currentl exported from China."
+          ]
         }
-    ],
-    "sections": [
+      ]
+    },
+    {
+      "section_number": 2,
+      "passage": {
+        "image": "http://abc.com/img.jpg",
+        "heading": "Great Migrations",
+        "paras": [
+          {
+            "mark": "a",
+            "content": "It is difficult to conceive of vigorous economic growth without an efficient transport system. Although modern information technologies can reduce the demand for physical transport by facilitating teleworking and teleservices, the requirement for transport continues to increase. There are two key factors behind this trend. For passenger transport, the determining factor is the spectacular growth in car use. The number of cars on European Union (EU) roads saw an increase of three million cars each year from 1990 to 2010, and in the next decade the EU will see a further substantial increase in its fleet."
+          },
+          {
+            "mark": "b",
+            "content": "As far as goods transport is concerned, growth is due to a large extent to changes in the European economy and its system of production. In the last 20 years, as internal frontiers have been abolished, the EU has moved from a \u201dstock\u201d economy to a \u201dflow\u201d economy. This phenomenon has been emphasised by the relocation of some industries, particularly those which are labour intensive, to reduce production costs, even though the production site is hundreds or even thousands of kilometres away from the final assembly plant or away from users."
+          },
+          {
+            "mark": "c",
+            "content": "The strong economic growth expected in countries which are candidates for entry to the EU will also increase transport flows, in particular road haulage traffic. In 1998, some of these countries already exported more than twice their 1990 volumes and imported more than five times their 1990 volumes. And although many candidate countries inherited a transport system which encourages rail, the distribution between modes has tipped sharply in favour of road transport since the 1990s. Between 1990 and 1998，road haulage increased by 19.4%, while during the same period rail haulage decreased by 43.5%, although \u2013 and this could benefit the enlarged EU \u2013 it is still on average at a much higher level than in existing member states."
+          },
+          {
+            "mark": "d",
+            "content": "However, a new imperative-sustainable development \u2013 offers an opportunity for adapting the EU，s common transport policy. This objective, agreed by the Gothenburg European Council, has to be achieved by integrating environmental considerations into Community policies, and shifting the balance between modes of transport lies at the heart of its strategy. The ambitious objective can only be fully achieved by 2020, but proposed measures are nonetheless a first essential step towards a sustainable transport system which will ideally be in place in 30 years\u201f time, that is by 2040."
+          },
+          {
+            "mark": "e",
+            "content": "In 1998, energy consumption in the transport sector was to blame for 28% of emissions of CO2，the leading greenhouse gas. According to the latest estimates, if nothing is done to reverse the traffic growth trend, CO2 emissions from transport can be expected to increase by around 50% to 1,113 billion tonnes by 2020，compared with the 739 billion tonnes recorded in 1990. Once again, road transport is the main culprit since it alone accounts for 84% of the CO2 emissions attributable to transport. Using alternative fuels and improving energy efficiency is thus both an ecological necessity and a technological challenge."
+          },
+          {
+            "mark": "f",
+            "content": "At the same time greater efforts must be made to achieve a modal shift. Such a change cannot be achieved overnight, all the less so after over half a century of constant deterioration in favour of road. This has reached such a pitch that today rail freight services are facing marginalisation, with just 8% of market share, and with international goods trains struggling along at an average speed of 18km/h. Three possible options have emerged."
+          },
+          {
+            "mark": "g",
+            "content": "The first approach would consist of focusing on road transport solely through pricing. This option would not be accompanied by complementary measures in the other modes of transport. In the short term it might curb the growth in road transport through the better loading ratio of goods vehicles and occupancy rates of passenger vehicles expected as a result of the increase in the price of transport. However, the lack of measures available to revitalise other modes of transport would make it impossible for more sustainable modes of transport to take up the baton."
+          },
+          {
+            "mark": "h",
+            "content": "The second approach also concentrates on road transport pricing but is accompanied by measures to increase the efficiency of the other modes (better quality of services, logistics, technology). However, this approach does not include investment in new infrastructure, nor does it guarantee better regional cohesion. It could help to achieve greater uncoupling than the first approach, but road transport would keep the lion\u201fs share of the market and continue to concentrate on saturated arteries, despite being the most polluting of the modes. It is therefore not enough to guarantee the necessary shift of the balance."
+          },
+          {
+            "mark": "i",
+            "content": "The third approach, which is not new, comprises a series of measures ranging from pricing to revitalising alternative modes of transport and targeting investment in the trans-European network. This integrated approach would allow the market shares of the other modes to return to their 1998 levels and thus make a shift of balance. It is far more ambitious than it looks, bearing in mind the historical imbalance in favour of roads for the last fifty years, but would achieve a marked break in the link between road transport growth and economic growth, without placing restrictions on the mobility of people and goods."
+          }
+        ]
+      },
+      "sub_sections": [
         {
-            "section_number": 1,
-            "passage": {
-                "image": "",
-                "heading": "Stepwells",
-                "sub_heading": "A millennium ago, stepwells were fundamental to life in the driest parts of India. Although many have been neglected, recent restoration has returned them to their former glory. Richard Cox travelled to  north-western India to document these spectacular monuments from a bygone era.",
-                "paras": [
-                    {
-                        "content": "During the sixth and seventh centuries, the inhabitants of the modern-day states of Gujarat and Rajasthan in North-western India developed a method of gaining access to clean, fresh groundwater during the dry season for drinking, bathing, watering animals and irrigation. However, the significance of this invention \u2013 the stepwell \u2013 goes beyond its utilitarian application."
-                    },
-                    {
-                        "content": "Unique to the region, stepwells are often architecturally complex and vary widely in size and shape. During their heyday, they were places of gathering, of leisure, of relaxation and of worship for villagers of all but the lowest castes.Most stepwells are found dotted around the desert areas of Gujarat (where they are called vav) and Rajasthan (where they are known as baori), while a few also survive in Delhi. Some were located in or near villages as public spaces for the community; others were positioned beside roads as resting places for travellers."
-                    },
-                    {
-                        "content": "As their name suggests, stepwells comprise a series of stone steps descending from ground level to the water source (normally an underground aquifer) as it recedes following the rains. When the water level was high, the user needed only to descend a few steps to reach it; when it was low, several levels would have to be negotiated."
-                    },
-                    {
-                        "content": "Some wells are vast, open craters with hundreds of steps paving each sloping side, often in tiers. Others are more elaborate, with long stepped passages leading to the water via several storeys built from stone and supported by pillars, they also included pavilions that sheltered visitors from the relentless heat. But perhaps the most impressive features are the intricate decorative sculptures that embellish many stepwells, showing activities from fighting and dancing to everyday acts such as women combing their hair and churning butter."
-                    },
-                    {
-                        "content": "Down the centuries, thousands of wells were constructed throughout northwestern India, but the majority have now fallen into disuse; many are derelict and dry, as groundwater has been diverted for industrial use and the wells no longer reach the water table. Their condition hasn\u2019t been helped by recent dry spells: southern Rajasthan suffered an eight-year drought between 1996 and 2004."
-                    },
-                    {
-                        "content": "However, some important sites in Gujarat have recently undergone major restoration, and the state government announced in June last year that it plans to restore the stepwells throughout the state."
-                    },
-                    {
-                        "content": "In Patan, the state\u2019s ancient capital, the stepwell of Rani Ki Vav (Queen\u2019s Stepwell) is perhaps the finest current example. It was built by Queen Udayamati during the late 11th century, but became silted up following a flood during the 13th century. But the Archaeological Survey of India began restoring it in the 1960s, and today it\u2019s in pristine condition. At 65 metres long, 20 metres wide and 27 metres deep, Rani Ki Vav features 500 distinct sculptures carved into niches throughout the monument, depicting gods such as Vishnu and Parvati in various incarnations. Incredibly, in January 2001, this ancient structure survived a devastating earthquake that measured 7.6 on the Richter scale."
-                    },
-                    {
-                        "content": "Another example is the Surya Kund in Modhera, northern Gujarat, next to the Sun Temple, built by King Bhima I in 1026 to honour the sun god Surya. It\u2019s actually a tank (kund means reservoir or pond) rather than a well, but displays the hallmarks of stepwell architecture, including four sides of steps that descend to the bottom in a stunning geometrical formation. The terraces house 108 small, intricately carved shrines between the sets of steps."
-                    },
-                    {
-                        "content": "Rajasthan also has a wealth of wells. The ancient city of Bundi, 200 kilometres south of Jaipur, is reknowned for its architecture, including its stepwells. One of the larger examples is Raniji Ki Baori, which was built by the queen of the region, Nathavatji, in 1699. At 46 metres deep, 20 metres wide and 40 metres long, the intricately carved monument is one of 21 baoris commissioned in the Bundi area by Nathavatji."
-                    },
-                    {
-                        "content": "In the old ruined town of Abhaneri, about 95 kilometres east of Jaipur, is Chand Baori, one of India\u2019s oldest and deepest wells; aesthetically, it\u2019s perhaps one of the most dramatic. Built in around 850 AD next to the temple of Harshat Mata, the baori comprises hundreds of zigzagging steps that run along three of its sides, steeply descending 11 storeys, resulting in a striking geometric pattern when seen from afar. On the fourth side, covered verandas supported by ornate pillars overlook the steps."
-                    },
-                    {
-                        "content": "Still in public use is Neemrana Ki Baori, located just off the Jaipur\u2013Dehli highway. Constructed in around 1700, it\u2019s nine storeys deep, with the last two levels underwater. At ground level, there are 86 colonnaded openings from where the visitor descends 170 steps to the deepest water source."
-                    },
-                    {
-                        "content": "Today, following years of neglect, many of these monuments to medieval engineering have been saved by the Archaeological Survey of India, which has recognised the importance of preserving them as part of the country\u2019s rich history. Tourists flock to wells in far-flung corners of northwestern India to gaze in wonder at these architectural marvels from 1,000 years ago, which serve as a reminder of both the ingenuity and artistry of ancient civilisations and of the value of water to human existence."
-                    }
-                ]
-            },
-            "sub_sections": [
-                {
-                    "first": 1,
-                    "last": 5,
-                    "type": "true-false",
-                    "options": "tf",
-                    "directions": [
-                      "Do the following statements agree with the information given in Reading Passage 1?",
-                      "In boxes 1-5 on your answer sheet, write"
-                    ],
-                    "text": [
-                        "Examples of ancient stepwells can be found all over the world.",
-                        "Stepwells had a range of functions, in addition to those related to water collection.",
-                        "The few existing stepwells in Delhi are more attractive than those found elsewhere.",
-                        "It took workers many years to build the stone steps characteristic of stepwells.",
-                        "It number of steps above the water level in a stepwell altered during the course of a year."
-                    ]
-                },
-                {
-                    "first": 6,
-                    "last": 8,
-                    "type": "answer",
-                    "directions": [
-                      "Answer the questions below.",
-                      "Choose <b>ONE WORD ONLY</b> from the passage for each answer.",
-                      "Write your answers in boxes 6-8 on your answer sheet."
-                    ],
-                    "text": [
-                        "Which part of some stepwells provided shade for people?",
-                        "What type of serious climatic event, which took place in southern Rajasthan, is mentioned in the article?",
-                        "Who are frequent visitors to stepwells nowadays?"
-                    ]
-                },
-                {
-                    "first": 9,
-                    "last": 13,
-                    "type": "table",
-                    "directions": [
-                        "Complete the table below",
-                        "Choose <b>ONE WORD AND/OR A NUMBER<\/b> from the passage for each answer.",
-                        "Write your answers in boxes 9-13 on your answer sheet."
-                    ],
-                    "table": [
-                        [
-                            [
-                                "<b>Stepwell<\/b>"
-                            ],
-                            [
-                                "<b>Date<\/b>"
-                            ],
-                            [
-                                "<b>Features<\/b>"
-                            ],
-                            [
-                                "<b>Other notes<\/b>"
-                            ]
-                        ],
-                        [
-                            [
-                                "<b><i>Rani Ki Vav<\/i><\/b>"
-                            ],
-                            [
-                                "Late 11th century"
-                            ],
-                            [
-                                "As many as 500 sculptures decorate the monument"
-                            ],
-                            [
-                                "Restored in the 1960s",
-                                "Excellent condition, despite the [] of 2001"
-                            ]
-                        ],
-                        [
-                            [
-                                "<b><i>Surya<\/i><\/b>"
-                            ],
-                            [
-                                "1026"
-                            ],
-                            [
-                                "Steps on the [] produce a geometrical pattern",
-                                "Carved shrines"
-                            ],
-                            [
-                                "Looks more like a [] than a well"
-                            ]
-                        ],
-                        [
-                            [
-                                "<b><i>Raniji Ki Baori<\/i><\/b>"
-                            ],
-                            [
-                                "1699"
-                            ],
-                            [
-                                "Intricately carved monument"
-                            ],
-                            [
-                                "One of 21 baoris in the area commissioned by Queen Nathavatji"
-                            ]
-                        ],
-                        [
-                            [
-                                "<b><i>Chand Baori<\/i><\/b>"
-                            ],
-                            [
-                                "850 AD"
-                            ],
-                            [
-                                "Steps take you down 11 storey to the bottom"
-                            ],
-                            [
-                                "Old, deep and very dramatic",
-                                "Has [] which provide a view of the steps"
-                            ]
-                        ],
-                        [
-                            [
-                                "<b><i>Neemrana Ki Baori<\/i><\/b>"
-                            ],
-                            [
-                                "1700"
-                            ],
-                            [
-                                "Has two [] levels"
-                            ],
-                            [
-                                "Used by public today"
-                            ]
-                        ]
-                    ]
-                }
-            ]
+          "first": 14,
+          "last": 18,
+          "type": "true-false",
+          "options": "tf",
+          "directions": [
+            "Do the following statements agree with the information given in Reading Passage 2?",
+            "In boxes 14-18 on your answer sheet, write"
+          ],
+          "text": [
+            "Local gulls and migrating arctic terns behave in the same way when offered food.",
+            "Experts' definitions of migration tend to vary according to their area of study.",
+            "Very few experts agree that the movement of aphids can be considered migration.",
+            "Aphids' journeys are affected by changes in the light that they perceive.",
+            "Dingle's aim is to distinguish between the migration behaviours of different species."
+          ]
         },
         {
-            "section_number": 2,
-            "passage": {
-                "image": "http://abc.com/img.jpg",
-                "heading": "European transport systems 1900-2010",
-                "sub_heading": "What have been the trends and what are the prospects for European transport systems?",
-                "paras": [
-                    {
-                        "mark": "a",
-                        "content": "It is difficult to conceive of vigorous economic growth without an efficient transport system. Although modern information technologies can reduce the demand for physical transport by facilitating teleworking and teleservices, the requirement for transport continues to increase. There are two key factors behind this trend. For passenger transport, the determining factor is the spectacular growth in car use. The number of cars on European Union (EU) roads saw an increase of three million cars each year from 1990 to 2010, and in the next decade the EU will see a further substantial increase in its fleet."
-                    },
-                    {
-                        "mark": "b",
-                        "content": "As far as goods transport is concerned, growth is due to a large extent to changes in the European economy and its system of production. In the last 20 years, as internal frontiers have been abolished, the EU has moved from a \u201dstock\u201d economy to a \u201dflow\u201d economy. This phenomenon has been emphasised by the relocation of some industries, particularly those which are labour intensive, to reduce production costs, even though the production site is hundreds or even thousands of kilometres away from the final assembly plant or away from users."
-                    },
-                    {
-                        "mark": "c",
-                        "content": "The strong economic growth expected in countries which are candidates for entry to the EU will also increase transport flows, in particular road haulage traffic. In 1998, some of these countries already exported more than twice their 1990 volumes and imported more than five times their 1990 volumes. And although many candidate countries inherited a transport system which encourages rail, the distribution between modes has tipped sharply in favour of road transport since the 1990s. Between 1990 and 1998，road haulage increased by 19.4%, while during the same period rail haulage decreased by 43.5%, although \u2013 and this could benefit the enlarged EU \u2013 it is still on average at a much higher level than in existing member states."
-                    },
-                    {
-                        "mark": "d",
-                        "content": "However, a new imperative-sustainable development \u2013 offers an opportunity for adapting the EU，s common transport policy. This objective, agreed by the Gothenburg European Council, has to be achieved by integrating environmental considerations into Community policies, and shifting the balance between modes of transport lies at the heart of its strategy. The ambitious objective can only be fully achieved by 2020, but proposed measures are nonetheless a first essential step towards a sustainable transport system which will ideally be in place in 30 years\u201f time, that is by 2040."
-                    },
-                    {
-                        "mark": "e",
-                        "content": "In 1998, energy consumption in the transport sector was to blame for 28% of emissions of CO2，the leading greenhouse gas. According to the latest estimates, if nothing is done to reverse the traffic growth trend, CO2 emissions from transport can be expected to increase by around 50% to 1,113 billion tonnes by 2020，compared with the 739 billion tonnes recorded in 1990. Once again, road transport is the main culprit since it alone accounts for 84% of the CO2 emissions attributable to transport. Using alternative fuels and improving energy efficiency is thus both an ecological necessity and a technological challenge."
-                    },
-                    {
-                        "mark": "f",
-                        "content": "At the same time greater efforts must be made to achieve a modal shift. Such a change cannot be achieved overnight, all the less so after over half a century of constant deterioration in favour of road. This has reached such a pitch that today rail freight services are facing marginalisation, with just 8% of market share, and with international goods trains struggling along at an average speed of 18km/h. Three possible options have emerged."
-                    },
-                    {
-                        "mark": "g",
-                        "content": "The first approach would consist of focusing on road transport solely through pricing. This option would not be accompanied by complementary measures in the other modes of transport. In the short term it might curb the growth in road transport through the better loading ratio of goods vehicles and occupancy rates of passenger vehicles expected as a result of the increase in the price of transport. However, the lack of measures available to revitalise other modes of transport would make it impossible for more sustainable modes of transport to take up the baton."
-                    },
-                    {
-                        "mark": "h",
-                        "content": "The second approach also concentrates on road transport pricing but is accompanied by measures to increase the efficiency of the other modes (better quality of services, logistics, technology). However, this approach does not include investment in new infrastructure, nor does it guarantee better regional cohesion. It could help to achieve greater uncoupling than the first approach, but road transport would keep the lion\u201fs share of the market and continue to concentrate on saturated arteries, despite being the most polluting of the modes. It is therefore not enough to guarantee the necessary shift of the balance."
-                    },
-                    {
-                        "mark": "i",
-                        "content": "The third approach, which is not new, comprises a series of measures ranging from pricing to revitalising alternative modes of transport and targeting investment in the trans-European network. This integrated approach would allow the market shares of the other modes to return to their 1998 levels and thus make a shift of balance. It is far more ambitious than it looks, bearing in mind the historical imbalance in favour of roads for the last fifty years, but would achieve a marked break in the link between road transport growth and economic growth, without placing restrictions on the mobility of people and goods."
-                    }
-                ]
-            },
-            "sub_sections": [
-                {
-                    "first": 14,
-                    "last": 21,
-                    "type": "heading",
-                    "directions": [
-                      "Reading Passage 2 has nine paragraph, <b>A-I</b>.",
-                      "Choose the correct heading for paragraphs <b>A-E</b> and <b>G-I</b> from the list of headings below.",
-                      "Write the correct number, <b>i-xi</b>, in boxes 14-21 on your answer sheet."
-                    ],
-                    "headings": [
-                        "A fresh and important long-term goal",
-                        "Changing for roads and improving other transport methods",
-                        "Changes affecting the distances goods may be transported",
-                        "Taking all the steps necessary to change transport patterns",
-                        "The environmental cost of rail transport",
-                        "The escalating cost of rail transport",
-                        "The need to achieve transport rebalance",
-                        "The rapid growth of private transport",
-                        "Plans to develop major road networks",
-                        "Restricting road use through charging policies alone",
-                        "Transport trends in countries awaiting EU admission"
-                    ],
-                    "paras": [
-                        {
-                            "char": "a"
-                        },
-                        {
-                            "char": "b"
-                        },
-                        {
-                            "char": "c"
-                        },
-                        {
-                            "char": "d"
-                        },
-                        {
-                            "char": "e"
-                        },
-                        {
-                            "char": "f",
-                            "answer": 7
-                        },
-                        {
-                            "char": "g"
-                        },
-                        {
-                            "char": "h"
-                        },
-                        {
-                            "char": "i"
-                        }
-                    ]
-                },
-                {
-                    "first": 22,
-                    "last": 26,
-                    "type": "true-false",
-                    "options": "tf",
-                    "directions": [
-                        "Do the following statements agree with the information given in Reading Passage 1?",
-                        "In boxes 22-26 on your answer sheet, write"
-                      ],
-                    "text": [
-                        "The need for transport is growing, despite technological developments.",
-                        "To reduce production costs, some indsutries have been moved closer to their relevant consumers.",
-                        "Cars are prohibitively expensive in some EU candidate countries.",
-                        "The Gothenburg European Council was set up 20 years ago.",
-                        "By the end of this decade, C02 emissions from transport are predicted to reach 739 billion tonnes."
-                    ]
-                }
-            ]
+          "first": 19,
+          "last": 22,
+          "type": "feature",
+          "directions": [
+            "Complete each sentence with the correct ending, <b>A-G</b>, below.",
+            "Write the correct letter, <b>A-G</b>, in boxes 19-22 on your answer sheet."
+          ],
+          "features": [
+            "be discouraged by difficulities.",
+            "travel on open land where they can look out for predators.",
+            "eat more than they need for immediate purposes.",
+            "be repeated daily.",
+            "ignore distractions.",
+            "be governed by the availability of water.",
+            "follow a straight line."
+          ],
+          "text": [
+            "According to Dingle, migratory routes are likely to",
+            "To prepare for migration, animals are likely to",
+            "During migration, animals are unlikely to",
+            "Arctic terns illstrate migrating animals' ability to"
+          ],
         },
         {
-            "section_number": 3,
-            "passage": {
-                "image": "",
-                "heading": "The psychology of innovation",
-                "sub_heading": "Why are so few companies truly innnovative?",
-                "paras": [
-                    {
-                        "content": "Innovation is key to business survival，and companies put substantial resources into inspiring employees to develop new ideas. There are, nevertheless, people working in luxurious, state-of-the-art centres designed to stimulate innovation who find that their environment doesn’t make them feel at all creative. And there are those who don’t have a budget, or much space, but who innovate successfully."
-                    },
-                    {
-                        "content": "For Robert B. Cialdini, Professor of Psychology at Arizona State University, one reason that companies don’t succeed as often as they should is that innovation starts with recruitment. Research shows that the fit between an employee’s values and a company’s values makes a difference to what contribution they make and whether, two years after they join, they’re still at the company. Studies at Harvard Business School show that, although some individuals may be more creative than others, almost every individual can be creative in the right circumstances."
-                    },
-                    {
-                        "content": "One of the most famous photographs in the story of rock’n’roll emphasises Ciaidini’s views. The 1956 picture of singers Elvis Presley, Carl Perkins, Johnny Cash and Jerry Lee Lewis jamming at a piano in Sun Studios in Memphis tells a hidden story. Sun’s ‘million-dollar quartet’ could have been a quintet. Missing from the picture is Roy Orbison’ a greater natural singer than Lewis, Perkins or Cash. Sam Phillips, who owned Sun, wanted to revolutionise popular music with songs that fused black and white music, and country and blues. Presley, Cash, Perkins and Lewis instinctively understood Phillips’s ambition and believed in it. Orbison wasn’t inspired by the goal, and only ever achieved one hit with the Sun label."
-                    },
-                    {
-                        "content": "The value fit matters, says Cialdini, because innovation is, in part, a process of change, and under that pressure we, as a species, behave differently, ‘When things change, we are hard-wired to play it safe.’ Managers should therefore adopt an approach that appears counterintuitive -they should explain what stands to be lost if the company fails to seize a particular opportunity. Studies show that we invariably take more gambles when threatened with a loss than when offered a reward."
-                    },
-                    {
-                        "content": "Managing innovation is a delicate art. It’s easy for a company to be pulled in conflicting directions as the marketing, product development, and finance departments each get different feedback from different sets of people. And without a system which ensures collaborative exchanges within the company, it’s also easy for small ‘pockets of innovation‟ to disappear. Innovation is a contact sport. You can‟t brief people just by saying, ‘We’re going in this direction and I’m going to take you with me.’"
-                    },
-                    {
-                        "content": "Cialdini believes that this ‘follow-the-leader syndrome, is dangerous, not least because it encourages bosses to go it alone. ‘It’s been scientifically proven that three people will be better than one at solving problems, even if that one person is the smartest person in the field.’ To prove his point, Cialdini cites an interview with molecular biologist James Watson. Watson, together with Francis Crick, discovered the structure of DNA, the genetic information carrier of all living organisms. ‘When asked how they had cracked the code ahead of an array of highly accomplished rival investigators, he said something that stunned me. He said ”he and Crick had succeeded because they were aware that they weren’t the most intelligent of the scientists pursuing the answer. The smartest scientist was called Rosalind Franklin who, Watson said, “was so intelligent she rarely sought advice”.’"
-                    },
-                    {
-                        "content": "Teamwork taps into one of the basic drivers of human behaviour. ‘The principle of social proof is so pervasive that we don’t even recognise it,’ says Cialdini. ‘If your project is being resisted, for example, by a group of veteran employees, ask another old-timer to speak up for it.’ Cialdini is not alone in advocating this strategy. Research shows that peer power, used horizontally not vertically, is much more powerful than any boss’s speech."
-                    },
-                    {
-                        "content": "Writing, visualising and prototyping can stimulate the flow of new ideas. Cialdini cites scores of research papers and historical events that prove that even something as simple as writing deepens every individual’s engagement in the project. It is, he says, the reason why all those competitions on breakfast cereal packets encouraged us to write in saying, in no more than 10 words: ‘I like Kellogg’s Com Flakes because… .’ The very act of writing makes us more likely to believe it."
-                    },
-                    {
-                        "content": "Authority doesn’t have to inhibit innovation but it often does. The wrong kind of leadership will lead to what Cialdini calls ”captainitis, the regrettable tendency of team members to opt out of team responsibilities that are properly their’. He calls it captainitis because, he says, ”crew members of multipilot aircraft exhibit a sometimes deadly passivity when the flight captain makes a clearly wrong-headed decision”. This behaviour is not, he says, unique to air travel, but can happen in any workplace where the leader is overbearing."
-                    },
-                    {
-                        "content": "At the other end of the scale is the 1980s Memphis design collective, a group of young designers for whom ”the only rule was that there were no rule”. This environment encouraged a free interchange of ideas, which led to more creativity with form, function, colour and materials that revolutionised attitudes to furniture design."
-                    },
-                    {
-                        "content": "Many theorists believe the ideal boss should lead from behind, taking pride in collective accomplishment and giving credit where it is due. Cialdini says:”Leaders should encourage everyone to contribute and simultaneously assure all concerned that every recommendation is important to making the right decision and will be given full attention” The frustrating thing about innovation is that there are many approaches, but no magic formula. However, a manager who wants to create a truly innovative culture can make their job a lot easier by recognising these psychological realities."
-                    }
-                ]
-            },
-            "sub_sections": [
-                {
-                    "first": 27,
-                    "last": 30,
-                    "type": "single",
-                    "directions": [
-                        "Choose the correct letter, <b>A<\/b>, <b>B<\/b>, <b>C<\/b> or <b>D<\/b>.",
-                        "Write the correct letter in boxes 27-30 on your answer sheet."
-                    ],
-                    "questions": [
-                        {
-                            "text": "The example of the 'million-dollar quartet' underlines the writer's point about",
-                            "choices": [
-                                "recognising talent.",
-                                "working as a team.",
-                                "having a shared objective.",
-                                "being an effective leader."
-                            ]
-                        },
-                        {
-                            "text": "James Watson suggests that he and Francis Crick won the race to discover the DNA code because they",
-                            "choices": [
-                                "were conscious of their own limitations.",
-                                "brought complementary skills to their partnership.",
-                                "were determined to outperform their brighter rivals.",
-                                "encouraged each other to realise thier joint ambition."
-                            ]
-                        },
-                        {
-                            "text": "The writer mentions competitions on breakfast cereal packets as an example of how to",
-                            "choices": [
-                                "inspire creative thinking.",
-                                "generate concise writing.",
-                                "promote loyalty to a group.",
-                                "strengthen commitment to an idea."
-                            ]
-                        },
-                        {
-                            "text": "In the last paragraph, the writer suggests that it is important for employees to",
-                            "choices": [
-                                "be aware of their company's goals.",
-                                "feel that their contributions are valued.",
-                                "have respect for their co-workers' achievements.",
-                                "understand why certain management decisions are made."
-                            ]
-                        }
-                    ]
-                },
-                {
-                  "first": 31,
-                  "last": 35,
-                  "type": "ending",
-                  "directions": [
-                    "Complete each sentence with the correct ending, <b>A-G</b>, below.",
-                    "Write the correct letter, <b>A-G</b>, in boxes 31-35 on your answer sheet."
-                  ],
-                  "sentences": [
-                    "Employees whose values match those of their employers are more likely to",
-                    "At times of change, people tend to",
-                    "If people are aware of what they might lost, they often will",
-                    "People working under a dominant boss are liable to",
-                    "Employees working in organisations with few rules are more likely to"
-                  ],
-                  "endings": [
-                    "take chances.",
-                    "share their ideas.",
-                    "become competitive.",
-                    "get promotion.",
-                    "avoid risk.",
-                    "ignore their duties",
-                    "remain in their jobs."
-                  ]
-                },
-                {
-                    "first": 36,
-                    "last": 40,
-                    "type": "true-false",
-                    "options": "yn",
-                    "directions": [
-                      "Do the following statements agree with the claims of the writer in Reading Passage 3?",
-                      "In boxes 36-40 on your answer sheet, write"
-                    ],
-                    "text": [
-                        "The physical surroundings in which a person works play a key role in determining their creativity.",
-                        "Most people have the potential to be creative.",
-                        "Teams work best when their members are of equally matched intelligence.",
-                        "It is easier for smaller companies to be innovative.",
-                        "A manager's approval of an idea is more persuasive than that of a colleague."
-                    ]
-                }
-            ]
-        },
-        {
-            "section_number": 4,
-            "passage": {
-                "image": "",
-                "heading": "Stepwells",
-                "sub_heading": "A millennium ago, stepwells were fundamental to life in the driest parts of India. Although many have been neglected, recent restoration has returned them to their former glory. Richard Cox travelled to  north-western India to document these spectacular monuments from a bygone era.",
-                "paras": [
-                    {
-                        "content": "During the sixth and seventh centuries, the inhabitants of the modern-day states of Gujarat and Rajasthan in North-western India developed a method of gaining access to clean, fresh groundwater during the dry season for drinking, bathing, watering animals and irrigation. However, the significance of this invention \u2013 the stepwell \u2013 goes beyond its utilitarian application."
-                    },
-                    {
-                        "content": "Unique to the region, stepwells are often architecturally complex and vary widely in size and shape. During their heyday, they were places of gathering, of leisure, of relaxation and of worship for villagers of all but the lowest castes.Most stepwells are found dotted around the desert areas of Gujarat (where they are called vav) and Rajasthan (where they are known as baori), while a few also survive in Delhi. Some were located in or near villages as public spaces for the community; others were positioned beside roads as resting places for travellers."
-                    },
-                    {
-                        "content": "As their name suggests, stepwells comprise a series of stone steps descending from ground level to the water source (normally an underground aquifer) as it recedes following the rains. When the water level was high, the user needed only to descend a few steps to reach it; when it was low, several levels would have to be negotiated."
-                    },
-                    {
-                        "content": "Some wells are vast, open craters with hundreds of steps paving each sloping side, often in tiers. Others are more elaborate, with long stepped passages leading to the water via several storeys built from stone and supported by pillars, they also included pavilions that sheltered visitors from the relentless heat. But perhaps the most impressive features are the intricate decorative sculptures that embellish many stepwells, showing activities from fighting and dancing to everyday acts such as women combing their hair and churning butter."
-                    },
-                    {
-                        "content": "Down the centuries, thousands of wells were constructed throughout northwestern India, but the majority have now fallen into disuse; many are derelict and dry, as groundwater has been diverted for industrial use and the wells no longer reach the water table. Their condition hasn\u2019t been helped by recent dry spells: southern Rajasthan suffered an eight-year drought between 1996 and 2004."
-                    },
-                    {
-                        "content": "However, some important sites in Gujarat have recently undergone major restoration, and the state government announced in June last year that it plans to restore the stepwells throughout the state."
-                    },
-                    {
-                        "content": "In Patan, the state\u2019s ancient capital, the stepwell of Rani Ki Vav (Queen\u2019s Stepwell) is perhaps the finest current example. It was built by Queen Udayamati during the late 11th century, but became silted up following a flood during the 13th century. But the Archaeological Survey of India began restoring it in the 1960s, and today it\u2019s in pristine condition. At 65 metres long, 20 metres wide and 27 metres deep, Rani Ki Vav features 500 distinct sculptures carved into niches throughout the monument, depicting gods such as Vishnu and Parvati in various incarnations. Incredibly, in January 2001, this ancient structure survived a devastating earthquake that measured 7.6 on the Richter scale."
-                    },
-                    {
-                        "content": "Another example is the Surya Kund in Modhera, northern Gujarat, next to the Sun Temple, built by King Bhima I in 1026 to honour the sun god Surya. It\u2019s actually a tank (kund means reservoir or pond) rather than a well, but displays the hallmarks of stepwell architecture, including four sides of steps that descend to the bottom in a stunning geometrical formation. The terraces house 108 small, intricately carved shrines between the sets of steps."
-                    },
-                    {
-                        "content": "Rajasthan also has a wealth of wells. The ancient city of Bundi, 200 kilometres south of Jaipur, is reknowned for its architecture, including its stepwells. One of the larger examples is Raniji Ki Baori, which was built by the queen of the region, Nathavatji, in 1699. At 46 metres deep, 20 metres wide and 40 metres long, the intricately carved monument is one of 21 baoris commissioned in the Bundi area by Nathavatji."
-                    },
-                    {
-                        "content": "In the old ruined town of Abhaneri, about 95 kilometres east of Jaipur, is Chand Baori, one of India\u2019s oldest and deepest wells; aesthetically, it\u2019s perhaps one of the most dramatic. Built in around 850 AD next to the temple of Harshat Mata, the baori comprises hundreds of zigzagging steps that run along three of its sides, steeply descending 11 storeys, resulting in a striking geometric pattern when seen from afar. On the fourth side, covered verandas supported by ornate pillars overlook the steps."
-                    },
-                    {
-                        "content": "Still in public use is Neemrana Ki Baori, located just off the Jaipur\u2013Dehli highway. Constructed in around 1700, it\u2019s nine storeys deep, with the last two levels underwater. At ground level, there are 86 colonnaded openings from where the visitor descends 170 steps to the deepest water source."
-                    },
-                    {
-                        "content": "Today, following years of neglect, many of these monuments to medieval engineering have been saved by the Archaeological Survey of India, which has recognised the importance of preserving them as part of the country\u2019s rich history. Tourists flock to wells in far-flung corners of northwestern India to gaze in wonder at these architectural marvels from 1,000 years ago, which serve as a reminder of both the ingenuity and artistry of ancient civilisations and of the value of water to human existence."
-                    }
-                ]
-            },
-            "sub_sections": [
-                {
-                    "first": 50,
-                    "last": 51,
-                    "type": "multiple",
-                    "limit": 2,
-                    "des": "The list below includes factors contributing to classroom noise.",
-                    "choices": [
-                        "current teaching methods",
-                        "echoing corridors",
-                        "cooling systems",
-                        "large class sizes",
-                        "loud-voiced teachers",
-                        "playground games"
-                    ]
-                }
-            ]
+          "first": 23,
+          "last": 26,
+          "type": "note",
+          "directions": [
+            "Complete the summary below.",
+            "Choose <b>ONE WORD ONLY</b> from the passage for each answer.",
+            "Write your answers in boxes 23-26 on your answer sheet."
+          ],
+          "heading": "The migration of pronghorns",
+          "paras": [
+            "Pronghorns rely on their eyesight and [] to avoid predators. One particular population's summer habitat is a national park, and their winter home is on the [], where they go to avoid the danger presented by the snow at that time of year. However, their route between these two areas contains three []. One problem is the construction of new homes in a narrow [] of land on the pronghorns' route."
+          ]
         }
-    ]
+      ]
+    },
+    {
+      "section_number": 3,
+      "passage": {
+        "image": "",
+        "heading": "The psychology of innovation",
+        "sub_heading": "Why are so few companies truly innnovative?",
+        "paras": [
+          {
+            "content": "Innovation is key to business survival，and companies put substantial resources into inspiring employees to develop new ideas. There are, nevertheless, people working in luxurious, state-of-the-art centres designed to stimulate innovation who find that their environment doesn\u2019t make them feel at all creative. And there are those who don\u2019t have a budget, or much space, but who innovate successfully."
+          },
+          {
+            "content": "For Robert B. Cialdini, Professor of Psychology at Arizona State University, one reason that companies don\u2019t succeed as often as they should is that innovation starts with recruitment. Research shows that the fit between an employee\u2019s values and a company\u2019s values makes a difference to what contribution they make and whether, two years after they join, they\u2019re still at the company. Studies at Harvard Business School show that, although some individuals may be more creative than others, almost every individual can be creative in the right circumstances."
+          },
+          {
+            "content": "One of the most famous photographs in the story of rock\u2019n\u2019roll emphasises Ciaidini\u2019s views. The 1956 picture of singers Elvis Presley, Carl Perkins, Johnny Cash and Jerry Lee Lewis jamming at a piano in Sun Studios in Memphis tells a hidden story. Sun\u2019s \u2018million-dollar quartet\u2019 could have been a quintet. Missing from the picture is Roy Orbison\u2019 a greater natural singer than Lewis, Perkins or Cash. Sam Phillips, who owned Sun, wanted to revolutionise popular music with songs that fused black and white music, and country and blues. Presley, Cash, Perkins and Lewis instinctively understood Phillips\u2019s ambition and believed in it. Orbison wasn\u2019t inspired by the goal, and only ever achieved one hit with the Sun label."
+          },
+          {
+            "content": "The value fit matters, says Cialdini, because innovation is, in part, a process of change, and under that pressure we, as a species, behave differently, \u2018When things change, we are hard-wired to play it safe.\u2019 Managers should therefore adopt an approach that appears counterintuitive -they should explain what stands to be lost if the company fails to seize a particular opportunity. Studies show that we invariably take more gambles when threatened with a loss than when offered a reward."
+          },
+          {
+            "content": "Managing innovation is a delicate art. It\u2019s easy for a company to be pulled in conflicting directions as the marketing, product development, and finance departments each get different feedback from different sets of people. And without a system which ensures collaborative exchanges within the company, it\u2019s also easy for small \u2018pockets of innovation\u201f to disappear. Innovation is a contact sport. You can\u201ft brief people just by saying, \u2018We\u2019re going in this direction and I\u2019m going to take you with me.\u2019"
+          },
+          {
+            "content": "Cialdini believes that this \u2018follow-the-leader syndrome, is dangerous, not least because it encourages bosses to go it alone. \u2018It\u2019s been scientifically proven that three people will be better than one at solving problems, even if that one person is the smartest person in the field.\u2019 To prove his point, Cialdini cites an interview with molecular biologist James Watson. Watson, together with Francis Crick, discovered the structure of DNA, the genetic information carrier of all living organisms. \u2018When asked how they had cracked the code ahead of an array of highly accomplished rival investigators, he said something that stunned me. He said \u201dhe and Crick had succeeded because they were aware that they weren\u2019t the most intelligent of the scientists pursuing the answer. The smartest scientist was called Rosalind Franklin who, Watson said, \u201cwas so intelligent she rarely sought advice\u201d.\u2019"
+          },
+          {
+            "content": "Teamwork taps into one of the basic drivers of human behaviour. \u2018The principle of social proof is so pervasive that we don\u2019t even recognise it,\u2019 says Cialdini. \u2018If your project is being resisted, for example, by a group of veteran employees, ask another old-timer to speak up for it.\u2019 Cialdini is not alone in advocating this strategy. Research shows that peer power, used horizontally not vertically, is much more powerful than any boss\u2019s speech."
+          },
+          {
+            "content": "Writing, visualising and prototyping can stimulate the flow of new ideas. Cialdini cites scores of research papers and historical events that prove that even something as simple as writing deepens every individual\u2019s engagement in the project. It is, he says, the reason why all those competitions on breakfast cereal packets encouraged us to write in saying, in no more than 10 words: \u2018I like Kellogg\u2019s Com Flakes because\u2026 .\u2019 The very act of writing makes us more likely to believe it."
+          },
+          {
+            "content": "Authority doesn\u2019t have to inhibit innovation but it often does. The wrong kind of leadership will lead to what Cialdini calls \u201dcaptainitis, the regrettable tendency of team members to opt out of team responsibilities that are properly their\u2019. He calls it captainitis because, he says, \u201dcrew members of multipilot aircraft exhibit a sometimes deadly passivity when the flight captain makes a clearly wrong-headed decision\u201d. This behaviour is not, he says, unique to air travel, but can happen in any workplace where the leader is overbearing."
+          },
+          {
+            "content": "At the other end of the scale is the 1980s Memphis design collective, a group of young designers for whom \u201dthe only rule was that there were no rule\u201d. This environment encouraged a free interchange of ideas, which led to more creativity with form, function, colour and materials that revolutionised attitudes to furniture design."
+          },
+          {
+            "content": "Many theorists believe the ideal boss should lead from behind, taking pride in collective accomplishment and giving credit where it is due. Cialdini says:\u201dLeaders should encourage everyone to contribute and simultaneously assure all concerned that every recommendation is important to making the right decision and will be given full attention\u201d The frustrating thing about innovation is that there are many approaches, but no magic formula. However, a manager who wants to create a truly innovative culture can make their job a lot easier by recognising these psychological realities."
+          }
+        ]
+      },
+      "sub_sections": [
+        {
+          "first": 27,
+          "last": 30,
+          "type": "single",
+          "directions": [
+            "Choose the correct letter, <b>A<\/b>, <b>B<\/b>, <b>C<\/b> or <b>D<\/b>.",
+            "Write the correct letter in boxes 27-30 on your answer sheet."
+          ],
+          "questions": [
+            {
+              "text": "The example of the 'million-dollar quartet' underlines the writer's point about",
+              "choices": [
+                "recognising talent.",
+                "working as a team.",
+                "having a shared objective.",
+                "being an effective leader."
+              ]
+            },
+            {
+              "text": "James Watson suggests that he and Francis Crick won the race to discover the DNA code because they",
+              "choices": [
+                "were conscious of their own limitations.",
+                "brought complementary skills to their partnership.",
+                "were determined to outperform their brighter rivals.",
+                "encouraged each other to realise thier joint ambition."
+              ]
+            },
+            {
+              "text": "The writer mentions competitions on breakfast cereal packets as an example of how to",
+              "choices": [
+                "inspire creative thinking.",
+                "generate concise writing.",
+                "promote loyalty to a group.",
+                "strengthen commitment to an idea."
+              ]
+            },
+            {
+              "text": "In the last paragraph, the writer suggests that it is important for employees to",
+              "choices": [
+                "be aware of their company's goals.",
+                "feel that their contributions are valued.",
+                "have respect for their co-workers' achievements.",
+                "understand why certain management decisions are made."
+              ]
+            }
+          ]
+        },
+        {
+          "first": 31,
+          "last": 35,
+          "type": "ending",
+          "directions": [
+            "Complete each sentence with the correct ending, <b>A-G<\/b>, below.",
+            "Write the correct letter, <b>A-G<\/b>, in boxes 31-35 on your answer sheet."
+          ],
+          "sentences": [
+            "Employees whose values match those of their employers are more likely to",
+            "At times of change, people tend to",
+            "If people are aware of what they might lost, they often will",
+            "People working under a dominant boss are liable to",
+            "Employees working in organisations with few rules are more likely to"
+          ],
+          "endings": [
+            "take chances.",
+            "share their ideas.",
+            "become competitive.",
+            "get promotion.",
+            "avoid risk.",
+            "ignore their duties",
+            "remain in their jobs."
+          ]
+        },
+        {
+          "first": 36,
+          "last": 40,
+          "type": "true-false",
+          "options": "yn",
+          "directions": [
+            "Do the following statements agree with the claims of the writer in Reading Passage 3?",
+            "In boxes 36-40 on your answer sheet, write"
+          ],
+          "text": [
+            "The physical surroundings in which a person works play a key role in determining their creativity.",
+            "Most people have the potential to be creative.",
+            "Teams work best when their members are of equally matched intelligence.",
+            "It is easier for smaller companies to be innovative.",
+            "A manager's approval of an idea is more persuasive than that of a colleague."
+          ]
+        }
+      ]
+    }
+  ]
 }

@@ -12,7 +12,6 @@
 }
 
 md-toolbar {
-  /*height: 40px;*/
   min-height: 0px;
   background: #e41937;
 }
@@ -22,7 +21,7 @@ md-toolbar {
 }
 
 nav > button {
-  /*color: white;*/
+  border-radius: 0px;
 }
 
 .active {

@@ -18,7 +18,8 @@ export class TestComponent implements OnInit {
     this.testService.find().then(result => {
       this.tests = result;
     });
-    this.cardWidth = (document.body.clientWidth / 4) + 'px';
+
+    this.cardWidth = (window.innerHeight - 64 * 2 - 20) + 'px';
   }
 
 }
