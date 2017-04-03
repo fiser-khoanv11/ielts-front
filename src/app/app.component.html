@@ -1,15 +1,18 @@
-<md-toolbar>
+<!-- <md-toolbar></md-toolbar> -->
+
+<md-toolbar class="header-toolbar">
   <a class="logo-a" href="/"><img class="logo" src="/assets/logo.png"></a>
   <span class="fill-remaining-space"></span>
   <nav class="nav-bar">
-    <button md-button routerLink="/">Library</button>
+    <button md-button routerLink="/library">Library</button>
+    <button md-button *ngIf="user" routerLink="/result">Result</button>
     <button md-button *ngIf="!user" (click)="fbLogin()">Login</button>
-    <button md-button *ngIf="user" routerLink="/result">
-      <img class="avatar" [src]="user.picture.data.url">
-      <span>{{user.first_name}}</span>
-      <md-icon class="icon">arrow_drop_down</md-icon>
-    </button>
     <button md-button *ngIf="user" (click)="fbLogout()">Logout</button>
+    <button md-button *ngIf="user">
+      <span>{{user.first_name}}</span>
+      <img class="avatar" [src]="user.picture.data.url">
+      <!-- <md-icon class="icon">arrow_drop_down</md-icon> -->
+    </button>
   </nav>
 </md-toolbar>
 

@@ -43,12 +43,13 @@ export class CommonComponent implements OnInit {
   @ViewChildren(InformationComponent) informationComponents: QueryList<InformationComponent>;
   @ViewChildren(SentenceComponent) sentenceComponents: QueryList<SentenceComponent>;
 
-  sections: Object[] = [];
+  sections: Object[];
   keys: Object[] = [];
   isSubmited: boolean = false;
   testId: number;
   skill: string;
-  timer: number = 3600;
+  timeLeft: number = 3600;
+  timer;
 
   constructor(private dialog: MdDialog, private snackBar: MdSnackBar, 
               private getDataService: GetDataService, private route: ActivatedRoute) { }
@@ -69,19 +70,24 @@ export class CommonComponent implements OnInit {
     this.setTimer();
   }
 
-  setTimer(): void {
-    // let setting = setInterval(() => {
-    //   this.timer --;
+  ngOnDestroy() {
+    clearInterval(this.timer);
+  }
 
-    //   if (this.timer == 1800) {
-    //     this.snackBar.open('30 minutes left!', 'OK', { duration: 2000 });
-    //   } else if (this.timer == 600) {
-    //     this.snackBar.open('10 minutes left!', 'OK', { duration: 2000 });
-    //   } else if (this.timer <= 0) {
-    //     clearInterval(setting);
-    //     this.viewSheet(true);
-    //   }
-    // }, 1);
+  setTimer(): void {
+    this.timer = setInterval(() => {
+      this.timeLeft --;
+
+      if (this.timeLeft == 1800) {
+        this.snackBar.open('30 minutes left!', 'OK', { duration: 2000 });
+      } else if (this.timeLeft == 600) {
+        this.snackBar.open('10 minutes left!', 'OK', { duration: 2000 });
+      } else if (this.timeLeft <= 0) {
+        clearInterval(this.timer);
+        this.dialog.closeAll();
+        this.viewSheet(true);
+      }
+    }, 1000);
   }
 
   getAnswers(): Array<Object> {
@@ -127,7 +133,7 @@ export class CommonComponent implements OnInit {
       answers: this.getAnswers(),
       keys: this.keys,
       isSubmited: this.isSubmited,
-      // isTimeout: isTimeout,
+      isTimeout: isTimeout,
       skill: this.skill,
       testId: this.testId
     }

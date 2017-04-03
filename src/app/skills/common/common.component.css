@@ -19,11 +19,12 @@
 .left-card {
   margin: 3px;
   margin-bottom: 20px;
+  font-family: 'Poppins', sans-serif;
 }
 
 .question-block {
   /*box-sizing: border-box;*/
-  border: 2px solid #EEEEEE;
+  border: 1px solid #EEEEEE;
   /*padding: 5px;*/
   /*display: inline-block;*/
   display: block;
@@ -34,12 +35,12 @@
 .question-block > p {
   display: inline-block;
   position: relative;
-  top: 2px;
+  top: 1px;
   margin: 0px;
   padding: 5px;
   font-size: larger;
   border: 2px solid #1E88E5;
-  border-width: 0 0 2px 0;
+  border-width: 0 0 1px 0;
 }
 
 .action-block {
@@ -51,6 +52,7 @@
   position: fixed;
   bottom: 25px;
   right: 25px;
+  cursor: default;
 }
 
 .timer:hover {

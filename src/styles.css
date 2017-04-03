@@ -5,7 +5,8 @@ body {
   /*font-family: 'Roboto';*/
   background: #F5F5F5;
   margin: 0px;
-  font-family: Roboto,"Helvetica Neue",sans-serif;
+  /*font-family: Roboto,"Helvetica Neue",sans-serif;*/
+  font-family: 'Montserrat', sans-serif;
 }
 
 .padding-50 {
@@ -53,13 +54,42 @@ p {
   min-height: 0px !important;
 }
 
+.bold {
+  font-weight: bold;
+}
+
+.heading {
+  margin-bottom: 50px;
+  text-align: center;
+  font-size: x-large;
+}
+
+.overall {
+  min-height: 500px;
+}
+
+/* Colors */
+
 .blue, .heading, b, .primary-color, .mat-select-value-text, input, .md-select-value {
   color: #1E88E5 !important;
 }
 
-.bold {
-  font-weight: bold;
+.red {
+  color: #cb253e !important;
 }
+
+/* a */
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+
+/* Format Table */
 
 .format-table {
   border-collapse: collapse;
@@ -73,8 +103,26 @@ p {
   padding: 5px;
 }
 
-.heading {
-  margin-bottom: 50px;
-  text-align: center;
-  font-size: x-large;
+/* Breadcrumb */
+
+.breadcrumb {
+  min-height: 0px !important;
+  background: #e41937 !important;
+  height: 45px !important;
+}
+
+.breadcrumb > div {
+  color: white !important;
+  font-size: 75% !important;
+  position: relative;
+  top: -5px;
+}
+
+.breadcrumb > div > md-toolbar-row > p > a {
+  color: white;
+}
+
+.breadcrumb > div > md-toolbar-row > p > md-icon {
+  position: relative;
+  top: 6px;
 }

@@ -11,9 +11,9 @@
 }
 
 .nav-bar > button {
-  border: solid #e41937;
+  /*border: solid #e41937;
   border-width: 0px 0px;
-  border-radius: 0;
+  border-radius: 0;*/
   height: 100%;
   color: #e41937;
 }
@@ -39,4 +39,11 @@ md-toolbar {
   height: 64px;
   /*background: #EEEEEE;*/
   background: white;
+}
+
+.header-toolbar {
+  border-bottom: 1px solid #e41937;
+  /*position: fixed;
+  top: 0px;
+  left: 0px;*/
 }

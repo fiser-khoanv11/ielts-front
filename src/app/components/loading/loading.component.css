@@ -1,0 +1,20 @@
+.loading {
+  padding: 50px;
+  opacity: 0.5;
+}
+
+md-progress-bar {
+  margin-bottom: 15px;
+}
+
+md-progress-bar:nth-child(2) {
+  width: 40%;
+}
+
+md-progress-bar:nth-child(3) {
+  width: 20%;
+}
+
+md-progress-bar:nth-child(4) {
+  width: 30%;
+}

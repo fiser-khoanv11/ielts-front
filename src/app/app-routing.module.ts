@@ -5,11 +5,13 @@ import { ListeningComponent } from './skills/listening/listening.component';
 import { ReadingComponent } from './skills/reading/reading.component';
 import { WritingComponent } from './skills/writing/writing.component';
 import { SpeakingComponent } from './skills/speaking/speaking.component';
-import { TestComponent } from './pages/test/test.component';
+import { HomeComponent } from './pages/home/home.component';
 import { ResultComponent } from './pages/result/result.component';
+import { LibraryComponent } from './pages/library/library.component';
 
 const appRoutes: Routes = [
-  { path: '', component: TestComponent },
+  { path: '', component: HomeComponent },
+  { path: 'library', component: LibraryComponent },
   { path: 'reading/:testId', component: ReadingComponent },
   { path: 'listening/:testId', component: ListeningComponent },
   { path: 'writing/:testId', component: WritingComponent },

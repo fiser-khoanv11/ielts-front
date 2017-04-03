@@ -1,0 +1,46 @@
+.banner {
+  width: 100%;
+}
+
+.overall {
+  padding: 10px 75px 20px 75px;
+}
+
+.card-div {
+  float: left;
+  padding: 10px;
+  box-sizing: border-box;
+  width: 24%;
+}
+
+.card-div > md-card {
+  border-radius: 0px;
+  padding: 10px;
+  font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
+}
+
+.card-div > md-card > img {
+  width: calc(100% + 20px);
+  margin: -10px -10px 0px;
+}
+
+.section > .header-bar > p {
+  display: inline-block;
+  margin-left: 10px;
+  font-size: x-large;
+}
+
+.section > .header-bar > button {
+  float: right;
+  margin: 20px 0px;
+}
+
+.card-des > .test-title {
+  font-size: x-large;
+  margin: 15px 0px 4px 10px;
+}
+
+.card-des > .test-des {
+  margin: 0px 0px 9px 10px;
+}

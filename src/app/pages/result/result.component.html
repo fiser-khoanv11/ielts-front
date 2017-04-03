@@ -1,17 +1,31 @@
-<div *ngIf="user">
-  <table>
+<md-toolbar class="breadcrumb">
+  <p>
+    <a href="/">Home</a>
+    <md-icon class="icon">chevron_right</md-icon>
+    <span href="/library">Result</span>
+  </p>
+</md-toolbar>
+
+<app-loading isShow="{{user ? false : true}}"></app-loading>
+
+<div class="overall" *ngIf="user">
+  <p class="section-header red">Your Results</p>
+  <table *ngIf="user.attempts.length != 0" class="format-table">
     <tr>
-      <th>Test</th>
-      <th>Skill</th>
-      <th>Score</th>
-      <th>Time</th>
+      <td><b>Test</b></td>
+      <td><b>Skill</b></td>
+      <td><b>Score</b></td>
+      <!-- <td><b>Time</b></td> -->
     </tr>
     <tr *ngFor="let attempt of user.attempts.slice().reverse()">
       <td>{{attempt.test_id}}</td>
-      <td>{{attempt.skill}}</td>
+      <td>{{attempt.skill | uppercase}}</td>
       <td>{{attempt.score}}
-        <a *ngIf="attempt.skill === 'writing'" routerLink="/test/{{attempt.test_id}}/writing">See your answer</a>
+        <a *ngIf="attempt.skill === 'writing'" class="blue" routerLink="/writing/{{attempt.test_id}}">See your answer</a>
       </td>
+      <!-- <td></td> -->
     </tr>
   </table>
+
+  <p *ngIf="user.attempts.length == 0">You haven't done any test yet!</p>
 </div>

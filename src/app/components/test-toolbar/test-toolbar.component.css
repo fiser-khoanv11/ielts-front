@@ -2,22 +2,9 @@
   flex: 1 1 auto;
 }
 
-#outlet {
-  padding: 30px;
-}
-
-.link {
-  color: rgba(255, 255, 255, 0.87);
-  text-decoration: none;
-}
-
-md-toolbar {
-  min-height: 0px;
-  background: #e41937;
-}
-
-.mat-toolbar-layout, md-toolbar-row {
-  height: 100%;
+nav {
+  position: relative;
+  top: 4px;
 }
 
 nav > button {
@@ -31,22 +18,4 @@ nav > button {
 
 .inactive {
   color: white;
-}
-
-.test-title {
-  color: white;
-  font-size: 75%
-}
-
-a {
-  color: white;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-md-toolbar {
-  height: 45px;
 }

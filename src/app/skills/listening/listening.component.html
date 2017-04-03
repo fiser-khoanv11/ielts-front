@@ -1,11 +1,7 @@
 <app-test-toolbar currentPage="0" [testId]="testId"></app-test-toolbar>
+<app-loading isShow="{{sections ? false : true}}"></app-loading>
 
-<button class="timer" md-raised-button>
-  <md-icon class="icon">alarm</md-icon>
-  {{timer | timer}}
-</button>
-
-<md-tab-group *ngIf="sections" class="margin-bottom-20">
+<md-tab-group *ngIf="sections" class="margin-bottom-20 overall">
   <md-tab *ngFor="let section of sections; let i = 'index'" label="Section {{section.section_number}}">
     <div class="padding-20">
       
@@ -58,3 +54,8 @@
     </div>
   </md-tab>
 </md-tab-group>
+
+<button class="timer" md-raised-button>
+  <md-icon class="icon">alarm</md-icon>
+  {{timeLeft | timer}}
+</button>

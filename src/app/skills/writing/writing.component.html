@@ -1,7 +1,8 @@
 <app-test-toolbar currentPage="2" [testId]="testId"></app-test-toolbar>
+<app-loading isShow="{{data ? false : true}}"></app-loading>
 
-<div class="padding-20" *ngIf="data">
-  <div class="left-block">
+<div class="padding-20 overall">
+  <div class="left-block" *ngIf="data">
     <md-card class="left-card">
       <md-card-title class="primary-color center">Writing Task 1</md-card-title>
       <md-card-subtitle>You should spend about 20 minutes on this task.</md-card-subtitle>

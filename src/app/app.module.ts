@@ -9,7 +9,7 @@ import { FacebookService } from 'ng2-facebook-sdk';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
-import { TestComponent } from './pages/test/test.component';
+import { HomeComponent } from './pages/home/home.component';
 import { ResultComponent } from './pages/result/result.component';
 import { ReadingComponent } from './skills/reading/reading.component';
 import { ListeningComponent } from './skills/listening/listening.component';
@@ -43,6 +43,8 @@ import { LetterPipe } from './pipes/letter.pipe';
 import { TimerPipe } from './pipes/timer.pipe';
 import { RomanPipe } from './pipes/roman.pipe';
 import { TextNumberPipe } from './pipes/text-number.pipe';
+import { LoadingComponent } from './components/loading/loading.component';
+import { LibraryComponent } from './pages/library/library.component';
 
 // import { LMultipleComponent } from './listening-types/l-multiple/l-multiple.component';
 // import { RMultipleComponent } from './reading-types/r-multiple/r-multiple.component';
@@ -64,7 +66,7 @@ import { TextNumberPipe } from './pipes/text-number.pipe';
     HeadingComponent,
     RomanPipe,
     TextNumberPipe,
-    TestComponent,
+    HomeComponent,
     ResultComponent,
     TestToolbarComponent,
     
@@ -95,6 +97,10 @@ import { TextNumberPipe } from './pipes/text-number.pipe';
     // LSingleComponent,
     // LNoteComponent,
     CommonComponent,
+
+    LoadingComponent,
+
+    LibraryComponent,
 
   ],
   entryComponents: [

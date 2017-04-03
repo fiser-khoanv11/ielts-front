@@ -1,7 +1,8 @@
 <app-test-toolbar currentPage="3" [testId]="testId"></app-test-toolbar>
+<app-loading isShow="{{data ? false : true}}"></app-loading>
 
-<div class="padding-20" *ngIf="data">
-  <md-card>
+<div class="padding-20 overall" *ngIf="data">
+  <md-card class="left-card">
     <md-card-title class="primary-color center">Part 1</md-card-title>
     <md-card-subtitle>The examiner asks the candidate about him/herself, his/her home, work or studies and other familier topics.</md-card-subtitle>
     <md-card-content>
@@ -14,13 +15,9 @@
     </md-card-content>
   </md-card>
 
-  <div class="space-20"></div>
-
-  <md-card>
+  <md-card class="left-card">
     <md-card-title class="primary-color center">Part 2</md-card-title>
-    <md-card-subtitle>
-      
-    </md-card-subtitle>
+    <md-card-subtitle></md-card-subtitle>
     <md-card-content>
       <p>You will have to talk about the topic for one to two minutes.</p>
       <p>You have one minute to think about what you are going to say.</p>
@@ -36,9 +33,7 @@
     </md-card-content>
   </md-card>
 
-  <div class="space-20"></div>
-
-  <md-card>
+  <md-card class="left-card">
     <md-card-title class="primary-color center">Part 3</md-card-title>
     <md-card-subtitle>Discussion topics</md-card-subtitle>
     <md-card-content>

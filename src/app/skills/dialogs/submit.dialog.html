@@ -7,7 +7,7 @@
       <p class="no-of-correct">Correct answers: {{testResult.noOfCorrect}}/40</p>
     </div>
     <md-dialog-content>
-      <table>
+      <table class="format-table">
         <tr>
           <th>No.</th>
           <th>Your Answer</th>
@@ -18,16 +18,6 @@
           <td class="second-col">
             <span *ngIf="!data.isSubmited && item.ans">{{item.ans}}</span>
             <span *ngIf="data.isSubmited && testResult.result" [ngStyle]="{color: testResult.result[i] ? 'green' : 'red'}">{{item.ans}}</span>
-            <!-- <md-icon class="icon"
-              color="blue"
-              *ngIf="isSubmited && testResult.result[i]">
-              info
-            </md-icon>
-            <md-icon class="icon"
-              color="red"
-              *ngIf="isSubmited && !testResult.result[i]">
-              info
-            </md-icon> -->
           </td>
           <td *ngIf="data.isSubmited" class="second-col">
             <span *ngIf="data.keys[i]">

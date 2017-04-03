@@ -1,11 +1,10 @@
-<md-toolbar>
-  <p class="test-title">
-    <a href="/">Library</a>
+<md-toolbar class="breadcrumb">
+  <p>
+    <a href="/">Home</a>
+    <md-icon class="icon">chevron_right</md-icon>
+    <a href="/library">Library</a>
     <md-icon class="icon">chevron_right</md-icon>
     <span *ngIf="test">{{test.description}} - {{test.title}}</span>
-    <!-- <a href="/">Cambridge IELTS 10</a>
-    <md-icon class="icon">chevron_right</md-icon>
-    Test 1 -->
   </p>
   <span class="fill-remaining-space"></span>
   <nav>

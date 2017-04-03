@@ -1,0 +1,30 @@
+md-toolbar {
+  min-height: 0px;
+  background: #e41937;
+  height: 45px;
+}
+
+.mat-toolbar-layout, md-toolbar-row {
+  height: 100%;
+}
+
+.test-title {
+  color: white;
+  font-size: 75%;
+  position: relative;
+  top: -5px;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}  
+
+md-icon {
+  position: relative;
+  top: 6px;
+}

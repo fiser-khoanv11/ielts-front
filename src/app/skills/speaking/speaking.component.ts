@@ -6,7 +6,7 @@ import { GetDataService } from '../../services/get-data.service';
 @Component({
   selector: 'app-speaking',
   templateUrl: './speaking.component.html',
-  styleUrls: ['./speaking.component.css'],
+  styleUrls: ['../common/common.component.css', './speaking.component.css'],
   providers: [ GetDataService ]
 })
 export class SpeakingComponent implements OnInit {
