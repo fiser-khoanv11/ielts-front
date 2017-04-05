@@ -10,7 +10,7 @@ class Data {
   isSubmited: boolean;
   skill: string;
   testId: number;
-  isTimeout: boolean;
+  isBecauseOfTimingOut: boolean;
 }
 
 @Component({
@@ -30,7 +30,7 @@ export class SubmitDialog implements OnInit {
   ngOnInit() {
     this.data = this.dialogRef.config.data.data;
     this.testResult = this.converter.getTestResult(this.data.answers, this.data.keys);
-    if (this.data.isTimeout) this.submit();
+    if (this.data.isBecauseOfTimingOut) this.submit();
   }
 
   ngOnDestroy() {

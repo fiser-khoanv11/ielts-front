@@ -1,6 +1,11 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ConverterService } from '../../services/converter.service';
 
+class DisplaySpan {
+  isInput: boolean;
+  data: any;
+}
+
 @Component({
   selector: 'app-note',
   templateUrl: './note.component.html',
@@ -10,7 +15,7 @@ import { ConverterService } from '../../services/converter.service';
 export class NoteComponent implements OnInit {
 
   @Input() data: Object;
-  displayParas: Array<Array<Object>> = [];
+  displayParas: Array<Array<DisplaySpan>> = [];
   answers: Object[] = [];
 
   constructor(private converterService: ConverterService) { }
@@ -28,7 +33,7 @@ export class NoteComponent implements OnInit {
     let res: string[] = [];
     for (let i = 0; i < this.displayParas.length; i++) {
       for (let j = 0; j < this.displayParas[i].length; j++) {
-        if (this.displayParas[i][j]['isInput']) {
+        if (this.displayParas[i][j].isInput) {
           res.push(this.answers[i][j]);
         }
       }

@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Response } from '@angular/http';
 import { UserService } from './user.service';
+import { GlobalService } from './global.service';
 import { FacebookService, FacebookInitParams, FacebookLoginResponse, FacebookLoginStatus } from 'ng2-facebook-sdk';
 
 @Injectable()
@@ -12,7 +13,8 @@ export class AccountService {
 
   init() {
     let fbParams: FacebookInitParams = {
-      appId: '1084564141677221',
+      // appId: '1084564141677221',
+      appId: GlobalService.appId,
       cookie: true,
       xfbml: true,
       version: 'v2.8'

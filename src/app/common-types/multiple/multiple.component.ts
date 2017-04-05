@@ -11,32 +11,32 @@ import { MdSnackBar } from '@angular/material';
 export class MultipleComponent implements OnInit {
 
   @Input() data: Object;
-  answers: string[] = [];
+  answers: boolean[] = [];
   numberOfChecked: number;
 
   constructor(public snackBar: MdSnackBar, private converterService: ConverterService) { }
 
-  ngOnInit() {
-    let length = this.data['choices'].length;
-  }
+  ngOnInit() { }
 
-  checkLimit(): void {
+  checkLimit(p): void {
     let count = 0;
 
     for (let i = 0; i < this.answers.length; i++) {
-      if (this.answers[i]) {
-        count++;
-      }
+      if (this.answers[i]) count++;
     }
 
-    if (this.numberOfChecked == this.data['limit'] && count == this.data['limit'] + 1) {
-      console.warn('Limit');
-      this.snackBar.open('Be careful with the choice limit!', 'OK', {
-        duration: 2000
-      });
+    if (count > this.data['limit']) {
+      this.answers[p] = false;
     }
 
-    this.numberOfChecked = count;
+    // if (this.numberOfChecked == this.data['limit'] && count == this.data['limit'] + 1) {
+    //   console.warn('Limit');
+    //   this.snackBar.open('Be careful with the choice limit!', 'OK', {
+    //     duration: 2000
+    //   });
+    // }
+
+    // this.numberOfChecked = count;
   }
 
   getAnswers() {

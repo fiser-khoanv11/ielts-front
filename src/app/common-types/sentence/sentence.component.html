@@ -1,0 +1,15 @@
+<p class="italic" *ngFor="let dir of data.directions" [innerHTML]="dir"></p>
+
+<p *ngIf="data.heading" class="heading">{{data.heading}}</p>
+
+<!-- <div > -->
+  <p *ngFor="let sen of displaySens; let i = 'index'">
+    <span>{{data.first + i}}. </span>
+    <span *ngFor="let span of sen">
+      <md-input-container *ngIf="span == '{}'" floatingPlaceholder="false">
+        <input mdInput type="text" [(ngModel)]="answers[i]" placeholder=""/>
+      </md-input-container>
+      <span *ngIf="span != '{}'">{{span}}</span>
+    </span>
+  </p>
+<!-- </div> -->

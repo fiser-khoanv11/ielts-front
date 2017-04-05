@@ -1,16 +1,22 @@
 {
-  "first": 26,
-  "last": 30,
+  "first": 13,
+  "last": 20,
   "type": "note",
   "directions": [
     "Complete the notes below.",
-    "Choose <b>ONE WORD ONLY</b> from the passage for each answer.",
-    "Write your answers in boxes 1-9 on your answer sheet."
+    "Write <b>NO MORE THAN TWO WORDS</b> for each answer."
   ],
-  "heading": "<optional> This is a heading",
+  "heading": "Joining the leisure club",
   "paras": [
-    "Paragraph 1 [].",
-    "Paragraph 2 [] something.",
-    "Here is [] Paragraph 3"
+    "<i>Personal Assessment</i>",
+    "<li>New members should describe any [].</li>",
+    "<li>The [] will be explained to you before you see the equipment.</li>",
+    "<li>You will be given a six-week [].</li>",
+    "<i>Types of membership</i>",
+    "<li>There is a compulsory £90 [] fee for members.</li>",
+    "<li>Gold members are given [] to all the LP clubs.</li>",
+    "<li>Premier members are given priority during [] hours.</li>",
+    "<li>Premier members can bring some [] every month.</li>",
+    "<li>Members should always take their [] with them.</li>"
   ]
 }

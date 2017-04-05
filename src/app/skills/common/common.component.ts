@@ -9,13 +9,13 @@ import { AnswerComponent } from '../../common-types/answer/answer.component';
 import { FeatureComponent } from '../../common-types/feature/feature.component';
 import { MultipleComponent } from '../../common-types/multiple/multiple.component';
 import { NoteComponent } from '../../common-types/note/note.component';
+import { SentenceComponent } from '../../common-types/sentence/sentence.component';
 import { SingleComponent } from '../../common-types/single/single.component';
 import { TableComponent } from '../../common-types/table/table.component';
 
 import { EndingComponent } from '../../reading-types/ending/ending.component';
 import { HeadingComponent } from '../../reading-types/heading/heading.component';
 import { InformationComponent } from '../../reading-types/information/information.component';
-import { SentenceComponent } from '../../reading-types/sentence/sentence.component';
 import { SummarySelectComponent } from '../../reading-types/summary-select/summary-select.component';
 import { TrueFalseComponent } from '../../reading-types/true-false/true-false.component';
 
@@ -33,6 +33,7 @@ export class CommonComponent implements OnInit {
   @ViewChildren(FeatureComponent) featureComponents: QueryList<FeatureComponent>;
   @ViewChildren(MultipleComponent) multipleComponent: QueryList<MultipleComponent>;
   @ViewChildren(NoteComponent) noteComponent: QueryList<NoteComponent>;
+  @ViewChildren(SentenceComponent) sentenceComponents: QueryList<SentenceComponent>;
   @ViewChildren(SingleComponent) singleComponent: QueryList<SingleComponent>;
   @ViewChildren(TableComponent) tableComponent: QueryList<TableComponent>;
 
@@ -41,7 +42,6 @@ export class CommonComponent implements OnInit {
   @ViewChildren(SummarySelectComponent) summarySelectComponents: QueryList<SummarySelectComponent>;
   @ViewChildren(EndingComponent) endingComponents: QueryList<EndingComponent>;
   @ViewChildren(InformationComponent) informationComponents: QueryList<InformationComponent>;
-  @ViewChildren(SentenceComponent) sentenceComponents: QueryList<SentenceComponent>;
 
   sections: Object[];
   keys: Object[] = [];
@@ -90,7 +90,7 @@ export class CommonComponent implements OnInit {
     }, 1000);
   }
 
-  getAnswers(): Array<Object> {
+  getAllAnswers(): Array<Object> {
     let arr = [];
     arr = arr.concat(this.answerComponents.toArray());
     arr = arr.concat(this.featureComponents.toArray());
@@ -107,33 +107,33 @@ export class CommonComponent implements OnInit {
     arr = arr.concat(this.sentenceComponents.toArray());    
 
     // Lay du lieu
-    let overall: Array<Object> = [];
+    let all: Array<Object> = [];
     for (let i = 0; i < arr.length; i++) {
-      let data = arr[i].getAnswers();
+      let answers = arr[i].getAnswers();
       for (let t = 0; t <= arr[i].data.last - arr[i].data.first; t++) {
-        overall.push({
+        all.push({
           no: arr[i].data.first + t,
-          ans: data[t]
+          ans: answers[t]
         });
       }
     }
 
     // Sap xep lai
-    overall.sort(this.compare);
+    all.sort(this.compare);
 
-    if (overall.length != 40) {
-      console.error('overall.length != 40');
+    if (all.length != 40) {
+      console.error('Number of questions is not 40!');
     }
 
-    return overall;
+    return all;
   }
 
-  viewSheet(isTimeout: boolean): void {    
+  viewSheet(isBecauseOfTimingOut): void {
     let _data = {
-      answers: this.getAnswers(),
+      answers: this.getAllAnswers(),
       keys: this.keys,
       isSubmited: this.isSubmited,
-      isTimeout: isTimeout,
+      isBecauseOfTimingOut: isBecauseOfTimingOut,
       skill: this.skill,
       testId: this.testId
     }

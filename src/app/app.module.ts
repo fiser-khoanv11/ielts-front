@@ -20,7 +20,7 @@ import { CommonComponent } from './skills/common/common.component';
 import { TrueFalseComponent } from './reading-types/true-false/true-false.component';
 import { AnswerComponent } from './common-types/answer/answer.component';
 import { HeadingComponent } from './reading-types/heading/heading.component';
-import { SentenceComponent } from './reading-types/sentence/sentence.component';
+import { SentenceComponent } from './common-types/sentence/sentence.component';
 import { EndingComponent } from './reading-types/ending/ending.component';
 import { InformationComponent } from './reading-types/information/information.component';
 import { SummarySelectComponent } from './reading-types/summary-select/summary-select.component';

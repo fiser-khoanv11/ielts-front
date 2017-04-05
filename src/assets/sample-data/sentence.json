@@ -1,0 +1,15 @@
+{
+  "first": 38,
+  "last": 40,
+  "type": "sentence",
+  "directions": [
+    "Complete the sentences below."
+    "Write <b>ONE WORD ONLY</b> for each answer."
+  ],
+  "heading": "<optional>",
+  "sentences": [
+    "Von Frisch discovered the difference between dance types by changing the position of the [].",
+    "The dance outside the hive points in the direction of the [].",
+    "The angle of the dance from the vertical shows the angle of the food from the []."
+  ]
+}

@@ -18,24 +18,13 @@
             </p>  
           </div>
           
-          <div *ngIf="question.type == 'answer'">
-            <app-answer [data]="question"></app-answer>
-          </div>
-          <div *ngIf="question.type == 'feature'">
-            <app-feature [data]="question"></app-feature>
-          </div>
-          <div *ngIf="question.type == 'multiple'">
-            <app-multiple [data]="question"></app-multiple>
-          </div>
-          <div *ngIf="question.type == 'note'">
-            <app-note [data]="question"></app-note>
-          </div>
-          <div *ngIf="question.type == 'single'">
-            <app-single [data]="question"></app-single>
-          </div>
-          <div *ngIf="question.type == 'table'">
-            <app-table [data]="question"></app-table>
-          </div>
+          <div *ngIf="question.type == 'answer'"><app-answer [data]="question"></app-answer></div>
+          <div *ngIf="question.type == 'feature'"><app-feature [data]="question"></app-feature></div>
+          <div *ngIf="question.type == 'multiple'"><app-multiple [data]="question"></app-multiple></div>
+          <div *ngIf="question.type == 'note'"><app-note [data]="question"></app-note></div>
+          <div *ngIf="question.type == 'sentence'"><app-sentence [data]="question"></app-sentence></div>
+          <div *ngIf="question.type == 'single'"><app-single [data]="question"></app-single></div>
+          <div *ngIf="question.type == 'table'"><app-table [data]="question"></app-table></div>
         </div>
       </div>
 
@@ -45,7 +34,7 @@
         </md-input-container>
 
         <div class="action-block">
-          <button md-raised-button color="primary" (click)="viewSheet(isSubmited)">
+          <button md-raised-button color="primary" (click)="viewSheet(false)">
             <span *ngIf="!isSubmited">View Answer Sheet & Submit</span>
             <span *ngIf="isSubmited">Review</span>
           </button>

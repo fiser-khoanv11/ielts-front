@@ -90,12 +90,12 @@ export class ConverterService {
     return null;
   }
 
-  paragraphToArray(paragraphs: Array<string>, first: number): Array<Array<Object>> {
-    let result: Array<Array<Object>> = [];
+  paragraphToArray(_paragraphs: Array<string>, _first: number): Array<Array<DisplaySpan>> {
+    let result: Array<Array<DisplaySpan>> = [];
 
-    for (let i = 0; i < paragraphs.length; i++) {
+    for (let i = 0; i < _paragraphs.length; i++) {
+      let paragraph: string = _paragraphs[i];
       result[i] = [];
-      let paragraph: string = paragraphs[i];
 
       while (paragraph.includes('[]')) {
         paragraph = paragraph.replace('[]', '*{}*');
@@ -105,15 +105,19 @@ export class ConverterService {
       
       for (let j = 0; j < splitedPara.length; j++) {
         if (splitedPara[j] == '{}') {
-          result[i].push({ isInput: true, data: first });
-          first++;
+          result[i].push({ isInput: true, data: _first });
+          _first++;
         } else {
           result[i].push({ isInput: false, data: splitedPara[j] });
         }
       }
     }
 
-    // console.warn(result);
     return result;
   }
+}
+
+class DisplaySpan {
+  isInput: boolean;
+  data: any;
 }

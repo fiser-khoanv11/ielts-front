@@ -5,3 +5,12 @@
   padding: 0px 22px;
   display: table;
 }
+
+.text-only {
+  line-height: 30px;
+}
+/*
+.mat-input-table {
+  position: relative;
+  top: 6px;
+}*/

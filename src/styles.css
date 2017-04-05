@@ -54,6 +54,10 @@ p {
   min-height: 0px !important;
 }
 
+.mat-input-wrapper {
+  margin: 0 !important;
+}
+
 .bold {
   font-weight: bold;
 }
