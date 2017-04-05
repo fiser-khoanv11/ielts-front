@@ -1,0 +1,21 @@
+{
+  "first": 27,
+  "last": 34,
+  "type": "information",
+  "directions": [
+    "Reading Passage 3 has seven sections, <b>A-G</b>.",
+    "Which section contains the following information?",
+    "Write the correct number, <b>A-G</b>, in boxes 27-34 on your answer sheet."
+  ],
+  "number_of_paras": 7,
+  "text": [
+    "a reference to books that assume a lack of mathematical knowledge",
+    "the way in which this is not a typical book about mathematics",
+    "personal examples of being helped by mathematics",
+    "examples of people who each had abililies that seemed incompatible",
+    "mention of different focuses of books about mathematics",
+    "a contrast between reading this book and reading other kinds of publication",
+    "a claim that the whole of the book is accessible to everybody",
+    "a reference to different categories of intended readers of this book"
+  ]
+}

@@ -18,6 +18,7 @@ export class ConverterService {
       for (let j = 0; j < keys.length; j++) {
         if (answer != undefined) {
           answer = answer.trim();
+          answer = answer.toLowerCase();
           while (answer.indexOf('  ') >= 0) {
             answer = answer.replace('  ', ' ');
           }

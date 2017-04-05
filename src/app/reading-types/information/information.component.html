@@ -1,14 +1,4 @@
-<p><i>
-  Reading Passage {{sectionNumber}} has {{data.number_of_paras | textNumber}} paragraphs, 
-  <b>A-{{data.number_of_paras | letter | uppercase}}</b>.
-</i></p>
-<p>Which paragraph contains the following information?</p>
-<p><i>
-  Write the correct letter, 
-  <b>A-{{data.number_of_paras | letter | uppercase}}</b>
-  , in boxes {{data.first}}-{{data.last}} on your answer sheet.
-</i></p>
-<p *ngIf="data.nb"><b>NB</b> You may use any letter more than once.</p>
+<p class="italic" *ngFor="let dir of data.directions" [innerHTML]="dir"></p>
 
 <div *ngFor="let item of data.text; let i = 'index'">
   <p><span *ngIf="data.first != data.last">{{data.first + i}}. </span>{{item}}</p>
