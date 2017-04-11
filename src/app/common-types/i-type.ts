@@ -17,6 +17,7 @@ export abstract class Type implements OnInit {
   abstract getAnswers(): Array<string>;
 
   getFirst(): number {
+    console.log('a');
     return this.data.first;
   }
 
