@@ -6,7 +6,7 @@
     <span *ngFor="let span of para; let j = 'index'">
       <md-input-container *ngIf="span.isInput" floatingPlaceholder="false">
         <span md-prefix class="margin-right-10" style="font-weight: bold">{{span.data}}</span>
-        <input mdInput type="text" [(ngModel)]="answers[i][j]" placeholder=""/>
+        <input mdInput type="text" [(ngModel)]="_answers[i][j]" placeholder=""/>
       </md-input-container>
       <span *ngIf="!span.isInput" class="text-only" [innerHTML]="span.data"></span>
     </span>

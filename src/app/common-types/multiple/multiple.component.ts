@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ConverterService } from '../../services/converter.service';
 import { MdSnackBar } from '@angular/material';
+import { Type } from '../i-type';
 
 @Component({
   selector: 'app-multiple',
@@ -8,46 +9,32 @@ import { MdSnackBar } from '@angular/material';
   styleUrls: ['./multiple.component.css'],
   providers: [ ConverterService ]
 })
-export class MultipleComponent implements OnInit {
+export class MultipleComponent extends Type {
 
-  @Input() data: Object;
-  answers: boolean[] = [];
+  private _answers: boolean[] = [];
   numberOfChecked: number;
 
-  constructor(public snackBar: MdSnackBar, private converterService: ConverterService) { }
-
-  ngOnInit() { }
+  constructor(public snackBar: MdSnackBar, private converterSv: ConverterService) {
+    super();
+  }
 
   checkLimit(p): void {
     let count = 0;
 
-    for (let i = 0; i < this.answers.length; i++) {
-      if (this.answers[i]) count++;
+    for (let i = 0; i < this._answers.length; i++) {
+      if (this._answers[i]) count++;
     }
-
-    if (count > this.data['limit']) {
-      this.answers[p] = false;
-    }
-
-    // if (this.numberOfChecked == this.data['limit'] && count == this.data['limit'] + 1) {
-    //   console.warn('Limit');
-    //   this.snackBar.open('Be careful with the choice limit!', 'OK', {
-    //     duration: 2000
-    //   });
-    // }
-
-    // this.numberOfChecked = count;
   }
 
-  getAnswers() {
-    let res: string[] = [];
-    for (let i = 0; i < this.answers.length; i++) {
-      if (this.answers[i]) {
-        res.push(this.converterService.numberToLetter(i + 1));
+  getAnswers(): Array<string> {
+    this.answers = [];
+    for (let i = 0; i < this._answers.length; i++) {
+      if (this._answers[i]) {
+        this.answers.push(this.converterSv.numberToLetter(i + 1));
       }
     }
 
-    return res;
+    return this.answers;
   }
 
 }

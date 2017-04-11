@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { TestService } from '../../services/test.service';
 
 @Component({
-  selector: 'app-test',
+  selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
   providers: [ TestService ]

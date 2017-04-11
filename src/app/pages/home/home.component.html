@@ -11,7 +11,7 @@
     </div>
     <div *ngFor="let test of tests" class="card-div">
       <md-card routerLink="/listening/{{test.id}}">
-        <img md-card-image [src]="test.image">
+        <!-- <img md-card-image [src]="test.image"> -->
         <div class="card-des">
           <p class="test-title red">{{test.title}}</p>
           <p class="test-des">{{test.description}}</p>

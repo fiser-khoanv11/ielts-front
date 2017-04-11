@@ -1,22 +1,14 @@
-import { Component, OnInit } from '@angular/core';
-import { Input } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Type } from '../i-type';
 
 @Component({
   selector: 'app-answer',
   templateUrl: './answer.component.html',
   styleUrls: ['./answer.component.css']
 })
-export class AnswerComponent implements OnInit {
+export class AnswerComponent extends Type {
 
-  @Input() data: Object;
-  answers: string[] = [];
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
-  getAnswers() {
+  getAnswers(): Array<string> {
     return this.answers;
   }
 

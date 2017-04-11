@@ -15,10 +15,11 @@ import { CommonComponent } from '../common/common.component';
 })
 export class ListeningComponent extends CommonComponent {
 
+  skill: string = 'listening';
+
   constructor(private _dialog: MdDialog, private _snackBar: MdSnackBar,
               private _getDataService: GetDataService, private _activatedRoute: ActivatedRoute) {
     super(_dialog, _snackBar, _getDataService, _activatedRoute);
-    this.skill = 'listening';
   }
 
 }

@@ -1,10 +1,8 @@
 <p class="italic" *ngFor="let dir of data.directions" [innerHTML]="dir"></p>
 
 <div *ngFor="let item of data.choices; let i = 'index'">
-  <md-checkbox [(ngModel)]="answers[i]" (change)="checkLimit(i)">
+  <md-checkbox [(ngModel)]="_answers[i]" (change)="checkLimit(i)">
     <span class="blue margin-right">{{i + 1 | letter | uppercase}}</span>
     {{item}}
   </md-checkbox>
 </div>
-
-{{answers | json}}

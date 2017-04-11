@@ -1,28 +1,26 @@
 import { Component, OnInit } from '@angular/core';
 import { Input } from '@angular/core';
-import { ConverterService } from '../../services/converter.service';
 
 @Component({
   selector: 'app-heading',
   templateUrl: './heading.component.html',
-  styleUrls: ['./heading.component.css'],
-  providers: [ ConverterService ]
+  styleUrls: ['./heading.component.css']
 })
 export class HeadingComponent implements OnInit {
 
-  @Input() data: Object;
+  @Input() data: Data;
   answers: Array<any> = [];
   mark: string = 'roman';
 
-  constructor(private converterService: ConverterService) { }
+  constructor() { }
 
   ngOnInit() {
-    let first = this.data['first'];
+    let count = 0;
 
-    for (let i = 0; i < this.data['paras'].length; i++) {
-      if (this.data['paras'][i]['answer'] == undefined) {
-        this.data['paras'][i]['no'] = first;
-        first++;
+    for (let i = 0; i < this.data.paras.length; i++) {
+      if (this.data.paras[i].answer == undefined) {
+        this.data.paras[i].no = count;
+        count++;
       }
     }
   }
@@ -30,8 +28,8 @@ export class HeadingComponent implements OnInit {
   getAnswerArray(): Array<number> {
     let array: Array<number> = this.answers.slice(0);
 
-    for (let i = 0; i < this.data['paras'].length; i++) {
-      let a = this.data['paras'][i]['answer'];
+    for (let i = 0; i < this.data.paras.length; i++) {
+      let a = this.data.paras[i].answer;
       if (a != undefined) {
         array.push(a);
       }
@@ -41,21 +39,14 @@ export class HeadingComponent implements OnInit {
   }
 
   getAnswers() {
-    let res: string[] = [];
-    
-    for (let i = 0; i < this.answers.length; i++) {
-      let temp: string = '';
-      
-      if (this.answers[i]) {
-        temp = this.converterService.numberToRoman(this.answers[i]);
-      } else {
-        temp = undefined;
-      }
-
-      res.push(temp);
-    }
-
-    return res;
+    return this.answers;
   }
 
+}
+
+class Data {
+  first: number;
+  last: number;
+  headings: Array<string>;
+  paras: Array<{char: string, answer: number, no: number}>;
 }

@@ -3,7 +3,6 @@ import { ActivatedRoute } from '@angular/router';
 import { MdDialog, MdSnackBar } from '@angular/material';
 
 import { GetDataService } from '../../services/get-data.service';
-import { ConverterService } from '../../services/converter.service';
 
 import { AnswerComponent } from '../../common-types/answer/answer.component';
 import { FeatureComponent } from '../../common-types/feature/feature.component';
@@ -42,6 +41,8 @@ export class CommonComponent implements OnInit {
   @ViewChildren(SummarySelectComponent) summarySelectComponents: QueryList<SummarySelectComponent>;
   @ViewChildren(EndingComponent) endingComponents: QueryList<EndingComponent>;
   @ViewChildren(InformationComponent) informationComponents: QueryList<InformationComponent>;
+
+  
 
   sections: Object[];
   keys: Object[] = [];
@@ -110,9 +111,9 @@ export class CommonComponent implements OnInit {
     let all: Array<Object> = [];
     for (let i = 0; i < arr.length; i++) {
       let answers = arr[i].getAnswers();
-      for (let t = 0; t <= arr[i].data.last - arr[i].data.first; t++) {
+      for (let t = 0; t <= arr[i].getLast() - arr[i].getFirst(); t++) {
         all.push({
-          no: arr[i].data.first + t,
+          no: arr[i].getFirst() + t,
           ans: answers[t]
         });
       }

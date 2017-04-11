@@ -1,0 +1,13 @@
+{
+        "first": 18,
+        "last": 22,
+        "type": "summary-select",
+        // "source": "select",
+        "duplicatable": true,
+        "heading": "Weather during the Little Ice Age",
+        "paras": [
+          "Documentation of past weather conditions is limited: our main sources of knowledge of conditions in the distant past are [] and []. ",
+          "We can deduce that Little Ice Age was a time of [], rather than of consistent freezing. Within it there were some periods of very cold winters, others of [] and heavy rain, and yet others that saw [] with no rain at all."
+        ],
+        "words": [ "climatic shifts", "ice cores", "tree rings", "glaciers", "interactions", "weather observations", "heat waves", "storms", "written accounts" ]
+      }

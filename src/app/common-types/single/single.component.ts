@@ -1,25 +1,14 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Type } from '../i-type';
 
 @Component({
   selector: 'app-single',
   templateUrl: './single.component.html',
   styleUrls: ['./single.component.css']
 })
-export class SingleComponent implements OnInit {
+export class SingleComponent extends Type {
 
-  @Input() data: Object;
-  answers: string[] = [];
-
-  constructor() { }
-
-  ngOnInit() {
-    let noOfQues = this.data['last'] - this.data['first'] + 1;
-    if (this.data['questions'].length != noOfQues) {
-      console.error('single :: wrong number of questions, required ' + noOfQues);
-    }
-  }
-
-  getAnswers() {
+  getAnswers(): Array<string> {
     return this.answers;
   }
 

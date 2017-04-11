@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ConverterService } from '../../services/converter.service';
+import { Type } from '../i-type';
 
 class DisplaySpan {
   isInput: boolean;
@@ -12,34 +13,36 @@ class DisplaySpan {
   styleUrls: ['./note.component.css'],
   providers: [ ConverterService ]
 })
-export class NoteComponent implements OnInit {
+export class NoteComponent extends Type implements OnInit {
 
-  @Input() data: Object;
   displayParas: Array<Array<DisplaySpan>> = [];
-  answers: Object[] = [];
+  _answers: Object[] = [];
 
-  constructor(private converterService: ConverterService) { }
+  constructor(private converterSv: ConverterService) {
+    super();
+  }
 
   ngOnInit() {
     let paras = this.data['paras'];
-    this.displayParas = this.converterService.paragraphToArray(paras, this.data['first']);
+    this.displayParas = this.converterSv.paragraphToArray(paras, this.data['first']);
 
     for (let i = 0; i < paras.length; i++) {
-      this.answers[i] = [];
+      this._answers[i] = [];
     }
   }
 
-  getAnswers() {
-    let res: string[] = [];
+  getAnswers(): Array<string> {
+    this.answers = [];
+
     for (let i = 0; i < this.displayParas.length; i++) {
       for (let j = 0; j < this.displayParas[i].length; j++) {
         if (this.displayParas[i][j].isInput) {
-          res.push(this.answers[i][j]);
+          this.answers.push(this._answers[i][j]);
         }
       }
     }
 
-    return res;
+    return this.answers;
   }
 
 }

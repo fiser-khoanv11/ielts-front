@@ -18,6 +18,7 @@
   padding: 10px;
   font-family: 'Montserrat', sans-serif;
   cursor: pointer;
+  border-left: 7px solid #cb253e;
 }
 
 .card-div > md-card > img {

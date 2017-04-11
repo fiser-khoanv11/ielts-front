@@ -1,18 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { Input } from '@angular/core';
+import { Type } from '../i-type';
 
 @Component({
   selector: 'app-sentence',
   templateUrl: './sentence.component.html',
   styleUrls: ['./sentence.component.css']
 })
-export class SentenceComponent implements OnInit {
+export class SentenceComponent extends Type implements OnInit {
 
-  @Input() data: Object;
   displaySens: Array<Array<Object>> = [];
-  answers: string[] = [];
-
-  constructor() { }
 
   ngOnInit() {
     let sens = this.data['sentences'];
@@ -27,7 +24,7 @@ export class SentenceComponent implements OnInit {
     }
   }
 
-  getAnswers() {
+  getAnswers(): Array<string> {
     return this.answers;
   }
 

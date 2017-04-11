@@ -42,7 +42,6 @@ import { SubmitDialog } from './skills/dialogs/submit.dialog';
 import { LetterPipe } from './pipes/letter.pipe';
 import { TimerPipe } from './pipes/timer.pipe';
 import { RomanPipe } from './pipes/roman.pipe';
-import { TextNumberPipe } from './pipes/text-number.pipe';
 import { LoadingComponent } from './components/loading/loading.component';
 import { LibraryComponent } from './pages/library/library.component';
 
@@ -65,7 +64,6 @@ import { LibraryComponent } from './pages/library/library.component';
     AnswerComponent,
     HeadingComponent,
     RomanPipe,
-    TextNumberPipe,
     HomeComponent,
     ResultComponent,
     TestToolbarComponent,

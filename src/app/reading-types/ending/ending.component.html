@@ -8,6 +8,6 @@
   <p><span>{{data.first + i}}. </span>{{sen}}</p>
   <md-select [(ngModel)]="answers[i]">
     <md-option *ngFor="let ending of data.endings; let j = 'index'"
-               [value]="j + 1">{{j + 1 | letter | uppercase}}. {{ending}}</md-option>
+               [value]="j + 1 | letter">{{j + 1 | letter | uppercase}}. {{ending}}</md-option>
   </md-select>
 </div>

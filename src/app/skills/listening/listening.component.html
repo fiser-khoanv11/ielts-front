@@ -1,11 +1,10 @@
 <app-test-toolbar currentPage="0" [testId]="testId"></app-test-toolbar>
 <app-loading isShow="{{sections ? false : true}}"></app-loading>
 
-<md-tab-group *ngIf="sections" class="margin-bottom-20 overall">
-  <md-tab *ngFor="let section of sections; let i = 'index'" label="Section {{section.section_number}}">
-    <div class="padding-20">
-      
-      <div class="left-block">
+<div class="left-block">
+  <md-tab-group *ngIf="sections" class="margin-bottom-20 overall">
+    <md-tab *ngFor="let section of sections; let i = 'index'" label="Section {{section.section_number}}">
+      <div class="padding-20">
         <!-- Block for each set of questions -->
         <div *ngFor="let question of section.sub_sections" class="margin-bottom-20">
           <div class="question-block blue">
@@ -27,22 +26,27 @@
           <div *ngIf="question.type == 'table'"><app-table [data]="question"></app-table></div>
         </div>
       </div>
+    </md-tab>
+  </md-tab-group>
+</div>
 
-      <div class="right-block">
-        <md-input-container class="margin-bottom-50">
-          <textarea mdInput placeholder="Note">You can take notes here but remember to transfer your answers to your answer sheet.</textarea>
-        </md-input-container>
 
-        <div class="action-block">
-          <button md-raised-button color="primary" (click)="viewSheet(false)">
-            <span *ngIf="!isSubmited">View Answer Sheet & Submit</span>
-            <span *ngIf="isSubmited">Review</span>
-          </button>
-        </div>
-      </div>
+<div class="right-block">
+  <div class="padding-20">
+    <audio src="/assets/Track01.mp3" controls autoplay></audio>
+
+    <md-input-container class="margin-bottom-20">
+      <textarea mdInput placeholder="Note">You can take notes here but remember to transfer your answers to your answer sheet.</textarea>
+    </md-input-container>
+
+    <div class="action-block">
+      <button md-raised-button color="primary" (click)="viewSheet(false)">
+        <span *ngIf="!isSubmited">View Answer Sheet & Submit</span>
+        <span *ngIf="isSubmited">Review</span>
+      </button>
     </div>
-  </md-tab>
-</md-tab-group>
+  </div>
+</div>
 
 <button class="timer" md-raised-button>
   <md-icon class="icon">alarm</md-icon>

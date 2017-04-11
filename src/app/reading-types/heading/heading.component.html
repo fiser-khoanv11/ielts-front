@@ -1,20 +1,20 @@
 <p class="italic" *ngFor="let dir of data.directions" [innerHTML]="dir"></p>
 
-<app-option-list 
-                 [list]="data.headings"
+<app-option-list [list]="data.headings"
                  [answers]="getAnswerArray()"
                  [mark]="mark"></app-option-list>
 
 <div *ngFor="let para of data.paras; let j = 'index'">
   <p>
-    <span *ngIf="para.no">{{para.no}}. </span>
-    <span *ngIf="!para.no"><i>Example: </i></span>
+    <span *ngIf="para.no != undefined">{{para.no + data.first}}. </span>
+    <span *ngIf="para.no == undefined"><i>Example: </i></span>
     Paragraph <b>{{para.char | uppercase}}</b>
   </p>
+
   <div *ngIf="!para.answer">
-    <md-select [(ngModel)]="answers[para.no - data.first]">
+    <md-select [(ngModel)]="answers[para.no]">
       <md-option *ngFor="let heading of data.headings; let i = 'index'"
-                 [value]="i + 1">{{i + 1 | roman}}</md-option>
+                 [value]="i + 1 | roman">{{i + 1 | roman}}</md-option>
     </md-select>
   </div>
   <div *ngIf="para.answer">

@@ -1,21 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { Input } from '@angular/core';
-import { ConverterService } from '../../services/converter.service';
+import { Type } from '../i-type';
 
 @Component({
   selector: 'app-table',
   templateUrl: './table.component.html',
-  styleUrls: ['./table.component.css'],
-  providers: [ ConverterService ]
+  styleUrls: ['./table.component.css']
 })
-export class TableComponent implements OnInit {
+export class TableComponent extends Type implements OnInit {
 
-  @Input() data: Object;
-  answers: string[] = [];
   displayTable: Array<Array<Array<Array<Object>>>> = [];
   count: number;
-
-  constructor(converterService: ConverterService) { }
 
   ngOnInit() {
     this.count = this.data['first'];
@@ -55,7 +50,7 @@ export class TableComponent implements OnInit {
     return result;
   }
 
-  getAnswers() {
+  getAnswers(): Array<string> {
     return this.answers;
   }
 
