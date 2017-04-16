@@ -1,5 +1,3 @@
-/* Content */
-
 .banner {
   width: 100%;
 }
@@ -8,24 +6,8 @@
   padding: 10px 75px 20px 75px;
 }
 
-.card-div {
-  float: left;
-  padding: 10px;
-  box-sizing: border-box;
-  width: 24%;
-}
-
-.card-div > md-card {
-  border-radius: 0px;
-  padding: 10px;
-  font-family: 'Montserrat', sans-serif;
-  cursor: pointer;
-  border-left: 7px solid #cb253e;
-}
-
-.card-div > md-card > img {
-  width: calc(100% + 20px);
-  margin: -10px -10px 0px;
+.section {
+  /*display: grid;*/
 }
 
 .section > .header-bar > p {
@@ -39,11 +21,36 @@
   margin: 20px 0px;
 }
 
-.card-des > .test-title {
+.section > .card-div {
+  /*float: left;*/
+  display: inline-block;
+  padding: 10px;
+  box-sizing: border-box;
+  width: 24%;
+}
+
+.section > .card-div > md-card {
+  border-radius: 0px;
+  padding: 10px;
+  font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
+  border-left: 7px solid #bdbdbd;
+}
+
+.section > .card-div > md-card:hover {
+  border-color: #cb253e;
+}
+
+.section > .card-div > md-card > img {
+  width: calc(100% + 20px);
+  margin: -10px -10px 0px;
+}
+
+.section > .card-div > md-card > .card-des > .test-title {
   font-size: x-large;
   margin: 15px 0px 4px 10px;
 }
 
-.card-des > .test-des {
+.section > .card-div > md-card > .card-des > .test-des {
   margin: 0px 0px 9px 10px;
 }

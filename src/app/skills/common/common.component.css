@@ -9,11 +9,16 @@
 .left-block, .right-block {
   height: 600px;
   width: 49%;
-  overflow: scroll;
+  overflow-y: scroll;
 }
 
-.left-block::-webkit-scrollbar, .right-block::-webkit-scrollbar { 
-  display: none; 
+.left-block::-webkit-scrollbar, .right-block::-webkit-scrollbar {
+  width: 0.5em;
+}
+ 
+.left-block::-webkit-scrollbar-thumb, .right-block::-webkit-scrollbar-thumb {
+  background-color: rgba(128, 222, 234, 0.5);
+  outline: 1px solid slategrey;
 }
 
 .left-card {

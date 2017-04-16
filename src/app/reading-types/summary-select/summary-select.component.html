@@ -1,13 +1,4 @@
-<md-slide-toggle [(ngModel)]="data.duplicatable">Duplicatable</md-slide-toggle>
-
-<p><i>Complete the summary using the list of words, 
-  <b>A-{{data.words.length | letter | uppercase}}</b>, below.</i></p>
-<p><i>
-  Write your letter, <b>A-{{data.words.length | letter | uppercase}}</b>, in boxes {{data.first}}
-  <span *ngIf="data.last - data.first == 1"> and </span>
-  <span *ngIf="data.last - data.first > 1">-</span>
-  {{data.last}} on your answer sheet.
-</i></p>
+<p class="italic" *ngFor="let dir of data.directions" [innerHTML]="dir"></p>
 
 <md-card class="half-card">
   <md-card-title>{{data.heading}}</md-card-title>
@@ -27,7 +18,6 @@
   </md-card-content>
 </md-card>
 
-<app-option-list 
-                 [list]="data.words"
+<app-option-list [list]="data.words"
                  [answers]="getAnswerArray()"
                  [mark]="mark"></app-option-list>

@@ -2,8 +2,6 @@
         "first": 18,
         "last": 22,
         "type": "summary-select",
-        // "source": "select",
-        "duplicatable": true,
         "heading": "Weather during the Little Ice Age",
         "paras": [
           "Documentation of past weather conditions is limited: our main sources of knowledge of conditions in the distant past are [] and []. ",

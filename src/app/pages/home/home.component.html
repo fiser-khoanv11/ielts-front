@@ -9,8 +9,8 @@
         <md-icon class="icon">chevron_right</md-icon>
       </button>
     </div>
-    <div *ngFor="let test of tests" class="card-div">
-      <md-card routerLink="/listening/{{test.id}}">
+    <div *ngFor="let test of tests; let i = 'index'" class="card-div">
+      <md-card *ngIf="i < 8" routerLink="/listening/{{test.id}}">
         <!-- <img md-card-image [src]="test.image"> -->
         <div class="card-des">
           <p class="test-title red">{{test.title}}</p>
@@ -19,4 +19,9 @@
       </md-card>
     </div>
   </div>
+
+  <!-- <div class="section">
+    <div class="header-bar"></div>
+    <div class="card-div"></div>
+  </div> -->
 </div>
