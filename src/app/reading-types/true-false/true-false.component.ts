@@ -1,27 +1,19 @@
-import { Component, OnInit } from '@angular/core';
-import { Input } from '@angular/core';
-
-export class Data {
-  options: string;
-}
+import { Component, OnInit, Input } from '@angular/core';
+import { Type } from '../../common-types/i-type';
 
 @Component({
   selector: 'app-true-false',
   templateUrl: './true-false.component.html',
   styleUrls: ['./true-false.component.css']
 })
-export class TrueFalseComponent implements OnInit {
+export class TrueFalseComponent extends Type implements OnInit {
 
-  @Input() data: Data;
   options: string[];
-  answers: string[] = [];
-
-  constructor() { }
 
   ngOnInit() {
-    if (this.data.options == 'tf') {
+    if (this.data['options'] == 'tf') {
       this.options = [ 'true', 'false', 'not given' ];
-    } else if (this.data.options == 'yn') {
+    } else if (this.data['options'] == 'yn') {
       this.options = [ 'yes', 'no', 'not given' ];
     }
   }

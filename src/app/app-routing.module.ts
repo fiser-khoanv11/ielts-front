@@ -8,6 +8,7 @@ import { SpeakingComponent } from './skills/speaking/speaking.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ResultComponent } from './pages/result/result.component';
 import { LibraryComponent } from './pages/library/library.component';
+import { AudioComponent } from './pages/audio/audio.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -17,6 +18,7 @@ const appRoutes: Routes = [
   { path: 'writing/:testId', component: WritingComponent },
   { path: 'speaking/:testId', component: SpeakingComponent },
   { path: 'result', component: ResultComponent },
+  { path: 'audio', component: AudioComponent }
 ];
 
 @NgModule({

@@ -1,35 +1,31 @@
-import { Component, OnInit } from '@angular/core';
-import { Input } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Type } from '../../common-types/i-type';
 
 @Component({
   selector: 'app-heading',
   templateUrl: './heading.component.html',
   styleUrls: ['./heading.component.css']
 })
-export class HeadingComponent implements OnInit {
+export class HeadingComponent extends Type implements OnInit {
 
-  @Input() data: Data;
-  answers: Array<any> = [];
   mark: string = 'roman';
-
-  constructor() { }
 
   ngOnInit() {
     let count = 0;
 
-    for (let i = 0; i < this.data.paras.length; i++) {
-      if (this.data.paras[i].answer == undefined) {
-        this.data.paras[i].no = count;
+    for (let i = 0; i < this.data['paras'].length; i++) {
+      if (this.data['paras'][i].answer == undefined) {
+        this.data['paras'][i].no = count;
         count++;
       }
     }
   }
 
-  getAnswerArray(): Array<number> {
-    let array: Array<number> = this.answers.slice(0);
+  getAnswerArray(): Array<string> {
+    let array: Array<string> = this.answers.slice(0);
 
-    for (let i = 0; i < this.data.paras.length; i++) {
-      let a = this.data.paras[i].answer;
+    for (let i = 0; i < this.data['paras'].length; i++) {
+      let a = this.data['paras'][i].answer;
       if (a != undefined) {
         array.push(a);
       }
@@ -42,11 +38,4 @@ export class HeadingComponent implements OnInit {
     return this.answers;
   }
 
-}
-
-class Data {
-  first: number;
-  last: number;
-  headings: Array<string>;
-  paras: Array<{char: string, answer: number, no: number}>;
 }

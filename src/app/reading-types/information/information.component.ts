@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { Input } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Type } from '../../common-types/i-type';
 import { ConverterService } from '../../services/converter.service';
 
 @Component({
@@ -8,14 +8,14 @@ import { ConverterService } from '../../services/converter.service';
   styleUrls: ['./information.component.css'],
   providers: [ ConverterService ]
 })
-export class InformationComponent implements OnInit {
+export class InformationComponent extends Type implements OnInit {
 
-  @Input() data: Object;
   @Input() sectionNumber: number;
-  answers: string[] = [];
   paras = [];
 
-  constructor(private converterService: ConverterService) { }
+  constructor(private converterService: ConverterService) {
+    super();
+  }
 
   ngOnInit() {
     for (let i = 0; i < this.data['number_of_paras']; i++) {

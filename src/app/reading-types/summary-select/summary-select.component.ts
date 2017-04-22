@@ -15,7 +15,7 @@ export class SummarySelectComponent implements OnInit {
   answers: Array<Array<number>> = [];
   mark: string = 'letter';
 
-  constructor(private converterService: ConverterService) { }
+  constructor(private converterService: ConverterService) {}
 
   ngOnInit() {
     let paras = this.data['paras'];

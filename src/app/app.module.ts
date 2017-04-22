@@ -5,6 +5,7 @@ import { HttpModule } from '@angular/http';
 import { MaterialModule } from '@angular/material';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { FacebookService } from 'ng2-facebook-sdk';
+import { FileDropDirective, FileSelectDirective } from 'ng2-file-upload';
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -44,15 +45,7 @@ import { TimerPipe } from './pipes/timer.pipe';
 import { RomanPipe } from './pipes/roman.pipe';
 import { LoadingComponent } from './components/loading/loading.component';
 import { LibraryComponent } from './pages/library/library.component';
-
-// import { LMultipleComponent } from './listening-types/l-multiple/l-multiple.component';
-// import { RMultipleComponent } from './reading-types/r-multiple/r-multiple.component';
-// import { LTableComponent } from './listening-types/l-table/l-table.component';
-// import { RTableComponent } from './reading-types/r-table/r-table.component';
-// import { LNoteComponent } from './listening-types/l-note/l-note.component';
-// import { RNoteComponent } from './reading-types/r-note/r-note.component';
-// import { LSingleComponent } from './listening-types/l-single/l-single.component';
-// import { RSingleComponent } from './reading-types/r-single/r-single.component';
+import { AudioComponent } from './pages/audio/audio.component';
 
 @NgModule({
   declarations: [
@@ -85,30 +78,24 @@ import { LibraryComponent } from './pages/library/library.component';
     TableComponent,
     TimerPipe,
 
-    // IReadingComponent,
-    // RTableComponent,
-    // RMultipleComponent,
-    // RSingleComponent,
-    // RNoteComponent,
-    // LTableComponent,
-    // LMultipleComponent,
-    // LSingleComponent,
-    // LNoteComponent,
     CommonComponent,
 
     LoadingComponent,
 
     LibraryComponent,
 
+    AudioComponent,
+    FileDropDirective,
+    FileSelectDirective
   ],
   entryComponents: [
     SubmitDialog,
   ],
   imports: [
+    MaterialModule.forRoot(),
     BrowserModule,
     FormsModule,
     HttpModule,
-    MaterialModule.forRoot(),
     AppRoutingModule
   ],
   providers: [

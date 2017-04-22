@@ -111,9 +111,9 @@ export class CommonComponent implements OnInit {
     let all: Array<Object> = [];
     for (let i = 0; i < arr.length; i++) {
       let answers = arr[i].getAnswers();
-      for (let t = 0; t <= arr[i].getLast() - arr[i].getFirst(); t++) {
+      for (let t = 0; t <= arr[i].data.last - arr[i].data.first; t++) {
         all.push({
-          no: arr[i].getFirst() + t,
+          no: arr[i].data.first + t,
           ans: answers[t]
         });
       }
