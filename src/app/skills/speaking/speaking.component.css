@@ -4,15 +4,28 @@
   padding: 10px;
 }
 
-md-card {
-  width: 50%;
-}
-
 .center {
   text-align: center;
+}
+
+md-card {
+  margin-bottom: 20px;
 }
 
 .topic {
   font-size: 110%;
   font-weight: bold;
+}
+
+audio {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.left-block {
+  width: 55%;
+}
+
+.right-block {
+  width: 43%;
 }

@@ -1,48 +1,77 @@
 <app-test-toolbar currentPage="3" [testId]="testId"></app-test-toolbar>
 <app-loading isShow="{{data ? false : true}}"></app-loading>
 
-<div class="padding-20 overall" *ngIf="data">
-  <md-card class="left-card">
-    <md-card-title class="primary-color center">Part 1</md-card-title>
-    <md-card-subtitle>The examiner asks the candidate about him/herself, his/her home, work or studies and other familier topics.</md-card-subtitle>
-    <md-card-content>
-      <div *ngFor="let topic of data.part_1.topics">
-        <p class="topic primary-color">{{topic.title}}</p>
-        <ul>
-          <li *ngFor="let question of topic.questions">{{question}}</li>
-        </ul>
-      </div>
-    </md-card-content>
-  </md-card>
+<div class="padding-20 overall">
+  <div class="left-block" *ngIf="data">
+    <md-card>
+      <md-card-title class="primary-color center">Part 1</md-card-title>
+      <md-card-subtitle>The examiner asks the candidate about him/herself, his/her home, work or studies and other familier topics.</md-card-subtitle>
+      <md-card-content>
+        <div *ngFor="let topic of data.part_1.topics">
+          <p class="topic primary-color">{{topic.title}}</p>
+          <ul>
+            <li *ngFor="let question of topic.questions">{{question}}</li>
+          </ul>
+        </div>
+      </md-card-content>
+    </md-card>
 
-  <md-card class="left-card">
-    <md-card-title class="primary-color center">Part 2</md-card-title>
-    <md-card-subtitle></md-card-subtitle>
-    <md-card-content>
-      <p>You will have to talk about the topic for one to two minutes.</p>
-      <p>You have one minute to think about what you are going to say.</p>
-      <p>You can make some notes to help you if you wish.</p>
-      <div class="box">
-        <p>{{data.part_2.question}}</p>
-        <p>You should say</p>
-        <ul>
-          <li *ngFor="let clue of data.part_2.clues">{{clue}}</li>
-        </ul>
-        <p>{{data.part_2.final_clue}}</p>
-      </div>
-    </md-card-content>
-  </md-card>
+    <md-card>
+      <md-card-title class="primary-color center">Part 2</md-card-title>
+      <md-card-subtitle></md-card-subtitle>
+      <md-card-content>
+        <p>You will have to talk about the topic for one to two minutes.</p>
+        <p>You have one minute to think about what you are going to say.</p>
+        <p>You can make some notes to help you if you wish.</p>
+        <div class="box">
+          <p>{{data.part_2.question}}</p>
+          <p>You should say</p>
+          <ul>
+            <li *ngFor="let clue of data.part_2.clues">{{clue}}</li>
+          </ul>
+          <p>{{data.part_2.final_clue}}</p>
+        </div>
+      </md-card-content>
+    </md-card>
 
-  <md-card class="left-card">
-    <md-card-title class="primary-color center">Part 3</md-card-title>
-    <md-card-subtitle>Discussion topics</md-card-subtitle>
-    <md-card-content>
-      <!-- <p>Discussion topics:</p> -->
-      <div *ngFor="let topic of data.part_3.topics">
-        <p class="topic primary-color">{{topic.title}}</p>
-        <i>Example questions:</i>
-        <p *ngFor="let question of topic.questions">{{question}}</p>
-      </div>
-    </md-card-content>
-  </md-card>
+    <md-card>
+      <md-card-title class="primary-color center">Part 3</md-card-title>
+      <md-card-subtitle>Discussion topics</md-card-subtitle>
+      <md-card-content>
+        <!-- <p>Discussion topics:</p> -->
+        <div *ngFor="let topic of data.part_3.topics">
+          <p class="topic primary-color">{{topic.title}}</p>
+          <i>Example questions:</i>
+          <p *ngFor="let question of topic.questions">{{question}}</p>
+        </div>
+      </md-card-content>
+    </md-card>
+  </div>
+
+  <div class="right-block">
+    <md-card>
+      <md-card-title class="primary-color">Your speaking file</md-card-title>
+      <md-card-content>
+        <audio src="/uploads/{{audioUrl}}" controls></audio>
+        <p>Make sure your audio file is less than 10MB.</p>
+        <input class="file" type="file" accept=".mp3" ng2FileSelect [uploader]="uploader" />
+
+        <div [ngSwitch]="uploader.queue.length && !uploader.queue[uploader.queue.length - 1].isUploaded && !uploader.queue[uploader.queue.length - 1].isUploading">
+          <button *ngSwitchCase="true" md-raised-button (click)="upload()" color="primary">Upload</button>
+          <button *ngSwitchCase="false" [disabled]="true" md-raised-button color="primary">
+            <span [ngSwitch]="!uploader.queue.length">
+              <span *ngSwitchCase="true">Upload</span>
+              <span *ngSwitchCase="false">
+                <span [ngSwitch]="uploader.queue[uploader.queue.length - 1].isUploading">
+                  <span *ngSwitchCase="true">Uploading...</span>
+                  <span *ngSwitchCase="false">Uploaded</span>
+                </span>
+              </span>
+            </span>
+          </button>
+        </div>
+
+      </md-card-content>
+    </md-card>
+  </div>
 </div>

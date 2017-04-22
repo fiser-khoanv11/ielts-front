@@ -9,17 +9,17 @@
     <span>{{skill}}</span>
   </p>
   <span class="fill-remaining-space"></span>
-  <nav>
-    <button *ngIf="currentPage == 0" md-raised-button class="active">Listening</button>
+  <nav [ngSwitch]="currentPage">
+    <button *ngSwitchCase="0" md-raised-button class="active">Listening</button>
     <button *ngIf="currentPage != 0" md-button class="inactive" routerLink="/listening/{{testId}}">Listening</button>
 
-    <button *ngIf="currentPage == 1" md-raised-button class="active">Reading</button>
+    <button *ngSwitchCase="1" md-raised-button class="active">Reading</button>
     <button *ngIf="currentPage != 1" md-button class="inactive" routerLink="/reading/{{testId}}">Reading</button>
 
-    <button *ngIf="currentPage == 2" md-raised-button class="active">Writing</button>
+    <button *ngSwitchCase="2" md-raised-button class="active">Writing</button>
     <button *ngIf="currentPage != 2" md-button class="inactive" routerLink="/writing/{{testId}}">Writing</button>
 
-    <button *ngIf="currentPage == 3" md-raised-button class="active">Speaking</button>
+    <button *ngSwitchCase="3" md-raised-button class="active">Speaking</button>
     <button *ngIf="currentPage != 3" md-button class="inactive" routerLink="/speaking/{{testId}}">Speaking</button>
   </nav>
 </md-toolbar>

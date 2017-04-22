@@ -2,9 +2,11 @@
 
 <md-toolbar class="header-toolbar">
   <a class="logo-a" href="/"><img class="logo" src="/assets/logo.png"></a>
-  <span class="fill-remaining-space"></span>
   <nav class="nav-bar">
     <button md-button routerLink="/library">Library</button>
+  </nav>
+  <span class="fill-remaining-space"></span>
+  <nav class="nav-bar">
     <button md-button *ngIf="user" routerLink="/result">Result</button>
     <button md-button *ngIf="!user" (click)="fbLogin()">Login</button>
     <button md-button *ngIf="user" (click)="fbLogout()">Logout</button>

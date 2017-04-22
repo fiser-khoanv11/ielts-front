@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { FileUploader } from 'ng2-file-upload';
+import { Http } from '@angular/http';
  
-// const URL = '/api/';
-const URL = 'https://localhost:3000/audio';
+const URL = '/api/user/audio';
 
 @Component({
   selector: 'app-audio',
@@ -11,9 +11,13 @@ const URL = 'https://localhost:3000/audio';
 })
 export class AudioComponent {
 
+  filesToUpload: Array<File> = [];
+
   public uploader:FileUploader = new FileUploader({url: URL});
   public hasBaseDropZoneOver:boolean = false;
   public hasAnotherDropZoneOver:boolean = false;
+
+  constructor(private http: Http) {}
  
   public fileOverBase(e:any):void {
     this.hasBaseDropZoneOver = e;
@@ -23,12 +27,13 @@ export class AudioComponent {
     this.hasAnotherDropZoneOver = e;
   }
 
-  show() {
-    console.log(this.uploader.queue[this.uploader.queue.length - 1]);
-  }
-
-  upload() {
-    this.uploader.queue[this.uploader.queue.length - 1].upload(); 
-  }
-
+  // upload() {
+  //   this.uploader.onBuildItemForm = function(fileItem, form) {
+  //     form.append('userId', 'hihi');
+  //     return {fileItem, form}
+  //   };
+  //   // this.uploader.queue[0]. = 'beenhere';
+  //   this.uploader.queue[0].upload();
+  // }
+  
 }
