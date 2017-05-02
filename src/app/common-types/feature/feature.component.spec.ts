@@ -7,7 +7,6 @@ import { FeatureComponent } from './feature.component';
 
 import { MaterialModule } from '@angular/material';
 import { FormsModule } from '@angular/forms';
-
 import { OptionListComponent } from '../../components/option-list/option-list.component';
 import { LetterPipe } from '../../pipes/letter.pipe';
 import { RomanPipe } from '../../pipes/roman.pipe';
@@ -34,6 +33,14 @@ describe('FeatureComponent', () => {
   });
 
   it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+
+  it('mark style should be letter', () => {
+    expect(component.mark).toBe('letter');
+  });
+
+  it('answers should be letters', () => {
     expect(component).toBeTruthy();
   });
 });

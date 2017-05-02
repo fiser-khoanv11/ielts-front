@@ -12,10 +12,11 @@ nav > button {
 }
 
 .active {
-  color: #e41937;
+  background: #e41937;
+  color: white;
   cursor: default;
 }
 
 .inactive {
-  color: white;
+  color: black;
 }

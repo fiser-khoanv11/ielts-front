@@ -35,6 +35,7 @@
 <div *ngFor="let text of data.text; let i = 'index'">
   <p><span>{{data.first + i}}. </span>{{text}}</p>
   <md-select [(ngModel)]="answers[i]">
+    <md-option></md-option>
     <md-option *ngFor="let item of options" [value]="item">{{item | uppercase}}</md-option>
   </md-select>
 </div>

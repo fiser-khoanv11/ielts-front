@@ -7,10 +7,10 @@
       <md-card-title class="primary-color center">Writing Task 1</md-card-title>
       <md-card-subtitle>You should spend about 20 minutes on this task.</md-card-subtitle>
       <md-card-content>
-        <table class="format-table"><tr><td><p *ngFor="let text of data.task_1.text">{{text}}</p></td></tr></table>
+        <table class="format-table"><tr><td><p *ngFor="let text of data.task_1.text" [innerHTML]="text"></p></td></tr></table>
         <p>Write at least 150 words.</p>
         <div class="space-20"></div>
-        <img src="http://content.ieltsonlinetests.com/fileman/Uploads/Images/ielts/practice%203/percentage-of-water-used-for-different-purposes.png">
+        <img src="/assets/{{data.task_1.image}}">
       </md-card-content>
     </md-card>
 
@@ -19,7 +19,7 @@
       <md-card-subtitle>You should spend about 40 minutes on this task.</md-card-subtitle>
       <md-card-content>
         <p>Write about the following topic:</p>
-        <table class="format-table"><tr><td><p *ngFor="let text of data.task_2.text">{{text}}</p></td></tr></table>
+        <table class="format-table"><tr><td><p *ngFor="let text of data.task_2.text" [innerHTML]="text"></p></td></tr></table>
         <p>Give reasons for your answer and include any relevant examples from your own knowledge or experience.</p>
         <p>Write at least 250 words.</p>
       </md-card-content>
@@ -27,11 +27,11 @@
   </div>
 
   <div class="right-block">
-    <md-input-container class="margin-bottom-50">
+    <md-input-container>
       <textarea mdInput [(ngModel)]="task1" placeholder="Task 1"></textarea>
     </md-input-container>
 
-    <md-input-container class="margin-bottom-50">
+    <md-input-container>
       <textarea mdInput [(ngModel)]="task2" placeholder="Task 2"></textarea>
     </md-input-container>
 
@@ -39,6 +39,7 @@
       <button md-raised-button (click)="submit()" [disabled]="isDisabled()" color="primary">
         <span *ngIf="!isDisabled() || !isSubmitted">Submit</span>
         <span *ngIf="isSubmitted && isDisabled()">Submitted</span>
+        <md-icon>send</md-icon>
       </button>
     </div>
   </div>

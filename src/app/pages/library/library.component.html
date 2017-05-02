@@ -7,15 +7,19 @@
 </md-toolbar>
 
 <div class="overall">
-  <div *ngFor="let book of books" class="section">
+  <md-input-container>
+    <md-icon mdSuffix>search</md-icon>
+    <input mdInput placeholder="Book title" [(ngModel)]="searchString">
+  </md-input-container>
+
+  <div *ngFor="let title of titles | searchLibrary:searchString" class="section">
     <div class="header-bar">
-      <p class="red">{{book[0].description}}</p>
+      <p class="red">{{title}}</p>
     </div>
-    <div *ngFor="let test of book" class="card-div">
+    <div *ngFor="let test of tests | searchLibraryTwo:title" class="card-div">
       <md-card routerLink="/listening/{{test.id}}">
         <div class="card-des">
           <p class="test-title red">{{test.title}}</p>
-          <p class="test-des">{{test.description}}</p>
         </div>
       </md-card>
     </div>

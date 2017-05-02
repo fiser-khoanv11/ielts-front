@@ -38,58 +38,64 @@ import { GlobalService } from './services/global.service';
 import { UserService } from './services/user.service';
 import { AccountService } from './services/account.service';
 
-import { SubmitDialog } from './skills/dialogs/submit.dialog';
+import { SubmitDialog } from './dialogs/submit/submit.dialog';
+import { FeedbackDialog } from './dialogs/feedback/feedback.dialog';
 
 import { LetterPipe } from './pipes/letter.pipe';
 import { TimerPipe } from './pipes/timer.pipe';
 import { RomanPipe } from './pipes/roman.pipe';
+import { SearchLibraryPipe } from './pipes/search-library.pipe';
 import { LoadingComponent } from './components/loading/loading.component';
 import { LibraryComponent } from './pages/library/library.component';
-import { AudioComponent } from './pages/audio/audio.component';
+import { AboutIeltsComponent } from './pages/about-ielts/about-ielts.component';
+import { SearchLibraryTwoPipe } from './pipes/search-library-two.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ReadingComponent,
-    SubmitDialog,
-    ListeningComponent,
-    TrueFalseComponent,
+
     AnswerComponent,
-    HeadingComponent,
-    RomanPipe,
-    HomeComponent,
-    ResultComponent,
-    TestToolbarComponent,
-    
+    FeatureComponent,
+    MultipleComponent,
+    NoteComponent,
     SentenceComponent,
+    SingleComponent,
+    TableComponent,
     EndingComponent,
-    LetterPipe,
+    HeadingComponent,
     InformationComponent,
     SummarySelectComponent,
-    OptionListComponent,
-    FeatureComponent,
-    
-    WritingComponent,
-    SpeakingComponent,
-    
-    MultipleComponent,
-    SingleComponent,
-    NoteComponent,
-    TableComponent,
-    TimerPipe,
-
-    CommonComponent,
+    TrueFalseComponent,
 
     LoadingComponent,
+    OptionListComponent,
+    TestToolbarComponent,
 
+    HomeComponent,
     LibraryComponent,
+    ResultComponent,
 
-    AudioComponent,
+    LetterPipe,
+    RomanPipe,
+    TimerPipe,
+    SearchLibraryPipe,
+
+    CommonComponent,
+    SubmitDialog,
+    FeedbackDialog,
+    ListeningComponent,
+    ReadingComponent,
+    SpeakingComponent,
+    WritingComponent,
+
     FileDropDirective,
-    FileSelectDirective
+    FileSelectDirective,
+    AboutIeltsComponent,
+    SearchLibraryTwoPipe,
   ],
   entryComponents: [
     SubmitDialog,
+    FeedbackDialog
   ],
   imports: [
     MaterialModule.forRoot(),

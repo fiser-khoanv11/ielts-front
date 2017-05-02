@@ -24,7 +24,7 @@ export class SubmitDialog implements OnInit {
   data: Data;
   testResult: {result: Array<boolean>, noOfCorrect: number, score: number};
 
-  constructor(private dialogRef: MdDialogRef<any>, private converter: ConverterService,
+  constructor(private dialogRef: MdDialogRef<SubmitDialog>, private converter: ConverterService,
               private att: AttemptService) { }
 
   ngOnInit() {

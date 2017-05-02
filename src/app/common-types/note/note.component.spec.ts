@@ -45,4 +45,8 @@ describe('NoteComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('answers should be collected', () => {
+    expect(component).toBeTruthy();
+  });
 });

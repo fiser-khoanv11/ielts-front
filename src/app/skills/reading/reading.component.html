@@ -1,4 +1,4 @@
-<app-test-toolbar currentPage="1" [testId]="testId"></app-test-toolbar>
+<app-test-toolbar currentPage="1" [testId]="testId" [time]="timeLeft"></app-test-toolbar>
 <app-loading isShow="{{sections ? false : true}}"></app-loading>
 
 <md-tab-group *ngIf="sections" class="margin-bottom-20 overall">
@@ -25,8 +25,8 @@
       <!-- Right-Block -->
       <div class="right-block">
         <!-- Block for each set of questions -->
-        <div *ngFor="let question of section.sub_sections" class="margin-bottom-20">
-          <div class="question-block blue">
+        <div *ngFor="let question of section.sub_sections" class="whole-block">
+          <div class="header-block">
             <p *ngIf="question.first == question.last">Question {{question.first}}</p>
             <p *ngIf="question.first != question.last">
               <span>Questions {{question.first}}</span>
@@ -36,35 +36,27 @@
             </p>  
           </div>
           
-          <div *ngIf="question.type == 'answer'"><app-answer [data]="question"></app-answer></div>
-          <div *ngIf="question.type == 'feature'"><app-feature [data]="question"></app-feature></div>
-          <div *ngIf="question.type == 'multiple'"><app-multiple [data]="question"></app-multiple></div>
-          <div *ngIf="question.type == 'note'"><app-note [data]="question"></app-note></div>
-          <div *ngIf="question.type == 'sentence'"><app-sentence [data]="question"></app-sentence></div>
-          <div *ngIf="question.type == 'single'"><app-single [data]="question"></app-single></div>
-          <div *ngIf="question.type == 'table'"><app-table [data]="question"></app-table></div>
+          <div class="content-block">
+            <div *ngIf="question.type == 'answer'"><app-answer [data]="question"></app-answer></div>
+            <div *ngIf="question.type == 'feature'"><app-feature [data]="question"></app-feature></div>
+            <div *ngIf="question.type == 'multiple'"><app-multiple [data]="question"></app-multiple></div>
+            <div *ngIf="question.type == 'note'"><app-note [data]="question"></app-note></div>
+            <div *ngIf="question.type == 'sentence'"><app-sentence [data]="question"></app-sentence></div>
+            <div *ngIf="question.type == 'single'"><app-single [data]="question"></app-single></div>
+            <div *ngIf="question.type == 'table'"><app-table [data]="question"></app-table></div>
 
-          <div *ngIf="question.type == 'true-false'">
-            <app-true-false [data]="question"></app-true-false>
-          </div>
-          <div *ngIf="question.type == 'heading'">
-            <app-heading [data]="question"></app-heading>
-          </div>
-          <div *ngIf="question.type == 'summary-select'">
-            <app-summary-select [data]="question"></app-summary-select>
-          </div>
-          <div *ngIf="question.type == 'ending'">
-            <app-ending [data]="question"></app-ending>
-          </div>
-          <div *ngIf="question.type == 'information'">
-            <app-information [data]="question"
-              [sectionNumber]="section.section_number"></app-information>
+            <div *ngIf="question.type == 'true-false'"><app-true-false [data]="question"></app-true-false></div>
+            <div *ngIf="question.type == 'heading'"><app-heading [data]="question"></app-heading></div>
+            <div *ngIf="question.type == 'summary-select'"><app-summary-select [data]="question"></app-summary-select></div>
+            <div *ngIf="question.type == 'ending'"><app-ending [data]="question"></app-ending></div>
+            <div *ngIf="question.type == 'information'"><app-information [data]="question"></app-information></div>
           </div>
         </div>
 
         <div class="action-block">
           <button md-raised-button color="primary" (click)="viewSheet(false)">
-            <span *ngIf="!isSubmited">View Answer Sheet & Submit</span>
+            <md-icon>assignment_turned_in</md-icon>
+            <span *ngIf="!isSubmited">Answer Sheet & Submit</span>
             <span *ngIf="isSubmited">Review</span>
           </button>
         </div>
@@ -74,8 +66,3 @@
     </div>
   </md-tab>
 </md-tab-group>
-
-<button class="timer" md-raised-button>
-  <md-icon class="icon">alarm</md-icon>
-  {{timeLeft | timer}}
-</button>

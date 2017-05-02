@@ -3,7 +3,10 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
-import { InformationComponent } from './information.component';
+import { InformationComponent } from './Information.component';
+
+import { MaterialModule } from '@angular/material';
+import { FormsModule } from '@angular/forms';
 
 describe('InformationComponent', () => {
   let component: InformationComponent;
@@ -11,7 +14,8 @@ describe('InformationComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ InformationComponent ]
+      declarations: [ InformationComponent ],
+      imports: [ MaterialModule.forRoot(), FormsModule ]
     })
     .compileComponents();
   }));
@@ -19,6 +23,9 @@ describe('InformationComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(InformationComponent);
     component = fixture.componentInstance;
+
+    component.data = {}
+
     fixture.detectChanges();
   });
 

@@ -10,41 +10,48 @@
   flex: 1 1 auto;
 }
 
-.nav-bar {
-  height: 100%;
-}
-
-.nav-bar > button {
-  /*border: solid #e41937;
-  border-width: 0px 0px;
-  border-radius: 0;*/
-  height: 100%;
-  color: #e41937;
-}
-
 .logo {
   height: 100%;
 }
 
 .logo-a {
   height: 50%;
-  margin-right: 16px;
+  margin-left: 16px;
+}
+
+.logo-b {
+  height: 30%;
+  margin-left: 16px;
 }
 
 .avatar {
   height: 75%;
   border-radius: 70%;
+  cursor: pointer;
 }
 
 md-toolbar {
   height: 64px;
-  /*background: #EEEEEE;*/
-  background: white;
+  background: #D32F2F;
 }
 
-.header-toolbar {
-  border-bottom: 1px solid #e41937;
-  /*position: fixed;
-  top: 0px;
-  left: 0px;*/
+/**/
+
+md-sidenav {
+  width: 250px;
+  border-right: 1px solid #e0e0e0;
+}
+
+.toggle {
+  box-shadow: none !important;
+  background-color: rgba(228, 25, 55, 0);
+  color: white;
+}
+
+md-menu {
+  width: 100px;
+}
+
+md-nav-list > a {
+  color: #616161;
 }

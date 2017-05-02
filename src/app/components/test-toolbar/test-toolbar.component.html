@@ -4,7 +4,7 @@
     <md-icon class="icon">chevron_right</md-icon>
     <a routerLink="/library">Library</a>
     <md-icon class="icon">chevron_right</md-icon>
-    <span *ngIf="test">{{test.description}} - {{test.title}}</span>
+    <span *ngIf="test">{{test.book_title}} - {{test.title}}</span>
     <md-icon class="icon">chevron_right</md-icon>
     <span>{{skill}}</span>
   </p>
@@ -13,7 +13,7 @@
     <button *ngSwitchCase="0" md-raised-button class="active">Listening</button>
     <button *ngIf="currentPage != 0" md-button class="inactive" routerLink="/listening/{{testId}}">Listening</button>
 
-    <button *ngSwitchCase="1" md-raised-button class="active">Reading</button>
+    <button *ngSwitchCase="1" md-raised-button class="active">Reading <md-icon>alarm</md-icon> {{time | timer}}</button>
     <button *ngIf="currentPage != 1" md-button class="inactive" routerLink="/reading/{{testId}}">Reading</button>
 
     <button *ngSwitchCase="2" md-raised-button class="active">Writing</button>

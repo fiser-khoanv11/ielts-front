@@ -5,13 +5,17 @@ import { DebugElement } from '@angular/core';
 
 import { TrueFalseComponent } from './true-false.component';
 
+import { MaterialModule } from '@angular/material';
+import { FormsModule } from '@angular/forms';
+
 describe('TrueFalseComponent', () => {
   let component: TrueFalseComponent;
   let fixture: ComponentFixture<TrueFalseComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TrueFalseComponent ]
+      declarations: [ TrueFalseComponent ],
+      imports: [ MaterialModule.forRoot(), FormsModule ]
     })
     .compileComponents();
   }));
@@ -19,6 +23,9 @@ describe('TrueFalseComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(TrueFalseComponent);
     component = fixture.componentInstance;
+
+    component.data = {}
+
     fixture.detectChanges();
   });
 

@@ -82,7 +82,7 @@ export class ConverterService {
       case 6: return 'vi';
       case 7: return 'vii';
       case 8: return 'viii';
-      case 9: return 'xi';
+      case 9: return 'ix';
       case 10: return 'x';
       case 11: return 'xi';
       case 12: return 'xii';

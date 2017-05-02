@@ -8,7 +8,7 @@ import { Type } from '../i-type';
 })
 export class FeatureComponent extends Type {
 
-  private mark: string = 'letter';
+  public mark: string = 'letter';
 
   getAnswers(): Array<string> {
     return this.answers;

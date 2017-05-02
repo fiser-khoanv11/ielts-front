@@ -2,11 +2,9 @@
 /*@import '~@angular/material/core/theming/prebuilt/dee';*/
 
 body {
-  /*font-family: 'Roboto';*/
   background: #F5F5F5;
   margin: 0px;
-  /*font-family: Roboto,"Helvetica Neue",sans-serif;*/
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 .padding-50 {
@@ -72,6 +70,10 @@ p {
   min-height: 500px;
 }
 
+.section-header {
+  font-size: x-large;
+}
+
 /* Colors */
 
 .blue, .heading, b, .primary-color, .mat-select-value-text, input, .md-select-value {
@@ -111,19 +113,19 @@ a:hover {
 
 .breadcrumb {
   min-height: 0px !important;
-  background: #e41937 !important;
+  background: white !important;
   height: 45px !important;
 }
 
 .breadcrumb > div {
-  color: white !important;
+  color: #e41937 !important;
   font-size: 75% !important;
   position: relative;
   top: -5px;
 }
 
 .breadcrumb > div > md-toolbar-row > p > a {
-  color: white;
+  color: #e41937;
 }
 
 .breadcrumb > div > md-toolbar-row > p > md-icon {

@@ -20,8 +20,10 @@
     <tr *ngFor="let attempt of user.attempts.slice().reverse()">
       <td>{{attempt.test_id}}</td>
       <td>{{attempt.skill | uppercase}}</td>
-      <td>{{attempt.score}}
-        <a *ngIf="attempt.skill === 'writing'" class="blue" routerLink="/writing/{{attempt.test_id}}">See your answer</a>
+      <td [ngSwitch]="attempt.skill">
+        <span>{{attempt.score}}</span>
+        <a *ngSwitchCase="'writing'" class="blue" routerLink="/writing/{{attempt.test_id}}">See your answer</a>
+        <a *ngSwitchCase="'speaking'" class="blue" routerLink="/speaking/{{attempt.test_id}}">See your answer</a>
       </td>
       <!-- <td></td> -->
     </tr>

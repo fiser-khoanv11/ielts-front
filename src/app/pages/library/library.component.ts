@@ -11,24 +11,17 @@ export class LibraryComponent implements OnInit {
 
   constructor(private testSv: TestService) { }
 
-  books: Array<Array<Object>> = [];
+  tests: Array<Object> = [];
   titles: Array<string> = [];
 
   ngOnInit() {
     this.testSv.find().then(result => {
+      this.tests = result;
+
       for (let i = 0; i < result.length; i++) {
-        if (this.titles.indexOf(result[i].description) < 0) {
-          this.titles.push(result[i].description);
+        if (this.titles.indexOf(result[i].book_title) < 0) {
+          this.titles.push(result[i].book_title);
         }
-      }
-
-      for (let i = 0; i < this.titles.length; i++) {
-        this.books[i] = [];
-      }
-
-      for (let i = 0; i < result.length; i++) {
-        let index = this.titles.indexOf(result[i].description);
-        this.books[index].push(result[i]);
       }
     });
   }

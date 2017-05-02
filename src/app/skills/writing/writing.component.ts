@@ -30,9 +30,7 @@ export class WritingComponent implements OnInit {
     this.testId = this.route.snapshot.params['testId'];
 
     this.getDataService.findOne(this.testId, 'writing').then(
-      (value: any) => {
-        this.data = value;
-      },
+      (value: any) => this.data = value,
       (reason: any) => console.error(reason)
     );
 
@@ -77,6 +75,7 @@ export class WritingComponent implements OnInit {
   }
 
   isDisabled(): boolean {
+    if (this.task1 == '' && this.task2 == '') return true;
     if (this.task1 == this._task1 && this.task2 == this._task2) return true;
     return false;
   }

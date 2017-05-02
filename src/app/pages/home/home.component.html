@@ -3,25 +3,28 @@
 <div class="overall">
   <div class="section">
     <div class="header-bar">
-      <p class="red">Recent Tests</p>
+      <p class="red">About IELTS</p>
+      <button md-button class="red" routerLink="/about-ielts">
+        Read More<md-icon class="icon">chevron_right</md-icon>
+      </button>
+    </div>
+    <p>The International English Language Testing System (IELTS) measures the language proficiency of people who want to study or work where English is used as a language of communication. It uses a nine-band scale to clearly identify levels of proficiency, from non-user (band score 1) through to expert (band score 9).</p>
+  </div>
+
+  <div class="section">
+    <div class="header-bar">
+      <p class="red">Latest Tests</p>
       <button md-button class="red" routerLink="/library">
-        See Library
-        <md-icon class="icon">chevron_right</md-icon>
+        See Library<md-icon class="icon">chevron_right</md-icon>
       </button>
     </div>
     <div *ngFor="let test of tests | slice:0:8" class="card-div">
       <md-card routerLink="/listening/{{test.id}}">
-        <!-- <img md-card-image [src]="test.image"> -->
         <div class="card-des">
           <p class="test-title red">{{test.title}}</p>
-          <p class="test-des">{{test.description}}</p>
+          <p class="test-des">{{test.book_title}}</p>
         </div>
       </md-card>
     </div>
   </div>
-
-  <!-- <div class="section">
-    <div class="header-bar"></div>
-    <div class="card-div"></div>
-  </div> -->
 </div>

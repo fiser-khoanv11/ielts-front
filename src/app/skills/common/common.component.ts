@@ -18,7 +18,7 @@ import { InformationComponent } from '../../reading-types/information/informatio
 import { SummarySelectComponent } from '../../reading-types/summary-select/summary-select.component';
 import { TrueFalseComponent } from '../../reading-types/true-false/true-false.component';
 
-import { SubmitDialog } from '../dialogs/submit.dialog'
+import { SubmitDialog } from '../../dialogs/submit/submit.dialog';
 
 @Component({
   selector: 'app-common',
@@ -41,8 +41,6 @@ export class CommonComponent implements OnInit {
   @ViewChildren(SummarySelectComponent) summarySelectComponents: QueryList<SummarySelectComponent>;
   @ViewChildren(EndingComponent) endingComponents: QueryList<EndingComponent>;
   @ViewChildren(InformationComponent) informationComponents: QueryList<InformationComponent>;
-
-  
 
   sections: Object[];
   keys: Object[] = [];
@@ -68,7 +66,9 @@ export class CommonComponent implements OnInit {
       (reason: any) => console.error(reason)
     );
 
-    this.setTimer();
+    if (this.skill === 'reading') {
+      this.setTimer();
+    }
   }
 
   ngOnDestroy() {

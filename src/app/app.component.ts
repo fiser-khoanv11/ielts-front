@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { MdDialog } from '@angular/material';
 import { AccountService } from 'app/services/account.service';
+import { FeedbackDialog } from 'app/dialogs/feedback/feedback.dialog';
 
 @Component({
   selector: 'app-root',
@@ -10,7 +12,7 @@ export class AppComponent implements OnInit {
 
   user: Object;
 
-  constructor(private acc: AccountService) { }
+  constructor(private acc: AccountService, private dialog: MdDialog) { }
 
   ngOnInit() {
     this.acc.init();
@@ -22,18 +24,20 @@ export class AppComponent implements OnInit {
   
   fbLogin(): void {
     this.acc.login().then(
-      (value: any) => this.user = value,
+      (value: any) => location.reload(),
       (reason: any) => console.error(reason)
     );
   }
 
   fbLogout(): void {
     this.acc.logout().then(
-      (value: any) => {
-        this.user = undefined;
-      },
+      (value: any) => location.reload(),
       (reason: any) => console.error(reason)
     );
+  }
+
+  public openFeedback(): void {
+    let dialogRef = this.dialog.open(FeedbackDialog);
   }
 
 }

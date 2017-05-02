@@ -12,6 +12,7 @@ export class TestToolbarComponent implements OnInit {
 
   @Input() currentPage: number;
   @Input() testId: number;
+  @Input() time: number;
   test: Object;
   skill: string;
 

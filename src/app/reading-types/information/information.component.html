@@ -4,6 +4,6 @@
   <p><span *ngIf="data.first != data.last">{{data.first + i}}. </span>{{item}}</p>
   <md-select [(ngModel)]="answers[i]">
     <md-option *ngFor="let para of paras; let j = 'index'"
-               [value]="para">Paragraph {{para | uppercase}}</md-option>
+               [value]="para + 1 | letter">Paragraph {{para + 1 | letter | uppercase}}</md-option>
   </md-select>
 </div>

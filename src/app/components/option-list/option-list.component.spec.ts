@@ -4,6 +4,8 @@ import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
 import { OptionListComponent } from './option-list.component';
+import { LetterPipe } from '../../pipes/letter.pipe';
+import { RomanPipe } from '../../pipes/roman.pipe';
 
 describe('OptionListComponent', () => {
   let component: OptionListComponent;
@@ -11,7 +13,7 @@ describe('OptionListComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ OptionListComponent ]
+      declarations: [ OptionListComponent, LetterPipe, RomanPipe ]
     })
     .compileComponents();
   }));

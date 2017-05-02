@@ -34,4 +34,12 @@ describe('MultipleComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('answers should be letters', () => {
+    expect(component).toBeTruthy();
+  });
+
+  it('answers should be within limit', () => {
+    expect(component).toBeTruthy();
+  });
 });

@@ -1,7 +1,7 @@
 <p class="italic" *ngFor="let dir of data.directions" [innerHTML]="dir"></p>
 
 <app-option-list [list]="data.headings"
-                 [answers]="getAnswerArray()"
+                 [answers]="answers"
                  [mark]="mark"></app-option-list>
 
 <div *ngFor="let para of data.paras; let j = 'index'">

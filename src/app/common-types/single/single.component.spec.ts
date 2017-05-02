@@ -5,13 +5,18 @@ import { DebugElement } from '@angular/core';
 
 import { SingleComponent } from './single.component';
 
+import { MaterialModule } from '@angular/material';
+import { FormsModule } from '@angular/forms';
+import { LetterPipe } from '../../pipes/letter.pipe';
+
 describe('SingleComponent', () => {
   let component: SingleComponent;
   let fixture: ComponentFixture<SingleComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SingleComponent ]
+      declarations: [ SingleComponent, LetterPipe ],
+      imports: [ MaterialModule.forRoot(), FormsModule ]
     })
     .compileComponents();
   }));
@@ -19,6 +24,9 @@ describe('SingleComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(SingleComponent);
     component = fixture.componentInstance;
+
+    component.data = {}
+
     fixture.detectChanges();
   });
 

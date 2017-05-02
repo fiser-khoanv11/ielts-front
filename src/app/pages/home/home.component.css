@@ -8,7 +8,7 @@
 
 .section > .header-bar > p {
   display: inline-block;
-  margin-left: 10px;
+  /*margin-left: 10px;*/
   font-size: x-large;
 }
 
@@ -18,7 +18,7 @@
 }
 
 .section > .card-div {
-  float: left;
+  display: inline-block;
   padding: 10px;
   box-sizing: border-box;
   width: 24%;
@@ -48,4 +48,7 @@
 
 .section > .card-div > md-card > .card-des > .test-des {
   margin: 0px 0px 9px 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 90%;
 }

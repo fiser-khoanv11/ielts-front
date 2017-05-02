@@ -20,9 +20,7 @@
       <md-card-title class="primary-color center">Part 2</md-card-title>
       <md-card-subtitle></md-card-subtitle>
       <md-card-content>
-        <p>You will have to talk about the topic for one to two minutes.</p>
-        <p>You have one minute to think about what you are going to say.</p>
-        <p>You can make some notes to help you if you wish.</p>
+        <p>You will have to talk about the topic for one to two minutes. You have one minute to think about what you are going to say. You can make some notes to help you if you wish.</p>
         <div class="box">
           <p>{{data.part_2.question}}</p>
           <p>You should say</p>
@@ -53,11 +51,13 @@
       <md-card-title class="primary-color">Your speaking file</md-card-title>
       <md-card-content>
         <audio src="/uploads/{{audioUrl}}" controls></audio>
-        <p>Make sure your audio file is less than 10MB.</p>
+        <p>Make sure your audio file is less than 5MB.</p>
         <input class="file" type="file" accept=".mp3" ng2FileSelect [uploader]="uploader" />
 
         <div [ngSwitch]="uploader.queue.length && !uploader.queue[uploader.queue.length - 1].isUploaded && !uploader.queue[uploader.queue.length - 1].isUploading">
-          <button *ngSwitchCase="true" md-raised-button (click)="upload()" color="primary">Upload</button>
+          <button *ngSwitchCase="true" md-raised-button (click)="upload()" color="primary">
+            Upload<md-icon>file_upload</md-icon>
+          </button>
           <button *ngSwitchCase="false" [disabled]="true" md-raised-button color="primary">
             <span [ngSwitch]="!uploader.queue.length">
               <span *ngSwitchCase="true">Upload</span>
@@ -68,6 +68,7 @@
                 </span>
               </span>
             </span>
+            <md-icon>file_upload</md-icon>
           </button>
         </div>
 

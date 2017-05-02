@@ -33,6 +33,8 @@
   </md-card-content>
 </md-card>
 <md-dialog-actions>
-  <button md-raised-button color="primary" *ngIf="!data.isSubmited" (click)="submit()" class="submit">Submit</button>
+  <button md-raised-button color="primary" *ngIf="!data.isSubmited" (click)="submit()" class="submit">
+    <md-icon>assignment_turned_in</md-icon> Submit
+  </button>
   <button md-button md-dialog-close>Close</button>
 </md-dialog-actions>
